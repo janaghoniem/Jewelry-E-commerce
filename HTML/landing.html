@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/landing-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="../Javascript/landing-script.js"></script>
+    <title>Landing Page</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="store-services">
+                <nav class="navigation">
+                    <a href="#">Find a Store</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact Us</a>
+                </nav>
+                <div class="search-button" id="search-button">
+                    <input type="text" id="searchField" placeholder="Search">
+                    <button id="search">
+                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                    </button>
+                </div>
+            </div>
+            <div class="user-data">
+                <nav class="navigation">
+                    <a href="#">Newsletter</a>
+                    <a href="#">My Account</a>
+                    <a href="#">My Wishlist</a>
+                    <a href="#">Shopping Bag</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header-middle"><a href="#main" class="logo">Logo-Here</a></div>
+        <div class="header-bottom">
+            <nav class="navigation">
+            <a href="#">Collection A</a>
+            <a href="#">Collection B</a>
+            <a href="#">Collection C</a>
+            <a href="#">Collection D</a>
+            <a href="#">Collection E</a>
+            <a href="#">Bracelets</a>
+            <a href="#">Earrings</a>
+            <a href="#">Necklaces</a>
+            <a href="#">Rings</a>
+            <a href="#">Head Pieces</a>
+            </nav>
+        </div>
+    </header>
+    <section class="main" id="main">
+        <div class="carousel">
+            <button class="carousel__button carousel__button--left is-hidden" id="carousel__button--left">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+
+            <div class="carousel__track-container">
+                <ul class="carousel__track" id = "carousel__track">
+                    <li class="carousel__slide current-slide">
+                        <video class="carousel__content" id="video-background" autoplay loop muted>
+                            <source src="../videos/ring.mp4" type="video/mp4">
+                        </video>
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__content" src="../images/quiz_bckg1.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <button class="carousel__button carousel__button--right" id="carousel__button--right">
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+
+            <div id="carousel__nav" class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+            </div>
+        </div>
+    </section>
+    <section class="categories" id="categories">
+        <div class="necklace">
+            <img src="../images/necklace1.jpg" alt="">
+            <p>Necklaces</p>
+        </div>
+        <div class="earrings">
+            <img src="../images/earrings1.jpg" alt="">
+            <p>Earrings</p>
+        </div>
+        <div class="ring">
+            <img src="../images/ring1.jpg" alt="">
+            <p>Rings</p>
+        </div>
+        <div class="bracelet">
+            <img src="../images/bracelet1.jpg" alt="">
+            <p>Bracelets</p>
+        </div>
+        <div class="headpiece">
+            <img src="../images/headpiece1.jpg" alt="">
+            <p>Headpieces</p>
+        </div>
+    </section>
+</body>
+</html>
