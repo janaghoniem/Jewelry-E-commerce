@@ -122,13 +122,13 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('mouseenter', function() {
             const img = this.querySelector('img');
             const category = this.className.split(' ')[0];
-            img.src = `../images/${category}2.jpg`;
+            img.src = `../images/Landing/${category}2.jpg`;
         });
     
         item.addEventListener('mouseleave', function() {
             const img = this.querySelector('img');
             const category = this.className.split(' ')[0];
-            img.src = `../images/${category}1.jpg`;
+            img.src = `../images/Landing/${category}1.jpg`;
         });
     });
 });
