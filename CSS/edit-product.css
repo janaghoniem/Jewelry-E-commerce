@@ -1,0 +1,114 @@
+body {
+	background: url(../images/edit-background.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+
+.form-holder input,
+textarea {
+	background: #eeeae8;
+	color: black;
+	border-radius: 8px;
+	outline-color: #eeeae8;
+	border: none;
+	height: 35px;
+	width: 150px;
+	display: block;
+	margin: 10px;
+}
+
+.container {
+	display: flex;
+	background-color: white;
+	border-radius: 8px;
+	margin-top:20px;
+	margin-left:30%;
+	width: 680px;
+	height: 600px;
+	max-width: 680px;
+	max-height: 600px;
+	min-height: 600px;
+	min-width: 680px;
+}
+
+.cards {
+	flex: 1;
+	padding-right:50px;
+	padding-left:10px;
+}
+
+.form {
+	flex: 1;
+}
+
+
+/* .submit-btn {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: rgba(256, 256, 256, 0.7);
+	border: 0;
+	border-radius: 15px;
+	display: block;
+	margin: 15px auto;
+	padding: 15px 45px;
+	width: 100%;
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: all .3s ease;
+
+	&:hover {
+		transition: all .3s ease;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+}
+
+ */
+
+
+/* Picture upload*/
+.uploadOuter {
+	text-align: center;
+	padding: 20px;
+
+	strong {
+		padding: 0 10px
+	}
+}
+
+.dragBox {
+	width: 250px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	line-height: 95px;
+	color: #999;
+	border: 2px dashed #ccc;
+	display: inline-block;
+	transition: transform 0.3s;
+
+	input[type="file"] {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		top: 0;
+		left: 0;
+	}
+}
+
+.draging {
+	transform: scale(1.1);
+}
+
+#preview {
+	text-align: center;
+
+	img {
+		max-width: 100%
+	}
+}
