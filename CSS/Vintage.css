@@ -1,0 +1,47 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.intro{
+    position: relative;
+    background-image: url("../images/Vintage/vintageBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+.overlay{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 90%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-content, .right-content {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.left-content{
+    text-align: left;
+}
+.right-content{
+   width: 50%;
+   height: auto;
+   text-align: center;
+}
+.right-content img{
+    max-width: 100%;
+    height: auto;
+}
