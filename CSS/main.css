@@ -1,114 +1,194 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/2e492ac67105d56ef337489b56a86486?family=Cooper+BT+W03+Md);
+@import url('https://fonts.cdnfonts.com/css/garet');
 
-* {
-    margin: 0;
-    padding: 0;
+*{
+    font-weight: 100;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    
 }
-
-body {
-    background: #efeae2;
-    min-height: 100vh;
-    overflow-x: hidden;
+body{
+    background-color:#3A1B14;
 }
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
+header{
+    font-family: 'Garet', sans-serif;
+    background-color:  rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
     width: 100%;
-    padding: 30px 100px;
+    position: fixed;
+    z-index: 999;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    z-index: 100;
-
+    padding: 10px 50px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.19);
 }
 
-.header1 {
-    position: absolute;
-    margin-bottom: 10px;
-    left: 45%;
+.header-middle a{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 8px 0;
 }
 
-.logo {
-    font-size: 2em;
-    color: #4f585e;
-    pointer-events: none;
-    margin-right: 270px;
-}
-
-.navigation {
+.header-top, .header-bottom {
+    width: 100%;
     display: flex;
-    position: fixed;
-    margin-top: 40px;
+    flex-direction: row;
+    align-items: center;
+    font-size: smaller;
 }
 
-.navigation a {
-    text-decoration: none;
-    color: #4f585e;
-    padding: 6px 15px;
+.header-top {
+    justify-content: space-between;
+}
+
+.header-bottom {
+    justify-content: center;
+}
+
+.store-services {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0; 
+    padding: 0;
+}
+
+
+#search-button {
+    color: #F6E8C0;
+    border-color: #F6E8C0;
     border-radius: 20px;
-    margin: 0 10px;
-    font-weight: 600;
-}
-
-.navigation a:hover,
-.navigation a.active {
-    background: #4f585e;
-    color: #fff;
-
-}
-
-.parallax {
-    position: relative;
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 40px;
+    margin-left: 10px;
+    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    transition: width 0.5s ease;
 }
 
-#text {
-    position: absolute;
-    font-size: 5em;
-    color: black;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+#searchField {
+    padding: 10px;
+    color: #F6E8C0;
+    border-color: transparent;
+    background-color: transparent;
+    height: 30px;
+    width: 0px; 
+    padding-right: 40px; 
+    box-sizing: border-box; 
+    transition: width 0.5s ease;
 }
 
-.parallax img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
+#searchField:focus {
+    outline: none;
+    border-radius: 20px;
 }
 
-.creation-product {
+#searchField::placeholder {
+    color: #F6E8C0;
+}
+
+#search {
+    background-image: url('../images/Landing/magnifying-glass1.png');
+    background-color: transparent;
+    border-color: transparent;
+    /* color: #F6E8C0; */
+    width: 30px;
+    height: 30px;
+    position: absolute; 
+    top: 50%; 
+    right: 5px;
+    transform: translateY(-50%); 
+    cursor: pointer; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+
+/* ICON ISN'T WORKING CHECK WHY */
+/* #search i {
+    font-size: 8em;
+    color: #F6E8C0;
+} */
+
+/* body{
+    background-color:#3A1B14;
+} */
+
+.logo{
+    color: #F6E8C0;
+    font-size: 1.3em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logo:hover{
+    color:#E47C21;
+}
+
+.navigation a{
+    color: #F6E8C0;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.navigation a:hover{
+    color:rgb(228, 124, 33);
+}
+
+
+/* End of Jana's code*/
+.preview-collections{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    
+}
+#video-background{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index: -1;
+}
+section{
+    padding-top:240px;
+    
+}
+
+.Collection-container{
+    margin-top:200px;
     position: relative;
-    background: #efeae2;
-
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    padding:20px 0;
+    z-index: 1;
 }
 
-.sec h2 {
-    font-size: 3em;
-    color: #fff;
-    margin-bottom: 10px;
+.collection-card{
+    width:320px;
+    height:200px;
+    background-color:white;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 20px;
 }
 
-.sec p {
-    font-size: 1em;
-    color: #fff;
-    font-weight: 300;
+.collection-card img{
+    width: 100%;
+    height:100%;
+    object-fit:cover;
 }
-
-.hill2 {
-    size: 10%;
-}
-
-
+/* Product preview*/
 ::-webkit-scrollbar {
     width: 1px;
     height: 1px;
@@ -193,14 +273,12 @@ header {
 
 .scroll-info,
 header {
-    position: absolute;
-    left: 1rem;
+    /* position: absolute;
+    left: 1rem; */
 }
 
 
-header {
-    bottom: 1rem;
-}
+
 
 .scroll-info {
     top: 1rem;
@@ -266,245 +344,5 @@ button {
 button:hover {
     cursor: pointer;
 }
+/* End of product preview*/
 
-
-
-
-
-
-/* a {
-    text-decoration: none;
-} */
-
-
-
-/* .search-img {
-    height: 20px;
-    width: auto;
-    position: absolute;
-    left: 1000;
-    top: 0;
-    
-} */
-
-
-
-/*header*/
-/* .header1 h3 {
-    display: inline;
-    position: absolute;
-    left: 50%;
-    top: 0;
-}
-.header1 {
-    margin-bottom: 15px;
-    color: #4f585e;
-
-} */
-/* 
-.navigation {
-    position: absolute;
-    left: 30%;
-    position: fixed;
-}
-.user-img {
-    height: 45px;
-    width: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-}
-
-.navigation a{
-    font-size: 16px;
-    align-items:center;
-    text-decoration: none;
-    margin-left: 40px;
-    position: relative;    
-    padding: 0px 10px 0px 10px;
-    color: black;
-}
-.navigation a::before{
-    content:'';
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    height: 2px;
-   
-
-}
-.navigation a:hover:after{
-transform:scaleX(1);
-width:100%;
-left:0;
-}
-
-
-
-.navigation a::after {
-    position: absolute;
-    bottom: -2px;
-    left: 50%; 
-    content: '';
-    height: 2px; 
-    width: 0;
-    background-color: rgb(8, 8, 8); 
-    transition: width 0.3s ease;
-    transform:translateX(-50%);
-    transform-origin: bottom left;
-} */
-/* .search-bar {
-    position: absolute;
-    left: 5%;
-    overflow: hidden;
-    border-radius: 5px;
-
-} */
-
-/* input[type="text"] {
-    border: none;
-    border-bottom: solid #4f585e;
-    height: 30px;
-   
-    width: 200px;
-    background-color: transparent;
-
-}
-input[type="search"]:focus {
-    outline: none;
-    border: none;
-    
-} */
-
-/* .main {
-   
-    background-color: #fbfbf8;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-
-section {
-    margin-top: 40px;
-}
-
-
-.active {
-    background-color: #7a7071;
-    color: white;
-} */
-
-/* Hide the link that should open and close the topnav on small screens */
-/* .navigation .icon {
-    display: none;
-} */
-
-/* Dropdown container - needed to position the dropdown content */
-/* .dropdown {
-    overflow: hidden;
-    display: inline;
-} */
-
-/* Style the dropdown button to fit inside the topnav */
-/* .dropdown .dropbtn {
-    font-size: 17px;
-    border: none;
-    outline: none;
-    color: black;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-} */
-
-/* Style the dropdown content (hidden by default) */
-/* .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-} */
-
-/* Style the links inside the dropdown */
-/* .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-} */
-
-/* Add a dark background on topnav links and the dropdown button on hover */
-/* .navigation a:hover,
-.dropdown:hover .dropbtn {
-    background-color: #555;
-    color:black;
-} */
-
-/* Add a grey background to dropdown links on hover */
-/* .dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-} */
-
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
-/* .dropdown:hover .dropdown-content {
-    display: block;
-} */
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-/* @media screen and (max-width: 600px) {
-
-    .search-bar,
-    .navigation a,
-    .dropdown .dropbtn {
-        display: none;
-    }
-
-    .navigation a.icon {
-        float: right;
-        display: block;
-    }
-} */
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-/* @media screen and (max-width: 600px) {
-
-    .navigation.responsive {
-        position: relative;
-    }
-
-    .navigation.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-
-
-    .navigation.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    
-
-    .navigation.responsive .dropdown {
-        float: none;
-    }
-
-    .navigation.responsive .dropdown-content {
-        position: relative;
-    }
-
-    .navigation.responsive .dropdown .dropbtn {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-} */
