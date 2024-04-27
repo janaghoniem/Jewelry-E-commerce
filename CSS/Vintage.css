@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 *{
     padding: 0px;
     margin: 0px;
@@ -14,7 +15,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: black;
 }
 .overlay{
     background-color: white;
@@ -33,13 +33,14 @@
     box-sizing: border-box;
 }
 .left-content{
-    text-align: left;
+    /* text-align: left; */
     margin-left: 100px;
 }
 .right-content{
    width: 50%;
    height: auto;
    margin-right: 100px;
+   margin-left: 0;
    text-align: center;
 }
 .right-content img{
@@ -47,17 +48,40 @@
     height: auto;
 }
 .collection-info{
-    max-width: 100%;
+    /* max-width: 100%; */
     text-align: justify;
     letter-spacing: 1px;
 }
 .collection-info p{
-    color: rgb(110, 110, 110);
+    color: rgb(98, 98, 98);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 100;
-    
+    font-weight: 300;
+    font-size: 15px;
 }
-.collection-info h2{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 400;
+.collection-info h1{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+.container{
+    display: grid;
+    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+}
+.item-1{
+    grid-area: 1 / 1 / 6 / 6;
+}
+.item-2{
+    grid-area: 3 / 5 / 8 / 10;
+    z-index: 1;
+}
+.item-3{
+    grid-area: 9 / 3 / 15 / 8 ;
+}
+.item-4{
+    grid-area: 14 / 1 / 15 / 6;
+    z-index: 2;
+}
+.item-5{
+    grid-area: 15 / 5 / 15 / 10;
 }
