@@ -14,22 +14,36 @@
 //       x.classList.add("responsive");
 //   }
 // }
-let text = document.getElementById('text');
-let leaf = document.getElementById('leaf');
-let hill1 = document.getElementById('hill1');
-let hill4 = document.getElementById('hill4');
-let hill5 = document.getElementById('hill5');
+document.addEventListener("DOMContentLoaded", function (){
+    const container = document.querySelector('.Collection-container');
+    const cards = document.querySelectorAll('.collection-card');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let scrollPosition = 0;
 
-window.addEventListener('scroll', () => {
-    let value = window.scrollY;
-    text.style.marginTop = value * 2.5 + 'px';
-    leaf.style.top = value * -1.5 + 'px';
-    leaf.style.left = value * 1.5 + 'px';
-    hill5.style.left=value *1.5+'px';
-    hill4.style.left=value *-1.5+'px';
-    hill1.style.top=value *1+'px';
+    updateScroll();
+    prevBtn.addEventListener('click', scrollLeft);
+    nextBtn.addEventListener('click', scrollRight);
 
-})
+    function updateScroll() {
+        container.scrollLeft = scrollPosition;
+    }
+    function scrollLeft(){
+        scrollPosition-=320;
+        if(scrollPosition<0){
+            scrollPosition=0;
+        }
+    }
+    function scrollRight(){
+        scrollPosition+=320;
+        const maxScroll=container.scrollWidth-container.clientWidth;
+    if(scrollPosition>maxScroll){
+        scrollPosition=maxScroll;
+    }
+    updateScroll();
+    }
+
+});
 
 
 let imgWrappers = document.getElementsByClassName('img-wrapper faster');
