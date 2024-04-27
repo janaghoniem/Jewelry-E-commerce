@@ -10,8 +10,10 @@
     background-image: url("../images/Vintage/vintageBackground.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100em;
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -33,15 +35,15 @@
     box-sizing: border-box;
 }
 .left-content{
-    /* text-align: left; */
     margin-left: 100px;
 }
 .right-content{
-   width: 50%;
    height: auto;
    margin-right: 100px;
    margin-left: 0;
    text-align: center;
+   flex: 1;
+   max-width: 100%;
 }
 .right-content img{
     max-width: 100%;
@@ -62,11 +64,13 @@
     font-family:'Times New Roman', Times, serif;
     font-weight: 500;
     letter-spacing: 4px;
+    font-size: 50px;
 }
 .container{
     display: grid;
-    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
-    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-gap: 10px; 
 }
 .item-1{
     grid-area: 1 / 1 / 6 / 6;
