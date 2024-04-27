@@ -5,12 +5,135 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+header{
+    font-family: 'Garet', sans-serif;
+    background-color:  rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.19);
+}
+
+.header-middle a{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.header-top, .header-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: smaller;
+}
+
+.header-top {
+    justify-content: space-between;
+}
+
+.header-bottom {
+    justify-content: center;
+}
+
+.store-services {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0; 
+    padding: 0;
+}
+
+
+#search-button {
+    color: #F6E8C0;
+    border-color: #F6E8C0;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 40px;
+    margin-left: 10px;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.5s ease;
+}
+
+#searchField {
+    padding: 10px;
+    color: #F6E8C0;
+    border-color: transparent;
+    background-color: transparent;
+    height: 30px;
+    width: 0px; 
+    padding-right: 40px; 
+    box-sizing: border-box; 
+    transition: width 0.5s ease;
+}
+
+#searchField:focus {
+    outline: none;
+    border-radius: 20px;
+}
+
+#searchField::placeholder {
+    color: #F6E8C0;
+}
+
+#search {
+    background-image: url('../images/Landing/magnifying-glass1.png');
+    background-color: transparent;
+    border-color: transparent;
+    /* color: #F6E8C0; */
+    width: 30px;
+    height: 30px;
+    position: absolute; 
+    top: 50%; 
+    right: 5px;
+    transform: translateY(-50%); 
+    cursor: pointer; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+body{
+    background-color: #F6E8C0;
+}
+
+.logo{
+    color: #F6E8C0;
+    font-size: 1.3em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logo:hover{
+    color:#E47C21;
+}
+
+.navigation a{
+    color: #F6E8C0;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.navigation a:hover{
+    color:rgb(228, 124, 33);
+}
+
 .intro{
     position: relative;
     background-image: url("../images/Vintage/vintageBackground.jpg");
     background-size: cover;
     background-position: center;
-    height: 100em;
+    height: 110em;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -21,7 +144,7 @@
 .overlay{
     background-color: white;
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     height: 90%;
     width: 90%;
@@ -32,10 +155,12 @@
     width: 50%;
     padding: 20px;
     margin: 50px;
+    margin-top: 10px;
     box-sizing: border-box;
 }
 .left-content{
     margin-left: 100px;
+    position: sticky;
 }
 .right-content{
    height: auto;
