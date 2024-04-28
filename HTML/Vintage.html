@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vintage collection</title>
     <link rel="stylesheet" href="../CSS/Vintage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="../Javascript/Vintage.js"></script>
 </head>
 <body>
     <header>
@@ -51,7 +53,7 @@
         <div class="bg">
             <div class="overlay">
                 <div class="left-content">
-                    <div class="collection-info">
+                    <div class="collection-info" id="collection-info">
                         <h1>VINTAGE ELEGANCE</h1><br>
                         <p>Within whispers of history and echoes of bygone eras, lies 'Vintage Elegance'—a collection of timeless treasures, paying homage to opulence and sophistication, inspired by antiquity's allure.</p>
                         <br>
@@ -81,6 +83,38 @@
             </div>
         </div>
     </section>
+    <div class="filters">
+        <i class="fa-solid fa-sliders"></i>
+        <p>Filter by:</p>
+        <button id="dropdownButton">
+            <span>Price</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <button id="dropdownButton">
+            <span>Color</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <button id="dropdownButton">
+            <span>Material</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <button id="dropdownButton">
+            <span>Jewel type</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <button id="dropdownButton">
+            <span>Gender</span> 
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="sort">
+            <p id="count">5 items</p>
+            <span>Sort by:</span>
+            <button id="sortButton">
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+        </div>
+        <hr>
+    </div>
     <p>haya</p><br>
     <p>haya</p><br>
     <p>haya</p><br>

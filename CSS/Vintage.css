@@ -4,6 +4,8 @@
     margin: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 header{
     font-family: 'Garet', sans-serif;
@@ -103,7 +105,8 @@ header{
     background-repeat: no-repeat;
 }
 body{
-    background-color: #F6E8C0;
+    /* background-color: #F6E8C0; */
+    background-color: #efeae2;
 }
 
 .logo{
@@ -130,7 +133,7 @@ body{
 
 .intro{
     position: relative;
-    background-image: url("../images/Vintage/vintageBackground.jpg");
+    background-image: url("../images/Vintage/vintageBG.jpg");
     background-size: cover;
     background-position: center;
     height: 110em;
@@ -153,7 +156,7 @@ body{
 }
 .left-content, .right-content {
     width: 50%;
-    padding: 20px;
+    padding: 30px;
     margin: 50px;
     margin-top: 10px;
     box-sizing: border-box;
@@ -178,6 +181,7 @@ body{
     /* max-width: 100%; */
     text-align: justify;
     letter-spacing: 1px;
+    
 }
 .collection-info p{
     color: rgb(98, 98, 98);
@@ -191,6 +195,7 @@ body{
     letter-spacing: 4px;
     font-size: 50px;
 }
+
 .container{
     display: grid;
     grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
@@ -213,4 +218,86 @@ body{
 }
 .item-5{
     grid-area: 15 / 5 / 15 / 10;
+}
+/* ------------------------------------------------------------------ */
+
+.filters{
+    display: inline-block;
+    padding: 30px;
+    margin: 20px;
+    margin-left: 50px;
+
+}
+.filters p{
+    font-size: 20px;
+    /* color: rgb(69, 68, 68); */
+    /* color: rgb(102, 43, 16); */
+    color: black;
+    display: inline-block;
+}
+.fa-sliders{
+    color: black;
+    /* color: rgb(69, 68, 68); */
+    /* color: rgb(102, 43, 16); */
+}
+#dropdownButton {
+    font-weight: lighter;
+    font-size: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid rgb(179, 179, 179);
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+#dropdownButton span {
+    position: absolute; 
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: rgb(69, 68, 68);
+}
+
+#dropdownButton i {
+    position: absolute; 
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: rgb(141, 141, 141);
+}
+#count{
+    color: rgb(128, 127, 127);
+    font-weight: lighter;
+    font-size: 18px;
+}
+.sort {
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.sort p{
+    margin-right: 1125px;
+}
+
+.sort span {
+    color: rgb(128, 127, 127);
+}
+
+#sortButton {
+    color: rgb(128, 127, 127);
+    background-color: #efeae2;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+}
+hr{
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
 }
