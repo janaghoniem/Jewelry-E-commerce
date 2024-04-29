@@ -1,65 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Orders.css">
-    <link rel="stylesheet" href="product.css">
-    <link rel="stylesheet" href="main.css">
-    <script src="product.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSS/Orders.css">
+  <link rel="stylesheet" href="../CSS/product.css">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <script src="../Javascript/product.js"></script>
+  <script src="../Javascript/landing-script.js"></script>
+  <script src="../Javascript/Orders.js"></script>
 </head>
+
 <body>
-    
+
   <header>
-    <div class="header1">
-        <h2 class="logo">Brand Name</h2>
+    <div class="header-top">
+      <div class="store-services">
+        <nav class="navigation">
+          <a href="#">Stores</a>
+          <a href="#">Users</a>
+          <a href="#">Contacts</a>
+        </nav>
+        <div class="search-button" id="search-button">
+          <input type="text" id="searchField" placeholder="Search">
+          <button id="search">
+            <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+          </button>
+        </div>
+      </div>
+      <div class="user-data">
+        <nav class="navigation">
+          <a href="#">Newsletter</a>
+          <a href="#">My Account</a>
+          <a href="#">My Wishlist</a>
+          <a href="#">Shopping Bag</a>
+        </nav>
+      </div>
     </div>
+    <div class="header-middle"><a href="#main" class="logo">Logo-Here</a></div>
+    <div class="header-bottom">
+      <nav class="navigation">
+        <a href="../HTML/main.html">Home</a>
+        <a href="#section-text1">Collections</a>
+        <a href="product.html">Products</a>
+        <a href="Orders.html">Statistics</a>
+        <a href="#">Reviews</a>
+        <a href="#">Customer Support</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="navigation">
-        <a href="main.html" >Home</a>
-        <a href="">Collections</a>
-        <a href="product.html">All Products</a>
-        <a href="Orders.html" class="active">Orders</a>
-        <a href="">Customer Support</a>
-        <a href="">Reviews</a>
-    </nav>
-</header>
+  <div class="container">
 
-        <div class="container">
-           
-            <ul class="responsive-table">
-              <li class="table-header">
-                <div class="col col-1">Order Id</div>
-                <div class="col col-2">Customer Name</div>
-                <div class="col col-3">Amount Due</div>
-                <div class="col col-4">Order Status</div>
-              </li>
-              <li class="table-row">
-                <div class="col col-1" data-label="Job Id">42235</div>
-                <div class="col col-2" data-label="Customer Name">John Doe</div>
-                <div class="col col-3" data-label="Amount">$350</div>
-                <div class="col col-4" data-label="Payment Status">Delivered</div>
-              </li>
-              <li class="table-row">
-                <div class="col col-1" data-label="Job Id">42442</div>
-                <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
-                <div class="col col-3" data-label="Amount">$220</div>
-                <div class="col col-4" data-label="Payment Status">Preparing</div>
-              </li>
-              <li class="table-row">
-                <div class="col col-1" data-label="Job Id">42257</div>
-                <div class="col col-2" data-label="Customer Name">John Smith</div>
-                <div class="col col-3" data-label="Amount">$341</div>
-                <div class="col col-4" data-label="Payment Status">Pending</div>
-              </li>
-              <li class="table-row">
-                <div class="col col-1" data-label="Job Id">42311</div>
-                <div class="col col-2" data-label="Customer Name">John Carpenter</div>
-                <div class="col col-3" data-label="Amount">$115</div>
-                <div class="col col-4" data-label="Payment Status">Delivered</div>
-              </li>
-            </ul>
-          </div>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Order Id</div>
+        <div class="col col-2">Customer Name</div>
+        <div class="col col-3">Total Amount</div>
+        <div class="col col-4">Ordered</div>
+        <div class="col col-5">Status</div>
+      </li>
+      <li onclick="toggleExpand()" class="table-row">
+        <div class="col col-1" data-label="Job Id">42235</div>
+        <div class="col col-2" data-label="Customer Name">John Doe</div>
+        <div class="col col-3" data-label="Amount">$350</div>
+        <div class="col col-4" data-label="Payment Status">Ring <br> Necklace</div>
+        <div class="col col-5" data-label="Payment Status">Delivered</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42442</div>
+        <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+        <div class="col col-3" data-label="Amount">$220</div>
+        <div class="col col-4" data-label="Payment Status">Ring <br> Necklace</div>
+        <div class="col col-5" data-label="Payment Status">Preparing</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42257</div>
+        <div class="col col-2" data-label="Customer Name">John Smith</div>
+        <div class="col col-3" data-label="Amount">$341</div>
+        <div class="col col-4" data-label="Payment Status">Ring <br> Necklace</div>
+        <div class="col col-5" data-label="Payment Status">Pending</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42311</div>
+        <div class="col col-2" data-label="Customer Name">John Carpenter</div>
+        <div class="col col-3" data-label="Amount">$115</div>
+        <div class="col col-4" data-label="Payment Status">Ring <br> Necklace</div>
+        <div class="col col-5" data-label="Payment Status">Delivered</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42671</div>
+        <div class="col col-2" data-label="Customer Name">Amy John</div>
+        <div class="col col-3" data-label="Amount">$115</div>
+        <div class="col col-4" data-label="Payment Status">Ring <br> Necklace</div>
+        <div class="col col-5" data-label="Payment Status">On the way</div>
+      </li>
+    </ul>
+  </div>
 </body>
+
 </html>
