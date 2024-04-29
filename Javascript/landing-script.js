@@ -119,16 +119,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     //categories hovering
     document.querySelectorAll('.categories div').forEach(item => {
+        const img = item.querySelector('.img img');
+        const category = item.className.split(' ')[0];
+    
+        //hover lel entire div
         item.addEventListener('mouseenter', function() {
-            const img = this.querySelector('img');
-            const category = this.className.split(' ')[0];
-            img.src = `../images/Landing/${category}2.jpg`;
+            img.src = `../images/Landing/exp/${category}2.jpg`;
         });
     
-        item.addEventListener('mouseleave', function() {
-            const img = this.querySelector('img');
-            const category = this.className.split(' ')[0];
-            img.src = `../images/Landing/${category}1.jpg`;
+        item.addEventListener('mouseout', function() {
+            img.src = `../images/Landing/exp/${category}1.png`;
         });
+    
+        //hover lel image nafsaha
+        const imgDiv = item.querySelector('.img');
+        if (imgDiv) {
+            img.addEventListener('mouseenter', function() {
+                img.src = `../images/Landing/exp/${category}2.jpg`;
+            });
+    
+            img.addEventListener('mouseout', function() {
+                img.src = `../images/Landing/exp/${category}1.jpg`;
+            });
+        }
     });
 });
