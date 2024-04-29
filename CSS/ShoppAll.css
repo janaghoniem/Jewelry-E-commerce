@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Bulgari Type", "Futura";
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #efeae2;
+  /* background-color: #1c0a00; */
+
+}
+
+/*----------------------------------------------------------- header------------------------------------------------ */
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3a2d2d;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #9b3900;
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #9b3900;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  /* Distribute items evenly along the flex container */
+  align-items: center;
+  /* Center items vertically */
+  background-color: transparent;
+}
+
+#left-nav,
+#right-nav,
+#middle-nav {
+  display: flex;
+  /* Use flexbox for the left and right navigation */
+  align-items: center;
+  /* Center items vertically */
+}
+
+#left-nav {
+  margin-right: 100px;
+
+
+}
+
+#right-nav {
+  margin-left: 100px;
+
+}
+
+#middle-nav {
+  flex-grow: 1;
+  /* Allow the middle navigation to grow and take up remaining space */
+  text-align: center;
+  /* Center text horizontally */
+  margin-right: 115px;
+  margin-left: 115px;
+  font-size: 20px;
+
+}
+
+/* #cat-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  margin: 20px;
+  text-decoration: none;
+
+} */
+#cat-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  margin: 20px auto;
+  /* Center the navigation bar horizontally */
+  margin-bottom: 0px;
+  padding: 0;
+  /* Remove default padding */
+  list-style: none;
+  /* Remove default list style */
+  width: 50%;
+  /* Set a fixed width for the navigation bar */
+  font-size: 19px;
+}
+
+#cat-nav li {
+  margin: 0 1px;
+  /* Adjust margin between list items */
+}
+
+#cat-nav li a {
+  text-decoration: none;
+  /* Remove underline from links */
+  color: black;
+  /* Set link color */
+}
+
+#line {
+  width: 100%;
+  /* Set the width of the line to fill the entire width of the page */
+  height: 1px;
+  /* Set the height of the line */
+  background-color: #828080;
+  /* Set the color of the line */
+  margin-top: 15px;
+}
+
+
+/*------------------------------------------------- shop products------------------------------------------------------ */
+
+#product1 {
+  text-align: center;
+
+
+}
+
+#product1 .pro-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 73%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+#product1 .pro {
+  width: 25%;
+  /* min-width: 250px; */
+  border: 1px solid#efeae2;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 px;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#product1 .big {
+  width: 50%;
+  height: 50%;
+  flex-wrap: wrap;
+}
+
+/* #product1 .pro img {
+  width: 100%;
+  max-width: 250px; 
+  margin: 0px;
+} */
+
+#product1 .pro.des {
+  text-align: start;
+  margin-top: 0px;
+}
+
+#product1 .pro .des h5 {
+
+  color: #1a1a1a;
+  font-size: 20px;
+
+
+}
+
+#product1 .pro .des i {
+  font-size: 12px;
+  color: rgb(243, 181, 25)
+}
+
+#product1 .pro .des h4 {
+
+  font-size: 20px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#product1 .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: transparent;
+  font-weight: 500;
+  color: #9b3900;
+  /* border: 1px solid #bbae99; */
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  font-family: 'FontAwesome';
+  text-align: center;
+
+
+}
+
+#product1 .pro .cart:hover {
+  box-shadow: #beb6aa;
+
+}
+
+#product1 .pro .des h5 {
+  line-height: 1.5;
+}
+/* ------------------------cat navbar---------------------------------------------------- */
+#category {
+  padding: 40px 190px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#category .fe-box {
+  width: 150px;
+  text-align: center;
+  padding: 0px 0px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  /* border: 1px solid #828080;
+  border-radius: 4px; */
+  margin: 0;
+}
+#category .fe-box:hover{
+box-shadow: 10px 10px 54px rgba(20, 19, 33, 0.1);
+}
+#category .fe-box h6{
+  padding:9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color:#9b3900;
+  background-color:transparent; 
+  font-size: 20px;
+}
+
+#category .fe-box img{
+  width:100%;
+  margin-bottom: 10px;
+}
+.title{
+  text-align: center;
+}
+/* -----------------------------------------------------------------filter bar-------------------------------------------------------------------*/
+.filter-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+.filter-bar label {
+  margin-right: 10px;
+}
+
+.filter-bar select, .filter-bar button {
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 60px; /* Add margin to create space between elements */
+}
+
+.filter-bar select {
+  width: 150px;
+}
+
+.filter-bar button {
+  background-color:  #9b3900;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-bar button:hover {
+  background-color: #45a049;
+}
+.filter-bar select {
+  width: 150px;
+  background-color: transparent; /* Set the background color to transparent */
+}
+
+.filter-bar button {
+  /* background-color: #4CAF50; */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* ---------------------------------------------------footer -------------------------------------------------*/
