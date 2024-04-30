@@ -1,23 +1,28 @@
 @import url(https://db.onlinewebfonts.com/c/2e492ac67105d56ef337489b56a86486?family=Cooper+BT+W03+Md);
 @import url('https://fonts.cdnfonts.com/css/garet');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 
 * {
+    font-family: "Nunito Sans", 'PT Sans','Didact Gothic','Garet', sans-serif;
     font-weight: 100;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    transition: all .3s cubic-bezier(.39,.575,.565,1);
+    -webkit-font-smoothing: antialiased;
 
 }
 
 body {
     background-color: #3A1B14;
 }
-
-header {
-    font-family: 'Garet', sans-serif;
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
+header{
+    /* background-color:  rgba(0, 0, 0, 0.1); */
+    /* backdrop-filter: blur(4px); */
     width: 100%;
     position: fixed;
     z-index: 999;
@@ -26,17 +31,25 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 50px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.19);
+    text-transform: uppercase;
+    /* border-bottom: 2px solid rgba(0, 0, 0, 0.19); */
 }
 
-.header-middle a {
+header:hover {
+    background-color: white;
+}
+
+header:hover * {
+    color: black;
+}
+
+.header-middle a{
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
     margin: 8px 0;
 }
 
-.header-top,
-.header-bottom {
+.header-top, .header-bottom {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -54,10 +67,10 @@ header {
 
 .store-services {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row;    
+    justify-content: space-between; 
     align-items: center;
-    margin: 0;
+    margin: 0; 
     padding: 0;
 }
 
@@ -69,7 +82,7 @@ header {
     background-color: rgb(0, 0, 0, 0.3);
     width: 40px;
     margin-left: 10px;
-    position: relative;
+    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,9 +95,9 @@ header {
     border-color: transparent;
     background-color: transparent;
     height: 30px;
-    width: 0px;
-    padding-right: 40px;
-    box-sizing: border-box;
+    width: 0px; 
+    padding-right: 40px; 
+    box-sizing: border-box; 
     transition: width 0.5s ease;
 }
 
@@ -104,45 +117,35 @@ header {
     /* color: #F6E8C0; */
     width: 30px;
     height: 30px;
-    position: absolute;
-    top: 50%;
+    position: absolute; 
+    top: 50%; 
     right: 5px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    background-size: contain;
+    transform: translateY(-50%); 
+    cursor: pointer; 
+    background-size: contain; 
     background-repeat: no-repeat;
 }
 
-/* ICON ISN'T WORKING CHECK WHY */
-/* #search i {
-    font-size: 8em;
-    color: #F6E8C0;
-} */
-
-/* body{
-    background-color:#3A1B14;
-} */
-
-.logo {
+.logo{
     color: #F6E8C0;
     font-size: 1.3em;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-.logo:hover {
-    color: #E47C21;
+.logo:hover{
+    color:#E47C21;
 }
 
-.navigation a {
+.navigation a{
     color: #F6E8C0;
     font-size: 1.1em;
     text-decoration: none;
     padding-left: 20px;
 }
 
-.navigation a:hover {
-    color: rgb(228, 124, 33);
+.navigation a:hover{
+    color:rgb(228, 124, 33);
 }
 
 

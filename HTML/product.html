@@ -15,24 +15,99 @@
 <body>
    
   <header>
-    <div class="header1">
-        <h2 class="logo">Brand Name</h2>
+    <div class="header-top">
+        <div class="store-services">
+            <nav class="navigation">
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Stores
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-bell-concierge"></i>
+                    Services
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-headset"></i>
+                    Contacts
+                </a>
+            </nav>
+            <div class="search-button" id="search-button">
+                <input type="text" id="searchField" placeholder="Search">
+                <button id="search">
+                    <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                </button>
+            </div>
+        </div>
+        <div class="user-data">
+            <nav class="navigation">
+                <a href="#">
+                    <i class="fa-regular fa-envelope"></i>
+                    Newsletter
+                </a>
+                <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    My Account
+                </a>
+                <a href="#">
+                    <i class="fa-regular fa-heart"></i>
+                    My Wishlist
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    Shopping Bag
+                </a>
+            </nav>
+        </div>
     </div>
-
-    <nav class="navigation">
-        <a href="main.html">Home</a>
-        <a href="">Collections</a>
-        <a href="" class="active">All Products</a>
-        <a href="Orders.html">Orders</a>
-        <a href="">Customer Support</a>
-        <a href="">Reviews</a>
-    </nav>
+    <div class="header-middle"><a href="#main" class="logo">Logo-Here</a></div>
+    <div class="header-bottom">
+        <nav class="navigation">
+        <a href="../HTML/main.html">Home</a>
+        <a href="#">Collections </a>
+        <a href="../HTML/product.html">Products</a>
+        <a href="../HTML/Orders.html">Orders</a>
+        <a href="">Statistics</a>
+        <a href="#">Reviews</a>
+        <a href="#">Customer Support</a>
+        <!-- <a href="#">Earrings</a>
+        <a href="#">Necklaces</a>
+        <a href="#">Rings</a>
+        <a href="#">Head Pieces</a> -->
+        </nav>
+    </div>
 </header>
   <div class="cards">
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="../images/img4.jpg" />
+        <img class="card__image" src="../images/Admin/img4.jpg" />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+          Product Name
+          <small>Collection:</small>
+        </h2>
+      </div>
+      <div class="card-flap flap1">
+        <div class="card-description">
+          This is where product description will be displayed, added and edited by the admin
+        </div>
+        <div class="card-flap flap2">
+          <div class="card-actions">
+            <a href="edit-product.html" class="btn">Edit</a>
+            <a href="edit-product.html" class="btn">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="../images/Admin/img6.jpg" />
       </div>
       <div class="card-title">
         <a href="#" class="toggle-info btn">
@@ -58,33 +133,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="../images/img6.jpg" />
-      </div>
-      <div class="card-title">
-        <a href="#" class="toggle-info btn">
-          <span class="left"></span>
-          <span class="right"></span>
-        </a>
-        <h2>
-          Product Name
-          <small>Collection:</small>
-        </h2>
-      </div>
-      <div class="card-flap flap1">
-        <div class="card-description">
-          This is where product description will be displayed, added and edited by the admin
-        </div>
-        <div class="card-flap flap2">
-          <div class="card-actions">
-            <a href="edit-product.html" class="btn">Edit</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card__image-holder">
-        <img class="card__image" src="../images/img5.jpg" alt="mountain" />
+        <img class="card__image" src="../images/Admin/img5.jpg" alt="mountain" />
       </div>
       <div class="card-title">
         <a href="#" class="toggle-info btn">
@@ -110,7 +159,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="../images/img3.jpg" />
+        <img class="card__image" src="../images/Admin/img3.jpg" />
       </div>
       <div class="card-title">
         <a href="#" class="toggle-info btn">
@@ -136,7 +185,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="../images/img2.jpg"  />
+        <img class="card__image" src="../images/Admin/img2.jpg"  />
       </div>
       <div class="card-title">
         <a href="#" class="toggle-info btn">
@@ -162,7 +211,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="../images/img1.jpg"  />
+        <img class="card__image" src="../images/Admin/img1.jpg"  />
       </div>
       <div class="card-title">
         <a href="#" class="toggle-info btn">
@@ -188,7 +237,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="../images/img8.jpg" />
+        <img class="card__image" src="../images/Admin/img8.jpg" />
       </div>
       <div class="card-title">
         <a href="#" class="toggle-info btn">
@@ -214,7 +263,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="../images/img9.jpg" />
+        <img class="card__image" src="../images/Admin/img9.jpg" />
       </div>
       <div class="card-title">
         <a href="#" class="toggle-info btn">
@@ -240,7 +289,7 @@
 
     <div class="card">
       <div class="card__image-holder">
-        <img class="card__image" src="../images/img10.jpg" />
+        <img class="card__image" src="../images/Admin/img10.jpg" />
       </div>
       <div class="card-title">
         <a href="#" class="toggle-info btn">
@@ -264,6 +313,30 @@
       </div>
     </div>
 
+    <div class="card">
+      <div class="card__image-holder">
+        <img class="card__image" src="../images/Admin/img10.jpg" />
+      </div>
+      <div class="card-title">
+        <a href="#" class="toggle-info btn">
+          <span class="left"></span>
+          <span class="right"></span>
+        </a>
+        <h2>
+          Add Product
+          <!-- <small>Collection:</small> -->
+        </h2>
+      </div>
+      <div class="card-flap flap1">
+        <div class="card-description">
+         Click on the add button to add a product
+        </div>
+        <div class="card-flap flap2">
+          <div class="card-actions">
+            <a href="edit-product.html" class="btn">Add</a>
+          </div>
+        </div>
+      </div>
   </div>
 
 
