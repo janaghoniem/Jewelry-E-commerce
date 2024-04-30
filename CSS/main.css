@@ -202,7 +202,7 @@ section {
 .content-container {
     display: flex;
     align-items: center;
-    margin-top: 90px;
+    padding-top: 90px;
     /* position: relative; */
     /* z-index:999; */
 }
