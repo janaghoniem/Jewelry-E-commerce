@@ -1,5 +1,5 @@
 body {
-	background: url(../images/edit-background.jpg) no-repeat;
+	background: url(../images/Admin/edit-background.jpg) no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 
@@ -22,24 +22,32 @@ textarea {
 	display: flex;
 	background-color: white;
 	border-radius: 8px;
-	margin-top:20px;
-	margin-left:30%;
-	width: 680px;
-	height: 600px;
-	max-width: 680px;
-	max-height: 600px;
+	transform:translateY(25%);
+	/* margin-top:20px; */
+	/* padding-top:150px; */
+	margin-left:25%;
+	width: 760px;
+	height: 620px;
+	max-width: 760px;
+	max-height: 620px;
 	min-height: 600px;
 	min-width: 680px;
 }
-
+.form-title{
+	padding-top:20px;
+	padding-bottom:100px;
+}
 .cards {
+	transform:translateY(-22%);
+	transform:translateX(-25%);
 	flex: 1;
-	padding-right:50px;
-	padding-left:10px;
+	padding-right:30px;
+	
 }
 
 .form {
 	flex: 1;
+	padding-top:20%;
 }
 
 

@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: #3A1B14;
+    background-color: #FEF8F1;
 }
 header{
     /* background-color:  rgba(0, 0, 0, 0.1); */
@@ -159,7 +159,7 @@ header:hover * {
 
     transform: translateY(-200%);
     padding-left: 200px;
-    color: #F6E8C0;
+    color: black;
     font-size: 1.3em;
     text-transform: uppercase;
 }
@@ -169,7 +169,7 @@ header:hover * {
     transform: translateY(-80%);
     padding-left: 200px;
     padding-top: 110px;
-    color: #F6E8C0;
+    color: black;
     font-size: 3em;
     text-transform: uppercase;
 

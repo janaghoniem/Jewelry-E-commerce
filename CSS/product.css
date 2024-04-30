@@ -7,6 +7,9 @@ body {
   color: #4f585e;
   font-family: 'Source Sans Pro', sans-serif;
   text-rendering: optimizeLegibility;
+  /* background: url(../images/Admin/background.jpeg) no-repeat; */
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 a.btn {
