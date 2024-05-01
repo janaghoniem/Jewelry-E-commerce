@@ -2,14 +2,18 @@ body,
 html {
 	height: 100%;
 	margin: 0;
-	/* background: #56665A; */
-	background: url(../images/Admin/chat-background.jpeg) no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+	background: #56665A;
+	/* background: url(../images/Admin/chat-background.jpeg) no-repeat; */
+	/* background-size: cover;
+	background-attachment: fixed; */
+	/* background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+	background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); */
 	
 }
 .container-fluid{
-	padding-top:150px;
+	height:100%;
+	padding-top:180px;
+	background-color:#56665A;
 }
 .chat {
 	margin-top: auto;
