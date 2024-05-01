@@ -7,7 +7,7 @@ body {
   color: #4f585e;
   font-family: 'Source Sans Pro', sans-serif;
   text-rendering: optimizeLegibility;
-  /* background: url(../images/Admin/background.jpeg) no-repeat; */
+  background: url(../images/Admin/WALLPAPER.jpeg) no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -40,9 +40,9 @@ a.btn:active {
 }
 
 div.cards {
-  /* margin: 80px auto; */
+  margin: 0 auto;
   /* margin-left:10%; */
-  margin-left: 150px;
+  /* margin-left: 150px; */
   /* margin-right:auto; */
   padding-top: 160px;
   max-width: 960px;
