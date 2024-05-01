@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //automatically alternate between slides
     
     //categories hovering
-    document.querySelectorAll('.categories div').forEach(item => {
+    document.querySelectorAll('.categories-container div').forEach(item => {
         const img = item.querySelector('.img img');
         const category = item.className.split(' ')[0];
     
@@ -208,4 +208,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    const images = document.querySelectorAll('.collection-img'); // Note the dot before 'collection'
+    images.forEach(image => console.log(image.offsetWidth));
+    images.forEach(image => console.log("height" + image.offsetHeight));
+
+
 });

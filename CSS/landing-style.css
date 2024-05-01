@@ -3,10 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/futura-pt');
+
 
 
 *{
-    font-family: "Nunito Sans", 'PT Sans','Didact Gothic','Garet', sans-serif;
+    font-family: 'Nunito Sans', 'PT Sans','Didact Gothic','Garet', sans-serif;
     font-weight: 100;
     padding: 0px;
     margin: 0px;
@@ -76,6 +78,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 .navigation a{
     color: #F6E8C0;
     font-size: 1.1em;
+    font-weight: 300;
     text-decoration: none;
     padding-left: 20px;
 }
@@ -251,6 +254,43 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     overflow: hidden;
 }
 
+.main h1 {
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    font-family: 'Futura PT';
+    text-transform: uppercase;
+    color:#F6E8C0;
+}
+
+.main-text {
+    margin-top: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    border: .0625rem solid #FFFFFF;
+    background-color: transparent;
+    color: #fff;
+    font-family: futura-pt, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .0625rem;
+    line-height: 1.625rem;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.875rem;
+    text-transform: uppercase;
+    transition: background-color ease-in-out .2s;
+    text-decoration: none;
+}
+
 #video-background {
     position: absolute;
     top: 0;
@@ -351,10 +391,18 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     display: none;
 }
 
-.categories {
+.categories-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.categories {
+    background-image: url('../images/Landing/bg2.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .img {
@@ -370,7 +418,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 }
 
 .categories div {
-    margin: 30px 0px;
+    margin: 10px 5px;
     text-align: center;
     cursor: pointer;
 }
@@ -386,20 +434,81 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     margin-top: -25px;
 }
 
+.categories h1 {
+    color: white;
+    font-family: 'Futura PT';
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
 .collections {
-    height: 100px;
-}
-
-.collection{
+    background-color: #F6E8C0;
     width: 100%;
-    height: 25%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.indian-img {
+.collections-container {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.collections div {
+    margin: 0 10px;
+}
+
+.collection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 303px;
+    height: 689px; 
+}
+
+.collection-img {
+    width: 100%;
+    height: 100%; 
     object-fit: cover;
-    height: 25%;
-    width: 100%;
+    transition: transform 0.3s ease;
 }
 
+.collection p {
+    position: relative; 
+    text-align: center;
+    font-family: 'Futura PT';
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 39px;
+    margin-top: -280px;
+}
 
+.indian p {
+    color: #CD711E;
+}
 
+.egyptian p {
+    color: #9F978C;
+}
+
+.vintage p {
+    color: #F9D199;
+}
+
+.middle-eastern p {
+    color: #F8EDB0;
+}
+
+/* .collection:hover .collection-img {
+    transform: scale(1.1); 
+} */
