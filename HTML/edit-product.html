@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit product</title>
-    <link rel="stylesheet" href="../CSS/edit-product.css">
+    <link rel="stylesheet" href="../CSS/edit-product.css" >
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../Javascript/landing-script.js"></script>
@@ -78,80 +78,7 @@
             </nav>
         </div>
     </header>
-    <div class="container">
-        <div class="cards">
-
-            <div class="card">
-                <div class="card__image-holder">
-                    <img class="card__image" />
-                    <div id="preview"></div>
-                </div>
-                <div class="card-title">
-
-                    <h2 id="productName">
-                        Card title
-                        <small>Image from unsplash.com</small>
-                    </h2>
-                    <div class="card-description">
-                        This grid is an attempt to make something nice that works on touch devices. Ignoring hover
-                        states when they're not available etc.
-                    </div>
-                    <div class="card-actions">
-                        <a href="product.html" class="btn">Save</a>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-            <form>
-                <div class="form-structure">
-                    <div class="edit">
-                        <h2 class="form-title" id="edit"><span>continue</span> editing</h2>
-                        <div class="form-holder">
-                            <input type="text" class="input" placeholder="Product Name">
-                            <input type="number" class="input" placeholder="price" min="1">
-                            <select name="Collections" id="Collections">
-                                <option value="" disabled selected>Belongs to</option>
-                                <option value="">Collection 1</option>
-                                <option value="">Collection 2</option>
-                                <option value="">Collection 3</option>
-                                <option value="">Collection 4</option>
-                            </select>
-                            <textarea class="description" placeholder="Change or add Description"></textarea>
-                        </div>
-                        <div class="row">
-                            <label><br>Upload image</label>
-                            <div class="uploadOuter">
-                                <label for="uploadFile" class="btn btn-primary">Upload Image</label>
-                                <strong>OR</strong>
-                                <span class="dragBox">
-                                    Drag and Drop image here
-                                    <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
-                                        id="uploadFile" />
-                                </span>
-                            </div>
-                            <div>
-                                <button class="submit-btn">Edit</button>
-                            </div>
-                            <!-- <div class="confirm-slide">
-                    <div class="slide">
-                        <h2 class="confirm">
-                            <span>are you</span> sure
-                        </h2>
-                        <div class="form-holder">
-                            <input type="email" class="input" placeholder="Email" />
-                            <input type="password" class="input" placeholder="Password" />
-                        </div>
-                        <button class="submit-btn">Log in</button>
-                    </div>
-                </div> -->
-                        </div>
-                        </div>
-                    </div>
-
-            </form>
-        </div>
+   
 </body>
 
 </html>
