@@ -1,4 +1,67 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    //nav bar scroll
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const headerTop = document.getElementById('header-top');
+        const headerMiddle = document.getElementById('header-middle');
+        const middleDiv = document.getElementById('top-move-on-scroll');
+        const headerBottom = document.getElementById('header-bottom');
+        const logo = document.getElementById('logo');
+        const searchButton = document.getElementById('search-button');
+        const headerTopParagraphs = headerTop.querySelectorAll('p');
+    
+        if (window.scrollY > 0) {
+            header.classList.remove('header-unscrolled');
+            header.classList.add('header-scrolled');
+    
+            middleDiv.innerHTML = headerTop.innerHTML;
+            headerTop.style.display = 'none';
+    
+            middleDiv.classList.remove('header-top-unscrolled');
+            middleDiv.classList.add('header-top-scrolled');
+    
+            headerMiddle.style.justifyContent = 'space-between';
+    
+            logo.classList.remove('logo-unscrolled');
+            logo.classList.add('logo-scrolled');
+    
+            searchButton.classList.remove('search-button-unscrolled');
+            searchButton.classList.add('search-button-scrolled');
+    
+            headerTopParagraphs.forEach(paragraph => {
+                paragraph.style.display = 'none';
+            });
+    
+            headerBottom.classList.remove('header-bottom-unscrolled');
+            headerBottom.classList.add('header-bottom-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+            header.classList.add('header-unscrolled');
+    
+            middleDiv.innerHTML = '';
+            headerTop.style.display = 'flex';
+
+            middleDiv.classList.remove('header-top-unscrolled');
+            middleDiv.classList.remove('header-top-scrolled');
+    
+            headerMiddle.style.justifyContent = 'center';
+    
+            logo.classList.remove('logo-scrolled');
+            logo.classList.add('logo-unscrolled');
+    
+            searchButton.classList.add('search-button-unscrolled');
+            searchButton.classList.remove('search-button-scrolled');
+    
+            headerTopParagraphs.forEach(paragraph => {
+                paragraph.style.display = 'inline';
+            });
+    
+            headerBottom.classList.add('header-bottom-unscrolled');
+            headerBottom.classList.remove('header-bottom-scrolled');
+        }
+    });
+    
     // 7agat el search
     const searchButton = document.getElementById('search');
     const searchField = document.getElementById('searchField');
@@ -8,9 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // search functionality
     if (searchButton && searchField) { // fy reference error -  debugging statement
         searchButton.addEventListener('click', expandSearch);
+        console.log("clicked1");
     }
 
     function expandSearch() {
+        console.log("clicked2");
         if (buttonCount === 0) {
             searchDiv.style.width = '200px';
             searchField.style.width = '200px';
