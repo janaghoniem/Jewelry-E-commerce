@@ -209,9 +209,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    const images = document.querySelectorAll('.collection-img'); // Note the dot before 'collection'
-    images.forEach(image => console.log(image.offsetWidth));
-    images.forEach(image => console.log("height" + image.offsetHeight));
+    const images = document.querySelectorAll('.img'); // Note the dot before 'collection'
+    images.forEach(image => console.log(image.offsetHeight));
 
 
 });
