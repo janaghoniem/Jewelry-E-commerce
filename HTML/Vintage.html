@@ -10,31 +10,55 @@
 </head>
 <body>
     <header>
-        <div class="header-top">
+        <div class="header-top-unscrolled" id="header-top">
             <div class="store-services">
                 <nav class="navigation">
-                    <a href="#">Find a Store</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact Us</a>
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Find a Store</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                        <p>Services</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-headset"></i>
+                        <p>Contact Us</p>
+                    </a>
                 </nav>
-                <div class="search-button" id="search-button">
+                <div class="search-button-unscrolled" id="search-button">
                     <input type="text" id="searchField" placeholder="Search">
                     <button id="search">
-                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
             </div>
             <div class="user-data">
                 <nav class="navigation">
-                    <a href="#">Newsletter</a>
-                    <a href="#">My Account</a>
-                    <a href="#">My Wishlist</a>
-                    <a href="#">Shopping Bag</a>
+                    <a href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>Newsletter</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-user"></i>
+                        <p>My Account</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>My Wishlist</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>Shopping Bag</p>
+                    </a>
                 </nav>
             </div>
         </div>
-        <div class="header-middle"><a href="#main" class="logo">Logo-Here</a></div>
-        <div class="header-bottom">
+        <div class="header-middle-unscrolled" id="header-middle">
+            <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
+            <div id="top-move-on-scroll"></div>
+        </div>
+        <div class="header-bottom-unscrolled" id="header-bottom">
             <nav class="navigation">
             <a href="#">Collection A</a>
             <a href="#">Collection B</a>
@@ -53,12 +77,14 @@
         <div class="bg">
             <div class="overlay">
                 <div class="left-content">
+                    <div class="test">
                     <h1>VINTAGE ELEGANCE</h1><br>
                     <p>Within whispers of history and echoes of bygone eras, lies 'Vintage Elegance'—a collection of timeless treasures, paying homage to opulence and sophistication, inspired by antiquity's allure.</p>
                     <br>
                     <p>Journey through romanticism, where each piece narrates tales of grace and grandeur. Rich hues and weathered textures evoke ancient mystique, while intricate filigree and aged gemstones exude nostalgia, weaving beauty with craftsmanship.</p>
                     <br> 
                     <a href="#products"><button>View Collection</button></a>
+                    </div>  
                 </div>
                 <div class="right-content">
                     <div class="container">
@@ -95,28 +121,43 @@
         <div class="filters">
             <i class="fa-solid fa-sliders"></i>
             <p>Filter by:</p>
-            <button id="dropdownButton">
-                <span>Price</span> 
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <button id="dropdownButton">
-                <span>Color</span> 
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <button id="dropdownButton">
-                <span>Material</span> 
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <button id="dropdownButton">
-                <span>Jewel type</span> 
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <button id="dropdownButton">
-                <span>Gender</span> 
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
+            <div class="buttons-container">
+                <div class="priceButton">
+                    <label for="touch1"><span class="spann">Price<i class="fa-solid fa-chevron-down"></i></span></label>          
+                    <input type="checkbox" id="touch1"> 
+                    <ul class="slide1">
+                        <li>>3000</li> 
+                        <li>>2000</li>
+                        <li>>129999</li>
+                        <li>>88800</li>
+                    </ul>
+                </div>
+                <div class="priceButton">
+                    <label for="touch2"><span class="spann">Color<i class="fa-solid fa-chevron-down"></i></span></label>          
+                    <input type="checkbox" id="touch2"> 
+                    <ul class="slide2">
+                        <li>Red</li> 
+                        <li>White</li>
+                        <li>Green</li>
+                        <li>Black</li>
+                        <li>Blue</li>
+
+                    </ul>
+                </div>
+                <div class="priceButton">
+                    <label for="touch3"><span class="spann">Type<i class="fa-solid fa-chevron-down"></i></span></label>          
+                    <input type="checkbox" id="touch3"> 
+                    <ul class="slide3">
+                        <li>Sets</li> 
+                        <li>Necklaces</li>
+                        <li>Earrings</li>
+                        <li>Rings</li>
+                    </ul>
+                </div>
+            </div>
+            
             <div class="sort">
-                <p id="count">6 items</p>
+                <p id="count">0 items</p>
                 <span>Sort by:</span>
                 <button id="sortButton">
                     <i class="fa-solid fa-chevron-down"></i>
@@ -133,7 +174,7 @@
                     <div class="info">
                         <br><p>Gold dangle drop earring.</p><br>
                         <p>EGP 12,000</p><br><br>
-                        <button>Add to cart</button>
+                        <button onclick="showAlert()">Add to cart</button>
                     </div>
                 </div>
                 <div class="card1">
