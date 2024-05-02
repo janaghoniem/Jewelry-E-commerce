@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = "edit-product.html";
                 return;
             }
+            if (e.target.classList.contains("btn") && e.target.textContent === "Add") {
+                window.location.href = "add-product.html";
+                return;
+            }
             var isShowing = this.classList.contains("show");
 
             var showingCards = document.querySelectorAll(".cards.showing .card.show");

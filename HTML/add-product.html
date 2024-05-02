@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/product.css">
+    <script src="../Javascript/landing-script.js"></script>
+    <script src="../Javascript/product.js"></script>
+    <link rel="stylesheet" href="../CSS/edit-product.css">
+</head>
+<body>
+      <!-- Jana's amazing header  -->
+      <header>
+        <div class="header-top-unscrolled" id="header-top">
+            <div class="store-services">
+                <nav class="navigation">
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Stores</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                        <p>Services</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-headset"></i>
+                        <p>Contacts</p>
+                    </a>
+                </nav>
+                <div class="search-button-unscrolled" id="search-button">
+                    <input type="text" id="searchField" placeholder="Search">
+                    <button id="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="user-data">
+                <nav class="navigation">
+                    <a href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>Newsletter</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-user"></i>
+                        <p>My Account</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>My Wishlist</p>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>Shopping Bag</p>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="header-middle-unscrolled" id="header-middle">
+            <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
+            <div id="top-move-on-scroll"></div>
+        </div>
+        <div class="header-bottom-unscrolled" id="header-bottom">
+            <nav class="navigation">
+                <a href="main.html">Home</a>
+                <a href="">Collection</a>
+                <a href="product.html">Products</a>
+                <a href="Orders.html">Orders</a>
+                <a href="#">Statistics</a>
+                <a href="#">Reviews</a>
+                <a href="support.html">Customer Support</a>
+                <!-- <a href="#">Necklaces</a>
+                <a href="#">Rings</a>
+                <a href="#">Head Pieces</a> -->
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="cards">
+
+            <div class="card">
+                <div class="card__image-holder">
+                    <img class="card__image" />
+                    <div id="preview"></div>
+                </div>
+                <div class="card-title">
+                    <a href="#" class="toggle-info btn">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                    </a>
+                    <h2>
+                        Product Name
+                        <small>Collection:</small>
+                        <small>price:</small>
+                    </h2>
+                </div>
+                <div class="card-flap flap1">
+                    <div class="card-description">
+                        This is where product description will be displayed, added and edited by the admin
+                    </div>
+                    <div class="card-flap flap2">
+                        <div class="card-actions">
+                            <a href="#" class="btn">Save</a>
+                            <a href="#" class="btn">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="text">
+           Contact us Form
+        </div> -->
+        <form action="#">
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label for="">Product Name</label>
+                </div>
+                <div class="input-data">
+                    <input type="number" min="1000" required>
+                    <div class="underline"></div>
+                    <label for="">Price</label>
+                </div>
+            </div>
+            <div class="form-row">
+               
+                <!-- <div class="input-data">
+                 <input type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Email Address</label>
+              </div> -->
+                <!-- <div class="input-data">
+                 <input type="text" required>
+                 <div class="underline"></div>
+                 <label for="">Website Name</label>
+              </div> -->
+            </div>
+            <div class="form-row">
+                <div class="input-data textarea">
+                    <textarea rows="8" cols="80" required></textarea>
+                    <br />
+                    <div class="underline"></div>
+                    <label for="">Product Description</label>
+                    <br />
+
+                </div>
+                <select name="Collections" id="Collections">
+                    <option value="" disabled selected>Belongs to</option>
+                    <option value="">Collection 1</option>
+                    <option value="">Collection 2</option>
+                    <option value="">Collection 3</option>
+                    <option value="">Collection 4</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <!-- <label><br>Upload image</label> -->
+                <div class="uploadOuter">
+                    <label for="uploadFile" class="btn btn-primary">Upload Image</label>
+                    <strong>OR</strong>
+                    <span class="dragBox">
+                        Drag and Drop image here
+                        <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                            id="uploadFile" required />
+                    </span>
+                </div>
+            </div>
+            <div class="form-row submit-btn">
+                <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" value="Edit">
+                </div>
+            </div>
+        </form>
+    </div>
+   
+</body>
+</html>
