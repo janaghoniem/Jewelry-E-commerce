@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <script src="ShoppAll.js"></script>
     <nav id="header">
         <ul id="navbar">
             <div id="left-nav">
@@ -196,7 +195,7 @@
 
     <section id="display-grid">
         <div class="title">
-            <h1>Best   Selling   Products</h1>
+            <h1>Best Selling Products</h1>
         </div>
         <div class="grid-container">
             <div class="grid-item prod1">
@@ -205,6 +204,8 @@
                     <h5>silver Nicholas</h5>
                     <h4>$100</h4>
                 </div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <!-- <i class="fas fa-shopping-cart" id="cart-icon"></i> -->
             </div>
             <div class="grid-item prod2">
                 <img src="../images/ShopAll/imgVIN.jpg" height="300" width="250">
@@ -257,15 +258,17 @@
             </div>
         </div>
     </section>
-    <div class="cart-container">
-        <div class="cart-bar">
-            <i class="fas fa-shopping-cart" id="cart-icon"></i>
-            <span class="cart-count">0</span>
-        </div>
-        <div class="checkout-info">
-            <span class="checkout-text">Total:</span>
-            <span class="checkout-total">$0.00</span>
-            <button class="checkout-btn">Checkout</button>
+    <div class="sidebar hidden">
+        <div class="cart-container">
+            <div class="cart-bar">
+                <i class="fas fa-shopping-cart" id="cart-icon"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="checkout-info">
+                <span class="checkout-text">Total:</span>
+                <span class="checkout-total">$0.00</span>
+                <button class="checkout-btn">Checkout</button>
+            </div>
         </div>
     </div>
 </body>

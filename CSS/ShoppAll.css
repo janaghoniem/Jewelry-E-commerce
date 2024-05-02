@@ -24,7 +24,12 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
-
+  position: sticky;
+  top: 0;
+  background-color: #f1f1f1;
+  z-index: 100;
+  width: 100%;
+  padding: 10px;
 }
 
 #navbar li {
@@ -64,6 +69,7 @@ body {
   align-items: center;
   /* Center items vertically */
   background-color: transparent;
+  
 }
 
 #left-nav,
@@ -111,7 +117,7 @@ body {
 
   color: #1a1a1a;
   font-size: 20px;
-  margin: 0; 
+  margin: 0;
 
 }
 
@@ -129,7 +135,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   color: #088178;
-  margin: 0; 
+  margin: 0;
 }
 
 /* #cat-nav{
@@ -166,8 +172,8 @@ body {
 
 #line {
   width: 100%;
-  height: 1px;
-  background-color: #828080;
+  height: 0.5px;
+  background-color: #908f8f;
   margin-top: 15px;
 }
 
@@ -245,6 +251,22 @@ body {
 }
 
 /* -------------------------------------------Cart Container-------------------------------------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0; /* Position on the right side */
+  bottom: 0;
+  width: 200px; /* Adjust width as needed */
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-left: 1px solid #ccc; /* Change border side */
+  overflow-y: auto; 
+  transition: transform 0.3s ease;
+}
+.hidden {
+  transform: translateX(100%); /* Move sidebar out of viewport */
+}
+
 .cart-container {
   position: sticky;
   top: 50%;
@@ -301,7 +323,7 @@ body {
   /* border: 1px solid #828080;
   border-radius: 4px; */
   margin: 0;
-  background-color:transparent;
+  background-color: transparent;
 }
 
 #category .fe-box:hover {
@@ -334,7 +356,13 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 50px;
+  margin-left: 0px;
+  position: sticky;
+  top: 80;
+  background-color:#f1efed;
+  z-index: 100;
+  width: 100%;
+  padding: 10px;
 }
 
 .filter-bar label {
