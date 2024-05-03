@@ -94,9 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = Array.from(track.children);
     const nextButton = document.getElementById('carousel__button--right');
     const prevButton = document.getElementById('carousel__button--left');
-    const dotsNav = document.getElementById('carousel__nav');
-    const dots = Array.from(dotsNav.children);
-
+    
     //da in case el user 8ayar el size of the window
     const slideSize = slides[0].getBoundingClientRect();
     const slideWidth = slideSize.width;
@@ -119,11 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
         targetSlide.classList.add('current-slide');
     }
 
-    function updateDots(currentDot, targetDot) {
-        currentDot.classList.remove('current-slide');
-        targetDot.classList.add('current-slide');
-    }
-
     function hideShowArrows (slides, prevButton, nextButton, targetIndex) {
         if(targetIndex === 0)
         {
@@ -140,47 +133,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //move left, slide to the left
     prevButton.addEventListener('click', e => {
-        const currentDot = dotsNav.querySelector('.current-slide');
-        const prevDot = currentDot.previousElementSibling;
         const currentSlide = track.querySelector('.current-slide');
         const prevSlide = currentSlide.previousElementSibling;
         const prevIndex = slides.findIndex(slide => slide === prevSlide);
 
         moveToSlide(track, currentSlide, prevSlide);
-        updateDots(currentDot, prevDot);
         hideShowArrows(slides, prevButton, nextButton, prevIndex);
     });
 
     //move right, slide to the right
     nextButton.addEventListener('click', e => {
-        const currentDot = dotsNav.querySelector('.current-slide');
-        const nextDot = currentDot.nextElementSibling;
         const currentSlide = track.querySelector('.current-slide');
         const nextSlide = currentSlide.nextElementSibling;
         const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
         moveToSlide(track, currentSlide, nextSlide);
-        updateDots(currentDot, nextDot);
         hideShowArrows(slides, prevButton, nextButton, nextIndex);
     });
 
-
-    //click nav indicator
-    dotsNav.addEventListener('click', e => {
-        const targetDot = e.target.closest('button');
-
-        if(!targetDot) return;
-
-        const currentSlide = track.querySelector('.current-slide');
-        const currentDot = dotsNav.querySelector('.current-slide');
-        const targetIndex = dots.findIndex(dot => dot === targetDot)
-        const targetSlide = slides[targetIndex];
-        moveToSlide(track, currentSlide, targetSlide);
-        updateDots(currentDot, targetDot);
-        hideShowArrows(slides, prevButton, nextButton, targetIndex);
-    });
-
-    //automatically alternate between slides
     
     //categories hovering
     document.querySelectorAll('.item').forEach(item => {
@@ -206,57 +176,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const images = document.querySelectorAll('.slider .item');
-const slider_container = document.querySelector('.slider_container');
-const inner_slider = document.querySelector('.slider');
+// const images = document.querySelectorAll('.slider .item');
+// const slider_container = document.querySelector('.slider_container');
+// const inner_slider = document.querySelector('.slider');
 
-const prevBtn = document.querySelector('.leftBtn');
-const nextBtn = document.querySelector('.rightBtn');
+// const prevBtn = document.querySelector('.leftBtn');
+// const nextBtn = document.querySelector('.rightBtn');
 
-let current = 1;
-const imgSize = images[0].clientWidth
-// this will give us the width of one of the images (images have the same size)
-// but first we want to add ......
-// follow me
-// but we want the image with snow to be the first one
-// we want it to be the default
-inner_slider.style.transform = `translateX(${-imgSize}px)`;
+// let current = 1;
+// const imgSize = images[0].clientWidth
+// // this will give us the width of one of the images (images have the same size)
+// // but first we want to add ......
+// // follow me
+// // but we want the image with snow to be the first one
+// // we want it to be the default
+// inner_slider.style.transform = `translateX(${-imgSize}px)`;
 
-// we fixed that bug no let's add the overflow hidden and this project is finished
-// if you need help with explanation comment down below
-prevBtn.addEventListener('click', () => {
-    if (current <= 0) return;
-    inner_slider.style.transition = '200ms ease-in-out transform';
-    current--;
-    inner_slider.style.transform = `translateX(${-imgSize * current}px)`;
-})
-nextBtn.addEventListener('click', () => {
-    if (current >= images.length - 1) return;
-    inner_slider.style.transition = '200ms ease-in-out transform';
-    current++;
-    inner_slider.style.transform = `translateX(${-imgSize * current}px)`;
-})
+// // we fixed that bug no let's add the overflow hidden and this project is finished
+// // if you need help with explanation comment down below
+// prevBtn.addEventListener('click', () => {
+//     if (current <= 0) return;
+//     inner_slider.style.transition = '200ms ease-in-out transform';
+//     current--;
+//     inner_slider.style.transform = `translateX(${-imgSize * current}px)`;
+// })
+// nextBtn.addEventListener('click', () => {
+//     if (current >= images.length - 1) return;
+//     inner_slider.style.transition = '200ms ease-in-out transform';
+//     current++;
+//     inner_slider.style.transform = `translateX(${-imgSize * current}px)`;
+// })
 
-// when we get to the last image we want it to get to the first image ...
-inner_slider.addEventListener('transitionend', () => {
-    if (images[current].classList.contains('first_img')) {
-        // if we remove the transition
-        // it works but kinda not the way we want
-        // we want it to loop
-        inner_slider.style.transition = 'none';
-        current = images.length - 2;
-        inner_slider.style.transform = `translateX(${-imgSize * current}px)`;
-        // you can see it loops
-    }
-    if (images[current].classList.contains('last_img')) {
-        inner_slider.style.transition = 'none';
-        current = images.length - current;
-        inner_slider.style.transform = `translateX(${-imgSize * current}px)`;
-    }
-})
-// this happens because we click faster than the transition time
-// we can fix this
-// but there's a problem when we click fast
+// // when we get to the last image we want it to get to the first image ...
+// inner_slider.addEventListener('transitionend', () => {
+//     if (images[current].classList.contains('first_img')) {
+//         // if we remove the transition
+//         // it works but kinda not the way we want
+//         // we want it to loop
+//         inner_slider.style.transition = 'none';
+//         current = images.length - 2;
+//         inner_slider.style.transform = `translateX(${-imgSize * current}px)`;
+//         // you can see it loops
+//     }
+//     if (images[current].classList.contains('last_img')) {
+//         inner_slider.style.transition = 'none';
+//         current = images.length - current;
+//         inner_slider.style.transform = `translateX(${-imgSize * current}px)`;
+//     }
+// })
+// // this happens because we click faster than the transition time
+// // we can fix this
+// // but there's a problem when we click fast
 
 
 

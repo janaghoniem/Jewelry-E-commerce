@@ -5,6 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/futura-pt');
 
+/* FROM HAYA */
+@import url('https://fonts.cdnfonts.com/css/garet');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
 *{
@@ -308,10 +313,16 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     align-items: center;
 }
 
+.best-sellers-multiple-card-slide {
+    display: flex;
+    flex-direction: row;
+}
+
+
 .carousel {
     position: relative;
-    height: 60vh;
-    width: 100%;
+    height: 70vh;
+    width: 90%;
     /* overflow: hidden; */
 }
 
@@ -333,7 +344,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     list-style: none;
     position: relative;
     height: 100%;
-    transition: transform 0.25s ease;
+    transition: transform 0.5s ease;
 }
 
 .carousel__slide {
@@ -354,11 +365,11 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 }
 
 .carousel__button--left {
-    left: 40px;
+    margin-left: -50px;
 }
 
 .carousel__button--right {
-    right: 40px;
+    right: 10px;
 }
 
 .carousel__button i {
@@ -397,6 +408,75 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 .is-hidden {
     display: none;
 }
+
+
+/* CARDS FROM HAYA */
+.imge{
+    position: relative;
+    overflow: hidden;
+    width: 240px;
+    height: 300px;
+}
+.imge i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.imge i:hover{
+    transform: scale(1.1);
+    color: rgb(158, 2, 2);
+    font-weight: bolder;
+}
+.imge img:hover{
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+.card{
+    overflow: hidden;
+    position: relative;
+    width: 300;
+    width: fit-content;
+    margin-right: 20px;
+    margin-top: 3%;
+    height: 29em;
+}
+/* .card1:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width:max-content;
+} */
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+}
+
+.info p {
+    margin: 10px 0 0 5px;
+    font-weight: 600;
+}
+
+.info button{
+    padding: 3%;
+    width: 60%;
+    color: white;
+    background-color: black;
+    border: black 1px solid;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.info button:hover{
+    color: black;
+    background-color: white;
+}
+
+
 
 .categories-container {
     display: flex;
