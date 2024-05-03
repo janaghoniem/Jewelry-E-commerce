@@ -514,7 +514,7 @@ p {
     fill: currentcolor;
 }
 
-button {
+/* button {
     position: relative;
     background: transparent;
     border-radius: 8px;
@@ -528,6 +528,6 @@ button {
 
 button:hover {
     cursor: pointer;
-}
+} */
 
 /* End of product preview*/
