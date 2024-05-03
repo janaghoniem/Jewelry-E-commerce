@@ -69,6 +69,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 .navigation a{
     color: #F6E8C0;
     font-size: 1.1em;
+    font-weight: 300;
     text-decoration: none;
     padding-left: 20px;
 }

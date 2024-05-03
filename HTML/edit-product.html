@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit product</title>
-    <link rel="stylesheet" href="../CSS/edit-product.css" >
-    <link rel="stylesheet" href="../css/product.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/edit-product.css">
+    <link rel="stylesheet" href="../CSS/product.css">
     <script src="../Javascript/landing-script.js"></script>
-    <script src="../Javascript/product.js"></script>
+    <link rel="stylesheet" href="../CSS/edit-product.css">
     <script src="../Javascript/edit-product.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -81,115 +81,91 @@
       </div>
   </header>
 
-
   <div class="container">
-      <div class="cards">
+    <div class="cards">
 
-          <div class="card">
-              <div class="card__image-holder">
-                  <img class="card__image" />
-                  <div id="preview"></div>
-              </div>
-              <div class="card-title">
-                  <a href="#" class="toggle-info btn">
-                      <span class="left"></span>
-                      <span class="right"></span>
-                  </a>
-                  <h2 id="productName">
-                      Product Name
-                  </h2>
-                  <h4 id="productPrice">
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" />
+                <div id="preview"></div>
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2 id="productName">Product Name</h2>
+                <h4 id="productPrice">
                     <small>price:</small>
-                </h2>
+                </h4>
                 <h4 id="productCollection">
                     <small>Collection:</small>
-
-                </h2>
-              </div>
-              <div class="card-flap flap1">
-                  <div class="card-description" >
-                      <h4 id="productDescription">This is where product description will be displayed, added and edited by the admin</h2>
-                  </div>
-                  <div class="card-flap flap2">
-                      <div class="card-actions">
-                          <a href="#" class="btn">Save</a>
-                          <a href="#" class="btn">Delete</a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- <div class="text">
-         Contact us Form
-      </div> -->
-      <form name="Edit-form"  action="product.html" method="post">
-          <div class="form-row">
-              <!-- <div class="input-data">
-                  <input type="text"  id="productNameInput" onchange="update()">
-                  <div class="underline"></div>
-                  <label for="">Product Name</label>
-              </div> -->
-              <div class="input-data">
-                <input type="text" onchange="update()"  id="productNameInput" required>
+                </h4>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    <h4 id="productDescription">This is where product description will be displayed, added and
+                        edited by the admin</h4>
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">Save</a>
+                        <a href="#" class="btn">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form name="Edit-form" action="product.html" method="post">
+        <div class="form-row">
+            <div class="input-data">
+                <input type="text" onchange="update()" id="productNameInput" >
                 <div class="underline"></div>
                 <label for="">Product Name</label>
             </div>
-              <div class="input-data">
-                  <input type="number" onchange="updatePrice()" id="productPriceInput" min="1000" required>
-                  <div class="underline"></div>
-                  <label for="">Price</label>
-              </div>
-          </div>
-          <div class="form-row">
-             
-              <!-- <div class="input-data">
-               <input type="text" required>
-               <div class="underline"></div>
-               <label for="">Email Address</label>
-            </div> -->
-              <!-- <div class="input-data">
-               <input type="text" required>
-               <div class="underline"></div>
-               <label for="">Website Name</label>
-            </div> -->
-          </div>
-          <div class="form-row">
-              <div class="input-data textarea">
-                  <textarea rows="8" cols="80"  id="productDescriptionI" onchange="updateDescription()" required></textarea>
-                  <br />
-                  <div class="underline"></div>
-                  <label for="">Product Description</label>
-                  <br />
+            <div class="input-data">
+                <input type="number" onchange="updatePrice()" id="productPriceInput" min="1000" >
+                <div class="underline"></div>
+                <label for="">Price</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data textarea">
+                <textarea rows="8" cols="80" id="productDescriptionI" onchange="updateDescription()" ></textarea>
+                <div class="underline"></div>
+                <label for="">Product Description</label>
+            </div>
+            <select name="Collections" id="productCollectionInput" onchange="updateCollection()">
+                <option value="" disabled selected>Belongs to</option>
+                <option value="1">Collection 1</option>
+                <option value="2">Collection 2</option>
+                <option value="3">Collection 3</option>
+                <option value="4">Collection 4</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <div class="uploadOuter">
+                <label for="uploadFile" class="btn btn-primary">Upload Image</label>
+                <strong>OR</strong>
+                <span class="dragBox">
+                    Drag and Drop image here
+                    <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()" id="uploadFile"  />
+                </span>
+            </div>
+        </div>
+        <div class="form-row submit-btn">
+            <div class="input-data">
+                <div class="inner"></div>
+                <button class="btn1">Edit</button>
+            </div>
+        </div>
+    </form>
+</div>
 
-              </div>
-              <select name="Collections" id="productCollectionInput" onchange="updateCollection()">
-                  <option value="" disabled selected>Belongs to</option>
-                  <option value="1">Collection 1</option>
-                  <option value="2">Collection 2</option>
-                  <option value="3">Collection 3</option>
-                  <option value="4">Collection 4</option>
-              </select>
-          </div>
-          <div class="form-row">
-              <!-- <label><br>Upload image</label> -->
-              <div class="uploadOuter">
-                  <label for="uploadFile" class="btn btn-primary">Upload Image</label>
-                  <strong>OR</strong>
-                  <span class="dragBox">
-                      Drag and Drop image here
-                      <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
-                          id="uploadFile" required />
-                  </span>
-              </div>
-          </div>
-          <div class="form-row submit-btn">
-              <div class="input-data">
-                  <div class="inner"></div>
-                  <input type="submit" value="Edit">
-              </div>
-          </div>
-      </form>
-  </div>
+<div class="container2">
+    <h2>You left some empty fields, are you sure you dont want to chnange them</h2>
+    <button class="btn2">Continue editing</button>
+</div>
  
 </body>
 

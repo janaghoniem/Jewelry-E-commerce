@@ -23,13 +23,13 @@ function drop() {
 function update() {
     var x = document.getElementById('productNameInput').value;
     document.getElementById('productName').innerText = x;
-  
+
 }
 
 function updatePrice() {
     var y = document.getElementById('productPriceInput').value;
     document.getElementById('productPrice').innerText = y
-   
+
 }
 
 function updateDescription() {
@@ -51,12 +51,37 @@ function updateCollection() {
         document.getElementById('productCollection').innerText = "Collection 3";
     }
     if (z == 4) {
-        var x=
-        document.getElementById('productCollection').innerText = "Collection 4";
+        var x =
+            document.getElementById('productCollection').innerText = "Collection 4";
     }
 
 
 }
+
+
+
+$(document).ready(function(){
+    $(".btn1").click(function(event){
+      event.preventDefault(); // Prevent the default form submission behavior
+      $(".container").slideUp(function(){
+        $(".container2").slideDown(); // Slide down container2 after container1 is hidden
+      });
+      $(".btn1").hide(); // Hide btn1
+      $(".btn2").show(); // Show btn2
+    });
+    $(".btn2").click(function(){
+      $(".container2").slideUp(function(){
+        $(".container").slideDown(); // Slide down container1 after container2 is hidden
+      });
+      $(".btn1").show(); // Show btn1
+      $(".btn2").hide(); // Hide btn2
+    });
+  });
+  
+
+
+
+
 // document.addEventListener('DOMContentLoaded',function(){
 // var productNameInput=documen.getElementById('productNameInput');
 // productNameInput.addEventListener('input',function(){
