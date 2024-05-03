@@ -183,37 +183,21 @@ document.addEventListener('DOMContentLoaded', function() {
     //automatically alternate between slides
     
     //categories hovering
-    document.querySelectorAll('.categories-container div').forEach(item => {
+    document.querySelectorAll('.item').forEach(item => {
         const primaryimg = item.querySelector('.primary-img');
         const secondaryimg = item.querySelector('.secondary-img');
+        const anchor = item.querySelector('a');
     
         //hover lel entire div
-        item.addEventListener('mouseenter', function() {
+        anchor.addEventListener('mouseenter', function() {
             // img.src = `../images/Landing/exp/${category}2.jpg`;
             primaryimg.style.opacity = '0';
             secondaryimg.style.opacity = '1';
         });
-    
-        item.addEventListener('mouseout', function() {
+
+        anchor.addEventListener('mouseout', function() {
             primaryimg.style.opacity = '1';
             secondaryimg.style.opacity = '0';
         });
-    
-        // //hover lel image nafsaha
-        // const imgDiv = item.querySelector('.img');
-        // if (imgDiv) {
-        //     img.addEventListener('mouseenter', function() {
-        //         img.src = `../images/Landing/exp/${category}2.jpg`;
-        //     });
-    
-        //     img.addEventListener('mouseout', function() {
-        //         img.src = `../images/Landing/exp/${category}1.jpg`;
-        //     });
-        // }
     });
-
-    // const images = document.querySelectorAll('.img'); // Note the dot before 'collection'
-    // images.forEach(image => console.log(image.offsetHeight));
-
-
 });

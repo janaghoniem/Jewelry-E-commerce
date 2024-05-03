@@ -395,6 +395,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     display: flex;
     flex-direction: row;
     justify-content: center;
+    cursor: default;
 }
 
 .categories {
@@ -412,6 +413,24 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     overflow: hidden;
 }
 
+.item a{
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    width: 300px;
+    height: 456.2px;
+    overflow: hidden;
+}
+
+/* .item:hover + .primary-img {
+    opacity: 0;
+}
+
+.item:hover + .secondary-img {
+    opacity: 1;
+} */
+
+
 .category-img {
     width: 300px;
     height: 379px;
@@ -425,12 +444,13 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 .secondary-img {
     opacity: 0;
     position: absolute;
+    /* top: 0; */
+    /* left: 0; */
 }
 
 .categories div {
     margin: 10px 5px;
     text-align: center;
-    cursor: pointer;
 }
 
 /* .border {
