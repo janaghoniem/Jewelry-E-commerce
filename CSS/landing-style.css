@@ -301,9 +301,16 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     z-index: -1; 
 }
 
+.best-sellers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .carousel {
     position: relative;
-    height: 100vh;
+    height: 60vh;
     width: 100%;
     /* overflow: hidden; */
 }
@@ -422,6 +429,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     overflow: hidden;
 }
 
+
 /* .item:hover + .primary-img {
     opacity: 0;
 }
@@ -453,10 +461,6 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     text-align: center;
 }
 
-/* .border {
-    border-left: 1px solid #000000;
-} */
-
 .categories p {
     color: black;
     font-weight: 600;
@@ -464,14 +468,17 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     margin-top: -25px;
 }
 
-.categories h1 {
-    color: white;
+.headers {
     font-family: 'Futura PT';
     font-weight: 500;
     font-size: 40px;
     text-align: center;
     text-transform: uppercase;
     margin-top: 40px;
+}
+
+.categories h1 {
+    color: white;
 }
 
 .indian-collection, .egyptian-collection {
@@ -489,7 +496,6 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 }
 
 .collection {
-    /* background-image: url('../images/Landing/exp/indian-bg.jpg'); */
     width: 100%;
     height: 90%;
     object-fit: cover;
@@ -506,8 +512,6 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* align-items: flex-end;
-    margin-right: 180px; */
     align-items: center;
     margin-top: 180px;
 }
@@ -626,4 +630,94 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 
 /* .collection:hover .collection-img {
     transform: scale(1.1); 
+} */
+
+/* .best-sellers {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .slider_container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.slider_container:before,
+.slider_container:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.slider_container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0),  rgb(254, 248, 241));
+}
+
+.slider_container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgb(254, 248, 241));
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    padding: 0 20px; 
+}
+
+span {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: rgba(14, 14, 14, .7);
+    border-radius: 50%;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 200ms ease-in-out background-color;
+}
+
+.leftBtn {
+    left:  5%;
+}
+.rightBtn {
+    right: 5%;
+}
+
+span:hover {
+    background-color: rgba(14, 14, 14, 1);
+}
+span:active {
+    transform: translateY(-50%) scale(.9);
+}
+
+.slider img {
+    max-width: 100%; 
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.slider a, .slider img, .item {
+    width: 223.18px;
+    height: 479px;
+}
+
+.slider .item .button {
+    border-color: #333;
+    color: #333;
+    font-size: small;
 } */

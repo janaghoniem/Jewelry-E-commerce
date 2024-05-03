@@ -107,7 +107,7 @@
     </section>
     <section class="categories" id="categories">
         <!-- <video src="../videos/Landing/bg.mp4" id="bg-video"></video> -->
-        <h1>OUR INSPIRING CREATIONS</h1>
+        <h1 class="headers">OUR INSPIRING CREATIONS</h1>
         <div class="categories-container">
             <div class="item">
                 <a href=""></a>
@@ -142,32 +142,6 @@
         </div>
     </section>
     <section class="indian-collection">
-       <!-- <div class="collections-container">
-         <div class="indian">
-            <a href="" class="collection">
-                <img src="../images/Landing/exp/indian.png" alt="" class="collection-img">
-                <p>The<br>Indian<br>Collection</p>
-            </a>
-        </div>
-        <div class="egyptian">
-            <a href="" class="collection">
-                <img src="../images/Landing/exp/egyptian2.png" alt="" class="collection-img">
-                <p>The<br>Egyptian<br>Collection</p>
-            </a>
-        </div>
-        <div class="vintage">
-            <a href="" class="collection">
-                <img src="../images/Landing/exp/vintage2.png" alt="" class="collection-img">
-                <p>The<br>Vintage<br>Collection</p>
-            </a>
-        </div>
-        <div class="middle-eastern">
-            <a href="" class="collection">
-                <img src="../images/Landing/exp/middle-eastern2.png" alt="" class="collection-img">
-                <p>The<br>MENA<br>Collection</p>
-            </a>
-        </div>
-       </div> -->
        <div class="collection">
             <img src="../images/Landing/exp/indian-bg.jpg" alt="">
             <div class="indian-collection-text collection-text">
@@ -191,71 +165,110 @@
             </div>
         </div>
     </section>
+
+    <section class="best-sellers">
+        <h1 class="headers">Best Sellers</h1>
+        <div class="carousel">
+            <button class="carousel__button carousel__button--left is-hidden" id="carousel__button--left">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+
+            <div class="carousel__track-container">
+                <ul class="carousel__track" id = "carousel__track">
+                    <li class="carousel__slide current-slide">
+                        <div class="carousel__content">
+                            
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__content" src="../images/Landing/bg.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <button class="carousel__button carousel__button--right" id="carousel__button--right">
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+
+            <div id="carousel__nav" class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
 
 
-
-
-
-
-
-
-<!-- <section class="collections">
-    <div class="carousel">
-        <button class="carousel__button carousel__button--left is-hidden" id="carousel__button--left">
-            <i class="fa-solid fa-angle-left"></i>
-        </button>
-
-        <div class="carousel__track-container">
-            <ul class="carousel__track" id = "carousel__track">
-                <li class="carousel__slide current-slide">
-                    <div class="indian">
-                        <a href="" class="collection">
-                            <img src="../images/Landing/exp/indian.png" alt="" class="collection-img">
-                            <p>The<br>Indian<br>Collection</p>
-                        </a>
-                    </div>
-                </li>
-                <li class="carousel__slide">
-                    <div class="egyptian">
-                        <a href="" class="collection">
-                            <img src="../images/Landing/exp/egyptian2.png" alt="" class="collection-img">
-                            <p>The<br>Egyptian<br>Collection</p>
-                        </a>
-                    </div>
-                </li>
-                <li class="carousel__slide">
-                    <div class="vintage">
-                        <a href="" class="collection">
-                            <img src="../images/Landing/exp/vintage2.png" alt="" class="collection-img">
-                            <p>The<br>Vintage<br>Collection</p>
-                        </a>
-                    </div>
-                </li>
-                <li class="carousel__slide">
-                    <div class="collections-container">
-                        <div class="middle-eastern">
-                            <a href="" class="collection">
-                                <img src="../images/Landing/exp/middle-eastern2.png" alt="" class="collection-img">
-                                <p>The<br>MENA<br>Collection</p>
-                            </a>
-                        </div>
-                       </div>
-                </li>
-            </ul>
+<!-- <div class="slider_container">
+    <span class="leftBtn">
+        <i class="fas fa-arrow-left"></i>
+    </span>
+    <div class="slider">
+        <div class="item first_img">
+            <a href=""></a>
+            <img src="../images/Landing/exp/ring2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/ring1.png" alt="" class="primary-img">
+            <div class="button">Add to cart</div>
+        </div> -->
+        <!-- here we'll add the last image -->
+        <!-- <div class="item">
+            <a href=""></a>
+            <img src="../images/Landing/exp/necklace2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/necklace1.png" alt="" class="primary-img">
+            <div class="button">Add to cart</div>
         </div>
-
-        <button class="carousel__button carousel__button--right" id="carousel__button--right">
-            <i class="fa-solid fa-angle-right"></i>
-        </button>
-
-        <div id="carousel__nav" class="carousel__nav">
-            <button class="carousel__indicator current-slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+        <div class="item">
+            <a href=""></a></a>
+            <img src="../images/Landing/exp/earrings2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/earrings1.png" alt="" class="primary-img">
+            <div class="button">Add to cart</div>
+        </div>
+        <div class="item">
+            <a href=""></a>
+            <img src="../images/Landing/exp/bracelet2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/bracelet1.png" alt="" class="primary-img">
+            <div class="button">Discover Bracelets</div>
+        </div>
+        <div class="item">
+            <a href=""></a>
+            <img src="../images/Landing/exp/ring2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/ring1.png" alt="" class="primary-img">
+            <div class="button">Add to cart</div>
+        </div>
+        <div class="item">
+            <a href=""></a>
+            <img src="../images/Landing/exp/necklace2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/necklace1.png" alt="" class="primary-img">
+            <div class="button">Add to cart</div>
+        </div>
+        <div class="item">
+            <a href=""></a></a>
+            <img src="../images/Landing/exp/earrings2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/earrings1.png" alt="" class="primary-img">
+            <div class="button">Add to cart</div>
+        </div>
+        <div class="item">
+            <a href=""></a>
+            <img src="../images/Landing/exp/bracelet2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/bracelet1.png" alt="" class="primary-img">
+            <div class="button">Discover Bracelets</div>
+        </div>
+        <div class="item">
+            <a href=""></a>
+            <img src="../images/Landing/exp/ring2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/ring1.png" alt="" class="primary-img">
+            <div class="button">Add to cart</div>
+        </div> -->
+        <!-- here we'll add the first image -->
+        <!-- <div class="item last_img">
+            <a href=""></a>
+            <img src="../images/Landing/exp/necklace2.jpg" alt="" class="secondary-img">
+            <img src="../images/Landing/exp/necklace1.png" alt="" class="primary-img">
+            <div class="button">Add to cart</div>
         </div>
     </div>
-   
-</section> -->
+    <span class="rightBtn">
+        <i class="fas fa-arrow-right"></i>
+    </span>
+</div> -->
