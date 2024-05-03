@@ -184,33 +184,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
     //categories hovering
     document.querySelectorAll('.categories-container div').forEach(item => {
-        const img = item.querySelector('.img img');
-        const category = item.className.split(' ')[0];
+        const primaryimg = item.querySelector('.primary-img');
+        const secondaryimg = item.querySelector('.secondary-img');
     
         //hover lel entire div
         item.addEventListener('mouseenter', function() {
-            img.src = `../images/Landing/exp/${category}2.jpg`;
+            // img.src = `../images/Landing/exp/${category}2.jpg`;
+            primaryimg.style.opacity = '0';
+            secondaryimg.style.opacity = '1';
         });
     
         item.addEventListener('mouseout', function() {
-            img.src = `../images/Landing/exp/${category}1.png`;
+            primaryimg.style.opacity = '1';
+            secondaryimg.style.opacity = '0';
         });
     
-        //hover lel image nafsaha
-        const imgDiv = item.querySelector('.img');
-        if (imgDiv) {
-            img.addEventListener('mouseenter', function() {
-                img.src = `../images/Landing/exp/${category}2.jpg`;
-            });
+        // //hover lel image nafsaha
+        // const imgDiv = item.querySelector('.img');
+        // if (imgDiv) {
+        //     img.addEventListener('mouseenter', function() {
+        //         img.src = `../images/Landing/exp/${category}2.jpg`;
+        //     });
     
-            img.addEventListener('mouseout', function() {
-                img.src = `../images/Landing/exp/${category}1.jpg`;
-            });
-        }
+        //     img.addEventListener('mouseout', function() {
+        //         img.src = `../images/Landing/exp/${category}1.jpg`;
+        //     });
+        // }
     });
 
-    const images = document.querySelectorAll('.img'); // Note the dot before 'collection'
-    images.forEach(image => console.log(image.offsetHeight));
+    // const images = document.querySelectorAll('.img'); // Note the dot before 'collection'
+    // images.forEach(image => console.log(image.offsetHeight));
 
 
 });
