@@ -480,8 +480,15 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     /* align-items: flex-end;
     margin-right: 180px; */
     align-items: center;
-    margin-left: 480px;
     margin-top: 180px;
+}
+
+.indian-collection-text {
+    margin-left: 480px;
+}
+
+.egyptian-collection-text {
+    margin-right: 480px;
 }
 
 .collection h2, .collection p{
