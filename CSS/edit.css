@@ -25,7 +25,7 @@ body{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: 778px;
     max-width: 100%;
     min-height: 480px;
 }
@@ -241,7 +241,7 @@ body{
 	border: 2px dashed #ccc;
 	display: inline-block;
 	transition: transform 0.3s;
-
+    cursor: pointer;
 	input[type="file"] {
 		position: absolute;
 		height: 100%;

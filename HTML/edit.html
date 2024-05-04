@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="../Javascript/landing-script.js"></script>
     <script src="../Javascript/product.js"></script>
+    <script src="../Javascript/edit.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -98,7 +99,7 @@
             <form>
                 <h1>Edit your Creation</h1>
                 <span>fill in the field where you want to see a change</span>
-                <input type="text" placeholder="Rename Product">
+                <input type="text" placeholder="Rename Product" pattern="[A-Za-z\s]+" title="Only text is allowed">
                 <input type="number" placeholder="Change the price" min="1000">
                 <select name="Collections" id="Collections">
                     <option value="" disabled selected>Belongs to</option>
@@ -169,7 +170,7 @@
             </div>
         </div>
     </div>
-    <script src="../Javascript/edit.js"></script>
+   
 
 </body>
 

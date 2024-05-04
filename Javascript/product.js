@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.addEventListener("click", function (e) {
             e.preventDefault();
             if (e.target.classList.contains("btn") && e.target.textContent === "Edit") {
-                window.location.href = "edit-product.html";
+                window.location.href = "edit.html";
                 return;
             }
             if (e.target.classList.contains("btn") && e.target.textContent === "Add") {
