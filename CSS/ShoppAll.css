@@ -4,7 +4,10 @@
   /* font-family: "Poppins", sans-serif; */
   /* font-family: "Bulgari Type", "Futura"; */
   /* font-family:  Inter, sans-serif; */
-  -font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* -font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
@@ -12,7 +15,7 @@
 }
 
 body {
-  background-color: #f1efed;
+  background-color:white;
   /* background-color: #1c0a00; */
 
 }
@@ -26,7 +29,7 @@ body {
   padding: 15px 30px;
   position: sticky;
   top: 0;
-  background-color: #f1f1f1;
+  background-color: white;
   z-index: 100;
   width: 100%;
   padding: 10px;
@@ -134,7 +137,7 @@ body {
 
   font-size: 20px;
   font-weight: 700;
-  color: #088178;
+  color: #06625c;
   margin: 0;
 }
 
@@ -346,9 +349,11 @@ body {
 }
 
 .title {
-  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 0px;
   text-align: center;
   font-size: 25px;
+  
 }
 
 /* -----------------------------------------------------------------filter bar-------------------------------------------------------------------*/
@@ -358,8 +363,8 @@ body {
   margin-bottom: 20px;
   margin-left: 0px;
   position: sticky;
-  top: 80;
-  background-color:#f1efed;
+  top: 0;
+  background-color:white;
   z-index: 100;
   width: 100%;
   padding: 10px;
