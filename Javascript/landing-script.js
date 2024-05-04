@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     //nav bar scroll
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
@@ -60,6 +60,49 @@ document.addEventListener('DOMContentLoaded', function() {
             headerBottom.classList.add('header-bottom-unscrolled');
             headerBottom.classList.remove('header-bottom-scrolled');
         }
+    });
+
+    //nav bar extension on hover
+    const navigationLinks = document.querySelectorAll('#header-bottom .navigation .extension');
+    const headerExtension = document.getElementById('header-bottom-anchor-extension');
+    const headerExtensionChildren = headerExtension.children;
+    let mouseOverLink = false; //in case el user alternated between el links besor3a msh 3aizeen flickering
+
+    navigationLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            mouseOverLink = true;
+            headerExtension.style.display = 'block';
+        });
+
+        link.addEventListener('mouseleave', () => {
+            mouseOverLink = false;
+            setTimeout(() => {
+                if (!mouseOverLink) {
+                    headerExtension.style.display = 'none';
+                }
+            }, 500); 
+        });
+    });
+
+    headerExtension.addEventListener('mouseenter', () => {
+        console.log('extension entered');
+        mouseOverLink = true;
+    });
+
+    headerExtension.addEventListener('mouseleave', () => {
+        mouseOverLink = false;
+        setTimeout(() => {
+            if (!mouseOverLink) {
+                console.log("extension exited");
+                headerExtension.style.display = 'none';
+            }
+        }, 30); 
+    });
+
+    headerExtensionChildren.forEach(div => {
+        div.addEventListener('mouseover', () => {
+            mouseOverLink = true;
+        })
     });
     
     // 7agat el search
@@ -159,19 +202,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const anchor = item.querySelector('a');
     
         //hover lel entire div
-        anchor.addEventListener('mouseenter', function() {
-            // img.src = `../images/Landing/exp/${category}2.jpg`;
-            primaryimg.style.opacity = '0';
-            secondaryimg.style.opacity = '1';
-        });
-
-        anchor.addEventListener('mouseout', function() {
-            primaryimg.style.opacity = '1';
-            secondaryimg.style.opacity = '0';
-        });
+        if(primaryimg && secondaryimg)
+        {
+            anchor.addEventListener('mouseenter', function() {
+                // img.src = `../images/Landing/exp/${category}2.jpg`;
+                primaryimg.style.opacity = '0';
+                secondaryimg.style.opacity = '1';
+            });
+    
+            anchor.addEventListener('mouseout', function() {
+                primaryimg.style.opacity = '1';
+                secondaryimg.style.opacity = '0';
+            });
+        }
     });
     
-
+    
 
 
 
