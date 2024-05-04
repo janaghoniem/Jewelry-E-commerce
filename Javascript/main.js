@@ -1,10 +1,27 @@
-jQuery(document).ready(function ($) {
-    var ns_in_viewport = function () {
-        $('section.content-row').each(function () {
-            $(this).isInViewport({ tolerance: -100 }).addClass('in-view');
-        });
-    }
+// jQuery(document).ready(function ($) {
+//     var ns_in_viewport = function () {
+//         $('section.content-row').each(function () {
+//             $(this).isInViewport({ tolerance: -100 }).addClass('in-view');
+//         });
+//     }
 
-    ns_in_viewport();
-    $(window).scroll(ns_in_viewport);
-});
+//     ns_in_viewport();
+//     $(window).scroll(ns_in_viewport);
+// });
+
+// jQuery(document).ready(function ($) {
+//     var ns_in_viewport = function () {
+//         $('section.content-row').each(function () {
+//             if ($(this).isInViewport({ tolerance: -100 })) {
+//                 $(this).addClass('in-view');
+//             } else {
+//                 $(this).removeClass('in-view');
+//             }
+//         });
+//     }
+
+//     ns_in_viewport();
+//     $(window).scroll(ns_in_viewport);
+// });
+
+
