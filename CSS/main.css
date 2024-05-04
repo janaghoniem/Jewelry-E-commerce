@@ -6,13 +6,13 @@
 
 
 * {
-    font-family: "Nunito Sans", 'PT Sans','Didact Gothic','Garet', sans-serif;
+    font-family: "Nunito Sans", 'PT Sans', 'Didact Gothic', 'Garet', sans-serif;
     font-weight: 100;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: all .3s cubic-bezier(.39,.575,.565,1);
+    transition: all .3s cubic-bezier(.39, .575, .565, 1);
     -webkit-font-smoothing: antialiased;
 
 }
@@ -20,7 +20,8 @@
 body {
     background-color: #FEF8F1;
 }
-header{
+
+header {
     /* background-color:  rgba(0, 0, 0, 0.1); */
     /* backdrop-filter: blur(4px); */
     width: 100%;
@@ -56,17 +57,19 @@ header:hover a {
     color: black;
 }
 
-header:hover #search-button{
+header:hover #search-button {
     color: black;
     border-color: black;
     background-color: transparent;
 }
 
-header:hover #search , header:hover #searchField, header:hover #searchField::placeholder {
+header:hover #search,
+header:hover #searchField,
+header:hover #searchField::placeholder {
     color: black;
 }
 
-.navigation a{
+.navigation a {
     color: #F6E8C0;
     font-size: 1.1em;
     font-weight: 300;
@@ -74,8 +77,8 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     padding-left: 20px;
 }
 
-.navigation a:hover{
-    color:rgb(228, 124, 33);
+.navigation a:hover {
+    color: rgb(228, 124, 33);
 }
 
 .logo-unscrolled {
@@ -88,7 +91,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 }
 
 .logo-unscrolled:hover {
-    color:#E47C21;
+    color: #E47C21;
 }
 
 .logo-scrolled {
@@ -100,7 +103,9 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     white-space: nowrap;
 }
 
-.header-top-unscrolled, .header-middle-unscrolled, .header-bottom-unscrolled {
+.header-top-unscrolled,
+.header-middle-unscrolled,
+.header-bottom-unscrolled {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -123,7 +128,9 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 
 /* SCROLLED */
 
-.header-top-scrolled, .header-middle-scrolled, .header-bottom-scrolled{
+.header-top-scrolled,
+.header-middle-scrolled,
+.header-bottom-scrolled {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -139,11 +146,11 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     justify-content: space-between;
 }
 
-.header-top-scrolled i{
+.header-top-scrolled i {
     color: black;
 }
 
-.header-bottom-scrolled a{
+.header-bottom-scrolled a {
     color: black;
 }
 
@@ -154,17 +161,18 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 
 .store-services {
     display: flex;
-    flex-direction: row;    
-    justify-content: space-between; 
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
-.store-services a p, .user-data a p{
+.store-services a p,
+.user-data a p {
     display: inline;
     align-items: center;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
@@ -175,7 +183,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     background-color: rgb(0, 0, 0, 0.3);
     width: 40px;
     margin-left: 10px;
-    position: relative; 
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,7 +197,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     background-color: transparent;
     width: 40px;
     margin-left: 10px;
-    position: relative; 
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,9 +210,9 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     border-color: transparent;
     background-color: transparent;
     height: 30px;
-    width: 0px; 
-    padding-right: 40px; 
-    box-sizing: border-box; 
+    width: 0px;
+    padding-right: 40px;
+    box-sizing: border-box;
     transition: width 0.5s ease;
 }
 
@@ -226,11 +234,11 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     /* color: #F6E8C0; */
     width: 30px;
     height: 30px;
-    position: absolute; 
-    top: 50%; 
+    position: absolute;
+    top: 50%;
     right: 5px;
-    transform: translateY(-50%); 
-    cursor: pointer; 
+    transform: translateY(-50%);
+    cursor: pointer;
     /* background-size: contain; 
     background-repeat: no-repeat; */
     z-index: 999;
@@ -243,7 +251,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     height:100px;
     padding-top:100px;
 } */
-#section-text {
+/* #section-text {
 
     transform: translateY(-200%);
     padding-left: 200px;
@@ -261,7 +269,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     font-size: 3em;
     text-transform: uppercase;
 
-}
+} */
 
 .preview-collections {
     position: relative;
@@ -280,6 +288,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    filter: brightness(36%);
 }
 
 section {
@@ -324,210 +333,49 @@ section {
     /* z-index: 1; */
 }
 
-/* .Collection-container {
-    margin-top: 90px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 0;
-    z-index: 1;
-overflow-x:auto;
-white-space:nowrap;
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'); */
+
+.section-text {
+    /* font-family: 'Montserrat', sans-serif; */
+    z-index: 999;
+    color: #F6E8C0;
+    font-weight: bolder;
+    margin: 60px auto;
+    text-align: center;
 }
 
-.collection-card {
-    flex: 0 0 auto;
-    margin: 0 10px;
-    width: 300px;
-    height: 200px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 20px;
+section.content-row {
+
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(20%);
+}
+
+section.content-row.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header{
+   font-weight: bolder;
+    margin: 60px auto;
+    text-align: center;
+
+}
+/* .statistics {
+    display: flex;
+
+}
+
+.stat-container {
+    flex: 1;
+    padding: auto 50px;
+    margin: auto 50px;
+    border:black;
+    border-style:dotted;
+    width:200px;
+    height:140px;
+    background-color:white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 } */
 
-.prev-btn,
-.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    color: black;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.prev-btn {
-    left: 10px
-}
-
-.next-btn {
-    right: 10px;
-}
-
-.collection-card img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-/* Product preview*/
-::-webkit-scrollbar {
-    width: 1px;
-    height: 1px;
-}
-
-::-webkit-scrollbar-button {
-    width: 1px;
-    height: 1px;
-}
-
-.external {
-    overflow: hidden;
-    height: 100vh;
-}
-
-.horizontal-scroll-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vh;
-    transform: rotate(-90deg) translate3d(0, -100vh, 0);
-    transform-origin: right top;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 0;
-    height: 100vw;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    padding-bottom: 10rem;
-}
-
-.img-wrapper {
-    transform: rotate(90deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 40vh;
-    transform-origin: 50% 50%;
-    transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
-    transition: 1s;
-}
-
-.img-wrapper:hover {
-    min-height: 65vh;
-}
-
-.slower {
-    transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(-10vh);
-}
-
-.slower1 {
-    transform: rotate(90deg) translateZ(-.25px) scale(1.05) translateX(0%) translateY(8vh);
-}
-
-.slower2 {
-    transform: rotate(90deg) translateZ(-.3px) scale(1.3) translateX(0%) translateY(2vh);
-}
-
-.slower-down {
-    transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(16vh);
-}
-
-.faster {
-    transform: rotate(90deg) translateZ(.15px) scale(0.8) translateX(0%) translateY(14vh);
-}
-
-.faster1 {
-    transform: rotate(90deg) translateZ(.05px) scale(0.8) translateX(0%) translateY(10vh);
-}
-
-.fastest {
-    transform: rotate(90deg) translateZ(.22px) scale(0.7) translateX(-10vh) translateY(-15vh);
-}
-
-.vertical {
-    transform: rotate(90deg) translateZ(-.15px) scale(1.15) translateX(0%) translateY(0%);
-}
-
-.last {
-    transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(25vh) translateY(-8vh);
-}
-
-.scroll-info,
-header {
-    /* position: absolute;
-    left: 1rem; */
-}
-
-
-
-
-.scroll-info {
-    top: 1rem;
-}
-
-a {
-    color: inherit;
-    font-weight: 500;
-
-}
-
-h1 {
-    font-weight: 300;
-    font-size: 1rem;
-}
-
-.img-wrapper a {
-    overflow: hidden;
-    display: block;
-    padding: 1vh;
-    background: #efecdb;
-    box-shadow: 0 10px 50px #5f2f1182;
-}
-
-.images {
-    max-width: 45vh;
-    max-height: 50vh;
-    transition: .5s;
-    vertical-align: top;
-    /* filter: saturate(40%) sepia(30%) hue-rotate(5deg); */
-}
-
-a:hover img {
-    /* filter: none; */
-}
-
-p {
-    margin: 0;
-}
-
-.scroll-info {
-    display: flex;
-    align-items: center;
-}
-
-.icon svg {
-    width: 50px;
-    fill: currentcolor;
-}
-
-/* button {
-    position: relative;
-    background: transparent;
-    border-radius: 8px;
-    left: 45%;
-    top: -20px;
-    height: 40px;
-    width: 200px;
-    color: #4f585e;
-    font-weight: 600;
-}
-
-button:hover {
-    cursor: pointer;
-} */
-
-/* End of product preview*/
