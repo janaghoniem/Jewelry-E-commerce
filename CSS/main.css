@@ -305,10 +305,7 @@ section {
     /* z-index:999; */
 }
 
-.Collection-text,
-.video {
-    flex: 1;
-}
+
 
 #video-collection {
     max-width: 100%;
@@ -393,7 +390,7 @@ section.content-row.in-view {
     flex: 1;
     padding: auto 50px;
     margin: auto 50px;
-    opacity:98%;
+    opacity:90%;
     width: auto;
     height: 240px;
     background-color: white;
@@ -405,4 +402,24 @@ section.content-row.in-view {
     background:url(../images/Admin/Texture2.jpeg) no-repeat;
     background-size: cover;
 	background-attachment: fixed;
+}
+
+.main-button{
+    border: .0625rem solid #FFFFFF;
+    background-color: transparent;
+    color: #fff;
+    font-family: futura-pt, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .0625rem;
+    line-height: 1.625rem;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.875rem;
+    text-transform: uppercase;
+    transition: background-color ease-in-out .2s;
+    text-decoration: none;
+    cursor:pointer;
 }
