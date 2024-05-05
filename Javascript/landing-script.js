@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
     //nav bar extension on hover
     const navigationLinks = document.querySelectorAll('#header-bottom .navigation .extension');
     const headerExtension = document.getElementById('header-bottom-anchor-extension');
-    const headerExtensionChildren = headerExtension.children;
     let mouseOverLink = false; //in case el user alternated between el links besor3a msh 3aizeen flickering
 
     navigationLinks.forEach(link => {
@@ -97,12 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 headerExtension.style.display = 'none';
             }
         }, 30); 
-    });
-
-    headerExtensionChildren.forEach(div => {
-        div.addEventListener('mouseover', () => {
-            mouseOverLink = true;
-        })
     });
     
     // 7agat el search
