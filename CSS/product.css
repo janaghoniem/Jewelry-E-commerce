@@ -7,9 +7,9 @@ body {
   color: #f6f6f7;
   font-family: 'Source Sans Pro', sans-serif;
   text-rendering: optimizeLegibility;
-  /* background: url(../images/Admin/WALLPAPER.jpeg) no-repeat;
+  background: url(../images/Admin/WALLPAPER.jpeg) no-repeat;
   background-size: cover;
-  background-attachment: fixed; */
+  background-attachment: fixed;
 }
 
 a.btn {
@@ -85,6 +85,7 @@ div.card div.card-title {
   padding: 6px 15px 10px;
   position: relative;
   z-index: 0;
+  color:black;
 }
 
 div.card div.card-title a.toggle-info {
@@ -136,6 +137,7 @@ div.card div.card-description {
   padding: 0 15px 10px;
   position: relative;
   font-size: 14px;
+  color:black;
 }
 
 div.card div.card-actions {
@@ -209,13 +211,14 @@ div.card.show div.flap2 {
 
 
 
-.editButton1 {
-  margin: 480px 530px;
+.scrollToView{
+  margin: 480px 600px ;
 
 }
 
 .view-products {
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  top:0;
   background: url(../images/Admin/1.jpeg), url(../images/Admin/Jewelry.jpeg), url(../images/Admin/p1.jpeg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: left top, calc(48% - 1px) top, right top;
@@ -229,9 +232,9 @@ div.card.show div.flap2 {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .view-products {
-    background: url(../images/Admin/1.jpeg), url(../images/Admin/Jewelry.jpeg);
+    background: url(../images/Admin/1.jpeg),url(../images/Admin/Jewelry.jpeg);
     background-position: left top, calc(100% - 1px) top;
     background-repeat: no-repeat, no-repeat;
     background-size: contain;
@@ -243,8 +246,8 @@ div.card.show div.flap2 {
     position: absolute;
   }
 
-  .editButton1 {
-    margin: 460px 250px;
+  .scrollToView {
+    margin: 500px 490px;
 
   }
 }
@@ -262,8 +265,8 @@ div.card.show div.flap2 {
     position: absolute;
   }
 
-  .editButton1 {
-    margin: 460px 150px;
+  .scrollToView {
+    margin: 550px 190px;
 
   }
 
@@ -277,7 +280,7 @@ div.card.show div.flap2 {
 .section-text {
   /* font-family: 'Montserrat', sans-serif; */
    z-index: 1;
-  color: #f6cdc0;
+  color: #000000;
   font-weight: bolder;
    margin: 10px auto 0 auto; 
    text-align: center; 
