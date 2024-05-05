@@ -357,7 +357,7 @@ section {
 .section-text1 {
     font-size: 30px;
 
-    color: black;
+    color: #F6E8C0;
     font-weight: bold;
     margin: 40px auto;
     text-align: center;
@@ -439,7 +439,7 @@ section.content-row.in-view {
 
 .view-products {
     margin-top: 10px;
-    background: url(../images/Admin/Jewelry.jpeg),url(../images/Admin/1.jpeg),url(../images/Admin/p1.jpeg);
+    background:url(../images/Admin/1.jpeg),url(../images/Admin/Jewelry.jpeg),url(../images/Admin/p1.jpeg);
     background-repeat:no-repeat,no-repeat,no-repeat;
     background-position:left top, calc(48% - 1px) top, right top;
     background-size: contain;
@@ -468,6 +468,61 @@ section.content-row.in-view {
 }
 
 .editButton1 {
-    margin: 480px 550px;
+    margin: 480px 530px;
 
+}
+
+/* @media only screen and (max-width: 800px) {
+    .view-products {
+      background:url(../images/Admin/1.jpeg),url(../images/Admin/Jewelry.jpeg);
+      background-position:left top, calc(100% - 1px) top;
+      background-repeat:no-repeat,no-repeat;
+      background-size: contain;
+      background-attachment: fixed;
+      width:100%;
+      position: absolute;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .view-products {
+      background:url(../images/Admin/1.jpeg);
+      background-position:calc(100% - 1px) top;
+      background-repeat:no-repeat;
+      background-size: contain;
+      background-attachment: fixed;
+      width:100%;
+      position: absolute;
+    }
+  } */
+
+  @media only screen and (max-width: 800px) {
+    .view-products {
+        background: url(../images/Admin/1.jpeg), url(../images/Admin/Jewelry.jpeg);
+        background-position: left top, calc(100% - 1px) top;
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+        width: 100%; /* Adjusted width for smaller viewports */
+        max-width: 800px; /* Limiting the maximum width */
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .view-products {
+        background: url(../images/Admin/1.jpeg);
+        background-position: calc(50% - 1px) top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+        width: 100%; /* Adjusted width for even smaller viewports */
+        max-width: 600px; /* Limiting the maximum width */
+        position: absolute;
+    }
+    .editButton1 {
+        margin: 460px 150px;
+    
+    }
+    
 }
