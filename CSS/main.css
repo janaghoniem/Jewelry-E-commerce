@@ -441,7 +441,7 @@ section.content-row.in-view {
     margin-top: 10px;
     background: url(../images/Admin/Jewelry.jpeg),url(../images/Admin/1.jpeg),url(../images/Admin/p1.jpeg);
     background-repeat:no-repeat,no-repeat,no-repeat;
-    background-position:left top, center top, right top;
+    background-position:left top, calc(48% - 1px) top, right top;
     background-size: contain;
     background-attachment: fixed;
     width:100%;
