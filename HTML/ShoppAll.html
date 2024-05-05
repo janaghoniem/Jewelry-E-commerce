@@ -101,8 +101,6 @@
         </select>
         <button id="apply-filter-btn">Apply Filters</button>
     </div>
-
-
     <!-- <section id="product1" class="section-p1">
         <div class="pro-container grid-container">
             <div class="pro grid-item prod1">
@@ -199,7 +197,8 @@
         </div>
         <div class="grid-container">
             <div class="grid-item prod1">
-                <img src="https://media2.bulgari.com/f_auto,q_auto,c_pad,w_300,h_300/production/dw0c3503db/images/images/1479841.png" height="300" width="250">
+                <img src="https://media2.bulgari.com/f_auto,q_auto,c_pad,w_300,h_300/production/dw0c3503db/images/images/1479841.png"
+                    height="300" width="250">
                 <div class="des">
                     <h5>silver Nicholas</h5>
                     <h4>$100</h4>
@@ -214,7 +213,9 @@
                     <h4>$100</h4>
                 </div>
             </div>
-            <div class="grid-item prod3"><img src="https://media2.bulgari.com/image/upload/f_auto,q_auto/v1662975529/grid/bzero1/Bzero1-2_goms9p.jpg" height="645" width="500">
+            <div class="grid-item prod3"><img
+                    src="https://media2.bulgari.com/image/upload/f_auto,q_auto/v1662975529/grid/bzero1/Bzero1-2_goms9p.jpg"
+                    height="645" width="500">
                 <div class="des">
                     <h5>silver Nicholas</h5>
                     <h4>$100</h4>
@@ -284,7 +285,7 @@
                     <h4>$100</h4>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <div class="sidebar hidden">
@@ -299,6 +300,28 @@
                 <button class="checkout-btn">Checkout</button>
             </div>
         </div>
+    </div>
+    <div class="pagination-container">
+        <button class="btn btn-first" onclick="first()">First</button>
+        <button class="btn btn-previous" onclick="prev()">
+            <i class="fa-solid fa-chevron-left"></i>
+            previous
+        </button>
+        <ul class="pagination">
+            <li class="pagination-item active" value="1" onclick="activePage(event)">
+                1
+            </li>
+            <li class="pagination-item" value="2" onclick="activePage(event)">2</li>
+            <li class="pagination-item" value="3" onclick="activePage(event)">3</li>
+            <li class="pagination-item" value="4" onclick="activePage(event)">4</li>
+            <li class="pagination-item" value="5" onclick="activePage(event)">5</li>
+        </ul>
+        <button class="btn btn-next" onclick="next()">
+            Next
+            <i class=" fa-solid fa-chevron-right"></i>
+        </button>
+        <button class=" btn btn-last" onclick="first()">Last</button>
+
     </div>
 </body>
 
