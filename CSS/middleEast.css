@@ -225,10 +225,110 @@ font-size: large;
     font-family: 'gill sans','gill sans mt', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.filter-box{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: white;
+    padding-top: 30px;
+}
+.filter-container{
+    display:inline-block;
+    vertical-align: top;
+   
+   
+  
+}
+/* select{
+    padding:10px;
+    font-size:16px;
+} */
+
+span{
+
+    padding:20px;
+    background: white;
+    color:black;
+    font-size: 0.99em;
+    font-variant: small-caps;
+    cursor:pointer;
+    display:block;
+    border: 2px solid black;
+    width:auto;
+ 
+
+}
+span::after{
+    float:right;
+    right:10%;
+   
+}
+.slide{
+    clear:both;
+    width:auto;
+    height:0px;
+    overflow:hidden;
+    text-align: center;
+    transition: height .4s ease;
+    border:1px solid black;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    position:absolute;
+    background-color: white;
+  
+
+}
+.slide li{
+    /* padding:10px; */
+    border:1px solid #ccc;
+    color:black;
+    align-items: center;
+    /* width:100%;
+    box-sizing: border-box; */
+}
+.slide a{
+    text-decoration: none;
+    color:black;
+    display:block;
+    padding:10px 20px;
+    transition: background-color 0.3s ;
+}
+.slide a:hover{
+    background-color: #f1f1f1;
+
+}
+.filter-box label{
+    margin-bottom:5px;
+    display: inline-block;
+    position: relative;
+}
+input[type="checkbox"]{
+    display:none;
+}
+.filter-box label:hover + input[type="checkbox"]+ .slide{
+    height:300px;
+}
+.filter-container:hover input[type="checkbox"]+ .slide{
+    height:auto;
+    /* position: relative; */
+    top:100%;
+    width:max-content;
+    left: 0;
+   
+}
+#category{
+    position: absolute;
+    opacity: 0;
+    height:0px;
+}
+#category:checked + .slide{
+    height:200px;
+}
 .coll-sec{
     
     background-color: white;
-    margin-top: 10px;
+   
    
     display: flex;
     align-items: center;
