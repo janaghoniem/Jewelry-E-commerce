@@ -451,7 +451,7 @@ section.content-row.in-view {
     z-index: -1;
 }
 
-.img-model {
+/* .img-model {
     max-width: 100%;
     height: auto;
     overflow: hidden;
@@ -465,7 +465,7 @@ section.content-row.in-view {
     max-width:100%;
     height:auto;
     position:relative;
-}
+} */
 
 .editButton1 {
     margin: 480px 530px;
@@ -503,7 +503,7 @@ section.content-row.in-view {
         background-repeat: no-repeat, no-repeat;
         background-size: contain;
         background-attachment: fixed;
-        width: 100%; /* Adjusted width for smaller viewports */
+        width: 100vw; /* Adjusted width for smaller viewports */
         max-width: 800px; /* Limiting the maximum width */
         position: absolute;
     }
@@ -521,7 +521,7 @@ section.content-row.in-view {
         background-size: contain;
         background-attachment: fixed;
         width: 100%; /* Adjusted width for even smaller viewports */
-        max-width: 600px; /* Limiting the maximum width */
+       
         position: absolute;
     }
     .editButton1 {

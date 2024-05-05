@@ -4,12 +4,12 @@
 /* Colour Stuff */
 body {
   /* background: #efeae2; */
-  color: #4f585e;
+  color: #f6f6f7;
   font-family: 'Source Sans Pro', sans-serif;
   text-rendering: optimizeLegibility;
-  background: url(../images/Admin/WALLPAPER.jpeg) no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+  /* background: url(../images/Admin/WALLPAPER.jpeg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed; */
 }
 
 a.btn {
@@ -44,7 +44,7 @@ div.cards {
   /* margin-left:10%; */
   /* margin-left: 150px; */
   /* margin-right:auto; */
-  padding-top: 160px;
+  padding-top: 60px;
   max-width: 960px;
   text-align: center;
   /* position: relative; */
@@ -205,4 +205,80 @@ div.card.show div.flap1 {
 
 div.card.show div.flap2 {
   transition: all 0.3s 0.2s ease-out;
+}
+
+
+
+.editButton1 {
+  margin: 480px 530px;
+
+}
+
+.view-products {
+  margin-top: 10px;
+  background: url(../images/Admin/1.jpeg), url(../images/Admin/Jewelry.jpeg), url(../images/Admin/p1.jpeg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: left top, calc(48% - 1px) top, right top;
+  background-size: contain;
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .view-products {
+    background: url(../images/Admin/1.jpeg), url(../images/Admin/Jewelry.jpeg);
+    background-position: left top, calc(100% - 1px) top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    width: 100vw;
+    /* Adjusted width for smaller viewports */
+    max-width: 800px;
+    /* Limiting the maximum width */
+    position: absolute;
+  }
+
+  .editButton1 {
+    margin: 460px 250px;
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .view-products {
+    background: url(../images/Admin/1.jpeg);
+    background-position: calc(50% - 1px) top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    width: 100%;
+    /* Adjusted width for even smaller viewports */
+
+    position: absolute;
+  }
+
+  .editButton1 {
+    margin: 460px 150px;
+
+  }
+
+}
+
+
+.Product-display{
+  padding-top:300px;
+}
+
+.section-text {
+  /* font-family: 'Montserrat', sans-serif; */
+   z-index: 1;
+  color: #f6cdc0;
+  font-weight: bolder;
+   margin: 10px auto 0 auto; 
+   text-align: center; 
 }
