@@ -112,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // search functionality
     if (searchButton && searchField) { // fy reference error -  debugging statement
         searchButton.addEventListener('click', expandSearch);
-        console.log("clicked1");
     }
 
     function expandSearch() {
@@ -120,13 +119,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (buttonCount === 0) {
             searchDiv.style.width = '200px';
             searchField.style.width = '200px';
-            searchDiv.style.border = '1px solid #F6E8C0';
+            searchDiv.style.border = '1px solid black';
             buttonCount++;
-        } else if (buttonCount === 1) {
+        } else if (buttonCount === 1 && searchField.value == "") {
             searchDiv.style.border = 'none';
             searchField.style.width = '0px';
             searchDiv.style.width = '40px';
             buttonCount--;
+        }
+        else {
+            alert("Hena its supposed to search");
         }
     }
 

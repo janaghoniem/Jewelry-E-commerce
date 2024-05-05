@@ -70,14 +70,13 @@ header:hover a {
     color: black;
 }
 
-header:hover #search-button{
-    color: black;
-    border-color: black;
-    background-color: transparent;
-}
-
 header:hover #search , header:hover #searchField, header:hover #searchField::placeholder {
     color: black;
+}
+
+header:hover #search-button{
+    border-color: black;
+    background-color: transparent;
 }
 
 .navigation a{
