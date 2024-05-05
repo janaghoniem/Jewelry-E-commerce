@@ -142,6 +142,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 
 .header-bottom-anchor-extension {
     display: none;
+    position: relative;
     padding: 10px;
     margin-top: 8px;
     background-color: white;
@@ -155,6 +156,19 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     border-bottom: 0.2em solid black;
     padding-bottom: 8px;
     transition: none;
+}
+
+#exit-extension-button {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#exit-extension-button i {
+    font-size: larger;
 }
 
 #collections-extension {

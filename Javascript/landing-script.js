@@ -65,7 +65,14 @@ document.addEventListener('DOMContentLoaded', function() {
     //nav bar extension on hover
     const navigationLinks = document.querySelectorAll('#header-bottom .navigation .extension');
     const headerExtension = document.getElementById('header-bottom-anchor-extension');
+    const exitButton = document.getElementById('exit-extension-button');
     let mouseOverLink = false; //in case el user alternated between el links besor3a msh 3aizeen flickering
+
+    exitButton.addEventListener('clicked', () => {
+        mouseOverLink = false;
+        console.log('exit button clicked');
+        headerExtension.style.display = 'none';
+    });
 
     navigationLinks.forEach(link => {
         link.addEventListener('mouseenter', () => {
@@ -84,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     headerExtension.addEventListener('mouseenter', () => {
-        console.log('extension entered');
         mouseOverLink = true;
     });
 
@@ -92,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
         mouseOverLink = false;
         setTimeout(() => {
             if (!mouseOverLink) {
-                console.log("extension exited");
                 headerExtension.style.display = 'none';
             }
         }, 30); 
