@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const exitButton = document.getElementById('exit-extension-button');
     let mouseOverLink = false; //in case el user alternated between el links besor3a msh 3aizeen flickering
 
-    exitButton.addEventListener('clicked', () => {
+    exitButton.addEventListener('click', () => {
         mouseOverLink = false;
         console.log('exit button clicked');
         headerExtension.style.display = 'none';
