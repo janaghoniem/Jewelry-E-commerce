@@ -305,34 +305,38 @@ section {
     /* z-index:999; */
 }
 
-
+.videos-container {
+    display: flex;
+    padding-left: 400px;
+    padding-bottom: 50px;
+}
 
 #video-collection {
+
     max-width: 100%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     height: 400px;
     width: auto;
-    left: 40%;
-    display: flex;
-    justify-content: flex-end;
+    margin: auto 10px;
+    /* padding-bottom:40px; */
     position: relative;
     /* z-index: 2; */
 }
 
 #video-collection2 {
+
     max-width: 100%;
     /* margin-top:4px; */
     height: 400px;
     width: auto;
-    left: 4.7%;
+    margin: auto 20px;
     display: flex;
     position: relative;
-    transform: translateY(-60%);
     /* z-index: 1; */
 }
 
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'); */
-.main-section{
+.main-section {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -340,6 +344,7 @@ section {
     align-items: top;
     overflow: hidden;
 }
+
 .section-text {
     /* font-family: 'Montserrat', sans-serif; */
     z-index: 1;
@@ -348,9 +353,10 @@ section {
     margin: 480px auto 0 auto;
     text-align: center;
 }
-.section-text1{
-    font-size:30px;
-   
+
+.section-text1 {
+    font-size: 30px;
+
     color: black;
     font-weight: bold;
     margin: 40px auto;
@@ -368,11 +374,13 @@ section.content-row.in-view {
     opacity: 1;
     transform: translateY(0);
 }
-.statistics{
-    background:url(../images/Admin/texture.jpeg) no-repeat;
+
+.statistics {
+    background: url(../images/Admin/texture.jpeg) no-repeat;
     background-size: cover;
-	background-attachment: fixed;
+    background-attachment: fixed;
 }
+
 .header {
     font-weight: bolder;
     margin: 20px auto;
@@ -383,28 +391,28 @@ section.content-row.in-view {
 
 .second-section {
     display: flex;
-    padding-bottom:80px;
+    padding-bottom: 80px;
 }
 
 .stat-container {
     flex: 1;
     padding: auto 50px;
     margin: auto 50px;
-    opacity:90%;
+    opacity: 90%;
     width: auto;
     height: 240px;
     background-color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
-.view-collections{
-    margin-top:10px;
-    background:url(../images/Admin/Texture2.jpeg) no-repeat;
+.view-collections {
+    margin-top: 10px;
+    background: url(../images/Admin/Collection-back.jpeg) no-repeat;
     background-size: cover;
-	background-attachment: fixed;
+    background-attachment: fixed;
 }
 
-.main-button{
+.main-button {
     border: .0625rem solid #FFFFFF;
     background-color: transparent;
     color: #fff;
@@ -421,5 +429,45 @@ section.content-row.in-view {
     text-transform: uppercase;
     transition: background-color ease-in-out .2s;
     text-decoration: none;
-    cursor:pointer;
+    cursor: pointer;
+}
+
+.editButton {
+    margin: auto 550px;
+
+}
+
+.view-products {
+    margin-top: 10px;
+    background: url(../images/Admin/Jewelry.jpeg),url(../images/Admin/1.jpeg),url(../images/Admin/p1.jpeg);
+    background-repeat:no-repeat,no-repeat,no-repeat;
+    background-position:left top, center top, right top;
+    background-size: contain;
+    background-attachment: fixed;
+    width:100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.img-model {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+   
+}
+
+.img-model img{
+    flex:1;
+    max-width:100%;
+    height:auto;
+    position:relative;
+}
+
+.editButton1 {
+    margin: 480px 550px;
+
 }
