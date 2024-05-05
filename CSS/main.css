@@ -507,6 +507,10 @@ section.content-row.in-view {
         max-width: 800px; /* Limiting the maximum width */
         position: absolute;
     }
+    .editButton1 {
+        margin: 460px 250px;
+    
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -526,3 +530,30 @@ section.content-row.in-view {
     }
     
 }
+@media only screen and (max-width: 500px) {
+    .videos-container {
+        display: flex;
+        padding-left: 2px;
+        padding-bottom: 50px;
+
+    }
+
+    .editButton {
+        margin: 40px 150px;
+    
+    }
+    
+}
+@media only screen and (max-width: 800px) {
+    .videos-container {
+        display: flex;
+        padding-left: 100px;
+        padding-bottom: 50px;
+    }
+    .editButton {
+        margin: 40px 250px;
+    
+    }
+    
+}
+
