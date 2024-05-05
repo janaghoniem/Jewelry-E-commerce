@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/landing-style.css">
+    <link rel="stylesheet" href="../CSS/admin-collections.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="../Javascript/landing-script.js"></script>
     <title>Landing Page</title>
 </head>
+
 <body>
     <header>
         <div class="header-top-unscrolled" id="header-top">
@@ -60,13 +63,13 @@
         </div>
         <div class="header-bottom-unscrolled" id="header-bottom">
             <nav class="navigation">
-                <a href="../HTML/landing.html">Home</a>
-                <a href="../HTML/ShoppAll.html">Shop All</a>
-                <a href="#" id="collections-anchor-with-extension" class="extension">Collections</a>
-                <a href="#">Bracelets</a>
-                <a href="#">Earrings</a>
-                <a href="#">Necklaces</a>
-                <a href="#">Rings</a>
+                <a href="main.html">Home</a>
+                <a href="admin-collections.html">Collection</a>
+                <a href="product.html">Products</a>
+                <a href="Orders.html">Orders</a>
+                <a href="">Statistics</a>
+                <a href="#">Reviews</a>
+                <a href="support.html">Customer Support</a>
                 <!-- <a href="#">Head Pieces</a> -->
             </nav>
         </div>
@@ -85,7 +88,8 @@
                 <div class="collection-extension">
                     <div class="collection-extension">
                         <a class="extension-item" href="../HTML/">
-                            <img src="../images/Landing/exp/egyptian-extension.jpg" alt="" class="category-img extension-img">
+                            <img src="../images/Landing/exp/egyptian-extension.jpg" alt=""
+                                class="category-img extension-img">
                             <div class="extension-text">
                                 <h2 class="extension-text">Majestic splendor</h2>
                                 <button class="extension-button">Discover the Egyptian collection</button>
@@ -95,7 +99,8 @@
                 </div>
                 <div class="collection-extension">
                     <a class="extension-item" href="../HTML/Vintage.html">
-                        <img src="../images/Landing/exp/vintage-extension.jpg" alt="" class="category-img extension-img">
+                        <img src="../images/Landing/exp/vintage-extension.jpg" alt=""
+                            class="category-img extension-img">
                         <div class="extension-text">
                             <h2 class="extension-text">Majestic splendor</h2>
                             <button class="extension-button">Discover the Vintage collection</button>
@@ -105,7 +110,8 @@
                 <div class="collection-extension">
                     <div class="collection-extension">
                         <a class="extension-item" href="../HTML/middleEast.html">
-                            <img src="../images/Landing/exp/mena-extension.jpg" alt="" class="category-img extension-img">
+                            <img src="../images/Landing/exp/mena-extension.jpg" alt=""
+                                class="category-img extension-img">
                             <div class="extension-text">
                                 <h2 class="extension-text">Majestic splendor</h2>
                                 <button class="extension-button">Discover the MENA collection</button>
@@ -117,14 +123,43 @@
         </div>
     </header>
 
-    <section class="main-section">
-        <video id="video-background" autoplay loop muted>
-            <source src="../videos/Admin/vidoe.mp4" type="video/mp4">
-        </video>
-        <!-- <h2 class="section-text">Welcome back <br> <span class="section-text">Scroll down to view latest insights on
-                your business</span></h2> -->
 
-        <!-- <i class="fa-light fa-angle-down"></i> -->
+    <section class="Indian-collection">
+        <div class="indian-button">
+
+            <button class="collection-button">Edit Indian</button>
+        </div>
+    </section>
+    <section class="text-break">
+        <h1 class="egypt-text"> The Egyptain collection</h1>
+    </section>
+    <section class="Egyptian-collection">
+
+        <div class="egyptain-button">
+
+            <button class="collection-button">Edit Egyptian</button>
+        </div>
+    </section>
+
+    <section class="text-break">
+        <h1 class="egypt-text"> The Vintage collection</h1>
+    </section>
+
+    <section class="vintage-collection">
+        <div class="vintage-button">
+            <button class="collection-button">Edit Vintage</button>
+        </div>
+    </section>
+
+    <section class="text-break">
+        <h1 class="egypt-text"> The MENA collection</h1>
+    </section>
+
+    <section class="mena-collection ">
+        <div class="mena-button">
+            <button class="collection-button">Edit MENA</button>
+        </div>
     </section>
 </body>
+
 </html>

@@ -27,3 +27,106 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+
+.Indian-collection {
+    background: url(../images/Admin/indian2.jpeg), url(../images/Admin/indian1.jpeg), url(../images/Admin/indain3.jpeg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left top, calc(50% - 1px) top, right top;
+    background-size: contain;
+    background-attachment: fixed;
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.collection-button {
+    border: .0625rem solid #FFFFFF;
+    background-color: transparent;
+    color: #fff;
+    font-family: futura-pt, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .0625rem;
+    line-height: 1.625rem;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.875rem;
+    text-transform: uppercase;
+    transition: background-color ease-in-out .2s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.indian-button {
+    margin: 490px 560px;
+}
+
+.text-break {
+    padding: 700px 400px 100px 400px;
+
+}
+
+.text-break {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Egyptian-collection {
+    /* margin-top:800px; */
+    /* padding-top:300px; */
+    background: url(../images/Admin/egyptian2.jpeg), url(../images/Admin/egyptian1.jpeg), url(../images/Admin/egypt1.jpeg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left top, center top, right top;
+    background-size: contain;
+    /* background-attachment: fixed; */
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.egyptain-button {
+    margin: 490px 590px;
+}
+
+.vintage-collection {
+    /* margin-top:800px; */
+    /* padding-top:300px; */
+    background: url(../images/Admin/vintage1.jpeg), url(../images/Admin/vintage2.jpeg), url(../images/Admin/vintage3.jpeg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left top, calc(55% - 1px) top, right top;
+    background-size: contain;
+    /* background-attachment: fixed; */
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.vintage-button {
+    margin: 490px 590px;
+}
+
+.mena-collection {
+    /* margin-top:800px; */
+    /* padding-top:300px; */
+    background: url(../images/Admin/Yara\ Alnamlah.jpeg), url(../images/Admin/MENA2.jpeg), url(../images/Admin/MENA3.jpeg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left top, calc(50% - 1px) top, right top;
+    background-size: contain;
+    /* background-attachment: fixed; */
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.mena-button {
+    margin: 490px 590px;
+}
