@@ -428,7 +428,7 @@ body {
     display: block;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     .icon {
         display: block;
         color: white;
@@ -449,7 +449,6 @@ body {
         display: none;
         position: absolute;
         top: 50px;
-        /* Adjust as needed */
         left: 0;
         background: white;
         padding: 10px;

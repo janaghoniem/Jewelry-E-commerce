@@ -4,7 +4,7 @@
 /* Colour Stuff */
 body {
   /* background: #efeae2; */
-  color: #f6f6f7;
+  color: #4f585e;
   font-family: 'Source Sans Pro', sans-serif;
   text-rendering: optimizeLegibility;
   background: url(../images/Admin/WALLPAPER.jpeg) no-repeat;
@@ -44,7 +44,7 @@ div.cards {
   /* margin-left:10%; */
   /* margin-left: 150px; */
   /* margin-right:auto; */
-  padding-top: 60px;
+  padding-top: 160px;
   max-width: 960px;
   text-align: center;
   /* position: relative; */
@@ -85,7 +85,6 @@ div.card div.card-title {
   padding: 6px 15px 10px;
   position: relative;
   z-index: 0;
-  color:black;
 }
 
 div.card div.card-title a.toggle-info {
@@ -137,7 +136,6 @@ div.card div.card-description {
   padding: 0 15px 10px;
   position: relative;
   font-size: 14px;
-  color:black;
 }
 
 div.card div.card-actions {
@@ -210,78 +208,45 @@ div.card.show div.flap2 {
 }
 
 
-
-.scrollToView{
-  margin: 480px 600px ;
-
+.icon {
+  display: none;
 }
 
-.view-products {
-  /* margin-top: 10px; */
-  top:0;
-  background: url(../images/Admin/1.jpeg), url(../images/Admin/Jewelry.jpeg), url(../images/Admin/p1.jpeg);
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: left top, calc(48% - 1px) top, right top;
-  background-size: contain;
-  background-attachment: fixed;
-  width: 100%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.navigation {
+  display: block;
 }
 
+@media only screen and (max-width: 900px) {
+  .icon {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
 
-@media only screen and (max-width: 1000px) {
-  .view-products {
-    background: url(../images/Admin/1.jpeg),url(../images/Admin/Jewelry.jpeg);
-    background-position: left top, calc(100% - 1px) top;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    width: 100vw;
-    /* Adjusted width for smaller viewports */
-    max-width: 800px;
-    /* Limiting the maximum width */
+  .logo {
+    margin-right: 0;
+
+  }
+
+  .responsive {
+    margin-right: 70px;
+  }
+
+  .navigation {
+    display: none;
     position: absolute;
+    top: 50px;
+    left: 0;
+    background: white;
+    padding: 10px;
+    z-index: 999;
   }
 
-  .scrollToView {
-    margin: 500px 490px;
-
+  .navigation a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 5px 0;
   }
-}
-
-@media only screen and (max-width: 600px) {
-  .view-products {
-    background: url(../images/Admin/1.jpeg);
-    background-position: calc(50% - 1px) top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    width: 100%;
-    /* Adjusted width for even smaller viewports */
-
-    position: absolute;
-  }
-
-  .scrollToView {
-    margin: 550px 190px;
-
-  }
-
-}
-
-
-.Product-display{
-  padding-top:300px;
-}
-
-.section-text {
-  /* font-family: 'Montserrat', sans-serif; */
-   z-index: 1;
-  color: #000000;
-  font-weight: bolder;
-   margin: 10px auto 0 auto; 
-   text-align: center; 
 }
