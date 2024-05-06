@@ -581,6 +581,9 @@ td{
     border: none;
 }
 
+th h2{
+    font-weight: bold;
+}
 th {
     text-align: right;
     border: none;
@@ -594,6 +597,7 @@ th {
 .first {
     text-align: center;
     border: none;
+   
 }
 
 .second,
