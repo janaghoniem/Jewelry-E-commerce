@@ -132,7 +132,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //LOGIN HANDLING
-    
+    const loginSubmitButton = document.getElementById('login-form-button');
+    const loginFormEmailField = document.getElementById('login-form-email-field');
+    const loginFormPasswordField = document.getElementById('login-form-password-field');
+
+    loginSubmitButton.addEventListener('click', () => {
+        if(loginFormEmailField.value === ""){
+            
+        }
+    });
+
+    const createAccountSubmitButton = document.getElementById('create-account-button');
+
+
 
 
     

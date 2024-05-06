@@ -124,11 +124,11 @@
             </nav>
             <form id="login-form">
                 <label class="login-nav-text-style" for="email-address-field">E-mail Address</label>
-                <input class="login-nav-text-style" type="text" name="email-address-field" required>
-                <p class="input-error login-nav-text-style"></p>
+                <input class="login-nav-text-style" type="text" name="email-address-field" id="login-form-email-field">
+                <p class="input-error login-nav-text-style" id="login-form-email-error"></p>
                 <label class="login-nav-text-style" for="password-field">Password</label>
-                <input class="login-nav-text-style" type="password" name="password-field" required>
-                <p class="input-error login-nav-text-style"></p>
+                <input class="login-nav-text-style" type="password" name="password-field" id="login-form-password-field">
+                <p class="input-error login-nav-text-style" id="login-form-password-error"></p>
                 <div class="remember-me-forgot-password-container">
                     <div class="remember-me-div">
                         <input type="checkbox" id="remember-me-checkbox">
@@ -138,40 +138,40 @@
                         <a href="" class="login-nav-text-style forgot-password">Forgot password?</a>
                     </div>
                 </div>
-                <button class="login-nav-text-style" type="submit">Login</button>
+                <button class="login-nav-text-style" type="submit" id="login-form-button">Login</button>
             </form>
             <form id="create-account-form">
                 <div class="sign-up-name-section">
                     <div>
                         <label class="login-nav-text-style" for="first-name-field">First name</label>
-                        <input class="login-nav-text-style" type="text" name="first-name-field" required>
-                        <p class="input-error login-nav-text-style"></p>
+                        <input class="login-nav-text-style" type="text" name="first-name-field" id="sign-up-first-name-field">
+                        <p class="input-error login-nav-text-style" id="sign-up-first-name-error"></p>
                     </div>
                     <div>
                         <label class="login-nav-text-style" for="last-name-field">Last name</label>
-                        <input class="login-nav-text-style" type="text" name="last-name-field" required>
-                        <p class="input-error login-nav-text-style"></p>
+                        <input class="login-nav-text-style" type="text" name="last-name-field" id="sign-up-last-name-field">
+                        <p class="input-error login-nav-text-style" id="sign-up-last-name-error"></p>
                     </div>
                 </div>
                 <label class="login-nav-text-style" for="email-address-field">E-mail Address</label>
-                <input class="login-nav-text-style" type="text" name="email-address-field" required>
-                <p class="input-error login-nav-text-style"></p>
+                <input class="login-nav-text-style" type="text" name="email-address-field" id="sign-up-email-field">
+                <p class="input-error login-nav-text-style" id="sign-up-email-error"></p>
                 <label class="login-nav-text-style" for="confirm-email-address-field">Confirm E-mail Address</label>
-                <input class="login-nav-text-style" type="text" name="confirm-email-address-field" required>
-                <p class="input-error login-nav-text-style"></p>
-                <label class="login-nav-text-style" for="confirm-password-field">Confirm Password</label>
-                <input class="login-nav-text-style" type="password" name="confirm-password-field" required>
-                <p class="input-error login-nav-text-style"></p>
+                <input class="login-nav-text-style" type="text" name="confirm-email-address-field" id="sign-up-confirm-email-field">
+                <p class="input-error login-nav-text-style" id="sign-up-confirm-email-error"></p>
                 <label class="login-nav-text-style" for="password-field">Password</label>
-                <input class="login-nav-text-style" type="password" name="password-field" required>
-                <p class="input-error login-nav-text-style"></p>
+                <input class="login-nav-text-style" type="password" name="password-field" id="sign-up-password-field">
+                <p class="input-error login-nav-text-style" id="sign-up-password-error"></p>
+                <label class="login-nav-text-style" for="confirm-password-field">Confirm Password</label>
+                <input class="login-nav-text-style" type="password" name="confirm-password-field" id="sign-up-confirm-password-field">
+                <p class="input-error login-nav-text-style" id="sign-up-confirm-password-error"></p>
                 <div class="remember-me-forgot-password-container">
                     <div class="remember-me-div">
                         <input type="checkbox" id="remember-me-checkbox">
                         <label for="remember-me-checkbox" class="login-nav-text-style">Sign up for special offers</label>
                     </div>
                 </div>
-                <button class="login-nav-text-style" type="submit">Create account</button>
+                <button class="login-nav-text-style" type="submit" id="create-account-button">Create account</button>
             </form>
         </div>
     </div>
