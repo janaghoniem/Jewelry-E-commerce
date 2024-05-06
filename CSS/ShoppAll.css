@@ -12,6 +12,10 @@
   margin: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: 0.5s;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
 body {
@@ -175,9 +179,10 @@ body {
 
 #line {
   width: 100%;
-  height: 0.5px;
-  background-color: #908f8f;
-  margin-top: 15px;
+  height: 0.2px;
+  background-color: #b3b1b1;
+  margin-top: 0px;
+  align-items: center;
 }
 
 
@@ -365,14 +370,17 @@ body {
 .filter-bar {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-left: 20px;
   position: sticky;
   top: 0;
   background-color: white;
   z-index: 100;
   width: 100%;
   padding: 10px;
+  align-items: center;
+  text-align: center;
+
 }
 
 .filter-bar label {
@@ -387,12 +395,8 @@ body {
   /* Add margin to create space between elements */
 }
 
-.filter-bar select {
-  width: 150px;
-}
-
 .filter-bar button {
-  background-color: #9b3900;
+  background-color: transparent;
   color: white;
   border: none;
   cursor: pointer;
@@ -403,26 +407,35 @@ body {
 }
 
 .filter-bar select {
-  width: 150px;
+  width: 70px;
   background-color: transparent;
 }
 
 .filter-bar button {
   /* background-color: #4CAF50; */
-  color: white;
+  color: rgb(15, 4, 4);
   border: none;
   cursor: pointer;
 }
 
-/* ---------------------------------------------------display Grid------------------------------------------ */
+.filter-bar h3 {
+  padding-right: 30px;
+  font: bold;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------display Grid---------------------------------------------- */
 .grid-container {
   display: grid;
   gap: 15px;
   background-color: transparent;
   /* width: 73%; */
   padding: 0px 150px 20px 150px;
+  /* padding: 0px 20px; */
   /* top right bottom left */
   margin: 30 auto;
+  box-sizing: border-box;
+  /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
 }
 
 
@@ -434,10 +447,24 @@ body {
   margin: 0 auto;
   /* width: 50%; */
   width: 100%;
+  font-size: 20px;
+  float: left;
 }
 
 .grid-item img {
   width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    padding: 0px 10px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .grid-item {
+    font-size: 10px;
+    /* Adjust font size for smaller screens */
+  }
 }
 
 .prod1 {
@@ -475,19 +502,20 @@ body {
 }
 
 /* ---------------------------------------------------pagination--------------------------------------------*/
-:root{
+:root {
   --primary: #9b3900;
-  --secondary:#e6b193;
-  --white:#fff;
-  --grey:rgba(128,128,128,0.5);
+  --secondary: #e6b193;
+  --white: #fff;
+  --grey: rgba(128, 128, 128, 0.5);
 
-  --font-size:1rem;
-  --font-weight:500;
+  --font-size: 1rem;
+  --font-weight: 500;
 
-  --radius-1:50px;
-  --radius-2:50%;
+  --radius-1: 50px;
+  --radius-2: 50%;
 
 }
+
 .pagination-container {
   display: flex;
   align-items: center;
@@ -527,35 +555,36 @@ body {
 
 .btn:disabled:hover {
   cursor: not-allowed;
-  color:var(--grey) ;
+  color: var(--grey);
   background-color: unset;
 }
-.pagination-item{
+
+.pagination-item {
   display: inline-block;
-  height:45px;
+  height: 45px;
   width: 45px;
   line-height: 45px;
   text-align: center;
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   margin: 0 5px;
-  cursor:pointer;
+  cursor: pointer;
   border-radius: var(--radius-2);
   background-position: -45px 0;
   transition: backgroound-color 0.3s ease-out 0.3s ease-out,
-  background-position .6s ;
+    background-position .6s;
 }
 
-.pagination-item.active{
-  color:var(--white);
-  background-image: linear-gradient(var(--primary),var(--primary));
+.pagination-item.active {
+  color: var(--white);
+  background-image: linear-gradient(var(--primary), var(--primary));
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.pagination-item:hover{
-color:var(--white);
-background-color: var(--secondary);
+.pagination-item:hover {
+  color: var(--white);
+  background-color: var(--secondary);
 }
 
 /* ---------------------------------------------------footer -------------------------------------------------*/
