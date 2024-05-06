@@ -102,6 +102,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 30); 
     });
+
+    //login - sign-up pop up
+    // Get the button and popup container elements
+    const accountButton = document.getElementById('login-button');
+    const popupContainer = document.getElementById('popup-container');
+
+    // Add event listener to open the popup when button is clicked
+    accountButton.addEventListener('click', () => {
+        popupContainer.style.display = 'flex';
+    });
+
+    // Close the popup when clicking outside of it
+    popupContainer.addEventListener('click', (event) => {
+        if (event.target === popupContainer) {
+            popupContainer.style.display = 'none';
+        }
+    });
+
+
     
     // 7agat el search
     const searchButton = document.getElementById('search');
