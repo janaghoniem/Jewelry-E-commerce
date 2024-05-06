@@ -348,7 +348,7 @@ header:hover #search-button{
 }
 
 .popup-container {
-    display: flex;
+    display: none;
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -393,12 +393,28 @@ header:hover #search-button{
     transition: none;
 }
 
+#login-form {
+    display: block;
+}
+
+#create-account-form {
+    display: none;
+}
+
+.sign-up-name-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .popup-form {
     background-color: white;
     padding: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 590px;
-    height: 470px;
+    height: auto;
+    max-height: 650px;
+    overflow: scroll;
 }
 
 .popup-form input {
@@ -447,7 +463,11 @@ header:hover #search-button{
     color: white;
 }
 
-
+.input-error {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    color: red;
+}
 
 .main {
     width: 100%;

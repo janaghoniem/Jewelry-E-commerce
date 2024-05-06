@@ -104,21 +104,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //login - sign-up pop up
-    // Get the button and popup container elements
-    const accountButton = document.getElementById('login-button');
+    const loginIconTrigger = document.getElementById('login-button');
     const popupContainer = document.getElementById('popup-container');
+    const loginButton = document.getElementById('login-nav');
+    const loginform = document.getElementById('login-form');
+    const createAccountButton = document.getElementById('Create-an-account-nav');
+    const createAccountForm = document.getElementById('create-account-form');
 
-    // Add event listener to open the popup when button is clicked
-    accountButton.addEventListener('click', () => {
+    loginIconTrigger.addEventListener('click', () => {
         popupContainer.style.display = 'flex';
     });
 
-    // Close the popup when clicking outside of it
-    popupContainer.addEventListener('click', (event) => {
-        if (event.target === popupContainer) {
-            popupContainer.style.display = 'none';
-        }
+    loginButton.addEventListener('click', () => {
+        createAccountButton.classList.remove('active');
+        createAccountForm.style.display = 'none';
+
+        loginButton.classList.add('active');
+        loginform.style.display = 'block';
     });
+
+    createAccountButton.addEventListener('click', () => {
+        loginButton.classList.remove('active');
+        loginform.style.display = 'none';
+
+        createAccountButton.classList.add('active');
+        createAccountForm.style.display = 'block';
+    });
+
+    //LOGIN HANDLING
+    
 
 
     
