@@ -18,11 +18,13 @@ overflow-x: hidden;
   
   
    justify-content: center;
+   margin-top: 90px;
 
 }
 .white-square{
     width:auto;
     height:auto;
+    margin-top: 90px;
     margin:50px;
  
     background-color: white;
@@ -58,7 +60,8 @@ overflow-x: hidden;
 #desc1{
     width:30vw;
     position: sticky;
-    top:0;
+    top:90px;
+    /* margin-top: 90px; */
 }
 .p1{
     font-size:20px;

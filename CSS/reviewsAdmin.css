@@ -1,0 +1,167 @@
+body{
+    background-image: url('../images/Admin/edit-background.jpg');
+    background-repeat: no-repeat;
+display:flex;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+background-size: cover;
+background-attachment: fixed;
+
+overflow-x: hidden;
+}
+.all-reviews{
+    top:90px;
+    margin-top: 150px;
+    padding:30px;
+}
+.review-box{
+    border:1px solid #ccc;
+    padding: 20px;
+    margin-bottom:20px;
+    position:relative;
+    display :inline-block;
+    width:800px;
+    background-color:rgba(250, 235, 215, 0.601) ;
+    border-radius: 10px;
+
+}
+.review-header{
+    display:flex;
+    align-items: center;
+    margin-bottom: 10px;
+  width:100%;
+}
+.review-avatar i{
+  font-size: 40px;
+    /* border-radius: 50%; */
+   margin:15px;
+   margin-top:3px;
+   position: relative;
+   display: inline;
+   
+
+}
+.review-info {
+    flex:1;
+   
+}
+.review-info p{
+    margin-top: 0;
+    margin-bottom:0;
+}
+.review-rating{
+    margin-bottom:10px;
+
+}
+.star{
+    color:gold;
+
+}
+.review-text{
+    margin-bottom:10px;
+}
+.delete-review{
+    border:none;
+    background-color: rgba(90, 20, 20, 0.296);
+    cursor:pointer;
+    padding:0;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+
+
+}
+.delete-review i{
+    font-size:20px;
+    color:#333;
+
+}
+.delete-review:hover{
+    color:#ddd;
+}
+@media screen and (max-width:768px){
+    .review-box{
+        border:1px solid #ccc;
+        padding: 20px;
+        margin-bottom:20px;
+        position:relative;
+        display :inline-block;
+        width:500px;
+        background-color:rgba(250, 235, 215, 0.601) ;
+        border-radius: 10px;
+    
+    }
+    .review-header{
+        display:flex;
+        align-items: center;
+        margin-bottom: 10px;
+      width:100%;
+    }
+    .review-avatar i{
+      font-size: 40px;
+     
+       margin:15px;
+       margin-top:3px;
+       position: relative;
+       display: inline;
+       
+    
+    }
+    .review-info {
+        flex:1;
+       
+    }
+    .review-info p{
+        margin-top: 0;
+        margin-bottom:0;
+    }
+    .review-rating{
+        margin-bottom:10px;
+    
+    }
+    .star{
+        color:gold;
+    
+    }
+    .review-text{
+        margin-bottom:10px;
+    }
+    .delete-review{
+        border:none;
+        background-color: rgba(90, 20, 20, 0.296);
+        cursor:pointer;
+        padding:0;
+        border-radius:50%;
+        width:40px;
+        height:40px;
+    
+    
+    }
+    .delete-review i{
+        font-size:20px;
+        color:#333;
+    
+    }
+    .delete-review:hover{
+        color:#ddd;
+    }
+}
+@media screen and (max-width:480px){
+    .review-box{
+        border:1px solid #ccc;
+        padding: 20px;
+        margin-bottom:20px;
+        position:relative;
+        display :inline-block;
+        width:300px;
+        background-color:rgba(250, 235, 215, 0.601) ;
+        border-radius: 10px;
+    
+    }
+    .review-info{
+        margin-right:0;
+     
+
+    }
+}
