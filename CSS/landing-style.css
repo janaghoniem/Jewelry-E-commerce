@@ -183,28 +183,17 @@ header:hover #search-button{
 
 .extension-item {
     width: 300px;
-    height: 400px;
+    height: 500px;
     overflow: hidden;
     text-decoration: none;
     margin: 10px;
 }
 
-#indian-collection-extension {
-    background-image: url(../images/Landing/Untitled-13\ \(3\).png);
+.extension-img {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
 }
-
-#egyptian-collection-extension {
-    background-image: url(../images/Landing/egyptian-collection-extension.png);
-}
-
-#vintage-collection-extension {
-    background-image: url(../images/Landing/vintage-collection-extension.png);
-}
-
-#middle-eastern-collection-extension {
-    background-image: url(../images/Landing/mena-collection-extension.png);
-}
-
 
 .extension-text {
     font-family: 'Futura PT';
