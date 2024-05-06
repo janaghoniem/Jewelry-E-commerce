@@ -132,14 +132,64 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //LOGIN HANDLING
+    function isValidEmail(email) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+
+    function isValidPassword(password) {
+        return (password.length >= 8);
+    }
+
+    function noErrorStyling(field) {
+        field.style.borderColor = 'silver';
+        field.style.backgroundColor = 'transparent';
+    }
+
     const loginSubmitButton = document.getElementById('login-form-button');
     const loginFormEmailField = document.getElementById('login-form-email-field');
+    const loginFormEmailError = document.getElementById('login-form-email-error');
     const loginFormPasswordField = document.getElementById('login-form-password-field');
+    const loginFormPasswordError = document.getElementById('login-form-password-error');
+
+    let requiredFieldError = "Required Field.";
+    let invalidEmailError = "Invalid E-mail Address";
+    let invalidPasswordError = "Use 8 or more characters";
+
+    function validateLogin() {
+        let valid = false;
+        loginFormEmailError.textContent = '';
+        loginFormPasswordError.textContent = '';
+        
+        noErrorStyling(loginFormEmailField);
+        noErrorStyling(loginFormPasswordField);
+
+        if(loginFormEmailField.value === ""){
+            loginFormEmailField.style.borderColor = 'red';
+            loginFormEmailError.textContent = requiredFieldError;
+        } else if (!isValidEmail(loginFormEmailField.value.trim())){
+            loginFormEmailError.textContent = invalidEmailError;
+        } 
+        if (loginFormPasswordField.value === "") {
+            loginFormPasswordField.style.borderColor = 'red';
+            loginFormPasswordError.textContent = requiredFieldError;
+        }else if (!isValidPassword(loginFormPasswordField.value.trim())){
+            loginFormPasswordError.textContent = invalidPasswordError;
+        }
+        else {
+            valid = true;
+            loginFormEmailError.textContent = '';
+            loginFormPasswordError.textContent = '';
+
+            noErrorStyling(loginFormEmailField);
+            noErrorStyling(loginFormPasswordField);
+        }
+        return valid;
+    }
 
     loginSubmitButton.addEventListener('click', () => {
-        if(loginFormEmailField.value === ""){
-            
-        }
+        if(!validateLogin())
+            event.preventDefault();
     });
 
     const createAccountSubmitButton = document.getElementById('create-account-button');
