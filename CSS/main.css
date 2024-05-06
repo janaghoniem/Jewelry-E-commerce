@@ -439,12 +439,12 @@ section.content-row.in-view {
 
 .view-products {
     margin-top: 10px;
-    background:url(../images/Admin/1.jpeg),url(../images/Admin/Jewelry.jpeg),url(../images/Admin/p1.jpeg);
-    background-repeat:no-repeat,no-repeat,no-repeat;
-    background-position:left top, calc(48% - 1px) top, right top;
+    background: url(../images/Admin/1.jpeg), url(../images/Admin/Jewelry.jpeg), url(../images/Admin/p1.jpeg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left top, calc(48% - 1px) top, right top;
     background-size: contain;
     background-attachment: fixed;
-    width:100%;
+    width: 100%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -496,20 +496,23 @@ section.content-row.in-view {
     }
   } */
 
-  @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .view-products {
         background: url(../images/Admin/1.jpeg), url(../images/Admin/Jewelry.jpeg);
         background-position: left top, calc(100% - 1px) top;
         background-repeat: no-repeat, no-repeat;
         background-size: contain;
         background-attachment: fixed;
-        width: 100vw; /* Adjusted width for smaller viewports */
-        max-width: 800px; /* Limiting the maximum width */
+        width: 100vw;
+        /* Adjusted width for smaller viewports */
+        max-width: 800px;
+        /* Limiting the maximum width */
         position: absolute;
     }
+
     .editButton1 {
         margin: 460px 250px;
-    
+
     }
 }
 
@@ -520,16 +523,19 @@ section.content-row.in-view {
         background-repeat: no-repeat;
         background-size: contain;
         background-attachment: fixed;
-        width: 100%; /* Adjusted width for even smaller viewports */
-       
+        width: 100%;
+        /* Adjusted width for even smaller viewports */
+
         position: absolute;
     }
+
     .editButton1 {
         margin: 460px 150px;
-    
+
     }
-    
+
 }
+
 @media only screen and (max-width: 500px) {
     .videos-container {
         display: flex;
@@ -540,20 +546,63 @@ section.content-row.in-view {
 
     .editButton {
         margin: 40px 150px;
-    
+
     }
-    
+
 }
+
 @media only screen and (max-width: 800px) {
     .videos-container {
         display: flex;
         padding-left: 100px;
         padding-bottom: 50px;
     }
+
     .editButton {
         margin: 40px 250px;
-    
+
     }
-    
+
 }
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    height: 3px;
+    z-index: 1;
+    margin-top: 300px
+}
+
+td{
+    text-align: center;
+    padding: 2px 8px 2px 8px;
+    color: white;
+    border: none;
+}
+
+th {
+    text-align: right;
+    border: none;
+    border-left-style: solid;
+    border: 4px solid #dddddd;
+    text-align: left;
+    padding: 8px 8px 2px 8px;
+    color: white;
+}
+
+.first {
+    text-align: center;
+    border: none;
+}
+
+.second,
+.third,
+.forth {
+    text-align: center;
+    border-bottom:none;
+    border-top:none;
+}
+.forth{
+    border:none;
+}
