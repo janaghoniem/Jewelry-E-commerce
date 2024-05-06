@@ -233,7 +233,7 @@ body {
     }
 
     .Egyptian-collection {
-        background: url(../images/Admin/egyptian2.jpeg),url(../images/Admin/egyptian1.jpeg);
+        background: url(../images/Admin/egyptian2.jpeg), url(../images/Admin/egyptian1.jpeg);
         background-position: left top, calc(100% - 1px) top;
         background-repeat: no-repeat, no-repeat;
         background-size: contain;
@@ -318,7 +318,7 @@ body {
         position: absolute;
     }
 
-    .vintage-button{
+    .vintage-button {
         margin-top: 460px;
         margin-left: 180px;
     }
@@ -385,7 +385,7 @@ body {
     }
 
     .text-break {
-        padding: 700px 100px 100px 100px; 
+        padding: 700px 100px 100px 100px;
     }
 
     .ADDBUTTON {
@@ -403,7 +403,7 @@ body {
     }
 
     .text-break {
-        padding: 700px 100px 100px 100px; 
+        padding: 700px 100px 100px 100px;
     }
 
 
@@ -413,6 +413,56 @@ body {
     }
 }
 
+
+
+
+
+
+
+
+.icon {
+    display: none;
+}
+
+.navigation {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .icon {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .logo {
+        margin-right: 0;
+
+    }
+
+    .responsive {
+        margin-right: 70px;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 50px;
+        /* Adjust as needed */
+        left: 0;
+        background: white;
+        padding: 10px;
+        z-index: 999;
+    }
+
+    .navigation a {
+        display: block;
+        color: black;
+        text-decoration: none;
+        padding: 5px 0;
+    }
+}
 
 /*Responsive header*/
 /* .responsive-header {
@@ -445,6 +495,3 @@ body {
         margin-right:20px;
     }
 } */
-
-
-
