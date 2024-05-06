@@ -375,6 +375,7 @@ input[type="checkbox"]{
 .c-pic img{
 width:100%;
 height:270px;
+border-radius: 20px 0px;
 
 }
 .c-pic i{
@@ -390,10 +391,59 @@ height:270px;
     transform:scale(1.1);
 
 }
+
 .c-info{
     font-weight: 90;
-    text-align: left;
+    text-align: center;
+    margin-top: 1px;
+    background-color: 	#7b40009f;
+    border-radius:20px 0px;
+    width:97%;
+    height:auto;
+    padding-bottom: 0;
     font-family: 'gill sans','gill sans mt', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.c-info p{
+    margin:0;
+}
+.curtain-btn{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: brown;
+    color:white;
+    padding:10px 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity:0;
+    border-radius: 20px 0px;
+}
+
+.popupMessage{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding:10px 20px;
+    border:1px solid black;
+    border-radius:5px;
+    display:none;
+    z-index:9999;
+    animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown{
+    0%{
+        top:-110px;
+
+    }
+    100%{
+        top:14px;
+    }
+}
+.c-pic:hover .curtain-btn{
+    opacity:1;
 }
 .coll-card{
     width:calc(25%-2%);
