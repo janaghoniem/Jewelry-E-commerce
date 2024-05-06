@@ -135,15 +135,14 @@ overflow-x: hidden;
     /* transition-duration: 1s; */
   }
 .outstanding-pieces {
-background-color: white;
-margin-top: 10px;
-width:98vw;
-
+   background-color: white;
+   margin-top: 10px;
+   width:98vw;
    display: flex;
    justify-content: space-between;
-    align-items: center;
-    /* vertical-align: top; */
-    padding:40px;
+   align-items: center;
+   /* vertical-align: top; */
+   padding:40px;
 
 
 }
@@ -162,7 +161,7 @@ font-size: large;
 .pcards{
     margin-top:50px;
      flex:1;
-  flex-wrap: nowrap;
+     flex-wrap: nowrap;
     justify-content: flex-end;
     display: flex;
    
@@ -174,6 +173,8 @@ font-size: large;
     height:300px; */
     align-items: center;
     display:inline-block;
+    overflow: hidden;
+    border-radius: 30px;
     
     
 }
@@ -183,10 +184,12 @@ font-size: large;
     margin-left:-40px;
     font-size:20px;
     color:rgb(113,46,15);
+   
 
 }
 .pic img{
     border-radius: 30px;
+    overflow: hidden;
 
 }
 .pic i:hover{
@@ -203,7 +206,7 @@ font-size: large;
     position: relative;
     width:calc(33%-2%);
     /* max-width: 30%; */
-    width:fit-content;
+    /* width:fit-content; */
     margin:10px;
   
     vertical-align: top;
@@ -215,14 +218,14 @@ font-size: large;
 }
 .card:hover{
 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    width:max-content;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.3); */
+    width:calc(33%-2%);
 
 }
 .info{
     font-weight: 100;
     text-align: center;
-    margin-top:15px;
+    /* margin-top:15px; */
     font-family: 'gill sans','gill sans mt', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .info p{
@@ -230,21 +233,23 @@ font-size: large;
 }
 
 .filter-box{
-    display:flex;
-    justify-content: left;
-    /* align-items: left; */
+    display:block;
+    
+    align-items: left;
     margin-top: 20px;
     background-color: white;
     padding-top: 30px;
-    padding-left: 30px;
+    padding-left: 40px;
+    margin-left:30px;
     
   
 }
 .filter-container{
-    display:inline-block;
+    /* display:inline-block;
     vertical-align: top;
+    position: relative; */
+    margin-right:20px;
     position: relative;
-    margin:0px 55px;
    
    
   
@@ -282,7 +287,7 @@ span::after{
     overflow:hidden;
     text-align: center;
     transition: height .4s ease;
-    border:1px solid black;
+    /* border:1px solid black; */
     list-style-type: none;
     padding:0;
     margin:0;
@@ -314,15 +319,15 @@ span::after{
 }
 .filter-box label{
     margin-bottom:5px;
-    display: inline-block;
-    position: relative;
+    display: block;
+    /* position: relative; */
+   
+   
 }
 input[type="checkbox"]{
     display:none;
 }
-/* .filter-box label:hover + input[type="checkbox"]+ .slide{
-    height:300px;
-} */
+
 .filter-container:hover input[type="checkbox"]+ .slide{
     height:auto;
    
@@ -332,6 +337,27 @@ input[type="checkbox"]{
     left: 0;
    
 }
+.filter-box p{
+    font-size: 20px;
+   
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.filter-heading{
+    margin-right:10px;
+  
+    
+}
+.filter-heading p{
+    margin-right:10px;
+    display:inline-flex;
+  
+}
+.filter-options{
+    display:inline-flex;
+    flex-wrap:wrap;
+}
 #category{
     position: absolute;
     opacity: 0;
@@ -339,6 +365,25 @@ input[type="checkbox"]{
 }
 #category:checked + .slide{
     height:auto;
+    width:100%;
+}
+#availability{
+    position: absolute;
+    opacity: 0;
+    height:0px;
+}
+#availability:checked + .slide{
+    height:auto;
+    width:100%;
+}
+#colors{
+    position: absolute;
+    opacity: 0;
+    height:0px;
+}
+#colors:checked + .slide{
+    height:auto;
+    width:100%;
 }
 .coll-sec{
     
@@ -370,12 +415,14 @@ input[type="checkbox"]{
     position:relative;
     width:220px;
     height:auto;
+    overflow: hidden;
 
 }
 .c-pic img{
 width:100%;
 height:270px;
-border-radius: 20px 0px;
+/* border-radius: 20px 0px; */
+overflow: hidden;
 
 }
 .c-pic i{
@@ -391,13 +438,17 @@ border-radius: 20px 0px;
     transform:scale(1.1);
 
 }
+.c-pic img:hover{
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
 
 .c-info{
     font-weight: 90;
     text-align: center;
     margin-top: 1px;
-    background-color: 	#7b40009f;
-    border-radius:20px 0px;
+    /* background-color: 	#7b40009f;
+    border-radius:20px 0px; */
     width:97%;
     height:auto;
     padding-bottom: 0;
@@ -416,7 +467,7 @@ border-radius: 20px 0px;
     cursor: pointer;
     transition: opacity 0.3s ease;
     opacity:0;
-    border-radius: 20px 0px;
+    border-radius: 0px 0px 20px 0px;
 }
 
 .popupMessage{
