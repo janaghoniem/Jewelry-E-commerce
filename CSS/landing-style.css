@@ -360,6 +360,18 @@ header:hover #search-button{
     align-items: center;
 }
 
+#exit-popup-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 100%;
+    margin-top: -20px;
+}
+
+#exit-popup-button i{
+    font-size: larger;
+}
+
 .login-nav {
     display: flex;
     flex-direction: row;

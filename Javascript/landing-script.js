@@ -289,7 +289,14 @@ document.addEventListener('DOMContentLoaded', function() {
     createAccountSubmitButton.addEventListener('click', () => {
         if(!validateSignUp())
             event.preventDefault();
-    })
+    });
+
+    //exiting el popup login
+    const exitPopupButton = document.getElementById('exit-popup-button');
+
+    exitPopupButton.addEventListener('click', () => {
+        popupContainer.style.display = 'none';
+    });
 
     
     // 7agat el search
