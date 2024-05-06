@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="../CSS/admin-collections.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="../Javascript/landing-script.js"></script>
+    <script src="../Javascript/admin-collections.js"></script>
     <title>Landing Page</title>
 </head>
 
 <body>
     <header>
         <div class="header-top-unscrolled" id="header-top">
-            <div class="store-services">
+            <!-- <div class="store-services">
                 <nav class="navigation">
                     <a href="#">
                         <i class="fa-solid fa-location-dot"></i>
@@ -55,14 +56,14 @@
                         <p>Shopping Bag</p>
                     </a>
                 </nav>
-            </div>
+            </div> -->
         </div>
         <div class="header-middle-unscrolled" id="header-middle">
             <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
             <div id="top-move-on-scroll"></div>
         </div>
         <div class="header-bottom-unscrolled" id="header-bottom">
-            <nav class="navigation">
+            <nav class="navigation" id="myTopnav">
                 <a href="main.html">Dashboard</a>
                 <a href="admin-collections.html">Collection</a>
                 <a href="product.html">Products</a>
@@ -70,6 +71,9 @@
                 <a href="">Statistics</a>
                 <a href="#">Reviews</a>
                 <a href="support.html">Customer Support</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
                 <!-- <a href="#">Necklaces</a>
                 <a href="#">Rings</a>
                 <a href="#">Head Pieces</a> -->
@@ -126,6 +130,29 @@
     </header>
 
 
+    <!-- <header class="responsive-header">
+        <div class="header-middle-unscrolled" id="header-middle">
+            <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
+            <div id="top-move-on-scroll"></div>
+        </div>
+        <a href="javascript:void(0);" class="burger" onclick=" toggleMenu()">&#9776;</a>
+        <div id="dropdown-menu" class="dropdown-menu">
+            <nav class="navigation">
+                <a href="../HTML/landing.html">Home</a>
+                <a href="../HTML/ShoppAll.html">Shop All</a>
+                <a href="#">Collections</a>
+                <a href="#">Bracelets</a>
+                <a href="#">Earrings</a>
+                <a href="#">Necklaces</a>
+                <a href="#">Rings</a>
+
+                
+            </nav>
+        </div>
+
+
+    </header> -->
+
     <section class="Indian-collection">
         <div class="indian-button">
 
@@ -161,6 +188,14 @@
         <div class="mena-button">
             <button class="collection-button">Edit MENA</button>
         </div>
+    </section>
+
+    <section class="text-break">
+        <h1 class="Addtext"> Or Add a new collection</h1>
+        <div class="ADDBUTTON">
+            <button class="add-button">Add Collection</button>
+        </div>
+       
     </section>
 </body>
 
