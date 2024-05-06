@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         field.style.backgroundColor = 'transparent';
     }
 
+    //validate login
     const loginSubmitButton = document.getElementById('login-form-button');
     const loginFormEmailField = document.getElementById('login-form-email-field');
     const loginFormEmailError = document.getElementById('login-form-email-error');
@@ -157,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let invalidPasswordError = "Use 8 or more characters";
 
     function validateLogin() {
-        let valid = false;
+        let valid = true;
         loginFormEmailError.textContent = '';
         loginFormPasswordError.textContent = '';
         
@@ -167,23 +168,21 @@ document.addEventListener('DOMContentLoaded', function() {
         if(loginFormEmailField.value === ""){
             loginFormEmailField.style.borderColor = 'red';
             loginFormEmailError.textContent = requiredFieldError;
+            valid = false;
         } else if (!isValidEmail(loginFormEmailField.value.trim())){
             loginFormEmailError.textContent = invalidEmailError;
+            valid = false;
         } 
+
         if (loginFormPasswordField.value === "") {
             loginFormPasswordField.style.borderColor = 'red';
             loginFormPasswordError.textContent = requiredFieldError;
+            valid = false;
         }else if (!isValidPassword(loginFormPasswordField.value.trim())){
             loginFormPasswordError.textContent = invalidPasswordError;
+            valid = false;
         }
-        else {
-            valid = true;
-            loginFormEmailError.textContent = '';
-            loginFormPasswordError.textContent = '';
 
-            noErrorStyling(loginFormEmailField);
-            noErrorStyling(loginFormPasswordField);
-        }
         return valid;
     }
 
@@ -192,10 +191,105 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
     });
 
+    //Validate sign-up
     const createAccountSubmitButton = document.getElementById('create-account-button');
+    const signUpFormFirstNameField = document.getElementById('sign-up-first-name-field');
+    const signUpFormFirstNameError= document.getElementById('sign-up-first-name-error');
+    const signUpFormLastNameField = document.getElementById('sign-up-last-name-field');
+    const signUpFormLastNameError= document.getElementById('sign-up-last-name-error');
+    const signUpFormEmailField = document.getElementById('sign-up-email-field');
+    const signUpFormEmailError = document.getElementById('sign-up-email-error');
+    const signUpFormConfirmEmailField = document.getElementById('sign-up-confirm-email-field');
+    const signUpFormConfirmEmailError = document.getElementById('sign-up-confirm-email-error');
+    const signUpFormPasswordField = document.getElementById('sign-up-password-field');
+    const signUpFormPasswordError = document.getElementById('sign-up-password-error');
+    const signUpFormConfirmPasswordField = document.getElementById('sign-up-confirm-password-field');
+    const signUpFormConfirmPasswordError = document.getElementById('sign-up-confirm-password-error');
 
+    let emailConfirmationError = "The E-mail confirmation does not match your E-mail address.";
+    let passwordConfirmationError = "The password confirmation does not match your entered password."
 
+    function validateSignUp() {
+        let valid = true;
+        signUpFormFirstNameError.textContent = '';
+        signUpFormLastNameError.textContent = '';
+        signUpFormEmailError.textContent = '';
+        signUpFormPasswordError.textContent = '';
+        signUpFormConfirmEmailError.textContent = '';
+        signUpFormConfirmPasswordError.textContent = '';
 
+        noErrorStyling(signUpFormFirstNameField);
+        noErrorStyling(signUpFormLastNameField);
+        noErrorStyling(signUpFormEmailField);
+        noErrorStyling(signUpFormPasswordField);
+        noErrorStyling(signUpFormConfirmEmailField);
+        noErrorStyling(signUpFormConfirmPasswordField);
+
+        if(signUpFormFirstNameField.value === ""){
+            signUpFormFirstNameField.style.borderColor = 'red';
+            signUpFormFirstNameField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormFirstNameError.textContent = requiredFieldError;
+            valid = false;
+        }
+        if(signUpFormLastNameField.value === ""){
+            signUpFormLastNameField.style.borderColor = 'red';
+            signUpFormLastNameField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormLastNameError.textContent = requiredFieldError;
+            valid = false;
+        }
+
+        if(signUpFormEmailField.value === ""){
+            signUpFormEmailField.style.borderColor = 'red';
+            signUpFormEmailField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormEmailError.textContent = requiredFieldError;
+            valid = false;
+        } else if (!isValidEmail(signUpFormEmailField.value.trim())){
+            signUpFormEmailField.style.borderColor = 'red';
+            signUpFormEmailField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormEmailError.textContent = invalidEmailError;
+            valid = false;
+        }
+        if(signUpFormConfirmEmailField.value === ""){
+            signUpFormConfirmEmailField.style.borderColor = 'red';
+            signUpFormConfirmEmailField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormConfirmEmailError.textContent = requiredFieldError;
+            valid = false;
+        } else if (signUpFormEmailField.value !== signUpFormConfirmEmailField){
+            signUpFormConfirmEmailField.style.borderColor = 'red';
+            signUpFormConfirmEmailField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormConfirmEmailError.textContent = emailConfirmationError;
+            valid = false;
+        }
+        if(signUpFormPasswordField.value === ""){
+            signUpFormPasswordField.style.borderColor = 'red';
+            signUpFormPasswordField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormPasswordError.textContent = requiredFieldError;
+            valid = false;
+        } else if (!isValidPassword(signUpFormPasswordField.value.trim())){
+            signUpFormPasswordField.style.borderColor = 'red';
+            signUpFormPasswordField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormPasswordError.textContent = invalidPasswordError;
+            valid = false;
+        }
+        if(signUpFormConfirmPasswordField.value === ""){
+            signUpFormConfirmPasswordField.style.borderColor = 'red';
+            signUpFormConfirmPasswordField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormConfirmPasswordError.textContent = requiredFieldError;
+            valid = false;
+        } else if (signUpFormConfirmPasswordField.value !== signUpFormPasswordField){
+            signUpFormConfirmPasswordField.style.borderColor = 'red';
+            signUpFormConfirmPasswordField.style.backgroundColor = 'rgb(255, 242, 242)';
+            signUpFormConfirmPasswordError.textContent = passwordConfirmationError;
+            valid = false;
+        }
+
+        return valid;
+    }
+
+    createAccountSubmitButton.addEventListener('click', () => {
+        if(!validateSignUp())
+            event.preventDefault();
+    })
 
     
     // 7agat el search

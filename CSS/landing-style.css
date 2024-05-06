@@ -467,6 +467,7 @@ header:hover #search-button{
     margin-top: -20px;
     margin-bottom: 10px;
     color: red;
+    font-size: smaller;
 }
 
 .main {
