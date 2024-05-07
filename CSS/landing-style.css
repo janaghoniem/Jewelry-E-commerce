@@ -760,7 +760,7 @@ header:hover #search-button{
 
 .indian-collection, .egyptian-collection {
     background-color: #F6E8C0;
-    width: 100%;
+    width: 100%; /*hayet8ayar fel responsiveness*/
     height: 89vh;
     display: flex;
     justify-content: center;
@@ -780,9 +780,9 @@ header:hover #search-button{
 
 .collection img{
     position: absolute;
-    width: 100%;
+    width: 100%; /*hayet8ayar fel responsiveness*/
     height: 85%;
-    object-fit: cover;
+    object-fit: cover;  /*contain fel responsiveness*/
 }
 
 .collection-text {
@@ -847,4 +847,79 @@ header:hover #search-button{
     align-items: center;
     justify-content: center;
     padding: .75rem 1.875rem;
+}
+
+@media screen and (max-width: 768px) {
+    .indian-collection, .egyptian-collection {
+        background-color: #F6E8C0;
+        width: 100vw; /*hayet8ayar fel responsiveness*/
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .egyptian-collection {
+        height: 40vh;
+        margin-bottom: -50px;
+    }
+
+    .collection img{
+        position: absolute;
+        width: 100vw; /*hayet8ayar fel responsiveness*/
+        height: 85%;
+        object-fit: contain;  /*contain fel responsiveness*/
+        margin-top: -170px;
+    }
+
+    .collection-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .indian-collection-text {
+        margin-left: 150px;
+        margin-top: 80px;
+    }
+    
+    .egyptian-collection-text {
+        margin-right: 140px;
+        margin-top: -100px;
+    }
+    
+    .collection h2, .collection p{
+        position: relative; 
+        text-align: center;
+        font-family: 'Futura PT';
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 25px;
+        z-index: 1;
+    }
+    
+    .collection p {
+        /* font-size: 24.2px; */
+        font-size: 10px;
+    }
+
+    .collection-button a{
+        font-family: 'Futura PT';
+        font-size: 10px;
+        font-weight: 500;
+        border: .0625rem solid;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: .0625rem;
+        line-height: 1.625rem;
+        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: .30rem 1rem;
+    }
+    
 }
