@@ -1014,18 +1014,156 @@ header:hover #search-button{
     }
 }
 
-@media screen and (max-width: 815px) and (min-width: 600px){
+@media screen and (max-width: 665px) and (min-width: 400px) {
     .collections-section{
         width: 100vw; 
-        height: 965px;
+        height: 775px;
     }
 
     .indian-collection{
-        margin-top: -25px;
+        margin-top: -75px;
     }
      
     .egyptian-collection{
-        margin-top: 97px;
+        margin-top: 65px;
+    }
+
+    .collection img{
+        position: absolute;
+        width: 100%;
+        height: 85%;
+        object-fit: contain;  
+        margin-top: -20px;
+    }
+
+    .indian-collection-text {
+        margin-top: 190px;
+        margin-left: 170px;
+    }
+    
+    .egyptian-collection-text {
+        margin-top: 110px;
+        margin-right: 120px;
+    }
+    
+    .collection h2, .collection p{
+        font-size: 37px;
+    }
+    
+    .collection p {
+        font-size: 13px;
+    }
+
+    .collection-button a{
+        font-size: 13px;
+        padding: .50rem 1.60rem;
+    }
+}
+
+@media screen and (max-width: 705px) and (min-width: 665px) {
+    .collections-section{
+        width: 100vw; 
+        height: 825px;
+    }
+
+    .indian-collection{
+        margin-top: -60px;
+    }
+     
+    .egyptian-collection{
+        margin-top: 75px;
+    }
+
+    .collection img{
+        position: absolute;
+        width: 100%;
+        height: 85%;
+        object-fit: contain;  
+        margin-top: -20px;
+    }
+
+    .indian-collection-text {
+        margin-top: 180px;
+        margin-left: 230px;
+    }
+    
+    .egyptian-collection-text {
+        margin-top: 130px;
+        margin-right: 170px;
+    }
+    
+    .collection h2, .collection p{
+        font-size: 38px;
+    }
+    
+    .collection p {
+        font-size: 13.5px;
+    }
+
+    .collection-button a{
+        font-size: 13.5px;
+        padding: .50rem 1.60rem;
+    }
+}
+
+@media screen and (max-width: 765px) and (min-width: 705px) {
+    .collections-section{
+        width: 100vw; 
+        height: 885px;
+    }
+
+    .indian-collection{
+        margin-top: -48px;
+    }
+     
+    .egyptian-collection{
+        margin-top: 90px;
+    }
+
+    .collection img{
+        position: absolute;
+        width: 100%;
+        height: 85%;
+        object-fit: contain;  
+        margin-top: -20px;
+    }
+
+    .indian-collection-text {
+        margin-top: 180px;
+        margin-left: 250px;
+    }
+    
+    .egyptian-collection-text {
+        margin-top: 130px;
+        margin-right: 190px;
+    }
+    
+    .collection h2, .collection p{
+        font-size: 40px;
+    }
+    
+    .collection p {
+        font-size: 14px;
+    }
+
+    .collection-button a{
+        font-size: 14px;
+        padding: .50rem 1.60rem;
+    }
+}
+
+@media screen and (max-width: 815px) and (min-width: 765px){
+    .collections-section{
+        width: 100vw; 
+        height: 953px;
+    }
+
+    .indian-collection{
+        margin-top: -30px;
+    }
+     
+    .egyptian-collection{
+        margin-top: 94px;
     }
 
     .collection img{
