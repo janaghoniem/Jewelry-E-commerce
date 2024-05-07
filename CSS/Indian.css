@@ -853,6 +853,10 @@ sort {
         margin: 0;
         overflow-x: hidden;
     }
+    .header{
+        margin: 0;
+        overflow-x: hidden;
+    }
 }
 @media (max-width:1020px){
     .overlay {
@@ -881,6 +885,7 @@ sort {
     .right-content img {
         max-width: 100%;
         height: auto;
+        
     }
 
     .right-content video {
@@ -925,10 +930,14 @@ sort {
         margin: 0;
         overflow-x: hidden;
     }
+    .header{
+        margin: 0;
+        overflow-x: hidden;
+    }
 }
 @media (max-width:425px){
     .intro{
-        height: 100em;
+        height: 110em;
 
     }
     .overlay{
@@ -939,9 +948,17 @@ sort {
         margin: 0;
         overflow-x: hidden;
     }
+    .header{
+        margin: 0;
+        overflow-x: hidden;
+    }
 }
 @media (max-width:1425px){
     body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .header{
         margin: 0;
         overflow-x: hidden;
     }
