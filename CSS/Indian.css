@@ -666,3 +666,43 @@ input[type="checkbox"]{
     height:auto;
     width:100%;
 }
+/* --------------          --------------------HALA'S FILTER END----------------------------------------------------------- */
+.curtain-btn{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: brown;
+    color:white;
+    padding:10px 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity:0;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.popupMessage{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding:10px 20px;
+    border:1px solid black;
+    border-radius:5px;
+    display:none;
+    z-index:9999;
+    animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown{
+    0%{
+        top:-110px;
+
+    }
+    100%{
+        top:14px;
+    }
+}
+.c-pic:hover .curtain-btn{
+    opacity:1;
+}
