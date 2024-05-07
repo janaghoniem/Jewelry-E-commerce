@@ -9,82 +9,123 @@
     <script src="../Javascript/Vintage.js"></script>
 </head>
 <body>
-    <header>
-        <div class="header-top-unscrolled" id="header-top">
-            <div class="store-services">
-                <nav class="navigation">
-                    <a href="#">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>Find a Store</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-bell-concierge"></i>
-                        <p>Services</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-headset"></i>
-                        <p>Contact Us</p>
-                    </a>
-                </nav>
-                <div class="search-button-unscrolled" id="search-button">
-                    <input type="text" id="searchField" placeholder="Search">
-                    <button id="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="user-data">
-                <nav class="navigation">
-                    <a href="#">
-                        <i class="fa-regular fa-envelope"></i>
-                        <p>Newsletter</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-regular fa-user"></i>
-                        <p>My Account</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-regular fa-heart"></i>
-                        <p>My Wishlist</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <p>Shopping Bag</p>
-                    </a>
-                </nav>
-            </div>
-        </div>
-        <div class="header-middle-unscrolled" id="header-middle">
-            <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
-            <div id="top-move-on-scroll"></div>
-        </div>
-        <div class="header-bottom-unscrolled" id="header-bottom">
+  <header>
+    <div class="header-top-unscrolled" id="header-top">
+        <div class="store-services">
             <nav class="navigation">
-            <a href="#">Collection A</a>
-            <a href="#">Collection B</a>
-            <a href="#">Collection C</a>
-            <a href="#">Collection D</a>
-            <a href="#">Collection E</a>
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Find a Store</p>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-bell-concierge"></i>
+                    <p>Services</p>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-headset"></i>
+                    <p>Contact Us</p>
+                </a>
+            </nav>
+            <div class="search-button-unscrolled" id="search-button">
+                <input type="search" id="searchField" placeholder="Search">
+                <button id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <div class="user-data">
+            <nav class="navigation">
+                <a href="#">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p>Newsletter</p>
+                </a>
+                <a href="#" id="login-button">
+                    <i class="fa-regular fa-user"></i>
+                    <p>My Account</p>
+                </a>
+                <a href="#">
+                    <i class="fa-regular fa-heart"></i>
+                    <p>My Wishlist</p>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <p>Shopping Bag</p>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div class="header-middle-unscrolled" id="header-middle">
+        <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
+        <div id="top-move-on-scroll"></div>
+    </div>
+    <div class="header-bottom-unscrolled" id="header-bottom">
+        <nav class="navigation">
+            <a href="../HTML/landing.html">Home</a>
+            <a href="../HTML/ShoppAll.html">Shop All</a>
+            <a href="#" id="collections-anchor-with-extension" class="extension">Collections</a>
             <a href="#">Bracelets</a>
             <a href="#">Earrings</a>
             <a href="#">Necklaces</a>
             <a href="#">Rings</a>
-            <a href="#">Head Pieces</a>
-            </nav>
+            <!-- <a href="#">Head Pieces</a> -->
+        </nav>
+    </div>
+    <div class="header-bottom-anchor-extension" id="header-bottom-anchor-extension">
+        <button id="exit-extension-button"><i class="fa-solid fa-x"></i></button>
+        <div id="collections-extension">
+            <div class="collection-extension">
+                <a class="extension-item" href="../HTML/Indian.html">
+                    <img src="../images/Landing/exp/indian-extension.jpg" alt="" class="category-img extension-img">
+                    <div class="extension-text">
+                        <h2 class="extension-text">Majestic splendor</h2>
+                        <button class="extension-button">Discover the indian collection</button>
+                    </div>
+                </a>
+            </div>
+            <div class="collection-extension">
+                <div class="collection-extension">
+                    <a class="extension-item" href="../HTML/">
+                        <img src="../images/Landing/exp/egyptian-extension.jpg" alt="" class="category-img extension-img">
+                        <div class="extension-text">
+                            <h2 class="extension-text">Majestic splendor</h2>
+                            <button class="extension-button">Discover the Egyptian collection</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="collection-extension">
+                <a class="extension-item" href="../HTML/Vintage.html">
+                    <img src="../images/Landing/exp/vintage-extension.jpg" alt="" class="category-img extension-img">
+                    <div class="extension-text">
+                        <h2 class="extension-text">Majestic splendor</h2>
+                        <button class="extension-button">Discover the Vintage collection</button>
+                    </div>
+                </a>
+            </div>
+            <div class="collection-extension">
+                <div class="collection-extension">
+                    <a class="extension-item" href="../HTML/middleEast.html">
+                        <img src="../images/Landing/exp/mena-extension.jpg" alt="" class="category-img extension-img">
+                        <div class="extension-text">
+                            <h2 class="extension-text">Majestic splendor</h2>
+                            <button class="extension-button">Discover the MENA collection</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
     <section class="intro">
         <div class="bg">
             <div class="overlay">
                 <div class="left-content">
-                    <div class="test">
                     <h1>VINTAGE ELEGANCE</h1><br>
                     <p>Within whispers of history and echoes of bygone eras, lies 'Vintage Elegance'—a collection of timeless treasures, paying homage to opulence and sophistication, inspired by antiquity's allure.</p>
                     <br>
                     <p>Journey through romanticism, where each piece narrates tales of grace and grandeur. Rich hues and weathered textures evoke ancient mystique, while intricate filigree and aged gemstones exude nostalgia, weaving beauty with craftsmanship.</p>
                     <br> 
                     <a href="#products"><button>View Collection</button></a>
-                    </div>  
                 </div>
                 <div class="right-content">
                     <div class="container">
@@ -121,47 +162,170 @@
         <div class="filters">
             <i class="fa-solid fa-sliders"></i>
             <p>Filter by:</p>
+
             <div class="buttons-container">
+
                 <div class="priceButton">
-                    <label for="touch1"><span class="spann">Price<i class="fa-solid fa-chevron-down"></i></span></label>          
-                    <input type="checkbox" id="touch1"> 
-                    <ul class="slide1">
-                        <li>>3000</li> 
-                        <li>>2000</li>
-                        <li>>129999</li>
-                        <li>>88800</li>
+                    <label for="touch"><span class="spann">Price<i class="fa-solid fa-chevron-down"></i></span></label>          
+                    <input type="checkbox" id="touch"> 
+                    <ul class="slide" id="slide">
+                        <li>
+                          <form>
+                            <div>
+                              <label class="containerr">Gold
+                              <input type="checkbox" id="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                          </form>
+                        </li> 
+                         
+                          <li><button onclick="closeSlide()">View All</button></li> 
+                          <li><button onclick="closeSlideAndUncheck()">Apply</button></li> 
                     </ul>
                 </div>
+
                 <div class="priceButton">
                     <label for="touch2"><span class="spann">Color<i class="fa-solid fa-chevron-down"></i></span></label>          
                     <input type="checkbox" id="touch2"> 
-                    <ul class="slide2">
-                        <li>Red</li> 
-                        <li>White</li>
-                        <li>Green</li>
-                        <li>Black</li>
-                        <li>Blue</li>
-
+                    <ul class="slide2" id="slide2">
+                        <li>
+                          <form>
+                            <div>
+                              <label class="containerr">Gold
+                              <input type="checkbox" id="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                          </form>
+                        </li> 
+                        <li>
+                            <form>
+                              <div>
+                                <label class="containerr">Silver
+                                <input type="checkbox" id="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                            </form>
+                          </li> 
+                          <li>
+                            <form>
+                              <div>
+                                <label class="containerr">Green
+                                <input type="checkbox" id="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                            </form>
+                          </li> 
+                          <li>
+                            <form>
+                              <div>
+                                <label class="containerr">Red
+                                <input type="checkbox" id="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                            </form>
+                          </li> 
+                          <li>
+                            <form>
+                              <div>
+                                <label class="containerr">Blue
+                                <input type="checkbox" id="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                            </form>
+                          </li> 
+                          <li><button onclick="closeSlide()">View All</button></li> 
+                          <li><button onclick="closeSlideAndUncheck()">Apply</button></li> 
                     </ul>
                 </div>
                 <div class="priceButton">
-                    <label for="touch3"><span class="spann">Type<i class="fa-solid fa-chevron-down"></i></span></label>          
+                    <label for="touch4"><span class="spann">Type<i class="fa-solid fa-chevron-down"></i></span></label>          
+                    <input type="checkbox" id="touch4"> 
+                    <ul class="slide4" id="slide4">
+                        <li>
+                          <form>
+                            <div>
+                              <label class="containerr">Sets
+                              <input type="checkbox" id="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                          </form>
+                        </li> 
+                        <li>
+                            <form>
+                              <div>
+                                <label class="containerr">Necklaces
+                                <input type="checkbox" id="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                            </form>
+                          </li> 
+                          <li>
+                            <form>
+                              <div>
+                                <label class="containerr">Bracelets
+                                <input type="checkbox" id="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                            </form>
+                          </li> 
+                          <li>
+                            <form>
+                              <div>
+                                <label class="containerr">Rings
+                                <input type="checkbox" id="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                            </form>
+                          </li> 
+                          <li>
+                            <form>
+                              <div>
+                                <label class="containerr">Earrings
+                                <input type="checkbox" id="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                              </div>
+                            </form>
+                          </li> 
+                          <li><button onclick="closeSlide()">View All</button></li> 
+                          <li><button onclick="closeSlideAndUncheck()">Apply</button></li> 
+                    </ul>
+                </div>
+                <div class="priceButton">
+                    <label for="touch3"><span class="spann">Sort<i class="fa-solid fa-chevron-down"></i></span></label>          
                     <input type="checkbox" id="touch3"> 
-                    <ul class="slide3">
-                        <li>Sets</li> 
-                        <li>Necklaces</li>
-                        <li>Earrings</li>
-                        <li>Rings</li>
+                    <ul class="slide3" id="slide3">
+                      <li>
+                        <button>Price High to low</button>
+                      </li>
+                      <li>
+                        <button>Price Low to high</button>
+                      </li>
+                      <li>
+                        <button>Best Sellers</button>
+                      </li>
+                      <li>
+                        <button>Recommended</button>
+                      </li>
+                      
+                      <li><button onclick="closeSlide()">View All</button></li> 
+                          
                     </ul>
                 </div>
             </div>
             
             <div class="sort">
-                <p id="count">0 items</p>
-                <span>Sort by:</span>
-                <button id="sortButton">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
+                <p id="count">10 items</p>
             </div>
             <hr>
             <!-- -- -------------------------------------------------------------->

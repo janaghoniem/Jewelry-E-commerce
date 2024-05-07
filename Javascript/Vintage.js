@@ -20,6 +20,24 @@
 function showAlert() {
     alert("Item added to cart!");
   }
+  function closeSlide() {
+      document.getElementById("touch").checked = false;
+      document.getElementById("touch2").checked = false; 
+      document.getElementById("touch4").checked = false; 
+  
+  }
+  
+  function closeSlideAndUncheck() {
+      document.getElementById("touch4").checked = false; 
+      document.getElementById("touch2").checked = false; 
+      document.getElementById("touch").checked = false; 
+  
+      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(function(checkbox) {
+          checkbox.checked = false;
+      });
+  }
+  
   
   
     document.addEventListener('DOMContentLoaded', function() {

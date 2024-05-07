@@ -13,6 +13,11 @@
     -webkit-font-smoothing: antialiased;
 }
 
+body {
+    /* background-image: url(../images/Landing/bg2.jpg); */
+    background-color: rgb(254, 248, 241);
+}
+
 header{
     /* background-color:  rgba(0, 0, 0, 0.1); */
     /* backdrop-filter: blur(4px); */
@@ -49,21 +54,21 @@ header:hover a {
     color: black;
 }
 
-header:hover #search-button{
-    color: black;
-    border-color: black;
-    background-color: transparent;
-}
-
 header:hover #search , header:hover #searchField, header:hover #searchField::placeholder {
     color: black;
+}
+
+header:hover #search-button{
+    border-color: black;
+    background-color: transparent;
 }
 
 .navigation a{
     color: #F6E8C0;
     font-size: 1.1em;
+    font-weight: 300;
     text-decoration: none;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .navigation a:hover{
@@ -94,8 +99,6 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 
 .header-top-unscrolled, .header-middle-unscrolled, .header-bottom-unscrolled {
     width: 100%;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     font-size: smaller;
     /* transition: fontSize 0ms ease; */
@@ -105,20 +108,107 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     justify-content: space-between;
 }
 
-.header-middle-unscrolled {
+.header-bottom-unscrolled {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top-unscrolled, .header-middle-unscrolled{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-middle-unscrolled, .header-bottom-unscrolled {
     justify-content: center;
 }
 
-.header-bottom-unscrolled {
+
+.header-bottom-anchor-extension {
+    display: none;
+    position: relative;
+    padding: 10px;
+    margin-top: 8px;
+    background-color: white;
+    border-top: 0.01em solid gainsboro;
+    width: 100vw;
+    height: 60vh;
+    z-index: -1;
+}
+
+#header-bottom .navigation a:hover {
+    border-bottom: 0.2em solid black;
+    padding-bottom: 8px;
+    transition: none;
+}
+
+#exit-extension-button {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#exit-extension-button i {
+    font-size: larger;
+}
+
+#collections-extension {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.extension-item {
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.extension-img {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.extension-text {
+    font-family: 'Futura PT';
+    margin-bottom: 290px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.extension-button {
+    font-family: sans-serif;
+    font-size: smaller;
+    background-color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.collection-extension {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* SCROLLED */
 
 .header-top-scrolled, .header-middle-scrolled, .header-bottom-scrolled{
     width: 100%;
-    display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
@@ -129,6 +219,16 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
 
 .header-middle-scrolled {
     justify-content: space-between;
+}
+
+.header-bottom-scrolled {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top-scrolled, .header-middle-scrolled {
+    display: flex;
+    flex-direction: row;
 }
 
 .header-top-scrolled i{
@@ -228,14 +328,15 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     z-index: 999;
 }
 
-/* ---------------END OF HEADER-------------- */
+/* -----------------------------------------------END OF HEADER------------------------------ */
 
 .intro{
     position: relative;
     background-image: url("../images/Vintage/vintageBG.jpg");
     background-size: cover;
     background-position: center;
-    height: 110em;
+    background-attachment: fixed;
+    height: 210vh;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -252,33 +353,32 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     width: 90%;
     transform: translate(-50%, -50%);
     display: flex;
+    align-items: flex-start;
+
 }
-.test{
-    position: sticky;
-    top: 0;
-}
+
 .left-content{
-    width: 50%;
-    padding: 30px;
-    margin: 50px;
-    margin-top: 10px;
-    box-sizing: border-box;
-    margin-left: 100px;
+    width: 40%;
+    padding: 5vw; 
+    margin: 5vw; 
     text-align: justify;
     letter-spacing: 1px;
-    
+    position: sticky;
+    top: 0;
 }
 .left-content p{
     color: rgb(98, 98, 98);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 300;
     font-size: 15px;
+    
 }
 .left-content h1{
     font-family:'Times New Roman', Times, serif;
     font-weight: 500;
     letter-spacing: 4px;
     font-size: 50px;
+    font-size: 3vw;
 }
 .left-content button{
     background-color: transparent;
@@ -287,8 +387,8 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     padding: 10px;
     width: 50%;
     margin-top: 10%;
-    font-weight: 200;
-    font-size: 90%;
+    font-weight: 100;
+    font-size: 1vw;
     text-decoration: none;
     z-index: 100;
 }
@@ -305,46 +405,43 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     color: white;
 
 }
-.right-content{
-    width: 50%;
-    padding: 30px;
-    margin: 50px;
-    margin-top: 10px;
-    box-sizing: border-box;
-    height: auto;
-    margin-right: 100px;
-    margin-left: 0;
+.right-content {
+    width: 70%;
+    padding: 5vw;
+    margin: 5vw;
     text-align: center;
-    flex: 1;
-    max-width: 100%;
-}
-.right-content img{
-    max-width: 100%;
-    height: auto;
 }
 
-.container{
+.right-content img {
+    max-width: 100%;
+    height: auto;
+}
+.right-content video {
+    max-width: 100%;
+    height: auto;
+}
+.container {
     display: grid;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-    grid-gap: 10px; 
+    grid-template-rows: repeat(20, 5vw); 
+    grid-template-columns: repeat(10, 1fr); 
+    grid-gap: 1vw; 
 }
 .item-1{
-    grid-area: 1 / 1 / 6 / 6;
+    grid-area: 1 / 1 / 10 / 8;
 }
 .item-2{
-    grid-area: 3 / 5 / 8 / 10;
+    grid-area: 3 / 6 / 13 / 14;
     z-index: 1;
 }
 .item-3{
-    grid-area: 8 / 3 / 15 / 8 ;
+    grid-area: 6 / 3 / 15 / 9 ;
 }
 .item-4{
-    grid-area: 15 / 1 / 19 / 6;
+    grid-area: 10 / 1 / 16 / 8;
     z-index: 2;
 }
 .item-5{
-    grid-area: 17 / 5 / 21 / 10;
+    grid-area: 12 / 6 / 19 / 14;
 }
 /* ------------------------------------------------------------------ */
 
@@ -353,7 +450,8 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     padding: 30px;
     margin: 20px;
     margin-left: 50px;
-
+    margin-right: 100px;
+    width: 90%;
 }
 .filters p{
     font-size: 20px;
@@ -373,26 +471,7 @@ header:hover #search , header:hover #searchField, header:hover #searchField::pla
     font-weight: lighter;
     font-size: 18px;
 }
-.sort {
-    align-items: center; 
-    margin-top: 20px;
-}
 
-.sort p{
-    margin-right: 1125px;
-}
-
-.sort span {
-    color: rgb(128, 127, 127);
-}
-
-#sortButton {
-    color: rgb(128, 127, 127);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding-left: 10px;
-}
 hr{
     margin-top: 10px;
     color: rgb(255, 255, 255);
@@ -459,10 +538,30 @@ hr{
     color: black;
     background-color: white;
 }
+sort {
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.sort p{
+    margin-right: 1125px;
+}
+
+.sort span {
+    color: rgb(128, 127, 127);
+}
+
+#sortButton {
+    color: rgb(128, 127, 127);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+}
 /* ----------------------------FILTER BUTTONS------------------------------ */
 .priceButton {
-    position: relative; /* Make the container relative */
-    width: 160px;
+    position: relative; 
+    width: 155px;
     background-color: transparent;
     border: #bab9b9 1px solid;
     margin: 2% 1% 2% 0;
@@ -492,62 +591,235 @@ hr{
     right: 10%;
 }
 
-.slide1 {
+/* ----------------------FIRST FILTER------------------ */
+.slide{
     position: absolute; 
-    top: 100%; 
+    top: 101%; 
     left: 0;
-    width: 100%;
+    width: calc(102% - 2px); 
     height: 0px;
     overflow: hidden;
     text-align: center;
-    transition: height 0.4s ease;
+    transition: height 0.9s ease;
     z-index: 1000;
     background-color: white;
     border: #bab9b9 1px solid;
+    border-top: none; 
+    margin-top: -1px; 
 }
+.slide li{
+    padding: 10px;
+}
+#touch{position: absolute; opacity: 0; height: 0px;}    
 
-.slide1 li {
-    padding: 30px;
-}
+#touch:checked + .slide {height: fit-content;} 
 
-#touch1 {
-    position: absolute; 
-    opacity: 0; 
-    height: 0px;
-}
-
-#touch1:checked + .slide1 {
-    height: fit-content;
-}
- 
-/* SECOND */
-.slide2{
-    clear: both;
+.slide button{
     width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide button:hover{
+    background-color: #f1f1f1;
+}
+/* ----------------------SECOND FILTER------------------ */
+.slide2{
+    position: absolute; 
+    top: 101%; 
+    left: 0;
+    width: calc(102% - 2px); 
     height: 0px;
     overflow: hidden;
     text-align: center;
-    transition: height 0.4s ease;
+    transition: height 0.9s ease;
+    z-index: 1000;
+    background-color: white;
+    border: #bab9b9 1px solid;
+    border-top: none; 
+    margin-top: -1px; 
 }
 .slide2 li{
-    padding: 30px;
+    padding: 10px;
 }
 #touch2{position: absolute; opacity: 0; height: 0px;}    
 
 #touch2:checked + .slide2 {height: fit-content;} 
 
-
-.slide3{
-    clear: both;
+.slide2 button{
     width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide2 button:hover{
+    background-color: #f1f1f1;
+}
+
+/* ----------------------THIRD FILTER------------------ */
+
+
+.slide4 {
+    position: absolute; 
+    top: 101%; 
+    left: 0;
+    width: calc(102% - 2px); 
     height: 0px;
     overflow: hidden;
     text-align: center;
-    transition: height 0.4s ease;
+    transition: height 0.9s ease;
+    z-index: 1000;
+    background-color: white;
+    border: #bab9b9 1px solid;
+    border-top: none; 
+    margin-top: -1px; 
+}
+
+.slide4 li {
+    padding: 10px;
+}
+#touch4{position: absolute; opacity: 0; height: 0px;}    
+
+#touch4:checked + .slide4 {height: fit-content;} 
+
+.slide4 button{
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide4 button:hover{
+    background-color: #f1f1f1;
+}
+
+
+.containerr {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 15px;
+
+  }
+  
+  /* Hide the browser's default checkbox */
+  .containerr input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 16px;
+    background-color: transparent;
+    border: 2px solid #546678;
+    margin-left: 7px;
+  }
+  
+  /* When the checkbox is checked, add a navy background */
+  .containerr input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+  
+  /* Create the checkmark (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .containerr input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark */
+  .containerr .checkmark:after {
+    left: 3px;
+    width: 4px;
+    height: 8px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .slide4 button{
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide4 button:hover{
+    background-color: #f1f1f1;
+}
+.slide3{
+    position: absolute; 
+    top: 101%; 
+    left: 0;
+    width: calc(102% - 2px); 
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.9s ease;
+    z-index: 1000;
+    background-color: white;
+    border: #bab9b9 1px solid;
+    border-top: none; 
+    margin-top: -1px; 
 }
 .slide3 li{
-    padding: 30px;
+    padding: 10px;
 }
 #touch3{position: absolute; opacity: 0; height: 0px;}    
 
 #touch3:checked + .slide3 {height: fit-content;} 
+
+.slide3 button{
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide3 button:hover{
+    background-color: #f1f1f1;
+}
+
+
+@media (max-width:1100px) {
+    .intro{
+        background-size: cover;
+        width:auto;
+        height: 90em;
+    }
+    .overlay{
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 80%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: flex-start;
+    
+    }
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+@media (max-width:1020px){
+
+}
