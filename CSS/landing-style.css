@@ -871,150 +871,147 @@ header:hover #search-button{
 
 @media screen and (max-width: 400px) {
 
-    .navigation {
-        display: none;
+    .collections-section{
+        width: 100vw; 
+        height: 470px;
     }
 
-    /* .collections-section{
-        height: ;
-    } */
-
-    .indian-collection, .egyptian-collection {
-        width: 100vw; /*hayet8ayar fel responsiveness*/
-        height: 40vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
+    .indian-collection{
+        margin-top: -150px;
     }
-
-    .egyptian-collection {
-        height: 45vh;
-        margin-bottom: -50px;
+     
+    .egyptian-collection{
+        margin-top: 8px;
     }
 
     .collection img{
         position: absolute;
-        width: 100vw; /*hayet8ayar fel responsiveness*/
+        width: 100%;
         height: 85%;
-        object-fit: contain;  /*contain fel responsiveness*/
-        margin-top: -170px;
+        object-fit: contain;  
+        margin-top: -20px;
     }
 
-    .collection-text {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-    
     .indian-collection-text {
-        margin-left: 150px;
-        margin-top: 80px;
+        margin-top: 220px;
+        margin-left: 125px;
     }
     
     .egyptian-collection-text {
-        margin-right: 130px;
-        margin-top: -100px;
+        margin-top: 50px;
+        margin-right: 100px;
     }
     
-    .collection h2, .collection p{
-        position: relative; 
-        text-align: center;
-        font-family: 'Futura PT';
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 600;
+    .collection h2{
         font-size: 20px;
-        z-index: 1;
     }
     
     .collection p {
-        /* font-size: 24.2px; */
         font-size: 10px;
     }
 
     .collection-button a{
-        font-family: 'Futura PT';
-        font-size: 8px;
-        font-weight: 500;
-        border: .0625rem solid;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: .0625rem;
-        line-height: 1.625rem;
-        white-space: nowrap;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: .01rem .8rem;
-    }
-
-    .collection-text {
-        margin-top: 180px;
-    }
-    
-    .indian-collection-text {
-        margin-left: 280px;
-    }
-    
-    .egyptian-collection-text {
-        margin-right: 280px;
-    }
-    
-    .collection-text h2, .collection-text p{
-        font-weight: 600;
         font-size: 10px;
-    }
-    
-    .collection-text p {
-        font-size: 18px;
-    }
-
-    .collection-button a{
-        font-size: 18px;
-        display: inline-flex;
-        padding: .70rem 1.80rem;
-    }
-
-    .side-icon {
-        display: block;
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-
-    .logo {
-        margin-right: 0;
-
-    }
-
-    .responsive {
-        margin-right: 70px;
-    }
-
-    .navigation {
-        display: none;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        background: white;
-        padding: 10px;
-        z-index: 999;
-    }
-
-    .navigation a {
-        display: block;
-        color: black;
-        text-decoration: none;
-        padding: 5px 0;
+        padding: .08rem 1.00rem;
     }
 }
 
-@media screen and (max-width: 665px) and (min-width: 400px) {
+@media screen and (max-width: 531px) and (min-width: 400px) {
+
+    .collections-section{
+        width: 100vw; 
+        height: 695px;
+    }
+
+    .indian-collection{
+        margin-top: -115px;
+    }
+     
+    .egyptian-collection{
+        margin-top: 20px;
+    }
+
+    .collection img{
+        position: absolute;
+        width: 100%;
+        height: 85%;
+        object-fit: contain;  
+        margin-top: -20px;
+    }
+
+    .indian-collection-text {
+        margin-top: 190px;
+        margin-left: 155px;
+    }
+    
+    .egyptian-collection-text {
+        margin-top: 110px;
+        margin-right: 100px;
+    }
+    
+    .collection h2, .collection p{
+        font-size: 31px;
+    }
+    
+    .collection p {
+        font-size: 12px;
+    }
+
+    .collection-button a{
+        font-size: 12px;
+        padding: .30rem 1.40rem;
+    }
+}
+
+@media screen and (max-width: 595px) and (min-width: 531px) {
+
+    .collections-section{
+        width: 100vw; 
+        height: 695px;
+    }
+
+    .indian-collection{
+        margin-top: -95px;
+    }
+     
+    .egyptian-collection{
+        margin-top: 52px;
+    }
+
+    .collection img{
+        position: absolute;
+        width: 100%;
+        height: 85%;
+        object-fit: contain;  
+        margin-top: -20px;
+    }
+
+    .indian-collection-text {
+        margin-top: 190px;
+        margin-left: 155px;
+    }
+    
+    .egyptian-collection-text {
+        margin-top: 110px;
+        margin-right: 100px;
+    }
+    
+    .collection h2, .collection p{
+        font-size: 33px;
+    }
+    
+    .collection p {
+        font-size: 12px;
+    }
+
+    .collection-button a{
+        font-size: 12px;
+        padding: .30rem 1.40rem;
+    }
+}
+
+@media screen and (max-width: 665px) and (min-width: 595px) {
+
     .collections-section{
         width: 100vw; 
         height: 775px;
@@ -1061,6 +1058,7 @@ header:hover #search-button{
 }
 
 @media screen and (max-width: 705px) and (min-width: 665px) {
+
     .collections-section{
         width: 100vw; 
         height: 825px;
@@ -1107,6 +1105,7 @@ header:hover #search-button{
 }
 
 @media screen and (max-width: 765px) and (min-width: 705px) {
+
     .collections-section{
         width: 100vw; 
         height: 885px;
@@ -1153,6 +1152,7 @@ header:hover #search-button{
 }
 
 @media screen and (max-width: 815px) and (min-width: 765px){
+
     .collections-section{
         width: 100vw; 
         height: 953px;
@@ -1200,6 +1200,7 @@ header:hover #search-button{
 }
 
 @media screen and (max-width: 825px) and (min-width: 815px) {
+
     .collections-section{
         width: 100vw; 
         height: 965px;
@@ -1247,6 +1248,7 @@ header:hover #search-button{
 }
 
 @media screen and (max-width: 855px) and (min-width: 825px) {
+
     .collections-section{
         width: 100vw; 
         height: 995px;
@@ -1290,44 +1292,7 @@ header:hover #search-button{
         font-size: 15px;
         padding: .70rem 1.80rem;
     }
-
-    .side-icon {
-        display: block;
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-
-    .logo {
-        margin-right: 0;
-
-    }
-
-    .responsive {
-        margin-right: 70px;
-    }
-
-    .navigation {
-        display: none;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        background: white;
-        padding: 10px;
-        z-index: 999;
-    }
-
-    .navigation a {
-        display: block;
-        color: black;
-        text-decoration: none;
-        padding: 5px 0;
-    }
 }
-
 
 @media screen and (max-width: 910px) and (min-width: 855px) {
 
@@ -1378,6 +1343,9 @@ header:hover #search-button{
         display: inline-flex;
         padding: .70rem 1.80rem;
     }
+}
+
+@media screen and (max-width: 1090px){
 
     .side-icon {
         display: block;
