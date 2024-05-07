@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/landing-style.css">
-    <link rel="stylesheet" href="../CSS/admin-collections.css">
+    <link rel="stylesheet" href="../CSS/Editcollection.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="../Javascript/landing-script.js"></script>
- 
-    <title>Landing Page</title>
+    <script src="../Javascript/edit.js"></script>
+    <script src="../Javascript/admin-collections.js"></script>
+    <title>Edit Collection</title>
 </head>
 
 <body>
@@ -62,9 +63,9 @@
             <div class="responsive">
                 <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
                     <i class="fa fa-bars"></i>
-                  </a>
+                </a>
             </div>
-           
+
             <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
             <div id="top-move-on-scroll"></div>
         </div>
@@ -82,54 +83,64 @@
                 <a href="#">Head Pieces</a> -->
             </nav>
         </div>
-       
+
     </header>
-    
-        
-    <section class="Indian-collection">
-        <div class="indian-button">
 
-            <button class="collection-button">Edit Indian</button>
+
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Are you sure ?</h1>
+                <span>You changed fields and left some empty, if you still
+                    want to edit go ahead and click on "continue editing" button
+                    but if you're sure with your changes, press on the "sure" button before loeding the page
+                </span>
+
+                <button>Sure</button>
+            </form>
         </div>
-    </section>
-    <section class="text-break">
-        <h1 class="egypt-text"> The Egyptain collection</h1>
-    </section>
-    <section class="Egyptian-collection">
-
-        <div class="egyptain-button">
-
-            <button class="collection-button">Edit Egyptian</button>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Edit your Creation</h1>
+                <span>fill in the field where you want to see a change</span>
+                <input type="text" placeholder="Rename Collection">
+                <textarea placeholder="Change the Description"></textarea>
+                <div class="uploadOuter">
+                    <label for="uploadFile" class="btn btn-primary">Upload Image</label>
+                    <strong>OR</strong>
+                    <span class="dragBox">
+                        Drag and Drop image here
+                        <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
+                            id="uploadFile" />
+                    </span>
+                </div>
+                <!-- <button>Edit</button> -->
+            </form>
         </div>
-    </section>
-
-    <section class="text-break">
-        <h1 class="egypt-text"> The Vintage collection</h1>
-    </section>
-
-    <section class="vintage-collection">
-        <div class="vintage-button">
-            <button class="collection-button">Edit Vintage</button>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <!-- <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p> -->
+                    <button class="hidden" id="login">Continue Editing</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <!-- <h1></h1> -->
+                    <h4>Current collection name</h4>
+                    <input type="text" placeholder="The Indian Collection" readonly>
+                    <h4>Current collection description</h4>
+                    <textarea placeholder="Majestic Splendor: Unevil The Essence Of Indian Grandeur"
+                        readonly></textarea>
+                    <h4>Current Image</h4>
+                    <div class="image-container">
+                        <img src="../images/Landing/exp/indian-bg.png">
+                    </div>
+                    <button class="hidden" id="register">Edit</button>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <section class="text-break">
-        <h1 class="egypt-text"> The MENA collection</h1>
-    </section>
-
-    <section class="mena-collection ">
-        <div class="mena-button">
-            <button class="collection-button">Edit MENA</button>
-        </div>
-    </section>
-
-    <section class="text-break">
-        <h1 class="Addtext"> Or Add a new collection</h1>
-        <div class="ADDBUTTON">
-            <button class="add-button">Add Collection</button>
-        </div>
-       
-    </section>
+    </div>
 </body>
 
 </html>

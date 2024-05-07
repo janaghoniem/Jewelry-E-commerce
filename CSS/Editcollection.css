@@ -16,6 +16,11 @@ body {
     /* justify-content: center; */
     flex-direction: column;
     height: 100vh;
+    /* background-color:#acb5ba; */
+    background: url(../images/Admin/orange.jpeg);
+    background-size: contain;
+    background-attachment: fixed;
+    width: 100%;
 }
 
 .container {
@@ -25,7 +30,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 778px;
+    width: 1000px;
     max-width: 100%;
     min-height: 480px;
 }
@@ -95,7 +100,7 @@ body {
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 8px;
-    width: 100%;
+    width: 70%;
     outline: none;
 }
 
@@ -178,7 +183,7 @@ body {
 }
 
 .toggle {
-    background-color: #BCA18A;
+    background-color:#BFB094;
     height: 100%;
     color: #fff;
     position: relative;
@@ -194,6 +199,7 @@ body {
 }
 
 .toggle-panel {
+    opacity:100%;
     position: absolute;
     width: 50%;
     height: 100%;
@@ -320,6 +326,16 @@ body {
     padding:10px 15px;
     font-size:13px;
     border-radius:8px;
-    width:100%;
+    width: 70%;
     outline:none;
+}
+
+.image-container img{
+    margin-top:20px;
+    margin-bottom:10px;
+    width:58%;
+}
+
+.toggle-panel input, .toggle-panel textarea{
+    opacity:90%;
 }
