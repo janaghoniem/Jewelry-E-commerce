@@ -795,6 +795,32 @@ sort {
 .slide3 button:hover{
     background-color: #f1f1f1;
 }
+.curtain-btn{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: brown;
+    color:white;
+    padding:10px 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity:0;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.popupMessage{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding:10px 20px;
+    border:1px solid black;
+    border-radius:5px;
+    display:none;
+    z-index:9999;
+    animation: slideDown 0.5s ease forwards;
+}
 
 
 @media (max-width:1100px) {
@@ -821,5 +847,94 @@ sort {
     }
 }
 @media (max-width:1020px){
+    .overlay {
+        flex-direction: column; 
+        align-items: center;
+    }
 
+    .left-content{
+        width: 90%; 
+        padding: 5vw; 
+        margin: 5vw;
+        text-align: justify;
+        letter-spacing: 1px;
+        position: sticky;
+        top: 0;
+    }
+    
+    .right-content {
+        width: 90%; 
+        padding: 5vw;
+        margin: 5vw;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .right-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .right-content video {
+        max-width: 100%;
+        height: auto;
+    }
+    .right-content button {
+        margin: 0 auto; /* Center the button horizontally */
+        display: block; /* Ensure it takes full width */
+    }
+    .container {
+        margin-top: 0px; 
+    }
+    .intro{
+        height: 150em;
+
+    }
+    .overlay{
+        height: 90%;
+
+    }
+    
+    .item-1{
+        grid-area: 1 / 1 / 6 / 7;
+    }
+    .item-2{
+        grid-area: 5 / 6 / 10 / 13;
+        z-index: 1;
+    }
+    .item-3{
+        grid-area: 11 / 3 / 18 / 8 ;
+        z-index: -1;
+    }
+    .item-4{
+        grid-area: 20 / 1 / 25 / 7;
+        z-index: 2;
+    }
+    .item-5{
+        grid-area: 22 / 6 / 27 / 13;
+    }
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+@media (max-width:425px){
+    .intro{
+        height: 100em;
+
+    }
+    .overlay{
+        height: 90%;
+
+    }
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+@media (max-width:1425px){
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
 }
