@@ -15,8 +15,8 @@ body{
 .cart-item{
 	background-color: #fff;
 	border-radius: 0px;
-	padding: 15px 20px;
-	margin-bottom: 20px;
+	padding: 5px 30px;
+	margin-bottom: 0px;
 }
 .center-item{
     display: flex;
@@ -28,6 +28,9 @@ body{
 }
 .cart-item h5{
     padding: 0 45px;
+}
+.cart-item h5 span{
+    padding: 0 px;
 }
 .cart-item .remove-item{
 	width: 25px!important;
@@ -64,4 +67,7 @@ body{
     -webkit-appearance: none;
     appearance: none;
     margin: 0;
+}
+.cart .info{
+    padding-left:5px;
 }
