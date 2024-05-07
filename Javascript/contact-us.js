@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loginIconTrigger.addEventListener('click', () => {
         popupContainer.style.display = 'flex';
+        document.body.style.overflow = 'none';
     });
 
     loginButton.addEventListener('click', () => {
@@ -167,6 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if(loginFormEmailField.value === ""){
             loginFormEmailField.style.borderColor = 'red';
+            loginFormEmailField.style.backgroundColor = 'rgb(255, 242, 242)';
             loginFormEmailError.textContent = requiredFieldError;
             valid = false;
         } else if (!isValidEmail(loginFormEmailField.value.trim())){
@@ -176,6 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (loginFormPasswordField.value === "") {
             loginFormPasswordField.style.borderColor = 'red';
+            loginFormPasswordField.style.backgroundColor = 'rgb(255, 242, 242)';
             loginFormPasswordError.textContent = requiredFieldError;
             valid = false;
         }else if (!isValidPassword(loginFormPasswordField.value.trim())){
@@ -296,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     exitPopupButton.addEventListener('click', () => {
         popupContainer.style.display = 'none';
+        document.body.style.overflow = 'scroll';
     });
 
     
@@ -327,4 +331,33 @@ document.addEventListener('DOMContentLoaded', function() {
             alert("Hena its supposed to search");
         }
     }
+
+    //CONTACT US
+    const emailUs = document.getElementById('Email-us');
+    const arrowDown = document.getElementById('arrow-down');
+    const arrowUp = document.getElementById('arrow-up');
+    const email = document.getElementById('email');
+    const cs = document.getElementById('CSAI');
+    const cspopup = document.getElementById('cs-popup');
+
+    arrowDown.addEventListener('click', () => {
+        arrowDown.style.display = 'none';
+        arrowUp.style.display = 'block';
+
+        emailUs.style.height = '165px'
+        email.style.display = 'block';
+    });
+
+    arrowUp.addEventListener('click', () => {
+        arrowUp.style.display = 'none';
+        arrowDown.style.display = 'block';
+
+        email.style.display = 'none';
+        emailUs.style.height = '129px'
+    });
+
+    cs.addEventListener('click', () => {
+        cspopup.style.display = 'flex';
+    })
+
 });

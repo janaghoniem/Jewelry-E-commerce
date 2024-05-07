@@ -23,7 +23,9 @@
 }
 
 body {
-    background-color: rgb(254, 248, 241);
+    /* background-color: rgb(254, 248, 241); */
+    background-color: white;
+
 }
 
 header{
@@ -37,6 +39,7 @@ header{
     align-items: center;
     padding: 10px 50px;
     text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.19);
 }
 
 header a {
@@ -453,21 +456,90 @@ header a {
 
 /* MAIN */
 
+.CU {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.CU h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 30px;
+    font-family: "Engravers' Gothic BT", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+    margin-top: 180px;
+}
+
 .main {
     padding: 50px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.main-content {
+    color: black;
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 1.25rem;
+    background-color: #f0ede8;
+    width: 396px;
+    height: 129px;
+    border: .0625rem solid rgba(0, 0, 0, 0);
+    margin-right: 20px;
+}
+
+.main-content:hover {
+    border: 1px solid black;
+}
+
+#Contact-us, #CSAI, #email-us-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.main-content {
-    background-color: grey;
-    width: 300px;
-    height: 600px;
+#Email-us {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    margin-top: -35px;
+    font-size: 30px;
     color: black;
+    margin-right: 20px;
+}
+
+.main-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
 }
 
 .main-text-content h3 {
-    font-weight: 500;
+    font-size: medium;
+    font-weight: 800;
+}
+
+.drop-down {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    font-size: large;
+    color: black;
+}
+
+#email {
+    margin-top: 7px;
+    margin-left: 3.125rem;
 }

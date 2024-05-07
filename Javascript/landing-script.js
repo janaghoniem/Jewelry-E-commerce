@@ -1,6 +1,3 @@
-// shahd Emad
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -117,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loginIconTrigger.addEventListener('click', () => {
         popupContainer.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     });
 
     loginButton.addEventListener('click', () => {
@@ -171,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if(loginFormEmailField.value === ""){
             loginFormEmailField.style.borderColor = 'red';
+            loginFormEmailField.style.backgroundColor = 'rgb(255, 242, 242)';
             loginFormEmailError.textContent = requiredFieldError;
             valid = false;
         } else if (!isValidEmail(loginFormEmailField.value.trim())){
@@ -180,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (loginFormPasswordField.value === "") {
             loginFormPasswordField.style.borderColor = 'red';
+            loginFormPasswordField.style.backgroundColor = 'rgb(255, 242, 242)';
             loginFormPasswordError.textContent = requiredFieldError;
             valid = false;
         }else if (!isValidPassword(loginFormPasswordField.value.trim())){
@@ -300,6 +300,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     exitPopupButton.addEventListener('click', () => {
         popupContainer.style.display = 'none';
+        document.body.style.overflow = 'scroll';
     });
 
     
