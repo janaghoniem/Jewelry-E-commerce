@@ -509,6 +509,169 @@ header:hover #search-button{
 
 /* ------------------------------------------------------------------ */
 
+.filter-box{
+    display:block;
+    
+    align-items: left;
+    margin-top: 20px;
+    background-color: white;
+    padding-top: 30px;
+    padding-left: 40px;
+    margin-left:30px;
+    
+  
+}
+.filter-container{
+    /* display:inline-block;
+    vertical-align: top;
+    position: relative; */
+    margin-right:20px;
+    position: relative;
+   
+   
+  
+}
+
+/* select{
+    padding:10px;
+    font-size:16px;
+} */
+
+span{
+
+    padding:20px;
+    background: white;
+    color:black;
+    font-size: 0.99em;
+    font-variant: small-caps;
+    cursor:pointer;
+    display:block;
+    border: 2px solid black;
+    width:auto;
+    margin-bottom: 0;
+ 
+
+}
+span::after{
+    float:right;
+    right:10%;
+   
+}
+.slide{
+    clear:both;
+    width:auto;
+    height:0px;
+    overflow:hidden;
+    text-align: center;
+    transition: height .4s ease;
+    /* border:1px solid black; */
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    position:absolute;
+    background-color: white;
+    top:calc(100% + 1px);
+    z-index:1;
+  
+
+}
+.filter-container {
+    width: 200px; /* Adjust the width as needed */
+    margin-right: 20px; /* Add margin for spacing between filter containers */
+    display: inline-block; /* Display filter containers inline */
+    background-color: transparent;
+}
+
+/* Adjust other styles as needed */
+
+.slide li{
+    /* padding:10px; */
+    border:1px solid #ccc;
+    color:black;
+    align-items: center;
+    /* width:100%;
+    box-sizing: border-box; */
+}
+.slide a{
+    text-decoration: none;
+    color:black;
+    display:block;
+    padding:10px 20px;
+    transition: background-color 0.3s ;
+}
+.slide a:hover{
+    background-color: #f1f1f1;
+
+}
+.filter-box label{
+    margin-bottom:5px;
+    display: block;
+    /* position: relative; */
+   
+   
+}
+input[type="checkbox"]{
+    display:none;
+}
+
+.filter-container:hover input[type="checkbox"]+ .slide{
+    height:auto;
+   
+    top:100%;
+    width:100%;
+    /* width:max-content; */
+    left: 0;
+   
+}
+.filter-box p{
+    font-size: 20px;
+   
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.filter-heading{
+    margin-right:10px;
+  
+    
+}
+.filter-heading p{
+    margin-right:10px;
+    display:inline-flex;
+  
+}
+.filter-options{
+    display:inline-flex;
+    flex-wrap:wrap;
+}
+#category{
+    position: absolute;
+    opacity: 0;
+    height:0px;
+}
+#category:checked + .slide{
+    height:auto;
+    width:100%;
+}
+#availability{
+    position: absolute;
+    opacity: 0;
+    height:0px;
+}
+#availability:checked + .slide{
+    height:auto;
+}
+#colors{
+    position: absolute;
+    opacity: 0;
+    height:0px;
+}
+#colors:checked + .slide{
+    height:auto;
+    width:100%;
+}
+
+/* --------------------------------------------------------------------------------- */
 .filters{
     display: inline-block;
     padding: 30px;
