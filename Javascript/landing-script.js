@@ -104,6 +104,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 30); 
     });
 
+    //responiveness
+    function toggleMenu(){
+        var nav= document.querySelector('.navigation');
+        nav.style.display=nav.style.display==='block'? 'none' :'block';
+    }
+
     //login - sign-up pop up
     const loginIconTrigger = document.getElementById('login-button');
     const popupContainer = document.getElementById('popup-container');
