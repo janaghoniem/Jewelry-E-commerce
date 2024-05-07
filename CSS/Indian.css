@@ -704,5 +704,245 @@ input[type="checkbox"]{
     }
 }
 .c-pic:hover .curtain-btn{
-    opacity:1;
+    opacity:1;
+}
+/* --------------          --------------------HALA'S FILTER END----------------------------------------------------------- */
+
+.filters{
+    display: inline-block;
+    padding: 30px;
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 100px;
+    width: 90%;
+}
+.filters p{
+    font-size: 20px;
+    /* color: rgb(69, 68, 68); */
+    /* color: rgb(102, 43, 16); */
+    color: black;
+    display: inline-block;
+}
+.fa-sliders{
+    color: black;
+    /* color: rgb(69, 68, 68); */
+    /* color: rgb(102, 43, 16); */
+}
+
+#count{
+    color: rgb(128, 127, 127);
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+hr{
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+}
+.cards{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.imge{
+    position: relative;
+    overflow: hidden;
+    width: 240px;
+    height: 300px;
+}
+.imge i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.imge i:hover{
+    transform: scale(1.1);
+    color: rgb(158, 2, 2);
+    font-weight: bolder;
+}
+.imge img:hover{
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+.card1{
+    overflow: hidden;
+    position: relative;
+    width: 300;
+    width: fit-content;
+    margin-right: 20px;
+    margin-top: 3%;
+    height: 29em;
+}
+/* .card1:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width:max-content;
+} */
+
+.info {
+    font-weight: 100;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 250px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the content horizontally */
+    font-weight: 200;
+
+}
+
+#price{
+    font-weight: 300;
+}
+.info button{
+    padding: 3%;
+    width: 60%;
+    color: white;
+    background-color: black;
+    border: black 1px solid;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.info button:hover{
+    color: black;
+    background-color: white;
+}
+sort {
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.sort p{
+    margin-right: 1125px;
+}
+
+.sort span {
+    color: rgb(128, 127, 127);
+}
+
+#sortButton {
+    color: rgb(128, 127, 127);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+
+@media (max-width:1100px) {
+    .intro{
+        background-size: cover;
+        width:auto;
+        height: 90em;
+    }
+    .overlay{
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 80%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: flex-start;
+    
+    }
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+@media (max-width:1020px){
+    .overlay {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .left-content{
+        width: 90%; 
+        padding: 5vw; 
+        margin: 5vw;
+        text-align: justify;
+        letter-spacing: 1px;
+        position: sticky;
+        top: 0;
+    }
+    
+    .right-content {
+        width: 90%; 
+        padding: 5vw;
+        margin: 5vw;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .right-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .right-content video {
+        max-width: 100%;
+        height: auto;
+    }
+    .right-content button {
+        margin: 0 auto; /* Center the button horizontally */
+        display: block; /* Ensure it takes full width */
+    }
+    .container {
+        margin-top: 0px; 
+    }
+    .intro{
+        height: 190em;
+
+    }
+    .overlay{
+        height: 90%;
+
+    }
+    
+    .item-1{
+        grid-area: 1 / 1 / 6 / 7;
+    }
+    .item-2{
+        grid-area: 5 / 6 / 10 / 13;
+        z-index: 1;
+    }
+    .item-3{
+        grid-area: 11 / 3 / 18 / 8 ;
+        z-index: -1;
+    }
+    .item-4{
+        grid-area: 20 / 1 / 25 / 7;
+        z-index: 2;
+    }
+    .item-5{
+        grid-area: 22 / 6 / 27 / 13;
+    }
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+@media (max-width:425px){
+    .intro{
+        height: 100em;
+
+    }
+    .overlay{
+        height: 90%;
+
+    }
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+@media (max-width:1425px){
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
 }
