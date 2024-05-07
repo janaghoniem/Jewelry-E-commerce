@@ -827,7 +827,242 @@ sort {
     padding-left: 10px;
 }
 
+.priceButton {
+    position: relative; 
+    width: 155px;
+    background-color: transparent;
+    border: #bab9b9 1px solid;
+    margin: 2% 1% 2% 0;
+    float: left; 
+}
 
+.priceButton:last-child {
+    margin-right: 0; 
+}
+
+.spann {
+    padding: 10px;
+    background-color: transparent;
+    color: rgb(105, 105, 105);
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+}
+
+.spann i {
+    margin-left: 50%;
+    font-size: 15px;
+}
+
+.spann::after {
+    float: right;
+    right: 10%;
+}
+
+/* ----------------------FIRST FILTER------------------ */
+.slide{
+    position: absolute; 
+    top: 101%; 
+    left: 0;
+    width: calc(102% - 2px); 
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.9s ease;
+    z-index: 1000;
+    background-color: white;
+    border: #bab9b9 1px solid;
+    border-top: none; 
+    margin-top: -1px; 
+}
+.slide li{
+    padding: 10px;
+}
+#touch{position: absolute; opacity: 0; height: 0px;}    
+
+#touch:checked + .slide {height: fit-content;} 
+
+.slide button{
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide button:hover{
+    background-color: #f1f1f1;
+}
+/* ----------------------SECOND FILTER------------------ */
+.slide2{
+    position: absolute; 
+    top: 101%; 
+    left: 0;
+    width: calc(102% - 2px); 
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.9s ease;
+    z-index: 1000;
+    background-color: white;
+    border: #bab9b9 1px solid;
+    border-top: none; 
+    margin-top: -1px; 
+}
+.slide2 li{
+    padding: 10px;
+}
+#touch2{position: absolute; opacity: 0; height: 0px;}    
+
+#touch2:checked + .slide2 {height: fit-content;} 
+
+.slide2 button{
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide2 button:hover{
+    background-color: #f1f1f1;
+}
+
+/* ----------------------THIRD FILTER------------------ */
+
+
+.slide4 {
+    position: absolute; 
+    top: 101%; 
+    left: 0;
+    width: calc(102% - 2px); 
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.9s ease;
+    z-index: 1000;
+    background-color: white;
+    border: #bab9b9 1px solid;
+    border-top: none; 
+    margin-top: -1px; 
+}
+
+.slide4 li {
+    padding: 10px;
+}
+#touch4{position: absolute; opacity: 0; height: 0px;}    
+
+#touch4:checked + .slide4 {height: fit-content;} 
+
+.slide4 button{
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide4 button:hover{
+    background-color: #f1f1f1;
+}
+
+
+.containerr {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 15px;
+
+  }
+  
+  /* Hide the browser's default checkbox */
+  .containerr input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 16px;
+    background-color: transparent;
+    border: 2px solid #546678;
+    margin-left: 7px;
+  }
+  
+  /* When the checkbox is checked, add a navy background */
+  .containerr input:checked ~ .checkmark {
+    background-color: transparent;
+  }
+  
+  /* Create the checkmark (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .containerr input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark */
+  .containerr .checkmark:after {
+    left: 3px;
+    width: 4px;
+    height: 8px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .slide4 button{
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide4 button:hover{
+    background-color: #f1f1f1;
+}
+.slide3{
+    position: absolute; 
+    top: 101%; 
+    left: 0;
+    width: calc(102% - 2px); 
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.9s ease;
+    z-index: 1000;
+    background-color: white;
+    border: #bab9b9 1px solid;
+    border-top: none; 
+    margin-top: -1px; 
+}
+.slide3 li{
+    padding: 10px;
+}
+#touch3{position: absolute; opacity: 0; height: 0px;}    
+
+#touch3:checked + .slide3 {height: fit-content;} 
+
+.slide3 button{
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.slide3 button:hover{
+    background-color: #f1f1f1;
+}
 @media (max-width:1100px) {
     .intro{
         background-size: cover;
