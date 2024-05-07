@@ -92,10 +92,7 @@
         <div class="form-container sign-up">
             <form>
                 <h1>Are you sure ?</h1>
-                <span>You changed fields and left some empty, if you still
-                    want to edit go ahead and click on "continue editing" button
-                    but if you're sure with your changes, press on the "sure" button before loeding the page
-                </span>
+                <span class="sure"></span>
 
                 <button>Sure</button>
             </form>
@@ -114,7 +111,10 @@
                         <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
                             id="uploadFile" />
                     </span>
+                    
                 </div>
+                <h4 class="successful"></h4>
+                    <h6 class="s"></h6>
                 <!-- <button>Edit</button> -->
             </form>
         </div>
@@ -123,6 +123,8 @@
                 <div class="toggle-panel toggle-left">
                     <!-- <h1>Welcome Back!</h1>
                     <p>Enter your personal details to use all of site features</p> -->
+                    <h3 class="picture-validation"></h3>
+                    <div id="preview" class="image-container"></div>
                     <button class="hidden" id="login">Continue Editing</button>
                 </div>
                 <div class="toggle-panel toggle-right">
@@ -136,7 +138,7 @@
                     <div class="image-container">
                         <img src="../images/Landing/exp/indian-bg.png">
                     </div>
-                    <button class="hidden" id="register">Edit</button>
+                    <button class="hidden" id="register" onclick=" checkConditions()">Edit</button>
                 </div>
             </div>
         </div>
