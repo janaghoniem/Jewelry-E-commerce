@@ -712,9 +712,6 @@ input[type="checkbox"]{
     display: inline-block;
     padding: 30px;
     margin: 20px;
-    margin-left: 50px;
-    margin-right: 100px;
-    width: 90%;
 }
 .filters p{
     font-size: 20px;
@@ -937,18 +934,14 @@ sort {
 }
 @media (max-width:425px){
     .intro{
-        height: 110em;
+        height: 80em;
 
     }
     .overlay{
         height: 90%;
-
+        top: 53%;
     }
     body{
-        margin: 0;
-        overflow-x: hidden;
-    }
-    .header{
         margin: 0;
         overflow-x: hidden;
     }
@@ -961,5 +954,15 @@ sort {
     .header{
         margin: 0;
         overflow-x: hidden;
+    }
+}
+@media (max-width:700px){
+    .intro{
+        height: 140em;
+
+    }
+    .overlay{
+        height: 90%;
+
     }
 }
