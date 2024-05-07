@@ -173,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
             valid = false;
         } else if (!isValidEmail(loginFormEmailField.value.trim())){
             loginFormEmailError.textContent = invalidEmailError;
+            loginFormEmailField.style.backgroundColor = 'rgb(255, 242, 242)';
             valid = false;
         } 
 
@@ -183,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
             valid = false;
         }else if (!isValidPassword(loginFormPasswordField.value.trim())){
             loginFormPasswordError.textContent = invalidPasswordError;
+            loginFormEmailField.style.backgroundColor = 'rgb(255, 242, 242)';
             valid = false;
         }
 
