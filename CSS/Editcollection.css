@@ -111,24 +111,24 @@ body {
     transition: all 0.6s ease-in-out;
 }
 
-.sign-in {
+.first {
     left: 0;
     width: 50%;
     z-index: 2;
 }
 
-.container.active .sign-in {
+.container.active .first {
     transform: translateX(100%);
 }
 
-.sign-up {
+.second {
     left: 0;
     width: 50%;
     opacity: 0;
     z-index: 1;
 }
 
-.container.active .sign-up {
+.container.active .second {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -338,4 +338,13 @@ body {
 
 .toggle-panel input, .toggle-panel textarea{
     opacity:90%;
+}
+
+
+#img-landing, /* Hide the checkbox */
+label[for=img-landing] { /* Hide the label */
+    display: none;
+}
+.box input[type="checkbox"] {
+    display: inline-block; /* Make the checkbox visible */
 }

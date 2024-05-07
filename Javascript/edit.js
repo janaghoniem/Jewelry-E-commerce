@@ -10,6 +10,28 @@ document.addEventListener("DOMContentLoaded", function () {
     loginBtn.addEventListener('click', () => {
         container.classList.remove("active");
     });
+
+    //     var indianButton = document.querySelector(".collection-button");
+
+    //     indianButton.addEventListener("click", function (e) {
+    //         e.preventDefault();
+    //         window.location.href = "EditCollection.html";
+    //     });
+
+    // const editform=document.querySelector(".form-container.first form");
+    // const submitbutton= document.getElementById("submitButton");
+
+    // submitbutton.addEventListener("click", function(event){
+    // event.preventDefualt();
+    // editform.submit();
+    // window.location.href = "EditCollection.html";
+
+    // });
+    // editform.addEventListener("submit", function(event){
+
+    // });
+
+
 });
 
 function toggleMenu() {
@@ -58,6 +80,8 @@ function checkConditions() {
     var textareaField = document.querySelector('textarea');
     var uploadFile = document.getElementById('uploadFile');
     var sureMessage = document.querySelector('.sure');
+    var imgLandingLabel = document.querySelector('label[for=img-landing]');
+    var imgLandingCheckbox = document.getElementById('img-landing');
 
     if (inputField.value === "" || textareaField.value === "" || uploadFile.value === "") {
         if (inputField.value === "" && textareaField.value === "" && uploadFile.value === "") {
@@ -65,6 +89,10 @@ function checkConditions() {
             return false;
         } else if (inputField.value === "" && textareaField.value === "" && uploadFile.value !== "") {
             sureMessage.innerHTML = "You only uploaded a picture to change";
+
+
+            imgLandingCheckbox.style.display = "inline-block";
+            imgLandingLabel.style.display = "inline-block";
         } else {
             sureMessage.innerHTML = "You left some empty fields unchanged";
         }
@@ -72,7 +100,7 @@ function checkConditions() {
 }
 
 function redirect() {
-console.log("redirect function is called");
+    console.log("redirect function is called");
     var inputField = document.querySelector('input[type=text]');
     var textareaField = document.querySelector('textarea');
     var uploadFile = document.getElementById('uploadFile');
@@ -89,7 +117,18 @@ console.log("redirect function is called");
         }
     }
 
-    if(inputField.value !== "" || textareaField.value !== "" || uploadFile.value !== ""){
-        window.location.href="../HTML/admin-collections.html";
+    if (inputField.value !== "" || textareaField.value !== "" || uploadFile.value !== "") {
+        window.location.href = "../HTML/admin-collections.html";
+    }
+}
+
+function TextOnly(event) {
+    const keyCode = event.keyCode || event.which;
+
+    if ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122)) {
+        return true;
+    } else {
+        event.preventDefalt();
+        return false;
     }
 }

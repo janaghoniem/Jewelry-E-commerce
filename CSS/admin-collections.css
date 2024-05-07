@@ -19,13 +19,7 @@
 
 body {
     background-color: #FEF8F1;
-}
-
-.view-collections {
-    margin-top: 10px;
-    background: url(../images/Admin/Collection-back.jpeg) no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    
 }
 
 
@@ -39,7 +33,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    /* z-index: -1; */
+    
 }
 
 .collection-button {
@@ -60,6 +55,7 @@ body {
     transition: background-color ease-in-out .2s;
     text-decoration: none;
     cursor: pointer;
+    z-index:999;
 }
 
 .add-button {
@@ -84,12 +80,17 @@ body {
 
 .indian-button {
     margin: 490px 560px;
+    z-index:999;
 }
-
+section{
+    /* margin-bottom:00px; */
+}
 .text-break {
     padding: 700px 300px 100px 400px;
+  
 
 }
+
 
 .Addtext {
     padding-left: 10px;
@@ -113,7 +114,6 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
 }
 
 .egyptain-button {
@@ -132,7 +132,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    
 }
 
 .vintage-button {
@@ -151,7 +151,6 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
 }
 
 .mena-button {
@@ -463,6 +462,9 @@ body {
     }
 }
 
+.indian-button{
+    cursor: pointer !important;
+}
 /*Responsive header*/
 /* .responsive-header {
     margin: 0;
