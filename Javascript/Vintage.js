@@ -147,7 +147,39 @@ function showAlert() {
               buttonCount--;
           }
       }
-  
+      function isInViewport(element, buffer = 35) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= -buffer &&
+            rect.left >= -buffer &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + buffer &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth) + buffer
+        );
+    }
+    function toggleMenu(){
+         var nav= document.querySelector('.navigation'); 
+         nav.style.display=nav.style.display==='block'? 'none' :'block'; 
+    }    
+    
+    // Function to handle scroll event
+    // Function to handle scroll event
+// Function to handle scroll event
+function handleScroll() {
+    const items = document.querySelectorAll('.item');
+
+    items.forEach((item) => {
+        if (isInViewport(item, 200)) { // Adjust the buffer value as needed
+            item.classList.add('show'); // Add 'show' class if item is in view
+        }
+    });
+}
+
+
+    
+    // Event listener for scroll event
+    window.addEventListener('scroll', handleScroll);
+    
+
       //automatically alternate between slides
       
       //categories hovering
