@@ -849,11 +849,16 @@ header:hover #search-button{
     padding: .75rem 1.875rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
+
+    .navigation {
+        display: none;
+    }
+
     .indian-collection, .egyptian-collection {
         background-color: #F6E8C0;
         width: 100vw; /*hayet8ayar fel responsiveness*/
-        height: 50vh;
+        height: 40vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -861,7 +866,7 @@ header:hover #search-button{
     }
 
     .egyptian-collection {
-        height: 40vh;
+        height: 45vh;
         margin-bottom: -50px;
     }
 
@@ -886,7 +891,7 @@ header:hover #search-button{
     }
     
     .egyptian-collection-text {
-        margin-right: 140px;
+        margin-right: 130px;
         margin-top: -100px;
     }
     
@@ -897,7 +902,7 @@ header:hover #search-button{
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 600;
-        font-size: 25px;
+        font-size: 20px;
         z-index: 1;
     }
     
@@ -908,7 +913,7 @@ header:hover #search-button{
 
     .collection-button a{
         font-family: 'Futura PT';
-        font-size: 10px;
+        font-size: 8px;
         font-weight: 500;
         border: .0625rem solid;
         text-transform: uppercase;
@@ -919,7 +924,76 @@ header:hover #search-button{
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: .30rem 1rem;
+        padding: .01rem .8rem;
+    }
+}
+
+
+@media screen and (max-width: 968px) {
+    
+    .indian-collection, .egyptian-collection {
+        background-color: #F6E8C0;
+        width: 100vw; 
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+
+    .collection img{
+        position: absolute;
+        width: 100vw;
+        height: 85%;
+        object-fit: contain;  
+        margin-top: -20px;
+    }
+
+    .collection-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-top: 180px;
     }
     
+    .indian-collection-text {
+        margin-left: 280px;
+    }
+    
+    .egyptian-collection-text {
+        margin-right: 280px;
+    }
+    
+    .collection h2, .collection p{
+        position: relative; 
+        text-align: center;
+        font-family: 'Futura PT';
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 50px;
+        z-index: 1;
+    }
+    
+    .collection p {
+        font-size: 18px;
+    }
+
+    .collection-button a{
+        font-family: 'Futura PT';
+        font-size: 18px;
+        font-weight: 500;
+        border: .0625rem solid;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: .0625rem;
+        line-height: 1.625rem;
+        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: .70rem 1.80rem;
+    }
 }
