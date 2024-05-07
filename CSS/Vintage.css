@@ -676,9 +676,6 @@ input[type="checkbox"]{
     display: inline-block;
     padding: 30px;
     margin: 20px;
-    margin-left: 50px;
-    margin-right: 100px;
-    width: 90%;
 }
 .filters p{
     font-size: 20px;
@@ -1067,7 +1064,7 @@ sort {
     }
 }
 .c-pic:hover .curtain-btn{
-    opacity:1;
+    opacity:1;
 }
 
 @media (max-width:1100px) {
@@ -1172,6 +1169,7 @@ sort {
     }
     .overlay{
         height: 90%;
+        top: 54%;
 
     }
     body{
