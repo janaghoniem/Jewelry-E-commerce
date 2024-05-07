@@ -579,7 +579,7 @@ span::after{
     width: 200px; /* Adjust the width as needed */
     margin-right: 20px; /* Add margin for spacing between filter containers */
     display: inline-block; /* Display filter containers inline */
-    background-color: transparent;
+    background-color: transparent ;
 }
 
 /* Adjust other styles as needed */
