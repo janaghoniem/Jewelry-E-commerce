@@ -1,0 +1,81 @@
+body {
+    background-image: url("../images/Quiz/pexels-davis-vidal-24041114-8465948.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    text-align: center;
+    max-width: 50%;
+}
+
+.intro {
+    font-size: 1.5vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(121, 74, 26);
+    text-align: justify;
+    width: 40vw;
+    margin-left: 5vw;
+}
+
+.pop {
+    color: rgb(88, 64, 40);
+    padding: 50px;
+}
+
+.pop hr {
+    border: none; 
+    height: 1px; 
+    background-color: #000; 
+    margin: 20px 0; 
+}
+
+.card1,
+.card2 {
+    display: inline-block; 
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid white; 
+    border-radius: 5px; 
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.card1 p,
+.card2 p {
+    margin-top: 0;
+}
+.card1 button{
+    background-color: transparent;
+    border-radius:3px ;
+    border: 1px solid rgb(121, 74, 26);
+    z-index: 1;
+    width: 7vw;
+    height: 2vw;
+}
+.card1 button:hover{
+    background-color: rgb(121, 74, 26);
+    color: white;
+    transition: 0.3s ease;
+}
+.card2 button{
+    background-color: transparent;
+    border-radius:3px ;
+    border: 1px solid rgb(121, 74, 26);
+    z-index: 1;
+    width: 7vw;
+    height: 2vw;
+}
+.card2 button:hover{
+    background-color: rgb(121, 74, 26);
+    color: white;
+    transition: 0.3s ease;
+}
