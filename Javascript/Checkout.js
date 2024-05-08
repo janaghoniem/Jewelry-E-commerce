@@ -27,3 +27,19 @@ document.querySelector('.cvv-input').onmouseleave = () => {
 document.querySelector('.cvv-input').oninput = () => {
     document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
 }
+
+// -------------------------------------------------------------------------------------------------
+
+// Get the elements
+const formContainer = document.querySelector('.form-container');
+const containerDiv = document.querySelector('.container');
+const completePurchaseBtn = document.querySelector('input[value="Complete purchase"]');
+
+// Function to hide form-container and show container
+function hideFormContainerOnClick() {
+    formContainer.classList.add('hidden');
+    containerDiv.classList.remove('hidden');
+}
+
+// Event listener for the button click
+completePurchaseBtn.addEventListener('click', hideFormContainerOnClick);
