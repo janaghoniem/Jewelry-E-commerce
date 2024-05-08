@@ -930,15 +930,20 @@ header:hover #search-button{
 }
 
 footer {
+    background-color: black;
+    height: 900px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
     padding: 20px;
+    z-index: 9999;
 }
 
 .footer-text {
     line-height: 1.25rem;
     font-family: 'Futura Pt', sans-serif;
+    flex: 1;
 }
 
 .footer-text h3{
