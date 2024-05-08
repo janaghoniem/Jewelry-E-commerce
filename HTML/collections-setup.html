@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/landing-style.css">
-    <link rel="stylesheet" href="../CSS/Editcollection.css">
+    <link rel="stylesheet" href="../CSS/admin-collections.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="../Javascript/landing-script.js"></script>
-    <script src="../Javascript/add.js"></script>
-    <script src="../Javascript/admin-collections.js"></script>
-    <title>Edit Collection</title>
+ 
+    <title>Landing Page</title>
 </head>
 
 <body>
@@ -63,9 +62,9 @@
             <div class="responsive">
                 <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
                     <i class="fa fa-bars"></i>
-                </a>
+                  </a>
             </div>
-
+           
             <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
             <div id="top-move-on-scroll"></div>
         </div>
@@ -83,73 +82,64 @@
                 <a href="#">Head Pieces</a> -->
             </nav>
         </div>
-
+       
     </header>
+    
+        
+    <section class="Indian-collection">
+        <div class="indian-button">
 
-
-
-    <div class="container" id="container">
-        <div class="form-container second">
-            <form>
-                <h1>Are you sure ?</h1>
-                <span class="sure"></span>
-
-                <button type="submit" id="submitButton">Sure</button>
-                <div clas="box">
-                    <input type="checkbox" id="img-landing" name="img-landing" value="">
-                    <label for="img-landing">
-                        <h6>Do you want this collection to show on the landing page</h6>
-                    </label><br>
-                </div>
-
-            </form>
+            <button class="collection-button"   onclick=
+            "window.location.href = 'add-collection.html';">Add Collection
+                
+            </button>
         </div>
-        <div class="form-container first">
-            <form>
-                <h1>Add a new Collection</h1>
-                <span>All fields are required to add new collection</span>
-                <input type="text" placeholder="Collection name" onkeypress="return  TextOnly(event)"
-                    title="only text is allowed">
-                <textarea placeholder="Add Description" required></textarea>
-                <div class="uploadOuter">
-                    <label for="uploadFile" class="btn btn-primary">Upload Image</label>
-                    <strong>OR</strong>
-                    <span class="dragBox">
-                        Drag and Drop image here
-                        <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()" id="uploadFile" />
-                    </span>
+    </section>
+    <section class="text-break">
+        <div class="section-container">
+            <h1 class="egypt-text">Edit Exisitng Collection</h1>
+        </div>
+       
+    </section>
+    <section class="Egyptian-collection">
 
-                </div>
-                <h4 class="successful"></h4>
-                <h6 class="s"></h6>
-                <!-- <button>Edit</button> -->
-            </form>
+        <div class="egyptain-button">
+
+            <button class="collection-button"  onclick=
+            "window.location.href = 'admin-collections.html';">Edit Collections</button>
         </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <!-- <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p> -->
-                    <h3 class="picture-validation"></h3>
-                    <div id="preview" class="image-container"></div>
-                    <button class="hidden" id="login">go back</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <!-- <h1></h1> -->
-                    <!-- <h4>Current collection name</h4>
-                    <input type="text" placeholder="The Egyptian Collection" readonly>
-                    <h4>Current collection description</h4>
-                    <textarea placeholder="Timeless Elegance: Explore The Magnificence Of Egyptian Opulence"
-                        readonly></textarea>
-                    <h4>Current Image</h4>
-                    <div class="image-container">
-                        <img src="../images/Landing/exp/egyptian-bg.jpg">
-                    </div> -->
-                    <button class="hidden" id="register">Add</button>
-                </div>
-            </div>
+    </section>
+
+    <section class="text-break">
+        <h1 class="egypt-text"> Change Exisitng layout</h1>
+    </section>
+
+    <section class="vintage-collection">
+        <div class="vintage-button">
+            <button class="collection-button" onclick=
+            "window.location.href = 'Edit-vintage.html';">Change</button>
         </div>
-    </div>
+    </section>
+
+    <section class="text-break">
+        <h1 class="egypt-text"> The MENA collection</h1>
+    </section>
+
+    <section class="mena-collection ">
+        <div class="mena-button">
+            <button class="collection-button"  onclick=
+            "window.location.href = 'Edit-mena.html';">Edit MENA</button>
+        </div>
+    </section>
+
+    <section class="text-break">
+        <h1 class="Addtext"> Or Add a new collection</h1>
+        <div class="ADDBUTTON">
+            <button class="add-button"  onclick=
+            "window.location.href = 'add-collection.html';">Add Collection</button>
+        </div>
+       
+    </section>
 </body>
 
 </html>
