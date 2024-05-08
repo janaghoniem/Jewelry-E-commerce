@@ -729,7 +729,6 @@ header:hover #search-button{
 
 .categories {
     background-image: url('../images/Landing/bg2.jpg');
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -906,13 +905,14 @@ header:hover #search-button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 580px;
+    margin-left: 650px;
+    padding-top: 60px;
     width: 800px;
 }
 
 .about-us-text-container h1, p {
     font-family: 'Futura PT', sans-serif;
-    font-weight: bolder;
+    color: rgb(254, 248, 241);
     line-height: 1.5rem;
     font-size: larger;
 }
@@ -920,6 +920,12 @@ header:hover #search-button{
 .about-us-text-container h1 {
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.about-us-text-container p {
+    font-weight: 500;
 }
 
 @media screen and (max-width: 385px) {
