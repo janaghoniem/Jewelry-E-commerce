@@ -158,7 +158,7 @@
                 <button id="login-nav" class="login-nav-text-style active">Login</button>
                 <button id="Create-an-account-nav" class="login-nav-text-style">Create new account</button>
             </nav>
-            <form id="login-form">
+            <form id="login-form" method="post" action="main.html">
                 <label class="login-nav-text-style" for="email-address-field">E-mail Address</label>
                 <input class="login-nav-text-style" type="email" name="email-address-field" id="login-form-email-field">
                 <p class="input-error login-nav-text-style" id="login-form-email-error"></p>
@@ -176,7 +176,7 @@
                 </div>
                 <button class="login-nav-text-style" type="submit" id="login-form-button">Login</button>
             </form>
-            <form id="create-account-form">
+            <form id="create-account-form" method="post">
                 <div class="sign-up-name-section">
                     <div>
                         <label class="login-nav-text-style" for="first-name-field">First name</label>

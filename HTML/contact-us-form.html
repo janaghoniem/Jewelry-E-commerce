@@ -158,7 +158,7 @@
                 <button id="login-nav" class="login-nav-text-style active">Login</button>
                 <button id="Create-an-account-nav" class="login-nav-text-style">Create new account</button>
             </nav>
-            <form id="login-form">
+            <form id="login-form" method="post" action="main.html">
                 <label class="login-nav-text-style" for="email-address-field">E-mail Address</label>
                 <input class="login-nav-text-style" type="email" name="email-address-field" id="login-form-email-field">
                 <p class="input-error login-nav-text-style" id="login-form-email-error"></p>
@@ -176,7 +176,7 @@
                 </div>
                 <button class="login-nav-text-style" type="submit" id="login-form-button">Login</button>
             </form>
-            <form id="create-account-form">
+            <form id="create-account-form" method="post">
                 <div class="sign-up-name-section">
                     <div>
                         <label class="login-nav-text-style" for="first-name-field">First name</label>
@@ -215,7 +215,7 @@
         <div class="title">
             <h1>Contact Us</h1>
         </div>
-        <form>
+        <form method="post" action="" enctype="">
             <div id="main-form">
                 <div class="vertical-form">
                     <label for="title-select-field" class="login-nav-text-style">Title*</label>
@@ -227,13 +227,13 @@
                     </select>
                     <label for="first-name-form-field" class="login-nav-text-style">First name*</label>
                     <input type="text" name="first-name-form-field" id="first-name-form-field" placeholder="Insert Name">
-                    <p id="first-name-form-field-error"></p>
+                    <p id="first-name-form-field-error" class="input-error"></p>
                     <label for="last-name-form-field" class="login-nav-text-style">Last name*</label>
                     <input type="text" name="last-name-form-field" id="last-name-form-field" placeholder="Insert Last Name">
-                    <p id="last-name-form-field-error"></p>
+                    <p id="last-name-form-field-error" class="input-error"></p>
                     <label for="email-address-form-field" class="login-nav-text-style">Email Address*</label>
                     <input type="email" name="email-address-form-field" id="email-address-form-field" placeholder="Insert Email Address">
-                    <p id="email-address-form-field-error"></p>
+                    <p id="email-address-form-field-error" class="input-error"></p>
                     <label for="country-select-field" class="login-nav-text-style">Country/Region*</label>
                     <select name="country-select-field" id="country-select-field">
                         <option value="Egypt" selected>Egypt</option>
@@ -252,12 +252,14 @@
                     </select>
                     <label for="phone-number-form-field" class="login-nav-text-style">Phone number</label>
                     <input type="tel" name="phone-number-form-field" id="phone-number-form-field" placeholder="Insert Phone Number">
+                    <p id="phone-number-form-field-error" class="input-error"></p>
                     <label for="message-form-field" class="login-nav-text-style">Message*</label>
                     <textarea id="message-form-field" name="message-form-field"  cols="50" placeholder="Insert Message"></textarea>
+                    <p id="message-form-field-error" class="input-error"></p>
                 </div>
             </div>
             <div>
-                <button class="submit-button login-nav-text-style">Submit</button>
+                <button class="submit-button login-nav-text-style" id="submit-button" type="submit">Submit</button>
             </div>
         </form>
     </section>

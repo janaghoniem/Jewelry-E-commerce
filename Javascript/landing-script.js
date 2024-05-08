@@ -62,11 +62,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const exitButton = document.getElementById('exit-extension-button');
     let mouseOverLink = false; //in case el user alternated between el links besor3a msh 3aizeen flickering
 
-    exitButton.addEventListener('click', () => {
-        mouseOverLink = false;
-        console.log('exit button clicked');
-        headerExtension.style.display = 'none';
-    });
+    if(exitButton){
+        exitButton.addEventListener('click', () => {
+            mouseOverLink = false;
+            console.log('exit button clicked');
+            headerExtension.style.display = 'none';
+        });
+    }
 
     navigationLinks.forEach(link => {
         link.addEventListener('mouseenter', () => {
@@ -141,7 +143,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //LOGIN HANDLING
-    const currentUsers = [];
+    const currentUsers = [{"Email": "admin@mail.com", "Password":"123admin"}];
+
+    function userExists(email) {
+        return currentUsers.some(user => user.Email === email);
+    }
+    
+    function addUser(email, password) {
+        currentUsers.push({ "Email": email, "Password": password });
+    }
 
     function isValidEmail(email) {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -202,8 +212,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     loginSubmitButton.addEventListener('click', () => {
-        if(!validateLogin())
+        if(validateLogin()) {
+            if(userExists(loginFormEmailField.value)) {
+                //el mafrood hena ye3mel login baa
+                if(loginFormEmailField.value === "admin@mail.com" && loginFormPasswordField.value === "123admin") {
+                    //neroo7 le page shahd
+                    // console.log('admin logged in');
+                    // window.location.href("..//HTML/main.html");
+                } else {
+                    //user 3ady
+                }
+            } else {
+                //replace dy b fading pop up
+                alert("User does not exist. Please sign up.");
+            }
+        } else {
             event.preventDefault();
+        }
     });
 
     //Validate sign-up
@@ -302,8 +327,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     createAccountSubmitButton.addEventListener('click', () => {
-        if(!validateSignUp())
+        if(validateSignUp()) {
+            //add el user lel dictionary beta3ty
+            addUser(signUpFormEmailField.value, signUpFormPasswordField.value);
+            //replace with cute fading popup
+            alert("Account created successfully!");
+        } else {
             event.preventDefault();
+        }
     });
 
     //exiting el popup login

@@ -459,6 +459,8 @@ header:hover #search-button{
     margin-bottom: 20px;
     padding: 8px;
     border: 1px solid silver;
+    text-transform: none;
+    font-family: sans-serif;
 }
 
 .popup-form label {
