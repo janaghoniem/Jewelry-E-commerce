@@ -183,7 +183,7 @@ body {
 }
 
 .toggle {
-    background-color:#BFB094;
+    background-color: #BFB094;
     height: 100%;
     color: #fff;
     position: relative;
@@ -199,7 +199,7 @@ body {
 }
 
 .toggle-panel {
-    opacity:100%;
+    opacity: 100%;
     position: absolute;
     width: 50%;
     height: 100%;
@@ -323,28 +323,84 @@ body {
     background-color: #eee;
     border: none;
     margin: 8px 0;
-    padding:10px 15px;
-    font-size:13px;
-    border-radius:8px;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
     width: 70%;
-    outline:none;
+    outline: none;
 }
 
-.image-container img{
-    margin-top:20px;
-    margin-bottom:10px;
-    width:58%;
+.image-container img {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 58%;
 }
 
-.toggle-panel input, .toggle-panel textarea{
-    opacity:90%;
+.toggle-panel input,
+.toggle-panel textarea {
+    opacity: 90%;
 }
 
 
-#img-landing, /* Hide the checkbox */
-label[for=img-landing] { /* Hide the label */
+#img-landing,
+/* Hide the checkbox */
+label[for=img-landing] {
+    /* Hide the label */
     display: none;
 }
+
 .box input[type="checkbox"] {
-    display: inline-block; /* Make the checkbox visible */
+    display: inline-block;
+    /* Make the checkbox visible */
+}
+
+.hidden1 {
+    display: none;
+}
+
+#preview1 {
+    display: none;
+}
+
+@media (min-width: 390px) and (min-height: 844px) {
+    form h1 {
+        font-size: 20px;
+        padding-left: 7vw;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .toggle-container {
+        display: none;
+        z-index: -1;
+    }
+
+    .hidden1 {
+        display: block;
+    }
+
+    .form-container.first {
+        padding-left: 5vw;
+        width: 100%;
+        z-index: 999;
+    }
+    .form-container.second form{
+       
+        padding-right:90vw;
+        width: 100%;
+        /* padding-right: 10vw;*/
+        /* width: 100%;  */
+        z-index: 999;
+    }
+    .form-container.second h1{
+        font-size: 15px;
+        padding-left: 7vw;
+    }
+    #preview1 {
+        display: block;
+        width:auto;
+        height:auto;
+    }
 }

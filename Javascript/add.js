@@ -94,7 +94,9 @@ function dragNdrop(event) {
         var suc1 = document.querySelector('.s');
         suc1.innerHTML = 'Please upload jpg, jpeg, or png';
         var preview = document.getElementById("preview");
+        var preview1 = document.getElementById("preview1");
         preview.innerHTML = "";
+        preview1.innerHTML = "";
     } else {
         var fileName = URL.createObjectURL(fileInput);
         var preview = document.getElementById("preview");
