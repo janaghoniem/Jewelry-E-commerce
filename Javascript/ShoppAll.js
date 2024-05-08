@@ -136,3 +136,33 @@ const enablePreviousAndFirstBtn = () => {
 };
 
 disablePreviousAndFirstBtn();
+
+function addToCart(){
+  var popup = document.createElement("div");
+  popup.classList.add("popupMessage");
+  popup.textContent= "Added to cart";
+  document.body.appendChild(popup);
+
+  // var windowwidth = window.innerWidth;
+  // var popupwidth = popup.offsetWidth;
+  // var leftposition = (windowwidth - popupwidth)/2;
+
+  // var scrollY = window.scrollY || window.pageYOffset;
+
+
+  // popup.style.top = scrollY + "px";
+  // popup.style.left = leftposition + "50%";
+
+
+
+  setTimeout(function(){
+      popup.style.display="block";
+  },100);
+
+  setTimeout(function(){
+      popup.style.display="none";
+      popup.parentNode.removeChild(popup);
+  },2000);
+
+ 
+}
