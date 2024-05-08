@@ -25,7 +25,7 @@ body {
     position: absolute;
     top: 52%;
     left: 50%;
-    height: 75%;
+    height: 85%;
     width: 80%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -329,4 +329,239 @@ body {
     margin: 20px;
     margin-bottom: 20px;
 
+}
+
+.result-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* adjust as needed */
+    margin-top: 130px;
+    margin-left: -2em;
+}
+.result-card img{
+    height: 300px;
+
+}
+.result-text {
+    margin-top: -85%;
+    margin-left: 110%;
+    width: 90%;
+    color: black;
+    z-index: 9999;
+}
+
+.best-sellers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80em;
+}
+
+.best-sellers-multiple-card-slide {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.carousel {
+    position: relative;
+    height: 70vh;
+    width: 1375px;
+    /* overflow: hidden; */
+}
+
+.carousel__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.carousel__button--left {
+    margin-left: -50px;
+}
+
+.carousel__button--right {
+    right: -40px;
+}
+
+.carousel__button i {
+    font-size: 50px;
+    color: #33333379;
+    transition: color 0.3s ease;
+}
+
+.carousel__button i:hover {
+    color: #333333d3;
+}
+
+.is-hidden {
+    display: none;
+}
+
+
+/* CARDS FROM HAYA */
+.imge{
+    position: relative;
+    overflow: hidden;
+    width: 240px;
+    height: 300px;
+}
+.imge i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.imge i:hover{
+    transform: scale(1.1);
+    color: rgb(158, 2, 2);
+    font-weight: bolder;
+}
+.imge img:hover{
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+.card{
+    overflow: hidden;
+    position: relative;
+    width: 300;
+    width: fit-content;
+    margin-right: 20px;
+    margin-top: 3%;
+    height: 29em;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+}
+
+.info p {
+    margin: 10px 0 0 5px;
+    font-weight: 600;
+}
+
+.info button{
+    padding: 3%;
+    width: 60%;
+    color: white;
+    background-color: black;
+    border: black 1px solid;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.info button:hover{
+    color: black;
+    background-color: white;
+}
+
+/* CATEGORIES */
+
+.categories-container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    cursor: default;
+}
+
+.categories {
+    background-image: url('../images/Landing/bg2.jpg');
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+}
+
+.item a{
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    width: 300px;
+    height: 456.2px;
+    overflow: hidden;
+}
+
+.primary-img {
+    opacity: 1;
+}
+
+.secondary-img {
+    opacity: 0;
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+}
+
+.categories div {
+    margin: 10px 5px;
+    text-align: center;
+}
+
+.categories p {
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: -25px;
+}
+
+.headers {
+    font-family: 'Futura PT';
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.categories h1 {
+    color: white;
 }
