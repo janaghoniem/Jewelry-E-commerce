@@ -250,3 +250,62 @@ h3{
     width:50vw;
   
 }
+@media only screen 
+ and (max-device-width: 1240px)
+ and (-webkit-min-device-pixel-ratio:1){
+    .upper-half-prod{
+    
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button{
+        width:700px;
+    }
+   
+ }
+ @media screen and (max-width:768px){
+    .upper-half-prod{
+    
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10%;
+    }
+    .button{
+        width:700px;
+    }
+    .lower-half-prod{
+        width:80vw;
+      
+    }
+   
+ 
+ }
+ @media screen and (max-width:480px){
+    .whole-prod-page{
+        margin-top: 17%;
+        padding:30px;
+       overflow-x: hidden;
+    }
+    
+    .upper-half-prod{
+    
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .button{
+        width:290px;
+    }
+    .lower-half-prod{
+        width:80vw;
+      
+    }
+    .prod-pic img{
+    width:300px;
+      margin-left:5px;  
+    }
+ }
+ 
