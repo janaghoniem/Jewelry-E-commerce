@@ -938,6 +938,7 @@ footer {
     flex-flow: row wrap;
     padding: 20px;
     z-index: 9999;
+    margin-top: 60px;
 }
 
 .footer-text {
