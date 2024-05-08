@@ -7,6 +7,15 @@ function selectOption(button) {
     });
     button.classList.toggle('active');
 }
+function selectOption(button) {
+    var buttons = document.querySelectorAll('.response2');
+    buttons.forEach(function(btn) {
+        if (btn !== button) {
+            btn.classList.remove('active');
+        }
+    });
+    button.classList.toggle('active');
+}
 
 function showNextQuestion(nextQuestionId) {
     var selectedOption = document.querySelector('.response.active');

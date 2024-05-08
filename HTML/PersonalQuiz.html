@@ -37,10 +37,24 @@
     
     <div id="question2" class="question2" style="display: none;">
         <!-- Question 2 -->
-        <p>Would you like to live in the desert?</p>
-        <button onclick="showNextQuestion('question3')">Yes</button>
-        <button onclick="showNextQuestion('question3')">No</button>
+        <p>What are your skin undertones?</p>
+        <span><h5>Don't know what your <a href="#" id="popupLink">skin tone</a> is?</h5></span>
+
+        <div id="popup" class="popup">
+            <h2>This is a popup</h2>
+            <p>Content of the popup goes here.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>   
+
+        <button onclick="selectOption(this)" class="response2">-Warm (yellow or golden undertones)</button><br><br>
+        <button onclick="selectOption(this)" class="response2">-Cool (pink or blue undertones)</button><br><br>
+        <button onclick="selectOption(this)" class="response2">-Neutral (a mix of warm and cool undertones)</button><br><br>
+        <br><button class="next" onclick="showNextQuestion('question3')">Next question</button>
+
     </div>
+
+    
+    
     
     <div id="question3" class="question3" style="display: none;">
         <!-- Question 3 -->
@@ -49,14 +63,17 @@
     
     
     <script>
-        function showNextQuestion(nextQuestionId) {
-            document.getElementById("question1").style.display = "none";
-            document.getElementById("question2").style.display = "none";
-            // Hide previous question
-            document.getElementById(nextQuestionId).style.display = "block";
-            // Show next question
+        var popupLink = document.getElementById("popupLink");
+        var popup = document.getElementById("popup");
+    
+        popupLink.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            popup.style.display = "block"; 
+        });
+    
+        function closePopup() {
+            popup.style.display = "none";
         }
     </script>
-    
 </body>
 </html>
