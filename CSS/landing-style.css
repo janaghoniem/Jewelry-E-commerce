@@ -73,7 +73,7 @@ header:hover a {
     color: black;
 }
 
-header:hover #search , header:hover #searchField, header:hover #searchField::placeholder {
+header:hover .search , header:hover .searchField, header:hover .searchField::placeholder {
     color: black;
 }
 
@@ -91,6 +91,10 @@ header:hover #search-button{
 }
 
 .navigation a:hover{
+    color:rgb(228, 124, 33);
+}
+
+.navigation i:hover{
     color:rgb(228, 124, 33);
 }
 
@@ -240,10 +244,16 @@ header:hover #search-button{
 .header-top-scrolled {
     justify-content: flex-end;
     font-size: medium;
+    .store-services {
+        flex-direction: row-reverse;
+    }
 }
 
 .header-middle-scrolled {
     justify-content: space-between;
+    .side-icon {
+        color: black;
+    }
 }
 
 .header-bottom-scrolled {
@@ -285,6 +295,10 @@ header:hover #search-button{
     padding: 0;
 }
 
+#search-button {
+    display: flex;
+}
+
 .search-button-unscrolled {
     color: #F6E8C0;
     border-color: #F6E8C0;
@@ -293,7 +307,6 @@ header:hover #search-button{
     width: 40px;
     margin-left: 10px;
     position: relative; 
-    display: flex;
     justify-content: center;
     align-items: center;
     transition: width 0.5s ease;
@@ -308,12 +321,13 @@ header:hover #search-button{
     margin-left: 10px;
     position: relative; 
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     transition: width 0.5s ease;
 }
 
-#searchField {
+.searchField {
     padding: 10px;
     color: #F6E8C0;
     border-color: transparent;
@@ -325,16 +339,20 @@ header:hover #search-button{
     transition: width 0.5s ease;
 }
 
-#searchField:focus {
+.searchField:focus {
     outline: none;
     border-radius: 20px;
 }
 
-#searchField::placeholder {
+.searchField::placeholder {
     color: #F6E8C0;
 }
 
-#search {
+#searchField2::placeholder {
+    color: black;
+}
+
+.search {
     /* background-image: url('../images/Landing/magnifying-glass1.png'); */
     color: #F6E8C0;
     font-size: 15px;

@@ -1,9 +1,3 @@
-
-
-
-<!-- Shahd Emad -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +11,7 @@
 <body>
     <header>
         <div class="header-top-unscrolled" id="header-top">
-            <div class="store-services">
+            <div class="store-services" id="store-services">
                 <nav class="navigation">
                     <a href="#">
                         <i class="fa-solid fa-location-dot"></i>
@@ -33,8 +27,8 @@
                     </a>
                 </nav>
                 <div class="search-button-unscrolled" id="search-button">
-                    <input type="search" id="searchField" placeholder="Search">
-                    <button id="search">
+                    <input type="search" id="searchField" class="searchField" placeholder="Search">
+                    <button id="search" class="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
@@ -67,7 +61,37 @@
                   </a>
             </div>
             <a href="#main" class="logo-unscrolled" id="logo">Firoza</a>
-            <div id="top-move-on-scroll"></div>
+            <div id="top-move-on-scroll" style="display: none;">
+                <div class="search-button-scrolled" id="search-button2">
+                    <input type="search" id="searchField2" class="searchField" placeholder="Search">
+                    <button id="search2" class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <nav class="navigation">
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                    </a>
+                    <a href="../HTML/Contact-Us.html">
+                        <i class="fa-solid fa-headset"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="#" id="login-button2">
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </nav>
+            </div>
         </div>
         <div class="header-bottom-unscrolled" id="header-bottom">
             <nav class="navigation">
@@ -258,9 +282,9 @@
             </button>
 
             <div class="carousel__track-container">
-                <ul class="carousel__track" id = "carousel__track">
+                <ul class="carousel__track  best-sellers-multiple-card-slide" id = "carousel__track">
                     <li class="carousel__slide current-slide">
-                        <div class="carousel__content best-sellers-multiple-card-slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/bracelet2.jpg" height="300" width="250">
@@ -272,6 +296,10 @@
                                     <button onclick="showAlert()">Add to cart</button>
                                 </div>
                             </div>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/necklace2.jpg" height="300" width="250">
@@ -283,6 +311,10 @@
                                     <button>Add to cart</button>
                                 </div>
                             </div>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/earrings2.jpg" height="300" width="250">
@@ -294,6 +326,10 @@
                                     <button>Add to cart</button>
                                 </div>
                             </div>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/product2.jpg" height="300" width="250">
@@ -305,6 +341,10 @@
                                     <button>Add to cart</button>
                                 </div>
                             </div>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/product8.jpg" height="300" width="250">
@@ -319,7 +359,7 @@
                         </div>
                     </li>
                     <li class="carousel__slide">
-                        <div class="carousel__content best-sellers-multiple-card-slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/product4.jpg" height="300" width="250">
@@ -331,6 +371,10 @@
                                     <button onclick="showAlert()">Add to cart</button>
                                 </div>
                             </div>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/product10.jpg" height="300" width="250">
@@ -342,6 +386,10 @@
                                     <button onclick="showAlert()">Add to cart</button>
                                 </div>
                             </div>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/product7.jpg" height="300" width="250">
@@ -353,6 +401,10 @@
                                     <button onclick="showAlert()">Add to cart</button>
                                 </div>
                             </div>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/product6.jpg" height="300" width="250">
@@ -364,6 +416,10 @@
                                     <button onclick="showAlert()">Add to cart</button>
                                 </div>
                             </div>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="carousel__content">
                             <div class="card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/product1.jpg" height="300" width="250">
