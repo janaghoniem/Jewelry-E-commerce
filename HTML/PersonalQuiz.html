@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../CSS/PersonalQuiz.css">
+    <script src="../Javascript/Quiz.js"></script>
 </head>
 <body>
+    <div id="question1">
+        <!-- Question 1 -->
+        <p>What do you prefer?</p>
+        <input type="checkbox" id="red" name="color" value="red">
+        <label for="red">Red</label><br>
+    
+        <input type="checkbox" id="blue" name="color" value="blue">
+        <label for="blue">Blue</label><br>
+    
+        <input type="checkbox" id="green" name="color" value="green">
+        <label for="green">Green</label><br>
+    
+        <input type="checkbox" id="yellow" name="color" value="yellow">
+        <label for="yellow">Yellow</label><br>
+        <button onclick="showNextQuestion('question2')">Next question</button>
+    </div>
+    
+    <div id="question2" style="display: none;">
+        <!-- Question 2 -->
+        <p>Would you like to live in the desert?</p>
+        <button onclick="showNextQuestion('question3')">Yes</button>
+        <button onclick="showNextQuestion('question3')">No</button>
+    </div>
+    
+    <div id="question3" style="display: none;">
+        <!-- Question 3 -->
+        <!-- Add more questions in a similar manner -->
+    </div>
+    
+    <script>
+        function showNextQuestion(nextQuestionId) {
+            document.getElementById("question1").style.display = "none";
+            document.getElementById("question2").style.display = "none";
+            // Hide previous question
+            document.getElementById(nextQuestionId).style.display = "block";
+            // Show next question
+        }
+    </script>
     
 </body>
 </html>
