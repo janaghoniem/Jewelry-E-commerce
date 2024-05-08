@@ -929,6 +929,28 @@ header:hover #search-button{
     font-weight: 500;
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    padding: 20px;
+}
+
+.footer-text {
+    line-height: 1.25rem;
+    font-family: 'Futura Pt', sans-serif;
+}
+
+.footer-text h3{
+    color: rgba(130, 130, 130);
+    text-transform: uppercase;
+}
+
+.footer-text a {
+    color: rgb(254, 248, 241);
+    font-size: 20px;
+}
+
 @media screen and (max-width: 385px) {
 
     #search-button {
