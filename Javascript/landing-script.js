@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     //da in case el user 8ayar el size of the window
     const slideSize = slides[0].getBoundingClientRect();
-    const slideWidth = 250;
+    const slideWidth = 275;
 
 
     // arrange the slides next to each other
@@ -385,8 +385,8 @@ document.addEventListener('DOMContentLoaded', function() {
     slides.forEach((slide, index) =>
     {
         slide.style.left = slideWidth * index + 'px';
-        if(index)
-        console.log("slide" + index + " width: " + slide.style.left)
+        // if(index)
+        // console.log("slide" + index + " width: " + slide.style.left)
     });
 
     //functions
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             prevButton.classList.add('is-hidden');
             nextButton.classList.remove('is-hidden');
-        } else if (targetIndex === slides.length - 1) {
+        } else if (targetIndex === slides.length - 5) {
             nextButton.classList.add('is-hidden');
             prevButton.classList.remove('is-hidden');
         } else {
