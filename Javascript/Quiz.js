@@ -1,5 +1,5 @@
 function selectOption(button) {
-    var buttons = document.querySelectorAll('.response.active, .response2.active');
+    var buttons = document.querySelectorAll('.response.active, .response2.active, .response7.active');
     buttons.forEach(function(btn) {
         if (btn !== button) {
             btn.classList.remove('active');
@@ -18,6 +18,7 @@ function showNextQuestion(nextQuestionId) {
     document.getElementById("question5").style.display = "none";
 
     document.getElementById("question6").style.display = "none";
+    document.getElementById("question7").style.display = "none";
 
 
 
