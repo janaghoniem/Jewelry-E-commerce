@@ -126,8 +126,26 @@ overflow-x: hidden;
     text-decoration: none;
     color:black;
 }
+@media only screen 
+ and (max-device-width: 1240px)
+ and (-webkit-min-device-pixel-ratio:1){
 
+    .review-box{
+        border:1px solid #ccc;
+        padding: 20px;
+        margin-bottom:20px;
+        position:relative;
+        display :flex;
+     
+        width:500px;
+        background-color:rgba(250, 235, 215, 0.601) ;
+        border-radius: 10px;
+    
+    }
+    
+}
 @media screen and (max-width:768px){
+    
     .review-box{
         border:1px solid #ccc;
         padding: 20px;
@@ -229,6 +247,7 @@ overflow-x: hidden;
     }
     .review-info{
         margin-right:0;
+        margin-left: 0;
      
 
     }
@@ -237,6 +256,7 @@ overflow-x: hidden;
         align-items:center;
         justify-content: center;
         width: 100px;
+        margin-right: 0;
     }
     .review-product-info img{
         width:70px;
@@ -245,5 +265,8 @@ overflow-x: hidden;
     }
     .product-link{
         text-align: center;
+    }
+    .reply-to-review{
+        margin-left: 1px;
     }
 }

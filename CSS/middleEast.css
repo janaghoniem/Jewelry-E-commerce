@@ -591,6 +591,7 @@ overflow: hidden;
     
     .coll-card{
         width:calc(50% - 10px);
+        margin-left:30px;
     }
     .images{
 
@@ -599,5 +600,8 @@ overflow: hidden;
     .images-trans{
         width:230px;
 
+    }
+    .coll-sec{
+      margin-left: 10%;
     }
 }
