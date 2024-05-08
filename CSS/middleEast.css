@@ -579,7 +579,61 @@ overflow: hidden;
         grid-column-start:12;
         /* transition-duration: 1s; */
       }
+      .pcards{
+        margin-top:50px;
+         flex:1;
+         flex-wrap: nowrap;
+        justify-content: flex-end;
+        display: flex;
+       
+    }
+    
+    .card{
+        overflow: hidden;
+        position: relative;
+        width: 200px;
+      
+        
+        margin:10px;
+      
+        vertical-align: top;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+    
+        
+    }
+    .card img{
+        width: 200px;
+       
+    }
+    .pic{
+        position: relative;
+      
+       width: 200px;
+        align-items: center;
+        display:inline-block;
+        overflow: hidden;
+        border-radius: 30px;
+        justify-content: center;
+        
+        
+    }
+    .pic i{
+        position:absolute;
+        margin-top: 8px;
+        margin-left:-40px;
+        font-size:20px;
+        color:rgb(113,46,15);
+       
+    
+    }
+    .pic img{
+        border-radius: 30px;
+        overflow: hidden;
+    
  }
+}
 
 @media screen and (max-width:768px){
     .coll-desc{
@@ -627,6 +681,7 @@ overflow: hidden;
         width:220px;
 
     }
+ 
     .card{
         /* width:calc(50%-2%); */
         margin-right: 0;
@@ -634,7 +689,7 @@ overflow: hidden;
       width:100%;
     }
     .card img{
-        width:100%;
+        width:auto;
        
     }
     .outstanding-pieces{
