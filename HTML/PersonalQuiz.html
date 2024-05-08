@@ -8,34 +8,45 @@
     <script src="../Javascript/Quiz.js"></script>
 </head>
 <body>
-    <div id="question1">
+    <div id="question1" class="question1">
         <!-- Question 1 -->
-        <p>What do you prefer?</p>
-        <input type="checkbox" id="red" name="color" value="red">
-        <label for="red">Red</label><br>
+        <p>Which house catches your fancy the most?</p>
+        <button class="response" onclick="toggleActive(this)">
+            <div class="image-wrapper">
+                <img src="../images/Quiz/Arabic house design.jpeg" height="300" alt="">
+            </div>
+        </button>
+        <button class="response" onclick="toggleActive(this)">
+            <div class="image-wrapper">
+                <img src="../images/Quiz/Castles and Courtyards 🏰☀️🌿.jpeg" height="300" alt="">
+            </div>
+        </button>
+        <button class="response" onclick="toggleActive(this)">
+            <div class="image-wrapper">
+                <img src="../images/Quiz/GQ Guide_ The first-time traveller’s manual to Bikaner, Rajasthan.jpeg" height="300" alt="">
+            </div>
+        </button>
+        <button class="response" onclick="toggleActive(this)">
+            <div class="image-wrapper">
+                <img src="../images/Quiz/Gallery of Kradoan House _ Thiti Ophatsodsai  - 1.jpeg" height="300" alt="">
+            </div>
+        </button>
     
-        <input type="checkbox" id="blue" name="color" value="blue">
-        <label for="blue">Blue</label><br>
-    
-        <input type="checkbox" id="green" name="color" value="green">
-        <label for="green">Green</label><br>
-    
-        <input type="checkbox" id="yellow" name="color" value="yellow">
-        <label for="yellow">Yellow</label><br>
-        <button onclick="showNextQuestion('question2')">Next question</button>
+        <br><button class="next" onclick="showNextQuestion('question2')">Next question</button>
     </div>
     
-    <div id="question2" style="display: none;">
+    <div id="question2" class="question2" style="display: none;">
         <!-- Question 2 -->
         <p>Would you like to live in the desert?</p>
         <button onclick="showNextQuestion('question3')">Yes</button>
         <button onclick="showNextQuestion('question3')">No</button>
     </div>
     
-    <div id="question3" style="display: none;">
+    <div id="question3" class="question3" style="display: none;">
         <!-- Question 3 -->
         <!-- Add more questions in a similar manner -->
     </div>
+    
     
     <script>
         function showNextQuestion(nextQuestionId) {

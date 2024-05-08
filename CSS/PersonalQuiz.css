@@ -6,3 +6,54 @@ body {
     background-attachment: fixed;
     margin: 0;
 }
+.next{
+    background-color: white;
+    border-radius:3px ;
+    border: 1px solid rgb(121, 74, 26);
+    z-index: 1;
+    width: 7vw;
+    height: 2vw;
+    margin-top: 20px;
+}
+.next:hover{
+    background-color: rgb(121, 74, 26);
+    color: white;
+    transition: 0.3s ease;
+}
+.question1 {
+    text-align: center;
+    height: 100vh;
+    margin-top: 150px;
+}
+
+.question1 p {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.images {
+    display: inline-block; 
+}
+
+.images img {
+    margin: 5px;
+}
+
+.next {
+    margin-top: 20px; 
+}
+.response {
+    border: 4px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.response.active {
+    border: 4px solid rgb(121, 74, 26);
+    transition: 0.3s;
+    transform: scale(1.1);
+    margin: 20px 20px 0 20px;
+
+}
