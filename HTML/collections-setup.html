@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/landing-style.css">
-    <link rel="stylesheet" href="../CSS/admin-collections.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/collection-setup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="../Javascript/landing-script.js"></script>
+    <script src="../Javascript/admin-collections.js"></script>
  
     <title>Landing Page</title>
 </head>
@@ -85,61 +87,37 @@
        
     </header>
     
-        
-    <section class="Indian-collection">
-        <div class="indian-button">
+    <section>
+
+   
+    <div class="button-container">
+      
+        <div class="admin-button">
 
             <button class="collection-button"   onclick=
             "window.location.href = 'add-collection.html';">Add Collection
                 
             </button>
         </div>
-    </section>
-    <section class="text-break">
-        <div class="section-container">
-            <h1 class="egypt-text">Edit Exisitng Collection</h1>
+
+        <div class="admin-button">
+
+            <button class="collection-button"   onclick=
+            "window.location.href = 'admin-collections.html';">Edit Collection
+                
+            </button>
         </div>
-       
-    </section>
-    <section class="Egyptian-collection">
 
-        <div class="egyptain-button">
+        <div class="admin-button">
 
-            <button class="collection-button"  onclick=
-            "window.location.href = 'admin-collections.html';">Edit Collections</button>
+            <button class="collection-button"   onclick=
+            "window.location.href = 'edit-layout.html';">Edit Layout
+                
+            </button>
         </div>
-    </section>
 
-    <section class="text-break">
-        <h1 class="egypt-text"> Change Exisitng layout</h1>
-    </section>
-
-    <section class="vintage-collection">
-        <div class="vintage-button">
-            <button class="collection-button" onclick=
-            "window.location.href = 'Edit-vintage.html';">Change</button>
-        </div>
-    </section>
-
-    <section class="text-break">
-        <h1 class="egypt-text"> The MENA collection</h1>
-    </section>
-
-    <section class="mena-collection ">
-        <div class="mena-button">
-            <button class="collection-button"  onclick=
-            "window.location.href = 'Edit-mena.html';">Edit MENA</button>
-        </div>
-    </section>
-
-    <section class="text-break">
-        <h1 class="Addtext"> Or Add a new collection</h1>
-        <div class="ADDBUTTON">
-            <button class="add-button"  onclick=
-            "window.location.href = 'add-collection.html';">Add Collection</button>
-        </div>
-       
-    </section>
+    </div>
+</section>
 </body>
 
 </html>

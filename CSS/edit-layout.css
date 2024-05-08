@@ -436,8 +436,21 @@ body {
     transform: rotate(45deg);
 }
 
+/* jana and haya code*/
+
+.collection-container {
+    margin-top:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 .cards{
-    margin-top: 4vh;
+    /* margin-top: 50px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -472,10 +485,6 @@ body {
     width: 300;
     width: fit-content;
     margin-right: 20px;
-    /* margin-top: 3%; */
+    margin-top: 3%;
     height: 29em;
-}
-.text1{
-    margin-top:90vh;
-   
 }

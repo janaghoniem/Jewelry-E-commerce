@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../CSS/main.css">
     <!-- <link rel="stylesheet" href="../CSS/landing-style.css"> -->
-    <script src="../Javascript/main.js"></script>
-    <!-- <script src="../Javascript/landing-script.js"></script> -->
+    <!-- <script src="../Javascript/main.js"></script> -->
+    <script src="../Javascript/edit-layout.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
@@ -59,9 +59,6 @@
                 <div class="indian-collection-text collection-text">
                     <h2>The Indian Collection</h2>
                     <p>Majestic Splendor: Unveil the Essence of Indian Grandeur</p>
-                    <div class="collection-button">
-                        <a href="../HTML/Indian.html" class="indian-collection-button">Explore Collection</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -72,9 +69,7 @@
                 <div class="egyptian-collection-text collection-text">
                     <h2>The Egyptian Collection</h2>
                     <p>Timeless Elegance: Explore the Magnificence of Egyptian Opulence</p>
-                    <div class="collection-button">
-                        <a href="../HTML/" class="egyptian-collection-button">Explore Collection</a>
-                    </div>
+                    <i class="fa-solid fa-plus"></i>
                 </div>
             </div>
         </div>
@@ -85,13 +80,6 @@
                 <div class="indian-collection-text collection-text">
                     <h2>The Indian Collection</h2>
                     <p>Majestic Splendor: Unveil the Essence of Indian Grandeur</p>
-                    <div class="collection-button">
-                        <label class="checkbox-label">
-                            <input type="checkbox" class="styled-checkbox">
-                            <span class="checkbox-custom"></span>
-                            <h4>Show on Landing page</h4>
-                        </label>
-                    </div>
                 </div>
             </div>
         </div>
@@ -102,17 +90,12 @@
                 <div class="egyptian-collection-text collection-text">
                     <h2>The Egyptian Collection</h2>
                     <p>Timeless Elegance: Explore the Magnificence of Egyptian Opulence</p>
-                    <div class="collection-button">
-                        <a href="../HTML/" class="egyptian-collection-button">Explore Collection</a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="collections">
-
-    </section>
+    
 
 
     <section class="text-break">
@@ -122,158 +105,127 @@
         </div>
     </section>
 
-    <section class="best-sellers">
-        <h1 class="headers">Best Sellers</h1>
-        <div class="carousel">
-            <button class="carousel__button carousel__button--left is-hidden" id="carousel__button--left">
-                <i class="fa-solid fa-angle-left"></i>
-            </button>
-
-            <div class="carousel__track-container">
-                <ul class="carousel__track  best-sellers-multiple-card-slide" id = "carousel__track">
-                    <li class="carousel__slide current-slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/bracelet2.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <div class="info">
-                                    <p>Gold dangle drop earring.</p>
-                                    <p>EGP 12,000</p>
-                                    <button onclick="showAlert()">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/necklace2.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <div class="info">
-                                    <p>Gold dangle drop earring.</p>
-                                    <p>EGP 12,000</p>
-                                    <button>Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/earrings2.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <div class="info">
-                                    <p>Gold dangle drop earring.</p>
-                                    <p>EGP 12,000</p>
-                                    <button>Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/product2.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <div class="info">
-                                    <p>Gold dangle drop earring.</p>
-                                    <p>EGP 12,000</p>
-                                    <button>Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/product8.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <div class="info">
-                                    <p>Gold dangle drop earring.</p>
-                                    <p>EGP 12,000</p>
-                                    <button>Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/product4.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <div class="info">
-                                    <p>Gold dangle drop earring.</p>
-                                    <p>EGP 12,000</p>
-                                    <button onclick="showAlert()">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/product10.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <div class="info">
-                                    <p>Gold dangle drop earring.</p>
-                                    <p>EGP 12,000</p>
-                                    <button onclick="showAlert()">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/product7.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/product6.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__content">
-                            <div class="card">
-                                <div class="imge">
-                                    <img src="../images/Landing/exp/product1.jpg" height="300" width="250">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+    <section class="collection-container">
+        <h1 class="headers">Indian Collection</h1>
+        <div class="cards">
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img1.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
             </div>
-            <button class="carousel__button carousel__button--right" id="carousel__button--right">
-                <i class="fa-solid fa-angle-right"></i>
-            </button>
-        </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img1.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img2.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/download (9).jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
     </section>
+
+    <section class="collection-container">
+        <h1 class="headers">Egyptian Collection</h1>
+        <div class="cards">
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img1.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img1.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img2.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/download (9).jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+    </section>
+
+    <section class="collection-container">
+        <h1 class="headers">Vintage Collection</h1>
+        <div class="cards">
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img1.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img1.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img2.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/download (9).jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+    </section>
+
+    <section class="collection-container">
+        <h1 class="headers">MENA Collection</h1>
+        <div class="cards">
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img1.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img1.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/img2.jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="imge">
+                    <img src="../images/Vintage/cards/download (9).jpeg" height="300" width="250">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
 
     <section class="collections">
 

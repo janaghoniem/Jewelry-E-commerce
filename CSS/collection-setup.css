@@ -1,0 +1,38 @@
+.button-container{
+    display:flex;
+    padding-top:50vh;
+    padding-left:40vh;
+
+    /* margin-top:800px; */
+    /* padding-top:300px; */
+  
+}
+body{
+    background-color:rgb(220, 201, 177);
+}
+.collection-button {
+    border: .0625rem solid #FFFFFF;
+    background-color: transparent;
+    color: #fff;
+    font-family: futura-pt, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .0625rem;
+    line-height: 1.625rem;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.875rem;
+    text-transform: uppercase;
+    transition: background-color ease-in-out .2s;
+    text-decoration: none;
+    cursor: pointer;
+    z-index:999;
+}
+
+
+.admin-button{
+    padding-left:10vh;
+}
+

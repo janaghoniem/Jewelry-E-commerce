@@ -3,10 +3,10 @@ function toggleMenu(){
     nav.style.display=nav.style.display==='block'? 'none' :'block';
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    var indianButton = document.querySelector(".collection-button");
+// document.addEventListener("DOMContentLoaded", function () {
+//     var indianButton = document.querySelector(".collection-button");
 
-    indianButton.addEventListener("click", function () {
-        window.location.href = "EditCollection.html";
-    });
-});
+//     indianButton.addEventListener("click", function () {
+//         window.location.href = "EditCollection.html";
+//     });
+// });
