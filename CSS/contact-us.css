@@ -46,6 +46,10 @@ header a {
     color: black;
 }
 
+.side-icon {
+    display: none;
+}
+
 .header-scrolled {
     width: 100%;
     position: fixed;
@@ -58,11 +62,11 @@ header a {
     text-transform: uppercase;
 }
 
-#search, #searchField, #searchField::placeholder {
+.searchh, .searchField, .searchField::placeholder {
     color: black;
 }
 
-#search-button{
+.search-button{
     border-color: black;
     background-color: transparent;
 }
@@ -267,20 +271,6 @@ header a {
     padding: 0;
 }
 
-.search-button-unscrolled {
-    color: #F6E8C0;
-    border-color: #F6E8C0;
-    border-radius: 20px;
-    background-color: rgb(0, 0, 0, 0.3);
-    width: 40px;
-    margin-left: 10px;
-    position: relative; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: width 0.5s ease;
-}
-
 .search-button-scrolled {
     color: black;
     border-color: black;
@@ -295,7 +285,7 @@ header a {
     transition: width 0.5s ease;
 }
 
-#searchField {
+.searchField {
     padding: 10px;
     border-color: transparent;
     background-color: transparent;
@@ -306,12 +296,12 @@ header a {
     transition: width 0.5s ease;
 }
 
-#searchField:focus {
+.searchField:focus {
     outline: none;
     border-radius: 20px;
 }
 
-#search {
+.searchh {
     font-size: 15px;
     background-color: transparent;
     border-color: transparent;
@@ -542,4 +532,91 @@ header a {
 #email {
     margin-top: 7px;
     margin-left: 3.125rem;
+}
+
+.cspopup-form {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 590px;
+    height: auto;
+    max-height: 650px;
+    overflow: scroll;
+}
+
+
+#main-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1600px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 0 20px
+}
+
+#main-form input, #main-form select, #main-form textarea, #main-form select option{
+    font-family: sans-serif;
+    width: 620px;
+    min-width: 300px;
+    height: 39px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+    font-weight: normal;
+    box-sizing: border-box;
+    line-height: 1.5;
+    color: #1f1f1f;
+    transition: box-shadow .25s ease-in-out, border-color .25s ease-in-out;
+    margin-bottom: 20px;
+    padding: 8px;
+    border: 1px solid silver;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 1400px) {
+    #main-form input, #main-form select, #main-form textarea {
+        width: auto;
+    }
+}
+
+#main-form label{
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.vertical-form {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+textarea {
+    min-height: 220px;
+    max-width: 620px;
+    resize: both;
+}
+
+.submit-button {
+    background: rgba(0, 0, 0, 0);
+    color: #1f1f1f;
+    border: 1px solid #1f1f1f;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 18px;
+    padding: 18px 45px;
+    text-decoration: none;
+    line-height: 1.125rem;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.submit-button:hover {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -4,18 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
         const headerTop = document.getElementById('header-top');
+
         const headerMiddle = document.getElementById('header-middle');
         const middleDiv = document.getElementById('top-move-on-scroll');
         const headerBottom = document.getElementById('header-bottom');
         const logo = document.getElementById('logo');
         const searchButton = document.getElementById('search-button');
-        const headerTopParagraphs = headerTop.querySelectorAll('p');
+        const searchbutton2 = document.getElementById('search-button2');
     
         if (window.scrollY > 0) {
             header.classList.remove('header-unscrolled');
             header.classList.add('header-scrolled');
+
+            searchButton.style.display = 'none';
     
-            middleDiv.innerHTML = headerTop.innerHTML;
+            middleDiv.style.display = 'flex';
+    
             headerTop.style.display = 'none';
     
             middleDiv.classList.remove('header-top-unscrolled');
@@ -26,20 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
             logo.classList.remove('logo-unscrolled');
             logo.classList.add('logo-scrolled');
     
-            searchButton.classList.remove('search-button-unscrolled');
-            searchButton.classList.add('search-button-scrolled');
-    
-            headerTopParagraphs.forEach(paragraph => {
-                paragraph.style.display = 'none';
-            });
-    
             headerBottom.classList.remove('header-bottom-unscrolled');
             headerBottom.classList.add('header-bottom-scrolled');
         } else {
             header.classList.remove('header-scrolled');
             header.classList.add('header-unscrolled');
     
-            middleDiv.innerHTML = '';
+            searchButton.style.display = 'flex';
+    
+            middleDiv.style.display = 'none';
+
             headerTop.style.display = 'flex';
 
             middleDiv.classList.remove('header-top-unscrolled');
@@ -49,14 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
             logo.classList.remove('logo-scrolled');
             logo.classList.add('logo-unscrolled');
-    
-            searchButton.classList.add('search-button-unscrolled');
-            searchButton.classList.remove('search-button-scrolled');
-    
-            headerTopParagraphs.forEach(paragraph => {
-                paragraph.style.display = 'inline';
-            });
-    
+        
             headerBottom.classList.add('header-bottom-unscrolled');
             headerBottom.classList.remove('header-bottom-scrolled');
         }
@@ -103,8 +96,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 30); 
     });
 
+    //responiveness
+    function toggleMenu(){
+        var nav= document.querySelector('.navigation');
+        nav.style.display=nav.style.display==='block'? 'none' :'block';
+    }
+
     //login - sign-up pop up
     const loginIconTrigger = document.getElementById('login-button');
+    const loginIconTrigger2 = document.getElementById('login-button2');
     const popupContainer = document.getElementById('popup-container');
     const loginButton = document.getElementById('login-nav');
     const loginform = document.getElementById('login-form');
@@ -112,8 +112,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const createAccountForm = document.getElementById('create-account-form');
 
     loginIconTrigger.addEventListener('click', () => {
+        event.preventDefault();
         popupContainer.style.display = 'flex';
-        document.body.style.overflow = 'none';
+        document.body.style.overflow = 'hidden';
+    });
+
+    loginIconTrigger2.addEventListener('click', () => {
+        event.preventDefault();
+        popupContainer.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     });
 
     loginButton.addEventListener('click', () => {
@@ -133,6 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //LOGIN HANDLING
+    const currentUsers = [];
+
     function isValidEmail(email) {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailPattern.test(email);
@@ -184,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
             valid = false;
         }else if (!isValidPassword(loginFormPasswordField.value.trim())){
             loginFormPasswordError.textContent = invalidPasswordError;
-            loginFormEmailField.style.backgroundColor = 'rgb(255, 242, 242)';
+            loginFormPasswordField.style.backgroundColor = 'rgb(255, 242, 242)';
             valid = false;
         }
 
@@ -306,18 +315,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     // 7agat el search
-    const searchButton = document.getElementById('search');
+    const searchButtonclick = document.getElementById('search');
     const searchField = document.getElementById('searchField');
     const searchDiv = document.getElementById('search-button');
     let buttonCount = 0;
-
     // search functionality
-    if (searchButton && searchField) { // fy reference error -  debugging statement
-        searchButton.addEventListener('click', expandSearch);
+    if (searchButtonclick && searchField) { 
+        searchButtonclick.addEventListener('click', expandSearch);
     }
 
     function expandSearch() {
-        console.log("clicked2");
         if (buttonCount === 0) {
             searchDiv.style.width = '200px';
             searchField.style.width = '200px';
@@ -334,13 +341,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    //second search
+    const searchButtonclick2 = document.getElementById('search2');
+    const searchField2 = document.getElementById('searchField2');
+    const searchDiv2 = document.getElementById('search-button2');
+    let buttonCount2 = 0;
+
+    if(searchButtonclick2){
+        searchButtonclick2.addEventListener('click', expandSearch2);
+    }
+
+    function expandSearch2() {
+        if (buttonCount2 === 0) {
+            searchDiv2.style.width = '200px';
+            searchField2.style.width = '200px';
+            searchDiv2.style.border = '1px solid black';
+            buttonCount2++;
+        } else if (buttonCount2 === 1 && searchField2.value == "") {
+            searchDiv2.style.border = 'none';
+            searchField2.style.width = '0px';
+            searchDiv2.style.width = '40px';
+            buttonCount2--;
+        }
+        else {
+            alert("Hena its supposed to search");
+        }
+    }
+
     //CONTACT US
     const emailUs = document.getElementById('Email-us');
     const arrowDown = document.getElementById('arrow-down');
     const arrowUp = document.getElementById('arrow-up');
     const email = document.getElementById('email');
-    const cs = document.getElementById('CSAI');
-    const cspopup = document.getElementById('cs-popup');
+    // const cs = document.getElementById('CSAI');
+    // const cspopup = document.getElementById('cs-popup');
 
     arrowDown.addEventListener('click', () => {
         arrowDown.style.display = 'none';
@@ -358,8 +392,9 @@ document.addEventListener('DOMContentLoaded', function() {
         emailUs.style.height = '129px'
     });
 
-    cs.addEventListener('click', () => {
-        cspopup.style.display = 'flex';
-    })
+    // cs.addEventListener('click', () => {
+    //     event.preventDefault();
+    //     // cspopup.style.display = 'flex';
+    // })
 
 });

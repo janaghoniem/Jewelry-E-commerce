@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/contact-us.css">
-    <!-- <link rel="stylesheet" href="../CSS/support.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-     <!-- BootStrap -->
-     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
     <script src="../Javascript/contact-us.js"></script>
-    <title>Contact Us | Customer Care | Firoza</title>
+    <title>Contact Us Form | Customer Care | Firoza</title>
 </head>
 <body>
     <header>
@@ -218,136 +215,51 @@
         <div class="title">
             <h1>Contact Us</h1>
         </div>
-        <div class="main">
-            <a href="../HTML/contact-us-form.html" id="Contact-us" class="main-content">
-                <div class="icon">
-                    <i class="fa-regular fa-file-lines"></i>
+        <form>
+            <div id="main-form">
+                <div class="vertical-form">
+                    <label for="title-select-field" class="login-nav-text-style">Title*</label>
+                    <select name="title-select-field" id="title-select-field">
+                        <option value="Ms." selected>Ms.</option>
+                        <option value="Mrs.">Ms.</option>
+                        <option value="Mr.">Ms.</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                    </select>
+                    <label for="first-name-form-field" class="login-nav-text-style">First name*</label>
+                    <input type="text" name="first-name-form-field" id="first-name-form-field" placeholder="Insert Name">
+                    <p id="first-name-form-field-error"></p>
+                    <label for="last-name-form-field" class="login-nav-text-style">Last name*</label>
+                    <input type="text" name="last-name-form-field" id="last-name-form-field" placeholder="Insert Last Name">
+                    <p id="last-name-form-field-error"></p>
+                    <label for="email-address-form-field" class="login-nav-text-style">Email Address*</label>
+                    <input type="email" name="email-address-form-field" id="email-address-form-field" placeholder="Insert Email Address">
+                    <p id="email-address-form-field-error"></p>
+                    <label for="country-select-field" class="login-nav-text-style">Country/Region*</label>
+                    <select name="country-select-field" id="country-select-field">
+                        <option value="Egypt" selected>Egypt</option>
+                        <option value="India">India</option>
+                        <option value="Palestine">Palestine</option>
+                        <option value="UK">UK</option>
+                    </select>
                 </div>
-                <div class="main-text-content">
-                    <h3>Contact Us</h3>
-                    <p>Send us a message and ask us to contact you</p>
-                </div>
-            </a>
-            <a href="" id="CSAI" class="main-content">
-                <div class="icon">
-                    <i class="fa-solid fa-user-tie"></i>
-                </div>
-                <div class="main-text-content">
-                    <h3>Personal customer support attendant</h3>
-                    <p>Ask our special customer support AI any question you want</p>
-                </div>
-            </a>
-            <a href="mailto:ww.cs@Firoza.com" id="Email-us" class="main-content">
-                <div id="email-us-row">
-                    <div class="icon">
-                        <i class="fa-solid fa-envelope-open"></i>
-                    </div>
-                    <div class="main-text-content">
-                        <h3>Email Us</h3>
-                        <p>Our Firoza ambassadors will gladly respond to your requests</p>
-                    </div>
-                </div>
-                <div class="drop-down">
-                    <i class="fa-solid fa-chevron-down" id="arrow-down"></i>
-                    <i class="fa-solid fa-chevron-up" style="display: none;" id="arrow-up"></i>
-                </div>
-                <div id="email" style="display: none;">
-                    <p class="main-text-content" id="cs-email-address">ww.cs@zumurud.com</p>
-                </div>
-            </a>
-        </div>
-        <!-- <div class="popup-container" id="cs-popup">
-            <div class="cspopup-form">
-                <div class="container-fluid h-100">
-                    <div class="row justify-content-center h-100">
-                        <div class="col-md-4 col-xl-3 chat">
-                                <div class="card-footer"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-xl-6 chat">
-                            <div class="card">
-                                <div class="card-header msg_head">
-                                    <div class="d-flex bd-highlight">
-                                        <div class="img-content">
-                                            <img src="../images/Admin/Admin-icon.png" class="rounded-circle user_img">
-                                        </div>
-                                        <div class="user_info">
-                                            <span>Admin</span>
-                                        </div>
-                                    </div>
-            
-                                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
-                                    <div class="action_menu">
-                                        <ul>
-                                            <li><i class="fas fa-user-circle"></i> View profile</li>
-                                            <li><i class="fas fa-ban"></i> Block user</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="card-body msg_card_body">
-                                    <div class="d-flex justify-content-end mb-4">
-                                        <div class="msg_cotainer_send">
-                                            Hi, what is your return policy?
-                                            <span class="msg_time_send">8:40 AM, Today</span>
-                                        </div>
-                                        <div class="img_cont_msg">
-                                            <img src="../images/Admin/icon1.png"
-                                                class="rounded-circle user_img_msg">
-                                        </div>
-                                    </div>
-                                    <div class="d-flex justify-content-start mb-4">
-                                        <div class="img_cont_msg">
-                                            <img src="../images/Admin/Admin-icon.png"
-                                                class="rounded-circle user_img_msg">
-                                        </div>
-                                        <div class="msg_cotainer">
-                                            Hi Shahd, unfortuanlty as part of my "becoming rich" plan, we dont return products hope
-                                        you undersrand
-                                            <span class="msg_time">8:55 AM, Today</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex justify-content-end mb-4">
-                                        <div class="msg_cotainer_send">
-                                            Excuse me?!
-                                            <span class="msg_time_send">9:00 AM, Today</span>
-                                        </div>
-                                        <div class="img_cont_msg">
-                                            <img src="../images/Admin/icon1.png"
-                                                class="rounded-circle user_img_msg">
-                                        </div>
-                                    </div>
-                                    <div class="d-flex justify-content-start mb-4">
-                                        <div class="img_cont_msg">
-                                            <img src="../images/Admin/Admin-icon.png"
-                                                class="rounded-circle user_img_msg">
-                                        </div>
-                                        <div class="msg_cotainer">
-                                            it is what it is, hope you enjoy ur purchase
-                                            <span class="msg_time">9:05 AM, Today</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="input-group">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text attach_btn"></span>
-                                        </div>
-                                        <textarea name="" class="form-control type_msg"
-                                            placeholder="Type your message..."></textarea>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="vertical-form">
+                    <label for="subject-select-field" class="login-nav-text-style">Subject*</label>
+                    <select name="title-select-field" id="title-select-field">
+                        <option value="Product Information" selected>Product Information</option>
+                        <option value="Product Purchase">Product Purchase</option>
+                        <option value="Boutique Information">Boutique Information</option>
+                        <option value="e-Repair Jewelry">e-Repair Jewelry</option>
+                    </select>
+                    <label for="phone-number-form-field" class="login-nav-text-style">Phone number</label>
+                    <input type="tel" name="phone-number-form-field" id="phone-number-form-field" placeholder="Insert Phone Number">
+                    <label for="message-form-field" class="login-nav-text-style">Message*</label>
+                    <textarea id="message-form-field" name="message-form-field"  cols="50" placeholder="Insert Message"></textarea>
                 </div>
             </div>
-        </div> -->
+            <div>
+                <button class="submit-button login-nav-text-style">Submit</button>
+            </div>
+        </form>
     </section>
-        <!-- JQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="../Javascript/support.js"></script>
 </body>
 </html>
