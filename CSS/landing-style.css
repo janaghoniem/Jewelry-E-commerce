@@ -574,6 +574,7 @@ header:hover #search-button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .best-sellers-multiple-card-slide {
@@ -894,7 +895,7 @@ header:hover #search-button{
     display: none;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 375px) {
 
     #search-button {
         display: none;
@@ -906,14 +907,14 @@ header:hover #search-button{
         left: 0;
     }
 
-
+    
     .collections-section{
         width: 100vw; 
-        height: 170px;
+        height: 370px;
     }
 
     .indian-collection{
-        margin-top: -150px;
+        margin-top: -165px;
     }
      
     .egyptian-collection{
@@ -950,9 +951,13 @@ header:hover #search-button{
         font-size: 10px;
         padding: .08rem 1.00rem;
     }
+
+    .carousel {
+        width: 247px;
+    }
 }
 
-@media screen and (max-width: 400px) and (min-width: 390px){
+@media screen and (max-width: 400px) and (min-width: 375px) {
 
     .collections-section{
         width: 100vw; 
@@ -960,11 +965,11 @@ header:hover #search-button{
     }
 
     .indian-collection{
-        margin-top: -150px;
+        margin-top: -240px;
     }
      
     .egyptian-collection{
-        margin-top: 8px;
+        margin-top: 3px;
     }
 
     .collection img{
@@ -976,7 +981,7 @@ header:hover #search-button{
     }
 
     .indian-collection-text {
-        margin-top: 220px;
+        margin-top: 315px;
         margin-left: 125px;
     }
     
@@ -996,6 +1001,10 @@ header:hover #search-button{
     .collection-button a{
         font-size: 10px;
         padding: .08rem 1.00rem;
+    }
+
+    .carousel {
+        width: 247px;
     }
 }
 

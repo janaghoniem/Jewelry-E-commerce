@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('header-scrolled');
             header.classList.add('header-unscrolled');
     
-            if(!this.window.width < 1090)
+            if(window.innerWidth > 1090)
             {
                 searchButton.style.display = 'flex';
                 middleDiv.style.display = 'none';
@@ -365,8 +365,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function expandSearch() {
         if (buttonCount === 0) {
-            searchDiv.style.width = '200px';
-            searchField.style.width = '200px';
+            if(window.innerWidth > 210)
+            {
+                searchDiv.style.width = '200px';
+                searchField.style.width = '200px';
+            } else {
+                searchDiv.style.width = '60px';
+                searchField.style.width = '60px';
+            }
             searchDiv.style.border = '1px solid black';
             buttonCount++;
         } else if (buttonCount === 1 && searchField.value == "") {
@@ -392,8 +398,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function expandSearch2() {
         if (buttonCount2 === 0) {
-            searchDiv2.style.width = '200px';
-            searchField2.style.width = '200px';
+            if(window.innerWidth > 400)
+            {
+                searchDiv2.style.width = '200px';
+                searchField2.style.width = '200px';
+            } else {
+                console.log('da5al hena');
+                searchDiv2.style.width = '120px';
+                searchField2.style.width = '120px';
+            }
             searchDiv2.style.border = '1px solid black';
             buttonCount2++;
         } else if (buttonCount2 === 1 && searchField2.value == "") {
