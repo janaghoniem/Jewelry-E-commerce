@@ -1,6 +1,15 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    const searchButton = document.getElementById('search-button');
+    const searchbutton2 = document.getElementById('search-button2');
+    const middleDiv = document.getElementById('top-move-on-scroll');
+
+
+    window.addEventListener('window size changed', () => {
+
+    });
+
     //nav bar scroll
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
@@ -8,11 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const headerMiddle = document.getElementById('header-middle');
         const sideicon = document.getElementById('side-icon');
-        const middleDiv = document.getElementById('top-move-on-scroll');
         const headerBottom = document.getElementById('header-bottom');
         const logo = document.getElementById('logo');
-        const searchButton = document.getElementById('search-button');
-        const searchbutton2 = document.getElementById('search-button2');
+        
     
         if (window.scrollY > 0) {
             header.classList.remove('header-unscrolled');
@@ -43,8 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 searchButton.style.display = 'flex';
                 middleDiv.style.display = 'none';
+            } else {
+                const middleDivanchors = this.document.querySelectorAll('middleDiv a');
+                middleDivanchors.display = 'none';
             }
-            
 
             sideicon.style.color = 'white';
 
@@ -398,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function expandSearch2() {
         if (buttonCount2 === 0) {
-            if(window.innerWidth > 400)
+            if(window.innerWidth > 440)
             {
                 searchDiv2.style.width = '200px';
                 searchField2.style.width = '200px';

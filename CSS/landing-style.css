@@ -69,7 +69,7 @@ header:hover {
     background-color: white;
 }
 
-header:hover a {
+header:hover a, header:hover .side-icon {
     color: black;
 }
 
@@ -574,7 +574,7 @@ header:hover #search-button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .best-sellers-multiple-card-slide {
@@ -895,7 +895,7 @@ header:hover #search-button{
     display: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
 
     #search-button {
         display: none;
@@ -910,7 +910,7 @@ header:hover #search-button{
     
     .collections-section{
         width: 100vw; 
-        height: 370px;
+        height: 450px;
     }
 
     .indian-collection{
@@ -957,7 +957,7 @@ header:hover #search-button{
     }
 }
 
-@media screen and (max-width: 400px) and (min-width: 375px) {
+@media screen and (max-width: 400px) and (min-width: 385px) {
 
     .collections-section{
         width: 100vw; 
@@ -1102,7 +1102,7 @@ header:hover #search-button{
     }
 }
 
-@media screen and (max-width: 665px) and (min-width: 595px) {
+@media screen and (max-width: 666px) and (min-width: 595px) {
 
     .collections-section{
         width: 100vw; 
