@@ -90,6 +90,8 @@ body {
     border-radius: 10px;
     padding: 10px;
     background-color: transparent;
+    width: 200px;
+    height: 130px;
 }
 
 .response2.active {

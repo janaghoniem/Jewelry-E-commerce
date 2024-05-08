@@ -1,20 +1,11 @@
 function selectOption(button) {
-    var buttons = document.querySelectorAll('.response');
+    var buttons = document.querySelectorAll('.response.active, .response2.active');
     buttons.forEach(function(btn) {
         if (btn !== button) {
             btn.classList.remove('active');
         }
     });
-    button.classList.toggle('active');
-}
-function selectOption(button) {
-    var buttons = document.querySelectorAll('.response2');
-    buttons.forEach(function(btn) {
-        if (btn !== button) {
-            btn.classList.remove('active');
-        }
-    });
-    button.classList.toggle('active');
+    button.classList.add('active');
 }
 
 function showNextQuestion(nextQuestionId) {
@@ -25,10 +16,5 @@ function showNextQuestion(nextQuestionId) {
     }
 
     document.getElementById("question1").style.display = "none";
-    document.getElementById(nextQuestionId).style.display = "block";
-}
-function showNextQuestion(nextQuestionId) {
-    document.getElementById("question1").style.display = "none";
-    document.getElementById("question2").style.display = "none";
     document.getElementById(nextQuestionId).style.display = "block";
 }
