@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const headerTop = document.getElementById('header-top');
 
         const headerMiddle = document.getElementById('header-middle');
+        const sideicon = document.getElementById('side-icon');
         const middleDiv = document.getElementById('top-move-on-scroll');
         const headerBottom = document.getElementById('header-bottom');
         const logo = document.getElementById('logo');
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.add('header-scrolled');
 
             searchButton.style.display = 'none';
+            sideicon.style.color = 'black';
     
             middleDiv.style.display = 'flex';
     
@@ -37,9 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('header-scrolled');
             header.classList.add('header-unscrolled');
     
-            searchButton.style.display = 'flex';
-    
-            middleDiv.style.display = 'none';
+            if(!this.window.width < 1090)
+            {
+                searchButton.style.display = 'flex';
+                middleDiv.style.display = 'none';
+            }
+            
+
+            sideicon.style.color = 'white';
 
             headerTop.style.display = 'flex';
 

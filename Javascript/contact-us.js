@@ -504,18 +504,20 @@ document.addEventListener('DOMContentLoaded', function() {
         return valid;
     }
 
-
-    submitbutton.addEventListener('click', () => {
-        if(!validateFormSubmission())
-            event.preventDefault();
-        //popup message sent
-
-        //clear fields
-        fn.textContent = '';
-        ln.textContent = '';
-        em.textContent = '';
-        pn.textContent = '';
-        ta.textContent = '';
-    })
+    if(submitbutton){
+        submitbutton.addEventListener('click', () => {
+            if(!validateFormSubmission())
+                event.preventDefault();
+            //popup message sent
+    
+            //clear fields
+            fn.textContent = '';
+            ln.textContent = '';
+            em.textContent = '';
+            pn.textContent = '';
+            ta.textContent = '';
+        })
+    }
+    
 
 });

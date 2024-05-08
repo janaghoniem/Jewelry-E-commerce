@@ -56,9 +56,9 @@
         </div>
         <div class="header-middle-unscrolled" id="header-middle">
             <div class="responsive">
-                <a href="javascript:void(0);" class="side-icon" onclick="toggleMenu()">
+                <a href="javascript:void(0);" class="side-icon" id="side-icon" onclick="toggleMenu()">
                     <i class="fa fa-bars"></i>
-                  </a>
+                </a>
             </div>
             <a href="#main" class="logo-unscrolled" id="logo">Firoza</a>
             <div id="top-move-on-scroll" style="display: none;">
@@ -178,7 +178,7 @@
             </form>
             <form id="create-account-form" method="post">
                 <div class="sign-up-name-section">
-                    <div>
+                    <div id="sign-up-fname">
                         <label class="login-nav-text-style" for="first-name-field">First name</label>
                         <input class="login-nav-text-style" type="text" name="first-name-field" id="sign-up-first-name-field">
                         <p class="input-error login-nav-text-style" id="sign-up-first-name-error"></p>
@@ -285,7 +285,7 @@
                 <ul class="carousel__track  best-sellers-multiple-card-slide" id = "carousel__track">
                     <li class="carousel__slide current-slide">
                         <div class="carousel__content">
-                            <div class="card">
+                            <div class="card" id="carousel-card">
                                 <div class="imge">
                                     <img src="../images/Landing/exp/bracelet2.jpg" height="300" width="250">
                                     <i class="fa-regular fa-heart"></i>
