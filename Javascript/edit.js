@@ -11,26 +11,26 @@ document.addEventListener("DOMContentLoaded", function () {
         container.classList.remove("active");
     });
 
-    //     var indianButton = document.querySelector(".collection-button");
+   
 
-    //     indianButton.addEventListener("click", function (e) {
-    //         e.preventDefault();
-    //         window.location.href = "EditCollection.html";
-    //     });
+    const submitButton = document.getElementById('submitButton');
+    const sureMessage = document.querySelector('.sure');
 
-    // const editform=document.querySelector(".form-container.first form");
-    // const submitbutton= document.getElementById("submitButton");
+    submitButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form submission by default
 
-    // submitbutton.addEventListener("click", function(event){
-    // event.preventDefualt();
-    // editform.submit();
-    // window.location.href = "EditCollection.html";
+        // Check if any of the required fields are empty
+        const inputField = document.querySelector('input[type=text]');
+        const textareaField = document.querySelector('textarea');
+        const uploadFile = document.getElementById('uploadFile');
 
-    // });
-    // editform.addEventListener("submit", function(event){
-
-    // });
-
+        if (inputField.value === "" || textareaField.value === "" || uploadFile.value === "") {
+            sureMessage.innerHTML = "This form will not submit as all fields are mandatory";
+        } else {
+            // If all fields are filled, submit the form
+            document.querySelector('form').submit();
+        }
+    });
 
 });
 

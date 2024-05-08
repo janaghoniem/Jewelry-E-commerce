@@ -384,7 +384,7 @@ section{
     }
 
     .text-break {
-        padding: 700px 100px 100px 100px;
+        padding: 120vh 10vw 20vh 30vw;
     }
 
     .ADDBUTTON {
@@ -402,13 +402,13 @@ section{
     }
 
     .text-break {
-        padding: 700px 100px 100px 100px;
+        padding: 120vh 10vw 20vh 30vw;
     }
 
 
     .ADDBUTTON {
         margin-top: 10vh;
-        margin-left: 10vh;
+        margin-left: 3vh;
     }
 }
 
