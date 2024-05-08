@@ -701,6 +701,7 @@ header:hover #search-button{
 .info p {
     margin: 10px 0 0 5px;
     font-weight: 500;
+    color: black;
 }
 
 .info button{
@@ -795,7 +796,7 @@ header:hover #search-button{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .indian-collection, .egyptian-collection {
