@@ -16,7 +16,10 @@ function showNextQuestion(nextQuestionId) {
     document.getElementById("question3").style.display = "none";
     document.getElementById("question4").style.display = "none";
     document.getElementById("question5").style.display = "none";
-    document.getElementById("question4").style.display = "none";
+
+    document.getElementById("question6").style.display = "none";
+
+
 
     document.getElementById(nextQuestionId).style.display = "block";
 }
