@@ -6,60 +6,125 @@
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/PersonalQuiz.css">
     <script src="../Javascript/Quiz.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
-    <div id="question1" class="question1">
-        <!-- Question 1 -->
-        <p>Which house catches your fancy the most?</p>
-        <button class="response" onclick="selectOption(this)">
-            <div class="image-wrapper">
-                <img src="../images/Quiz/Arabic house design.jpeg" height="300" alt="">
-            </div>
-        </button>
-        <button class="response" onclick="selectOption(this)">
-            <div class="image-wrapper">
-                <img src="../images/Quiz/Castles and Courtyards 🏰☀️🌿.jpeg" height="300" alt="">
-            </div>
-        </button>
-        <button class="response" onclick="selectOption(this)">
-            <div class="image-wrapper">
-                <img src="../images/Quiz/GQ Guide_ The first-time traveller’s manual to Bikaner, Rajasthan.jpeg" height="300" alt="">
-            </div>
-        </button>
-        <button class="response" onclick="selectOption(this)">
-            <div class="image-wrapper">
-                <img src="../images/Quiz/Gallery of Kradoan House _ Thiti Ophatsodsai  - 1.jpeg" height="300" alt="">
-            </div>
-        </button>
+    <div id="progress-bar"></div>
+    <div class="overlay">
+        <div id="question1" class="question1">
+            <!-- Question 1 -->
+            <p>Which house catches your fancy the most?</p>
+            <button class="response" onclick="selectOption(this)">
+                <div class="image-wrapper">
+                    <img src="../images/Quiz/Arabic house design.jpeg" height="300" alt="">
+                </div>
+            </button>
+            <button class="response" onclick="selectOption(this)">
+                <div class="image-wrapper">
+                    <img src="../images/Quiz/Castles and Courtyards 🏰☀️🌿.jpeg" height="300" alt="">
+                </div>
+            </button>
+            <button class="response" onclick="selectOption(this)">
+                <div class="image-wrapper">
+                    <img src="../images/Quiz/GQ Guide_ The first-time traveller’s manual to Bikaner, Rajasthan.jpeg" height="300" alt="">
+                </div>
+            </button>
+            <button class="response" onclick="selectOption(this)">
+                <div class="image-wrapper">
+                    <img src="../images/Quiz/Gallery of Kradoan House _ Thiti Ophatsodsai  - 1.jpeg" height="300" alt="">
+                </div>
+            </button>
+        
+            <br><button class="next" onclick="showNextQuestion('question2')">Next question</button>
+        </div>
+        
+        <div id="question2" class="question2" style="display: none;">
+            <!-- Question 2 -->
+            <p>What are your skin undertones?</p>
+            <span><h3>Don't know what your <a href="#" id="popupLink">skin tone</a> is?</h3></span>
     
-        <br><button class="next" onclick="showNextQuestion('question2')">Next question</button>
+            <div id="popup" class="popup">
+                <h2>This is a popup</h2>
+                <p>Content of the popup goes here.</p>
+                <button onclick="closePopup()" class="exit-popup"><i class="fa-solid fa-xmark"></i></button>
+            </div>   
+    
+            <button onclick="selectOption(this)" class="response2">-Warm (yellow or golden undertones)</button>
+            <button onclick="selectOption(this)" class="response2">-Cool (pink or blue undertones)</button>
+            <button onclick="selectOption(this)" class="response2">-Neutral (a mix of warm and cool undertones)</button>
+            <br><button class="next" onclick="showNextQuestion('question3')">Next question</button>
+    
+        </div>
+        <div id="question3" class="question3" style="display: none;">
+            <!-- Question 3 -->
+            <p>Which gemstone colors resonate with you the most?</p>
+            <button onclick="selectOption(this)" class="response2">-Vibrant blues</button>
+            <button onclick="selectOption(this)" class="response2">-Deep red</button>
+            <button onclick="selectOption(this)" class="response2">-Earthy tones</button>
+            <br><button class="next" onclick="showNextQuestion('question4')">Next question</button>
+    
+        </div>
+
+        <div id="question4" class="question4" style="display: none;">
+            <!-- Question 4 -->
+            <p>What's your preferred jewelry style?</p>
+            <button onclick="selectOption(this)" class="response2">-Classic</button>
+            <button onclick="selectOption(this)" class="response2">-Modern</button>
+            <button onclick="selectOption(this)" class="response2">-Vintage</button>
+            <button onclick="selectOption(this)" class="response2">-Statement pieces</button>
+
+            <br><button class="next" onclick="showNextQuestion('question5')">Next question</button>
+    
+        </div>
+        <div id="question5" class="question5" style="display: none;">
+            <!-- Question 5 -->
+            <p>Are there any trends or styles you're currently interested in exploring in your jewelry collection?</p>
+            <form>
+               <input type="text" id="jewelryTrends" name="jewelryTrends" placeholder="Enter trends or styles">
+            </form>
+
+            <br><button class="next" onclick="showNextQuestion('question6')">Next question</button>
+    
+        </div>
+
+        <div id="question6" class="question6" style="display: none;">
+            <!-- Question 5 -->
+            <p>If you could attend a themed party inspired by a specific culture, which one would you choose?</p>
+            <button class="response" onclick="selectOption(this)">
+                <div class="image-wrapper">
+                    <img src="../images/Quiz/New folder/download (12).jpeg" height="300" alt="">
+                    <h6>Egyptian</h6>
+
+                </div>
+            </button>
+            <button class="response" onclick="selectOption(this)">
+                <div class="image-wrapper">
+                    <img src="../images/Quiz/New folder/download (11).jpeg" height="300" alt="">
+                    <h6>Middle east</h6>
+                </div>
+            </button>
+            <button class="response" onclick="selectOption(this)">
+                <div class="image-wrapper">
+                    <img src="../images/Quiz/New folder/download (10).jpeg" height="300" alt="">
+                    <h6>Indian</h6>
+
+                </div>
+            </button>
+            <button class="response" onclick="selectOption(this)">
+                <div class="image-wrapper">
+                    <!-- <img src="../images/Quiz/New folder/download (9).jpeg" height="300" alt=""> -->
+                    <img src="../images/Quiz/New folder/15'' Finger Loop Satin Stretchy Gloves - Black.jpeg" height="300" alt="">
+                    <h6>Vintage</h6>
+
+                </div>
+            </button>
+        
+            <br><button class="next" onclick="showNextQuestion('question7')">Next question</button>
+    
+        </div>
     </div>
     
-    <div id="question2" class="question2" style="display: none;">
-        <!-- Question 2 -->
-        <p>What are your skin undertones?</p>
-        <span><h5>Don't know what your <a href="#" id="popupLink">skin tone</a> is?</h5></span>
-
-        <div id="popup" class="popup">
-            <h2>This is a popup</h2>
-            <p>Content of the popup goes here.</p>
-            <button onclick="closePopup()">Close</button>
-        </div>   
-
-        <button onclick="selectOption(this)" class="response2">-Warm (yellow or golden undertones)</button>
-        <button onclick="selectOption(this)" class="response2">-Cool (pink or blue undertones)</button>
-        <button onclick="selectOption(this)" class="response2">-Neutral (a mix of warm and cool undertones)</button>
-        <br><button class="next" onclick="showNextQuestion('question3')">Next question</button>
-
-    </div>
-
-    
-    
-    
-    <div id="question3" class="question3" style="display: none;">
-        <!-- Question 3 -->
-        <!-- Add more questions in a similar manner -->
-    </div>
     
     
     <script>
