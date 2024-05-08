@@ -341,6 +341,7 @@ body {
     margin-left: 340px;
 }
 
+
 .egyptian-collection-text {
     margin-right: 300px;
 }
@@ -450,6 +451,7 @@ body {
 .collection-container {
     
     margin-top:10vh;
+    margin-left:10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
