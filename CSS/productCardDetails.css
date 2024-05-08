@@ -9,9 +9,10 @@
     align-items:flex-start;
 }
 .prod-pic{
+ 
     
     flex:0 0 40vw;
-    margin-right:20px;
+    /* margin-right:20px; */
 }
 .price-rating{
     flex:1;
@@ -263,6 +264,7 @@ h3{
         width:700px;
     }
    
+   
  }
  @media screen and (max-width:768px){
     .upper-half-prod{
@@ -270,7 +272,9 @@ h3{
         display:flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 10%;
+       
+       
+       
     }
     .button{
         width:700px;
