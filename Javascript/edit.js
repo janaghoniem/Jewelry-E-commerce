@@ -50,24 +50,69 @@ function toggleMenu() {
 //     }
 //     reader.readAsDataURL(file);
 // }
+function fileValidation() {
+    var fileInput = dcument.getElementById('file');
+    var filepath = fileInput.value;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+    if (!allowedExtensions.exec(filrpath)) {
+        var suc = document.querySelector('.successful');
+        suc.innerHTML = 'Extension file not supported';
+        var suc1 = document.querySelector('.s');
+        suc1.innerHTML = 'please upload jpg, jpeg or png';
+    }else{
+        dragNdrop(event);
+    }
+}
 
 "use strict";
+// function dragNdrop(event) {
+//     var fileName = URL.createObjectURL(event.target.files[0]);
+//     var preview = document.getElementById("preview");
+//     var previewImg = document.createElement("img");
+//     previewImg.setAttribute("src", fileName);
+//     preview.innerHTML = "";
+//     preview.appendChild(previewImg);
+//     var pictureValidation = document.querySelector('.picture-validation');
+//     pictureValidation.innerHTML = 'Picture you uploaded';
+
+//     var suc = document.querySelector('.successful');
+//     suc.innerHTML = 'Uploaded successfully';
+
+//     var suc1 = document.querySelector('.s');
+//     suc1.innerHTML = 'Click on edit button to view image';
+// }
+
 function dragNdrop(event) {
-    var fileName = URL.createObjectURL(event.target.files[0]);
-    var preview = document.getElementById("preview");
-    var previewImg = document.createElement("img");
-    previewImg.setAttribute("src", fileName);
-    preview.innerHTML = "";
-    preview.appendChild(previewImg);
-    var pictureValidation = document.querySelector('.picture-validation');
-    pictureValidation.innerHTML = 'Picture you uploaded';
+    var fileInput = event.target.files[0];
+    var filepath = fileInput.name;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
-    var suc = document.querySelector('.successful');
-    suc.innerHTML = 'Uploaded successfully';
-
-    var suc1 = document.querySelector('.s');
-    suc1.innerHTML = 'Click on edit button to view image';
+    if (!allowedExtensions.exec(filepath)) {
+        var suc = document.querySelector('.successful');
+        suc.innerHTML = 'File not supported';
+        var suc1 = document.querySelector('.s');
+        suc1.innerHTML = 'Please upload jpg, jpeg, or png';
+        var preview = document.getElementById("preview");
+        preview.innerHTML = "";
+    } else {
+        var fileName = URL.createObjectURL(fileInput);
+        var preview = document.getElementById("preview");
+        var previewImg = document.createElement("img");
+        previewImg.setAttribute("src", fileName);
+        preview.innerHTML = "";
+        preview.appendChild(previewImg);
+        var pictureValidation = document.querySelector('.picture-validation');
+        pictureValidation.innerHTML = 'Picture you uploaded';
+    
+        var suc = document.querySelector('.successful');
+        suc.innerHTML = 'Uploaded successfully';
+    
+        var suc1 = document.querySelector('.s');
+        suc1.innerHTML = 'Click on edit button to view image';
+    }
 }
+
 function drag() {
     document.getElementById('uploadFile').parentNode.className = 'draging dragBox';
 }
