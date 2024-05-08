@@ -82,6 +82,10 @@ header:hover #search-button{
     background-color: transparent;
 }
 
+.side-icon {
+    display: none;
+}
+
 .navigation a{
     color: #F6E8C0;
     font-size: 1.1em;
@@ -696,7 +700,7 @@ header:hover #search-button{
 
 .info p {
     margin: 10px 0 0 5px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .info button{
@@ -891,8 +895,31 @@ header:hover #search-button{
     padding: .75rem 1.875rem;
 }
 
-.side-icon {
-    display: none;
+#about-us-section {
+    background-image: url(../images/Landing/about-us-img.png);
+    height: 500px;
+    width: 100%;
+}
+
+.about-us-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 580px;
+    width: 800px;
+}
+
+.about-us-text-container h1, p {
+    font-family: 'Futura PT', sans-serif;
+    font-weight: bolder;
+    line-height: 1.5rem;
+    font-size: larger;
+}
+
+.about-us-text-container h1 {
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 385px) {
