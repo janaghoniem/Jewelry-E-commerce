@@ -261,6 +261,15 @@ body {
     padding-top:30vh;
    
 }
+.text-break{
+    padding-top:80vh;
+}
+.text-break h2{
+    padding-left:38vw;
+}
+.text-break h3{
+    padding-left:35vw;
+}
 .text h2{
     padding-left:40vw;
 }
@@ -281,7 +290,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50vh;
+    margin-bottom: 55vh;
     padding-left: 13vw;
 }
 
@@ -289,7 +298,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 95px;
+    margin-bottom: 60px;
     padding-left: 3vw;
 }
 
@@ -439,13 +448,34 @@ body {
 /* jana and haya code*/
 
 .collection-container {
-    margin-top:100vh;
+    
+    margin-top:10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+.collection-container2 {
+    margin: top 0.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.collection-container3 {
+    margin-top:5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.collection-container4 {
+    margin-top:5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -469,10 +499,22 @@ body {
     font-size: 20px;
     color: rgb(255, 255, 255);
 }
-
+.icon i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    z-index:2;
+    color: black(255, 255, 255);
+}
+.icon i:hover{
+    transform: scale(1.1);
+    color: rgb(2, 158, 36);
+    font-weight: bolder;
+}
 .imge i:hover{
     transform: scale(1.1);
-    color: rgb(158, 2, 2);
+    color: rgb(2, 158, 36);
     font-weight: bolder;
 }
 .imge img:hover{
