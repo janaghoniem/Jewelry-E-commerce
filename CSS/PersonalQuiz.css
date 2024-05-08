@@ -260,7 +260,7 @@ body {
 .question6 {
     text-align: center;
     height: 100vh;
-    margin-top: 25px;
+    margin-top: -20px;
     margin-left: -15px;
 
 }
@@ -303,7 +303,7 @@ body {
 .question7 {
     text-align: center;
     height: 100vh;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 1em;
 }
 
