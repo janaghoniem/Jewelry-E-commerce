@@ -40,12 +40,7 @@ overflow-x: hidden;
     margin-bottom: 10px;
 }
 
-/* .review-header{
-    display:flex;
-    align-items: center;
-    margin-bottom: 10px;
-  width:100%;
-} */
+
 .review-avatar i{
   font-size: 40px;
     /* border-radius: 50%; */
@@ -127,6 +122,10 @@ overflow-x: hidden;
     height:150px;
 
 }
+.product-link{
+    text-decoration: none;
+    color:black;
+}
 
 @media screen and (max-width:768px){
     .review-box{
@@ -134,22 +133,29 @@ overflow-x: hidden;
         padding: 20px;
         margin-bottom:20px;
         position:relative;
-        display :inline-block;
+        display :flex;
+     
         width:500px;
         background-color:rgba(250, 235, 215, 0.601) ;
         border-radius: 10px;
     
     }
-    .review-header{
-        display:flex;
-        align-items: center;
-        margin-bottom: 10px;
-      width:100%;
+    .review-left, .review-product-info{
+        width:100%;
+        /* margin-bottom: 10px; */
+
     }
+    .review-product-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+    }
+   
     .review-avatar i{
       font-size: 40px;
      
-       margin:15px;
+       /* margin:15px; */
        margin-top:3px;
        position: relative;
        display: inline;
@@ -194,6 +200,14 @@ overflow-x: hidden;
     .delete-review:hover{
         color:#ddd;
     }
+    .review-product-info img{
+        width:70px;
+        height:70px;
+    
+    }
+    .product-link{
+        text-align: center;
+    }
 }
 @media screen and (max-width:480px){
     .review-box{
@@ -201,15 +215,35 @@ overflow-x: hidden;
         padding: 20px;
         margin-bottom:20px;
         position:relative;
-        display :inline-block;
+        display :flex;
+       
         width:300px;
         background-color:rgba(250, 235, 215, 0.601) ;
         border-radius: 10px;
     
     }
+    .review-left, .review-product-info{
+        width:100%;
+        margin-bottom: 10px;
+
+    }
     .review-info{
         margin-right:0;
      
 
+    }
+    .review-product-info{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        width: 100px;
+    }
+    .review-product-info img{
+        width:70px;
+        height:70px;
+    
+    }
+    .product-link{
+        text-align: center;
     }
 }
