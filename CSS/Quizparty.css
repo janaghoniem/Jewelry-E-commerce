@@ -1,0 +1,72 @@
+body {
+    background-image: url("../images/Quiz/download\ \(9\).jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+.overlay{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    height: 85%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: flex-start;
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.5vw;
+    color: rgb(92, 53, 3);
+    margin-left: 13em;
+}
+
+.user{
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-top: 5em;
+    font-size: 2.5em;
+}
+.user i{
+    padding :15px;
+}
+.btn{
+    background-color: transparent;
+    border-radius:3px ;
+    border: 1px solid rgb(121, 74, 26);
+    z-index: 1;
+    width: 26vw;
+    height: 3vw;
+    margin-top: 16em;
+    margin-left: -60em;
+}
+.btn:hover{
+    background-color: rgb(121, 74, 26);
+    color: white;
+    transition: 0.3s ease;
+}
+.btn2{
+    background-color: transparent;
+    border-radius:3px ;
+    border: 1px solid rgb(121, 74, 26);
+    z-index: 1;
+    width: 26vw;
+    height: 3vw;
+    margin-top: 46em;
+    margin-left: -20em;
+}
+.btn2:hover{
+    background-color: rgb(121, 74, 26);
+    color: white;
+    transition: 0.3s ease;
+}
