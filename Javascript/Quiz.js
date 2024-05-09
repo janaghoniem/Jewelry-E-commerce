@@ -78,7 +78,7 @@ function calculateResult() {
     let description = '';
 
     // Define score ranges and corresponding results
-    if (totalScore >= 40 && totalScore <= 60) {
+    if (totalScore >= 0 && totalScore <= 60) {
         result = 'Indian';
         imageSrc = '../images/Quiz/New folder/download (10).jpeg'; // Set the image source for Indian result
         description = 'Indian description goes here...';

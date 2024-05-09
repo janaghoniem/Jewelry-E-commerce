@@ -344,6 +344,19 @@ body {
     height: 300px;
 
 }
+
+.result-card {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+}
+
+.result {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+
 .result-text {
     margin-top: -85%;
     margin-left: 110%;
