@@ -1,36 +1,15 @@
-@import url(https://db.onlinewebfonts.com/c/2e492ac67105d56ef337489b56a86486?family=Cooper+BT+W03+Md);
-@import url('https://fonts.cdnfonts.com/css/garet');
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/futura-pt');
-
-/* OPTIONAL FONT FOR LOGIN POP UP */
-@import url(https://db.onlinewebfonts.com/c/be89a5bed739eee8649fa3322ff5c52b?family=Engravers%27+Gothic+BT);
-
-/* FROM HAYA */
-@import url('https://fonts.cdnfonts.com/css/garet');
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
-*{
-    font-family: 'Nunito Sans', 'PT Sans','Didact Gothic','Garet', sans-serif;
-    font-weight: 100;
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    transition: all .3s cubic-bezier(.39,.575,.565,1);
-    -webkit-font-smoothing: antialiased;
+body{
+    background:#FFF0DF;
+    min-height: 100vh;
+    vertical-align: middle;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
-
-body {
-    /* background-image: url(../images/Landing/bg2.jpg); */
-    background-color: rgb(254, 248, 241);
-}
-
+/*  -----------------header------------------------------------- */
 header{
     /* background-color:  rgba(0, 0, 0, 0.1); */
     /* backdrop-filter: blur(4px); */
@@ -44,6 +23,7 @@ header{
     padding: 10px 50px;
     text-transform: uppercase;
     /* border-bottom: 2px solid rgba(0, 0, 0, 0.19); */
+    
 }
 
 .header-scrolled {
@@ -63,7 +43,7 @@ header:hover {
     background-color: white;
 }
 
-header:hover a, header:hover .navigation p, header:hover #side-icon{
+header:hover a {
     color: black;
 }
 
@@ -76,26 +56,17 @@ header:hover #search-button{
     background-color: transparent;
 }
 
-.side-icon {
-    display: none;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    position: relative;
-    margin-left: -40px;
-}
-
 .navigation a{
-    color: #F6E8C0;
+    color: #1a1404;
     font-size: 1.1em;
     font-weight: 300;
     text-decoration: none;
     margin-left: 20px;
 }
 
-/* .navigation a:hover{
+.navigation a:hover{
     color:rgb(228, 124, 33);
-} */
+}
 
 .navigation i:hover{
     color:rgb(228, 124, 33);
@@ -247,6 +218,9 @@ header:hover #search-button{
 .header-top-scrolled {
     justify-content: flex-end;
     font-size: medium;
+    .store-services {
+        flex-direction: row-reverse;
+    }
 }
 
 .header-middle-scrolled {
@@ -371,144 +345,161 @@ header:hover #search-button{
     z-index: 999;
 }
 
-.popup-container {
-    display: none;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
+/* --------------------------------------------------------------- */
+.title{
+    margin-bottom: 5vh;
+}
+.card{
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+    padding-top:200px;
+    
+}
+@media(max-width:767px){
+    .card{
+        margin: 3vh auto;
+    }
+}
+.cart{
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+@media(max-width:767px){
+    .cart{
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem;
+    }
+}
+.summary{
+    background-color: #BFB094;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+}
+@media(max-width:767px){
+    .summary{
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 1rem;
+    }
+}
+.summary .col-2{
+    padding: 0;
+}
+.summary .col-10
+{
+    padding: 0;
+}.row{
+    margin: 0;
+}
+.title b{
+    font-size: 1.5rem;
+}
+.main{
+    margin: 0;
+    padding: 2vh 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    justify-content: center;
-    align-items: center;
-    scroll-behavior: unset;
 }
-
-#exit-popup-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: 100%;
-    margin-top: -20px;
+.col-2, .col{
+    padding: 0 1vh;
 }
-
-#exit-popup-button i{
-    font-size: larger;
+a{
+    padding: 0 1vh;
 }
-
-.login-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.close{
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+img{
+    width: 3.5rem;
+}
+.back-to-shop{
+    margin-top: 4.5rem;
+}
+h5{
+    margin-top: 4vh;
+}
+hr{
+    margin-top: 1.25rem;
+}
+form{
+    padding: 2vh 0;
+}
+select{
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
     width: 100%;
-    border-bottom: 0.01em solid black;
-    padding: 0 20px;
-    margin-bottom: 40px;
+    background-color: rgb(247, 247, 247);
 }
-
-.login-nav-text-style {
-    font-family: "Engravers' Gothic BT", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: black;
-}
-
-.login-nav button {
-    background-color: transparent;
-    width: auto;
-    border: none;
-    font-size: 25px;
-    text-align: center;
-    padding: 30px;
-    cursor: pointer;
-}
-
-.login-nav button.active {
-    border-bottom: 0.1em solid black;
-    transition: none;
-}
-
-#login-form {
-    display: block;
-}
-
-#create-account-form {
-    display: none;
-}
-
-.sign-up-name-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#sign-up-fname {
-    margin-right: 10px;
-}
-
-.popup-form {
-    background-color: white;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 590px;
-    height: auto;
-    max-height: 650px;
-    overflow: scroll;
-}
-
-.popup-form input {
+input{
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
     width: 100%;
-    margin-bottom: 20px;
-    padding: 8px;
-    border: 1px solid silver;
-    text-transform: none;
-    font-family: sans-serif;
+    background-color: rgb(247, 247, 247);
 }
-
-.popup-form label {
-    font-family: sans-serif;
-    font-size: 12px;
+input:focus::-webkit-input-placeholder
+{
+      color:transparent;
 }
-
-#remember-me-forgot-password-container{
-    display: flex;
-    justify-content: center;
-}
-
-.remember-me-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: auto;
-}
-
-#remember-me-checkbox {
-    display: inline-block;
-    width: auto;
-    margin-right: 5px;
-}
-
-/* .forgot-password {
-    margin-left: auto; 
-    text-decoration: none;
-    color: #007bff;
-} */
-
-.popup-form form button {
+.btn{
+    background-color: #000;
+    border-color: #000;
+    color: white;
     width: 100%;
-    font-size: 20px;
-    border: none;
-    margin-top: 24px;
-    padding: 12px 30px;
-    background-color: black;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0;
+}
+.btn:focus{
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    /* -webkit-user-select: none; */
+    transition: none; 
+}
+.btn:hover{
     color: white;
 }
-
-.input-error {
-    margin-top: -20px;
-    margin-bottom: 10px;
-    color: red;
-    font-size: smaller;
+a{
+    color: black; 
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+ #code{
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253) , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+a {
+	text-decoration: none;
+  }
+.text-muted{
+	background-color: rgb(247, 247, 247);
+}
+.col button{
+    color: white;
+    background-color: black;
+    border: black 1px solid;
+    cursor: pointer;
+}
+.col button:hover{
+    color: black;
+    background-color: white;
 }

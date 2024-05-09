@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist</title>
-    <link rel="stylesheet" href="../CSS/wishlist.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<html>
 
-    <script src="../Javascript/wishlist.js"></script>
+<head>
+   <title>Shopping Cart</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+   <link href="../CSS/wishlist.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
+    <!----------------------------------------------------------header----------------------------------------------------->
     <header>
         <div class="header-top-unscrolled" id="header-top">
             <div class="store-services" id="store-services">
@@ -18,10 +22,10 @@
                         <i class="fa-solid fa-location-dot"></i>
                         <p>Find a Store</p>
                     </a>
-                    <!-- <a href="#">
+                    <a href="#">
                         <i class="fa-solid fa-bell-concierge"></i>
                         <p>Services</p>
-                    </a> -->
+                    </a>
                     <a href="../HTML/Contact-Us.html">
                         <i class="fa-solid fa-headset"></i>
                         <p>Contact Us</p>
@@ -36,10 +40,10 @@
             </div>
             <div class="user-data">
                 <nav class="navigation">
-                    <!-- <a href="#">
+                    <a href="#">
                         <i class="fa-regular fa-envelope"></i>
                         <p>Newsletter</p>
-                    </a> -->
+                    </a>
                     <a href="#" id="login-button">
                         <i class="fa-regular fa-user"></i>
                         <p>My Account</p>
@@ -57,13 +61,13 @@
         </div>
         <div class="header-middle-unscrolled" id="header-middle">
             <div class="responsive">
-                <a href="javascript:void(0);" class="side-icon" id="side-icon">
+                <a href="javascript:void(0);" class="side-icon" id="side-icon" onclick="toggleMenu()">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
             <a href="#main" class="logo-unscrolled" id="logo">Firoza</a>
             <div id="top-move-on-scroll" style="display: none;">
-                <div class="search-button-unscrolled" id="search-button2">
+                <div class="search-button-scrolled" id="search-button2">
                     <input type="search" id="searchField2" class="searchField" placeholder="Search">
                     <button id="search2" class="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -152,65 +156,81 @@
             </div>
         </div>
     </header>
-    <div id="popup-container" class="popup-container">
-        <div class="popup-form">
-            <button id="exit-popup-button"><i class="fa-solid fa-x"></i></button>
-            <nav class="login-nav">
-                <button id="login-nav" class="login-nav-text-style active">Login</button>
-                <button id="Create-an-account-nav" class="login-nav-text-style">Create new account</button>
-            </nav>
-            <form id="login-form" method="post" action="main.html">
-                <label class="login-nav-text-style" for="email-address-field">E-mail Address</label>
-                <input class="login-nav-text-style" type="email" name="email-address-field" id="login-form-email-field">
-                <p class="input-error login-nav-text-style" id="login-form-email-error"></p>
-                <label class="login-nav-text-style" for="password-field">Password</label>
-                <input class="login-nav-text-style" type="password" name="password-field" id="login-form-password-field">
-                <p class="input-error login-nav-text-style" id="login-form-password-error"></p>
-                <div class="remember-me-forgot-password-container">
-                    <div class="remember-me-div">
-                        <input type="checkbox" id="remember-me-checkbox">
-                        <label for="remember-me-checkbox" class="login-nav-text-style">Remember me</label>
-                    </div>
-                    <div>
-                        <a href="" class="login-nav-text-style forgot-password">Forgot password?</a>
-                    </div>
-                </div>
-                <button class="login-nav-text-style" type="submit" id="login-form-button">Login</button>
-            </form>
-            <form id="create-account-form" method="post">
-                <div class="sign-up-name-section">
-                    <div id="sign-up-fname">
-                        <label class="login-nav-text-style" for="first-name-field">First name</label>
-                        <input class="login-nav-text-style" type="text" name="first-name-field" id="sign-up-first-name-field">
-                        <p class="input-error login-nav-text-style" id="sign-up-first-name-error"></p>
-                    </div>
-                    <div>
-                        <label class="login-nav-text-style" for="last-name-field">Last name</label>
-                        <input class="login-nav-text-style" type="text" name="last-name-field" id="sign-up-last-name-field">
-                        <p class="input-error login-nav-text-style" id="sign-up-last-name-error"></p>
-                    </div>
-                </div>
-                <label class="login-nav-text-style" for="email-address-field">E-mail Address</label>
-                <input class="login-nav-text-style" type="email" name="email-address-field" id="sign-up-email-field">
-                <p class="input-error login-nav-text-style" id="sign-up-email-error"></p>
-                <label class="login-nav-text-style" for="confirm-email-address-field">Confirm E-mail Address</label>
-                <input class="login-nav-text-style" type="email" name="confirm-email-address-field" id="sign-up-confirm-email-field">
-                <p class="input-error login-nav-text-style" id="sign-up-confirm-email-error"></p>
-                <label class="login-nav-text-style" for="password-field">Password</label>
-                <input class="login-nav-text-style" type="password" name="password-field" id="sign-up-password-field">
-                <p class="input-error login-nav-text-style" id="sign-up-password-error"></p>
-                <label class="login-nav-text-style" for="confirm-password-field">Confirm Password</label>
-                <input class="login-nav-text-style" type="password" name="confirm-password-field" id="sign-up-confirm-password-field">
-                <p class="input-error login-nav-text-style" id="sign-up-confirm-password-error"></p>
-                <div class="remember-me-forgot-password-container">
-                    <div class="remember-me-div">
-                        <input type="checkbox" id="remember-me-checkbox">
-                        <label for="remember-me-checkbox" class="login-nav-text-style">Sign up for special offers</label>
-                    </div>
-                </div>
-                <button class="login-nav-text-style" type="submit" id="create-account-button">Create account</button>
-            </form>
-        </div>
-    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------ -->
+   <div class="card">
+      <div class="row justify-content-center">
+          <div class="col-md-8 cart">
+              <div class="title">
+                  <div class="row">
+                    
+                      <div class="col"><h4><b> <i class="fa-solid fa-heart"></i>Wishlist</b></h4></div>
+                      <div class="col align-self-center text-right text-muted">4 items</div>
+                  </div>
+              </div>    
+              <div class="row border-top border-bottom">
+                  <div class="row main align-items-center">
+                      <div class="col-2"><img class="img-fluid" src="C:\Users\a\Downloads\Bzero1-2_goms9p .jpg" alt=""></div>
+                      <div class="col">
+                          <div class="row text-muted">Necklace</div>
+                          <div class="row">CGolden Threads Accent</div>
+                      </div>
+                      <div class="col">
+                          <button onclick="addToCart(this)">
+                            add to cart
+                          </button>
+                      </div>
+                      <div class="col">EGP 12,000 <span class="close">&#10005;</span></div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="row main align-items-center">
+                      <div class="col-2"><img class="img-fluid"src="C:\Users\a\Downloads\Bzero1-2_goms9p .jpg" alt=""></div>
+                      <div class="col">
+                          <div class="row text-muted">earring</div>
+                          <div class="row">Gold dangle drop </div>
+                      </div>
+                      <div class="col">
+                        <button onclick="addToCart(this)">
+                            add to cart
+                          </button>                      </div>
+                      <div class="col">EGP  95,000   <span class="close">&#10005;</span></div>
+                  </div>
+              </div>
+              <div class="row border-top border-bottom">
+                  <div class="row main align-items-center">
+                      <div class="col-2"><img class="img-fluid" src="C:\Users\a\Downloads\Bzero1-2_goms9p .jpg" alt=""></div>
+                      <div class="col">
+                          <div class="row text-muted">earring</div>
+                          <div class="row">Blush Heart Dangler</div>
+                      </div>
+                      <div class="col">
+                        <button onclick="addToCart(this)">
+                            add to cart
+                          </button>                      </div>
+                      <div class="col">EGP 50,000 <span class="close">&#10005;</span></div>
+                  </div>
+              </div>
+              <div class="row border-top border-bottom">
+               <div class="row main align-items-center">
+                   <div class="col-2"><img class="img-fluid" src="C:\Users\a\Downloads\Bzero1-2_goms9p .jpg" alt=""></div>
+                   <div class="col">
+                       <div class="row text-muted">Necklace</div>
+                       <div class="row">Pearl Cascade Collar</div>
+                   </div>
+                   <div class="col">
+                    <button onclick="addToCart(this)">
+                        add to cart
+                    </button>                   </div>
+                   <div class="col">EGP 120,000 <span class="close">&#10005;</span></div>
+               </div>
+           </div>
+              <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+          </div>
+          
+      </div>
+      
+  </div>
+   <script src="../Javascript/wishlist.js"></script>
 </body>
 </html>
