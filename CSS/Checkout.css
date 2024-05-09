@@ -58,7 +58,7 @@ body{
     border-radius: 30px;
     margin-bottom: 1rem;
     position: relative;
-    background-image: url(Resources/check.svg);
+    /* background-image: url(Resources/check.svg); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60%;
@@ -354,10 +354,14 @@ input[type="button"]:hover{
 }
 .invalid {
     border: 1px solid red;
+    color: red;
+    font-size: 12px;
+    
 }
 .error-message {
     color: red;
     font-size: 12px;
+    
 }
 input[type="text"] .error-message{
     background-color: rgb(255, 172, 172);
