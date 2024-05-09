@@ -368,6 +368,48 @@ header:hover #search-button, #search-button2{
     z-index: 999;
 }
 
+
+
+
+.sidepanel {
+    height: 100%; /* Specify a height */
+    width: 0; 
+    position: fixed; 
+    z-index: 9999999; 
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s;
+}
+
+  
+.sidepanel a, .sidepanel i {
+    font-family: 'Futura Pt', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidepanel a:hover, .sidepanel i:hover {
+    color: rgb(254, 248, 241);
+}
+  
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
 .popup-container {
     display: none;
     position: fixed;
@@ -509,6 +551,9 @@ header:hover #search-button, #search-button2{
     color: red;
     font-size: smaller;
 }
+
+
+/* END OF HEADER */
 
 .main {
     width: 100%;
@@ -981,46 +1026,6 @@ footer {
     text-decoration-thickness: 2px; 
     text-decoration-skip-ink: none; 
     text-underline-offset: .5rem;
-}
-
-
-
-.sidepanel {
-    height: 100%; /* Specify a height */
-    width: 0; 
-    position: fixed; 
-    z-index: 9999999; 
-    top: 0;
-    left: 0;
-    background-color: black;
-    overflow-x: hidden; 
-    padding-top: 60px; 
-    transition: 0.5s;
-}
-
-  
-.sidepanel a {
-    font-family: 'Futura Pt', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-  
-.sidepanel a:hover {
-    color: rgb(254, 248, 241);
-}
-  
-.sidepanel .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
 }
 
 @media screen and (max-width: 385px) {
