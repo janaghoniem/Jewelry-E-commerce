@@ -206,7 +206,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //LOGIN HANDLING
-    const currentUsers = [{"Email": "admin@mail.com", "Password":"123admin"}];
+    const currentUsers = [{"Email": "admin@mail.com", "Password":"123admin"},
+        {"Email": "user@mail.com", "Password":"1234user"}
+    ];
 
     function userExists(email) {
         return currentUsers.some(user => user.Email === email);
@@ -284,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // window.location.href("..//HTML/main.html");
                 } else {
                     //user 3ady
+                    // loginIconTrigger.href = "../HTML/"
                 }
             } else {
                 //replace dy b fading pop up
