@@ -181,9 +181,7 @@ font-size: large;
     
     
 }
-.pic:hover .curtain-btn{
-    opacity:1;
-}
+
 .pic i{
     position:absolute;
     margin-top: 8px;
