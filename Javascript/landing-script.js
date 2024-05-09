@@ -164,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //login - sign-up pop up
     const loginIconTrigger = document.getElementById('login-button');
     const loginIconTrigger2 = document.getElementById('login-button2');
+    const loginIconTrigger3 = document.getElementById('login-button3');
     const popupContainer = document.getElementById('popup-container');
     const loginButton = document.getElementById('login-nav');
     const loginform = document.getElementById('login-form');
@@ -177,6 +178,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     loginIconTrigger2.addEventListener('click', () => {
+        event.preventDefault();
+        popupContainer.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    });
+
+    loginIconTrigger3.addEventListener('click', () => {
         event.preventDefault();
         popupContainer.style.display = 'flex';
         document.body.style.overflow = 'hidden';
