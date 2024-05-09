@@ -2,20 +2,24 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const searchButton = document.getElementById('search-button');
-    const searchbutton2 = document.getElementById('search-button2');
+    const searchButton2 = document.getElementById('search-button2');
     const middleDiv = document.getElementById('top-move-on-scroll');
+    const middleDivanchors = document.querySelectorAll('middleDiv a');
+    const headerMiddle = document.getElementById('header-middle');
 
-
-    window.addEventListener('window size changed', () => {
-
-    });
+    if(window.innerWidth < 1100)
+    {
+        searchButton.style.display = 'none';
+        searchButton2.style.marginLeft = '70px';
+        middleDiv.style.display = 'flex';
+        middleDivanchors.display = 'none';
+        headerMiddle.style.justifyContent = 'center';
+    } 
 
     //nav bar scroll
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
         const headerTop = document.getElementById('header-top');
-
-        const headerMiddle = document.getElementById('header-middle');
         const sideicon = document.getElementById('side-icon');
         const headerBottom = document.getElementById('header-bottom');
         const logo = document.getElementById('logo');
@@ -26,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.add('header-scrolled');
 
             searchButton.style.display = 'none';
+
+            searchButton2.classList.remove('search-button-unscrolled');
+            searchButton2.classList.add('search-button-scrolled');
+
             sideicon.style.color = 'black';
     
             middleDiv.style.display = 'flex';
@@ -46,13 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('header-scrolled');
             header.classList.add('header-unscrolled');
     
-            if(window.innerWidth > 1090)
+            if(window.innerWidth > 1100)
             {
                 searchButton.style.display = 'flex';
                 middleDiv.style.display = 'none';
             } else {
-                const middleDivanchors = this.document.querySelectorAll('middleDiv a');
                 middleDivanchors.display = 'none';
+                searchButton2.classList.remove('search-button-scrolled');
+                searchButton2.classList.add('search-button-unscrolled');
             }
 
             sideicon.style.color = 'white';
@@ -61,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             middleDiv.classList.remove('header-top-unscrolled');
             middleDiv.classList.remove('header-top-scrolled');
+
     
             headerMiddle.style.justifyContent = 'center';
     
@@ -116,10 +126,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //responiveness
-    function toggleMenu(){
-        var nav= document.querySelector('.navigation');
-        nav.style.display=nav.style.display==='block'? 'none' :'block';
-    }
+    // function toggleMenu(){
+    //     var nav= document.querySelector('.navigation');
+    //     nav.style.display=nav.style.display==='block'? 'none' :'block';
+    // }
 
     //login - sign-up pop up
     const loginIconTrigger = document.getElementById('login-button');
@@ -379,8 +389,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 searchDiv.style.width = '200px';
                 searchField.style.width = '200px';
             } else {
-                searchDiv.style.width = '60px';
-                searchField.style.width = '60px';
+                searchDiv.style.width = '40px';
+                searchField.style.width = '40px';
             }
             searchDiv.style.border = '1px solid black';
             buttonCount++;
