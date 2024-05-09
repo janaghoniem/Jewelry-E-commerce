@@ -384,20 +384,28 @@ header:hover #search-button, #search-button2{
     transition: 0.5s;
 }
 
+.sidepanel i {
+    margin-right: 10px;
+}
   
-.sidepanel a, .sidepanel i {
+.sidepanel a {
     font-family: 'Futura Pt', sans-serif;
-    font-weight: 500;
     text-transform: uppercase;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 15px;
     color: #818181;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     transition: 0.3s;
 }
+
+.sidepanel p {
+    font-weight: 400;
+}
   
-.sidepanel a:hover, .sidepanel i:hover {
+.sidepanel a:hover p, .sidepanel a:hover {
     color: rgb(254, 248, 241);
 }
   
