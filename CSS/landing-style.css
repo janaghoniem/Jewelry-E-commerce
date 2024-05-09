@@ -69,7 +69,7 @@ header:hover {
     background-color: white;
 }
 
-header:hover a, header:hover .side-icon {
+header:hover a, header:hover .navigation p, header:hover .side-icon {
     color: black;
 }
 
@@ -94,9 +94,9 @@ header:hover #search-button{
     margin-left: 20px;
 }
 
-.navigation a:hover{
+/* .navigation a:hover{
     color:rgb(228, 124, 33);
-}
+} */
 
 .navigation i:hover{
     color:rgb(228, 124, 33);
@@ -912,7 +912,7 @@ header:hover #search-button{
 }
 
 .about-us-text-container h1, p {
-    font-family: 'Futura PT', sans-serif;
+    font-family: "Futura PT", sans-serif;
     color: rgb(254, 248, 241);
     line-height: 1.5rem;
     font-size: larger;
@@ -931,30 +931,53 @@ header:hover #search-button{
 
 footer {
     background-color: black;
-    height: 900px;
+    height: 300px;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
-    padding: 20px;
+    padding: 50px;
     z-index: 9999;
     margin-top: 60px;
 }
 
-.footer-text {
+.footer-text a, .footer-text h3 {
+    display: flex;
+    flex-direction: column;
     line-height: 1.25rem;
-    font-family: 'Futura Pt', sans-serif;
+    font-family: 'Futura pt', sans-serif;
     flex: 1;
 }
 
 .footer-text h3{
     color: rgba(130, 130, 130);
     text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .063rem;;
 }
 
-.footer-text a {
-    color: rgb(254, 248, 241);
+.footer-anchors {
+    display: flex;
+    flex-direction: column;
     font-size: 20px;
+    margin-right: 100px;
+}
+
+.footer-anchors a {
+    text-decoration: none;
+    color: rgb(254, 248, 241);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.footer-anchors a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(254, 248, 241); 
+    text-decoration-thickness: 2px; 
+    text-decoration-skip-ink: none; 
+    text-underline-offset: .5rem;
 }
 
 @media screen and (max-width: 385px) {
