@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Support</title>
-    <link rel="stylesheet" href="../CSS/landing-style.css">
+    <!-- <link rel="stylesheet" href="../CSS/landing-style.css"> -->
     <link rel="stylesheet" href="../CSS/support.css">
     <script src="../Javascript/landing-script.js"></script>
-
+    <script src="../Javascript/admin-collections.js"></script>
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <!-- Font awesome -->
@@ -17,230 +17,240 @@
 </head>
 
 <body>
-    <!-- Jana's amazing header  -->
-    <header>
-        <div class="header-top-unscrolled" id="header-top">
-            <div class="store-services">
-                <nav class="navigation">
-                    <a href="#">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>Stores</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-bell-concierge"></i>
-                        <p>Services</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-headset"></i>
-                        <p>Contacts</p>
-                    </a>
-                </nav>
-                <div class="search-button-unscrolled" id="search-button">
-                    <input type="text" id="searchField" placeholder="Search">
-                    <button id="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="user-data">
-                <nav class="navigation">
-                    <a href="#">
-                        <i class="fa-regular fa-envelope"></i>
-                        <p>Newsletter</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-regular fa-user"></i>
-                        <p>My Account</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-regular fa-heart"></i>
-                        <p>My Wishlist</p>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <p>Shopping Bag</p>
-                    </a>
-                </nav>
-            </div>
-        </div>
-        <div class="header-middle-unscrolled" id="header-middle">
-            <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
-            <div id="top-move-on-scroll"></div>
-        </div>
-        <div class="header-bottom-unscrolled" id="header-bottom">
+   <!-- Jana's amazing header  -->
+   <header>
+    <div class="header-top-unscrolled" id="header-top">
+        <!-- <div class="store-services">
             <nav class="navigation">
-                <a href="main.html">Home</a>
-                <a href="">Collection</a>
-                <a href="product.html">Products</a>
-                <a href="Orders.html">Orders</a>
-                <a href="#">Statistics</a>
-                <a href="#">Reviews</a>
-                <a href="support.html">Customer Support</a>
-                <!-- <a href="#">Necklaces</a>
-                <a href="#">Rings</a>
-                <a href="#">Head Pieces</a> -->
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Find a Store</p>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-bell-concierge"></i>
+                    <p>Services</p>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-headset"></i>
+                    <p>Contact Us</p>
+                </a>
             </nav>
-        </div>
-    </header>
-
-
-    <!-- Chatting HTML start here -->
-    <div class="container-fluid h-100">
-        <div class="row justify-content-center h-100">
-            <div class="col-md-4 col-xl-3 chat">
-                <div class="card mb-sm-3 mb-md-0 contacts_card">
-                    <div class="card-header">
-                        <div class="input-group">
-                            <input type="tetx" placeholder="Search..." name="" class="form-control search">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body contacts_body">
-                        <ui class="contacts">
-                            <li class="active">
-                                <div class="d-flex bd-highlight">
-                                    <div class="img-cont">
-                                        <img src="../images/Admin/icon1.png" class="rounded-circle user_img">
-
-                                    </div>
-                                    <div class="user_info">
-                                        <span>Shahd Emad</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex bd-highlight">
-                                    <div class="img-cont">
-                                        <img src="../images/Admin/icon3.png" class="rounded-circle user_img">
-
-                                    </div>
-                                    <div class="user_info">
-                                        <span>Hala Amr</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex bd-highlight">
-                                    <div class="img-cont">
-                                        <img src="../images/Admin/icon5.png" class="rounded-circle user_img">
-
-                                    </div>
-                                    <div class="user_info">
-                                        <span>Habiba Darwish</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex bd-highlight">
-                                    <div class="img-cont">
-                                        <img src="../images/Admin/icon2.png" class="rounded-circle user_img">
-
-                                    </div>
-                                    <div class="user_info">
-                                        <span>Haya Walid</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex bd-highlight">
-                                    <div class="img-cont">
-                                        <img src="../images/Admin/icon4.png" class="rounded-circle user_img">
-
-                                    </div>
-                                    <div class="user_info">
-                                        <span>Jana Ghoniem</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ui>
-                    </div>
-                    <div class="card-footer"></div>
-                </div>
+            <div class="search-button-unscrolled" id="search-button">
+                <input type="text" id="searchField" placeholder="Search">
+                <button id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </div>
-            <div class="col-md-8 col-xl-6 chat">
-                <div class="card">
-                    <div class="card-header msg_head">
-                        <div class="d-flex bd-highlight">
-                            <div class="img-content">
-                                <img src="../images/Admin/icon1.png" class="rounded-circle user_img">
-                                <!-- <span class="online_icon"></span> -->
-                            </div>
-                            <div class="user_info">
-                                <span>Shahd Emad</span>
-                            </div>
-                        </div>
+        </div>
+        <div class="user-data">
+            <nav class="navigation">
+                <a href="#">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p>Newsletter</p>
+                </a>
+                <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    <p>My Account</p>
+                </a>
+                <a href="#">
+                    <i class="fa-regular fa-heart"></i>
+                    <p>My Wishlist</p>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <p>Shopping Bag</p>
+                </a>
+            </nav>
+        </div> -->
+    </div>
+    <div class="header-middle-unscrolled" id="header-middle">
+        <div class="responsive">
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </div>
+       
+        <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
+        <div id="top-move-on-scroll"></div>
+    </div>
+    <div class="header-bottom-unscrolled" id="header-bottom">
+        <nav class="navigation">
+            <a href="main.html">Dashboard</a>
+            <a href="collections-setup.html">Collection</a>
+            <a href="product.html">Products</a>
+            <a href="Orders.html">Orders</a>
+            <a href="">Statistics</a>
+            <a href="reviewsAdmin.html">Reviews</a>
+            <a href="support.html">Customer Support</a>
+            <!-- <a href="#">Necklaces</a>
+            <a href="#">Rings</a>
+            <a href="#">Head Pieces</a> -->
+        </nav>
+    </div>
+   
+</header>
 
-                        <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
-                        <div class="action_menu">
-                            <ul>
-                                <li><i class="fas fa-user-circle"></i> View profile</li>
-                                <li><i class="fas fa-ban"></i> Block user</li>
-                            </ul>
+
+
+<!-- Chatting HTML start here -->
+<div class="container-fluid h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-md-4 col-xl-3 chat">
+            <div class="card mb-sm-3 mb-md-0 contacts_card">
+                <div class="card-header">
+                    <!-- <div class="input-group">
+                        <input type="tetx" placeholder="Search..." name="" class="form-control search">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="card-body contacts_body">
+                    <ui class="contacts">
+                        <li class="active">
+                            <div class="d-flex bd-highlight">
+                                <div class="img-cont">
+                                    <img src="../images/Admin/icon1.png" class="rounded-circle user_img">
+
+                                </div>
+                                <div class="user_info">
+                                    <span>Shahd Emad</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex bd-highlight">
+                                <div class="img-cont">
+                                    <img src="../images/Admin/icon3.png" class="rounded-circle user_img">
+
+                                </div>
+                                <div class="user_info">
+                                    <span>Hala Amr</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex bd-highlight">
+                                <div class="img-cont">
+                                    <img src="../images/Admin/icon5.png" class="rounded-circle user_img">
+
+                                </div>
+                                <div class="user_info">
+                                    <span>Habiba Darwish</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex bd-highlight">
+                                <div class="img-cont">
+                                    <img src="../images/Admin/icon2.png" class="rounded-circle user_img">
+
+                                </div>
+                                <div class="user_info">
+                                    <span>Haya Walid</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-flex bd-highlight">
+                                <div class="img-cont">
+                                    <img src="../images/Admin/icon4.png" class="rounded-circle user_img">
+
+                                </div>
+                                <div class="user_info">
+                                    <span>Jana Ghoniem</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ui>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+        <div class="col-md-8 col-xl-6 chat">
+            <div class="card">
+                <div class="card-header msg_head">
+                    <div class="d-flex bd-highlight">
+                        <div class="img-content">
+                            <img src="../images/Admin/icon1.png" class="rounded-circle user_img">
+                            <!-- <span class="online_icon"></span> -->
+                        </div>
+                        <div class="user_info">
+                            <span>Shahd Emad</span>
                         </div>
                     </div>
-                    <div class="card-body msg_card_body">
-                        <div class="d-flex justify-content-start mb-4">
-                            <div class="img_cont_msg">
-                                <img src="../images/Admin/icon1.png"
-                                    class="rounded-circle user_img_msg">
-                            </div>
-                            <div class="msg_cotainer">
-                                Hi, what is your return policy?
-                                <span class="msg_time">8:40 AM, Today</span>
-                            </div>
+
+                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+                    <div class="action_menu">
+                        <ul>
+                            <li><i class="fas fa-user-circle"></i> View profile</li>
+                            <li><i class="fas fa-ban"></i> Block user</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body msg_card_body">
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="../images/Admin/icon1.png"
+                                class="rounded-circle user_img_msg">
                         </div>
-                        <div class="d-flex justify-content-end mb-4">
-                            <div class="msg_cotainer_send">
-                                Hi Shahd, unfortuanlty as part of my "becoming rich" plan, we dont return products hope
-                                you undersrand
-                                <span class="msg_time_send">8:55 AM, Today</span>
-                            </div>
-                            <div class="img_cont_msg">
-                                <img src="../images/Admin/Admin-icon.png"
-                                    class="rounded-circle user_img_msg">
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-start mb-4">
-                            <div class="img_cont_msg">
-                                <img src="../images/Admin/icon1.png"
-                                    class="rounded-circle user_img_msg">
-                            </div>
-                            <div class="msg_cotainer">
-                                Excuse me?!
-                                <span class="msg_time">9:00 AM, Today</span>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-end mb-4">
-                            <div class="msg_cotainer_send">
-                                it is what it is, hope you enjoy ur purchase
-                                <span class="msg_time_send">9:05 AM, Today</span>
-                            </div>
-                            <div class="img_cont_msg">
-                                <img src="../images/Admin/Admin-icon.png"
-                                    class="rounded-circle user_img_msg">
-                            </div>
+                        <div class="msg_cotainer">
+                            Hi, what is your return policy?
+                            <span class="msg_time">8:40 AM, Today</span>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <div class="input-group">
-                            <div class="input-group-append">
-                                <span class="input-group-text attach_btn"></span>
-                            </div>
-                            <textarea name="" class="form-control type_msg"
-                                placeholder="Type your message..."></textarea>
-                            <div class="input-group-append">
-                                <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
-                            </div>
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="msg_cotainer_send">
+                            Hi Shahd, unfortuanlty as part of my "becoming rich" plan, we dont return products hope
+                            you undersrand
+                            <span class="msg_time_send">8:55 AM, Today</span>
+                        </div>
+                        <div class="img_cont_msg">
+                            <img src="../images/Admin/Admin-icon.png"
+                                class="rounded-circle user_img_msg">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="../images/Admin/icon1.png"
+                                class="rounded-circle user_img_msg">
+                        </div>
+                        <div class="msg_cotainer">
+                            Excuse me?!
+                            <span class="msg_time">9:00 AM, Today</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="msg_cotainer_send">
+                            it is what it is, hope you enjoy ur purchase
+                            <span class="msg_time_send">9:05 AM, Today</span>
+                        </div>
+                        <div class="img_cont_msg">
+                            <img src="../images/Admin/Admin-icon.png"
+                                class="rounded-circle user_img_msg">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text attach_btn"></span>
+                        </div>
+                        <textarea name="" class="form-control type_msg"
+                            placeholder="Type your message..."></textarea>
+                        <div class="input-group-append">
+                            <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../Javascript/support.js"></script>
+</div>
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="../Javascript/support.js"></script>
+
+</body>
 
 </html>
