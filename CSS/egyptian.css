@@ -1,8 +1,8 @@
 
 
 body {
-    background-image: url('../images/middleEastimages/image (3).jpg');
-/* background-size: cover; */
+    background-image: url('../images/Egyptian/the judgement.jpg');
+background-size: 100vw;
 /* background-attachment: fixed; */
 background-repeat: no-repeat;
 display:flex;
@@ -129,7 +129,7 @@ overflow-x: hidden;
 #image5{
     grid-row-start: 21;
     grid-column-start:1;
-    height:350px;
+    height:270px;
     /* transition-duration: 1s; */
   }
 #image4{
