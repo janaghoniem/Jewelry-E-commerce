@@ -342,3 +342,13 @@ input[type="button"]:hover{
 .hidden {
     display: none;
 }
+.invalid {
+    border: 1px solid red;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+input[type="text"] .error-message{
+    background-color: rgb(255, 172, 172);
+}
