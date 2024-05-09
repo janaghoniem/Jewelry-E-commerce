@@ -70,6 +70,21 @@ function validateForm() {
             if (errorMessage) {
                 errorMessage.remove();
             }
+           // Additional check for email format validation
+            if (input.getAttribute('type') === 'text' && input.getAttribute('id') === 'Email') {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(input.value)) {
+                    isValid = false;
+                    input.classList.add('invalid');
+                    const errorMessage = input.parentNode.querySelector('.error-message');
+                    if (!errorMessage) {
+                        const errorMessage = document.createElement('span');
+                        errorMessage.classList.add('error-message');
+                        errorMessage.textContent = 'Please enter a valid email address';
+                        input.parentNode.appendChild(errorMessage);
+                    }
+                }
+            }
         }
     });
 
@@ -95,3 +110,7 @@ const form = document.querySelector('.checkout-form');
 
 
 form.addEventListener('submit', handleFormSubmission);
+
+
+
+// ----------Payment Form Validation-----------------------------
