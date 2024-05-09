@@ -26,12 +26,6 @@
     -webkit-font-smoothing: antialiased;
 }
 
-/* video {
-    object-fit: contain;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}  */
-
 body {
     /* background-image: url(../images/Landing/bg2.jpg); */
     background-color: rgb(254, 248, 241);
@@ -69,7 +63,7 @@ header:hover {
     background-color: white;
 }
 
-header:hover a, header:hover .navigation p{
+header:hover a, header:hover .navigation p, header:hover #side-icon{
     color: black;
 }
 
@@ -88,7 +82,7 @@ header:hover #search-button{
     text-decoration: none;
     font-size: 20px;
     position: relative;
-    margin-left: -60px;
+    margin-left: -40px;
 }
 
 .navigation a{
