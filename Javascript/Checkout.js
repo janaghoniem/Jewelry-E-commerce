@@ -49,10 +49,10 @@ document.querySelector('.cvv-input').oninput = () => {
 function validateForm() {
     let isValid = true;
 
-    
+
     const inputs = document.querySelectorAll('.checkout-form input[type="text"]');
-    
-    
+
+
     inputs.forEach(input => {
         if (input.value.trim() === '') {
             isValid = false;
@@ -70,7 +70,7 @@ function validateForm() {
             if (errorMessage) {
                 errorMessage.remove();
             }
-           // Additional check for email format validation
+            // Additional check for email format validation
             if (input.getAttribute('type') === 'text' && input.getAttribute('id') === 'Email') {
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(input.value)) {
@@ -100,7 +100,7 @@ function handleFormSubmission(event) {
         console.log('Form is valid. Proceeding to the next step...');
         const formContainer = document.querySelector('.form-container');
         const containerDiv = document.querySelector('.container');
-     
+
         formContainer.classList.add('hidden');
         containerDiv.classList.remove('hidden');
     }
@@ -118,13 +118,13 @@ function validateForms() {
     let isFormValid = true;
 
     // Select all input elements in the forms
-    const forms = document.querySelectorAll('.checkout-form');
+    const forms = document.querySelectorAll('.payment-form');
 
     // Loop through each form
     forms.forEach(form => {
         // Select all input elements in the form
         const inputs = form.querySelectorAll('input, select');
-        
+
         // Loop through each input element
         inputs.forEach(input => {
             // Check if the input value is empty
@@ -149,6 +149,20 @@ function validateForms() {
                     errorMessage.remove();
                 }
             }
+            if (input.classList.contains('card-number-input')) {
+                const cardNumber = input.value.trim();
+                if (!isValidCardNumber(cardNumber)) {
+                    isFormValid = false;
+                    input.classList.add('invalid');
+                    const errorMessage = input.parentNode.querySelector('.error-message');
+                    if (!errorMessage) {
+                        const errorMessage = document.createElement('span');
+                        errorMessage.classList.add('error-message');
+                        errorMessage.textContent = 'Invalid card number';
+                        input.parentNode.appendChild(errorMessage);
+                    }
+                }
+            }
         });
     });
 
@@ -168,13 +182,85 @@ function handleFormSubmissions(event) {
     if (areFormsValid) {
         // Add your logic here to proceed with form submission
         console.log('All forms are valid. Proceeding with submission...');
+        //Display success message
+        alert('Paid successfully!');
+
+        // Redirect to the specified page
+        window.location.href = 'ShoppAll.html';
+
     }
 }
 
-function payAndRedirect() {
-    // Display success message
-    alert('Paid successfully!');
+// function payAndRedirect() {
+//     // Display success message
+//     alert('Paid successfully!');
 
-    // Redirect to the specified page
-    window.location.href = 'ShoppAll.html';
+//     // Redirect to the specified page
+//     window.location.href = 'ShoppAll.html';
+// }
+
+
+// ---------------------------------------------------------------
+// function validateForms() {
+//     let isFormValid = true;
+
+//     // Select all input elements in the forms
+//     const forms = document.querySelectorAll('.payment-form');
+
+//     // Loop through each form
+//     forms.forEach(form => {
+//         // Select all input elements in the form
+//         const inputs = form.querySelectorAll('input, select');
+
+//         // Loop through each input element
+//         inputs.forEach(input => {
+//             // Check if the input value is empty
+//             if (!input.value.trim()) {
+//                 isFormValid = false;
+//                 // Add red border to the input field
+//                 input.classList.add('invalid');
+//                 // Check if an error message already exists
+//                 const errorMessage = input.parentNode.querySelector('.error-message');
+//                 if (!errorMessage) {
+//                     // Create and append a span element to show error message
+//                     const errorMessage = document.createElement('span');
+//                     errorMessage.classList.add('error-message');
+//                     errorMessage.textContent = 'This field is required';
+//                     input.parentNode.appendChild(errorMessage);
+//                 }
+//             } else {
+//                 // Remove red border and error message if input is not empty
+//                 input.classList.remove('invalid');
+//                 const errorMessage = input.parentNode.querySelector('.error-message');
+//                 if (errorMessage) {
+//                     errorMessage.remove();
+//                 }
+//             }
+
+//             // Specific validation for card number field
+//             if (input.classList.contains('card-number-input')) {
+//                 const cardNumber = input.value.trim();
+//                 if (!isValidCardNumber(cardNumber)) {
+//                     isFormValid = false;
+//                     input.classList.add('invalid');
+//                     const errorMessage = input.parentNode.querySelector('.error-message');
+//                     if (!errorMessage) {
+//                         const errorMessage = document.createElement('span');
+//                         errorMessage.classList.add('error-message');
+//                         errorMessage.textContent = 'Invalid card number';
+//                         input.parentNode.appendChild(errorMessage);
+//                     }
+//                 }
+//             }
+//         });
+//     });
+
+//     // Return true if all forms are valid, otherwise false
+//     return isFormValid;
+// }
+
+// Function to check if a card number is valid (e.g., 16 digits for most credit cards)
+function isValidCardNumber(cardNumber) {
+    // Implement your validation logic here, e.g., check if cardNumber has 16 digits
+    return /^\d{16}$/.test(cardNumber);
 }
