@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const textareaField = document.querySelector('textarea');
         const uploadFile = document.getElementById('uploadFile');
 
-        if (inputField.value === "" || textareaField.value === "" || uploadFile.value === "") {
+        if (inputField.value === "" || textareaField.value === "" || uploadFile.value === "" || !fileValidation()) {
             sureMessage.innerHTML = "This form will not submit as all fields are mandatory";
         } else {
             // If all fields are filled, submit the form

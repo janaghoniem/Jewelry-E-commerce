@@ -1,3 +1,7 @@
+*{
+    font-family: 'Nunito Sans', 'PT Sans','Didact Gothic','Garet', sans-serif;
+
+}
 body{
     background-image: url('../images/Admin/edit-background.jpg');
     background-repeat: no-repeat;

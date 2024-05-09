@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const categories = document.getElementById('Categroy');
     const collections = document.getElementById('Collections');
 
-    if (inputField.value === "" || numberField.value === "" || uploadFile.value === "" || categories.value === "" && collections.value === "") {
+    if (inputField.value === "" || numberField.value === "" || uploadFile.value === "" || categories.value === "" && collections.value === "" ||!fileValidation()) {
             sureMessage.innerHTML = "This form will not submit as all fields are mandatory";
         } else {
             // If all fields are filled, submit the form

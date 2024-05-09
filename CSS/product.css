@@ -1,6 +1,9 @@
 /* Font Stuff */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900');
+*{
+  font-family: 'Nunito Sans', 'PT Sans','Didact Gothic','Garet', sans-serif;
 
+}
 /* Colour Stuff */
 body {
   /* background: #efeae2; */

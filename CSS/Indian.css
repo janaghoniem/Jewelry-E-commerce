@@ -3,12 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/futura-pt');
+
+/* OPTIONAL FONT FOR LOGIN POP UP */
+@import url(https://db.onlinewebfonts.com/c/be89a5bed739eee8649fa3322ff5c52b?family=Engravers%27+Gothic+BT);
+
+/* FROM HAYA */
+@import url('https://fonts.cdnfonts.com/css/garet');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 *{
+    font-family: 'Nunito Sans', 'PT Sans','Didact Gothic','Garet', sans-serif;
+    font-weight: 100;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: all .3s cubic-bezier(.39,.575,.565,1);
     -webkit-font-smoothing: antialiased;
 }
@@ -50,17 +63,26 @@ header:hover {
     background-color: white;
 }
 
-header:hover a {
+header:hover a, header:hover .navigation p{
     color: black;
 }
 
-header:hover #search , header:hover #searchField, header:hover #searchField::placeholder {
+header:hover .search , header:hover .searchField, header:hover .searchField::placeholder {
     color: black;
 }
 
-header:hover #search-button{
+header:hover #search-button, #search-button2{
     border-color: black;
     background-color: transparent;
+}
+
+.side-icon {
+    display: none;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    margin-left: -40px;
 }
 
 .navigation a{
@@ -71,7 +93,11 @@ header:hover #search-button{
     margin-left: 20px;
 }
 
-.navigation a:hover{
+/* .navigation a:hover{
+    color:rgb(228, 124, 33);
+} */
+
+.navigation i:hover{
     color:rgb(228, 124, 33);
 }
 
@@ -176,6 +202,12 @@ header:hover #search-button{
     z-index: -1;
 }
 
+.category-img {
+    width: 300px;
+    height: 379px;
+    object-fit: cover;
+}
+
 .extension-text {
     font-family: 'Futura PT';
     margin-bottom: 290px;
@@ -219,6 +251,9 @@ header:hover #search-button{
 
 .header-middle-scrolled {
     justify-content: space-between;
+    .side-icon {
+        color: black;
+    }
 }
 
 .header-bottom-scrolled {
@@ -260,6 +295,10 @@ header:hover #search-button{
     padding: 0;
 }
 
+#search-button {
+    display: flex;
+}
+
 .search-button-unscrolled {
     color: #F6E8C0;
     border-color: #F6E8C0;
@@ -268,7 +307,6 @@ header:hover #search-button{
     width: 40px;
     margin-left: 10px;
     position: relative; 
-    display: flex;
     justify-content: center;
     align-items: center;
     transition: width 0.5s ease;
@@ -283,12 +321,13 @@ header:hover #search-button{
     margin-left: 10px;
     position: relative; 
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     transition: width 0.5s ease;
 }
 
-#searchField {
+.searchField {
     padding: 10px;
     color: #F6E8C0;
     border-color: transparent;
@@ -300,16 +339,17 @@ header:hover #search-button{
     transition: width 0.5s ease;
 }
 
-#searchField:focus {
+.searchField:focus {
     outline: none;
     border-radius: 20px;
 }
 
-#searchField::placeholder {
+.searchField::placeholder {
     color: #F6E8C0;
 }
 
-#search {
+
+.search {
     /* background-image: url('../images/Landing/magnifying-glass1.png'); */
     color: #F6E8C0;
     font-size: 15px;
@@ -328,25 +368,246 @@ header:hover #search-button{
     z-index: 999;
 }
 
-.icon {
-    display: none;
+
+.sidepanel {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 9999999; 
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s;
 }
 
-.navigation {
+.sidepanel a {
+    font-family: 'Futura Pt', sans-serif;
+    text-transform: uppercase;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.3s;
+    font-weight: 400;
+}
+.sidepanel a:hover {
+    color: rgb(254, 248, 241);
+}
+  
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidepanel .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.sidepanel .dropbtn {
+    font-family: 'Futura Pt', sans-serif;
+    text-transform: uppercase;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.sidepanel .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.sidepanel .dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    color: #818181;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.sidepanel .dropdown-content a:hover {
+    background-color: #333;
+    color: rgb(254, 248, 241);
+}
+
+.sidepanel .dropdown:hover .dropdown-content {
     display: block;
 }
 
-@media only screen and (max-width: 900px) {
-    .icon {
+.sidepanel .dropdown:hover .dropbtn {
+    color: rgb(254, 248, 241);
+}
+
+
+
+.popup-container {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: unset;
+}
+
+#exit-popup-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 100%;
+    margin-top: -20px;
+}
+
+#exit-popup-button i{
+    font-size: larger;
+}
+
+.login-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 0.01em solid black;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.login-nav-text-style {
+    font-family: "Engravers' Gothic BT", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.login-nav button {
+    background-color: transparent;
+    width: auto;
+    border: none;
+    font-size: 25px;
+    text-align: center;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.login-nav button.active {
+    border-bottom: 0.1em solid black;
+    transition: none;
+}
+
+#login-form {
+    display: block;
+}
+
+#create-account-form {
+    display: none;
+}
+
+.sign-up-name-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#sign-up-fname {
+    margin-right: 10px;
+}
+
+.popup-form {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 590px;
+    height: auto;
+    max-height: 650px;
+    overflow: scroll;
+}
+
+.popup-form input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+    border: 1px solid silver;
+    text-transform: none;
+    font-family: sans-serif;
+}
+
+.popup-form label {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+#remember-me-forgot-password-container{
+    display: flex;
+    justify-content: center;
+}
+
+.remember-me-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: auto;
+}
+
+#remember-me-checkbox {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+}
+
+/* .forgot-password {
+    margin-left: auto; 
+    text-decoration: none;
+    color: #007bff;
+} */
+
+.popup-form form button {
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    margin-top: 24px;
+    padding: 12px 30px;
+    background-color: black;
+    color: white;
+}
+
+.input-error {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    color: red;
+    font-size: smaller;
+}
+
+@media screen and (max-width: 1090px){
+    header {
+        width: 100%;
+    }
+
+    .side-icon {
         display: block;
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
     }
 
     .logo {
         margin-right: 0;
-
     }
 
     .responsive {
@@ -369,7 +630,8 @@ header:hover #search-button{
         text-decoration: none;
         padding: 5px 0;
     }
-}
+} 
+
 /* -------------------------------------END OF HEADER------------------------------------- */
 .intro{
     position: relative;

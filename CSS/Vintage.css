@@ -33,7 +33,7 @@ body {
 
 header{
     background-color:  rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px); 
+    backdrop-filter: blur(4px);
     width: 100%;
     position: fixed;
     z-index: 999;
@@ -369,10 +369,8 @@ header:hover #search-button, #search-button2{
 }
 
 
-
-
 .sidepanel {
-    height: 100%; /* Specify a height */
+    height: 100%; 
     width: 0; 
     position: fixed; 
     z-index: 9999999; 
@@ -384,20 +382,20 @@ header:hover #search-button, #search-button2{
     transition: 0.5s;
 }
 
-  
-.sidepanel a, .sidepanel i {
+.sidepanel a {
     font-family: 'Futura Pt', sans-serif;
-    font-weight: 500;
     text-transform: uppercase;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 15px;
     color: #818181;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     transition: 0.3s;
+    font-weight: 400;
 }
-  
-.sidepanel a:hover, .sidepanel i:hover {
+.sidepanel a:hover {
     color: rgb(254, 248, 241);
 }
   
@@ -408,6 +406,53 @@ header:hover #search-button, #search-button2{
     font-size: 36px;
     margin-left: 50px;
 }
+
+.sidepanel .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.sidepanel .dropbtn {
+    font-family: 'Futura Pt', sans-serif;
+    text-transform: uppercase;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.sidepanel .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.sidepanel .dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    color: #818181;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.sidepanel .dropdown-content a:hover {
+    background-color: #333;
+    color: rgb(254, 248, 241);
+}
+
+.sidepanel .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sidepanel .dropdown:hover .dropbtn {
+    color: rgb(254, 248, 241);
+}
+
 
 
 .popup-container {
@@ -551,7 +596,6 @@ header:hover #search-button, #search-button2{
     color: red;
     font-size: smaller;
 }
-
 
 @media screen and (max-width: 1090px){
     header {
