@@ -69,7 +69,7 @@ header:hover {
     background-color: white;
 }
 
-header:hover a, header:hover .navigation p, header:hover .side-icon {
+header:hover a, header:hover .navigation p{
     color: black;
 }
 
@@ -84,6 +84,11 @@ header:hover #search-button{
 
 .side-icon {
     display: none;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    margin-left: -60px;
 }
 
 .navigation a{
@@ -248,9 +253,6 @@ header:hover #search-button{
 .header-top-scrolled {
     justify-content: flex-end;
     font-size: medium;
-    .store-services {
-        flex-direction: row-reverse;
-    }
 }
 
 .header-middle-scrolled {
@@ -734,6 +736,7 @@ header:hover #search-button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 10px ;
 }
 
 .item {
@@ -931,7 +934,7 @@ header:hover #search-button{
 
 footer {
     background-color: black;
-    height: 300px;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -963,6 +966,7 @@ footer {
     flex-direction: column;
     font-size: 20px;
     margin-right: 100px;
+    margin-bottom: 10px;
 }
 
 .footer-anchors a {
@@ -982,17 +986,6 @@ footer {
 
 @media screen and (max-width: 385px) {
 
-    #search-button {
-        display: none;
-    }
-    
-
-    .side-icon {
-        top: 0;
-        left: 0;
-    }
-
-    
     .collections-section{
         width: 100vw; 
         height: 450px;
@@ -1003,7 +996,7 @@ footer {
     }
      
     .egyptian-collection{
-        margin-top: 8px;
+        margin-top: -8px;
     }
 
     .collection img{
@@ -1531,16 +1524,11 @@ footer {
 
 @media screen and (max-width: 1090px){
     header {
-        width: auto;
+        width: 100vw;
     }
 
     .side-icon {
         display: block;
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
-        position: relative;
-        margin-left: -30px;
     }
 
     /* #search-button, .search-button-scrolled, .search-button-unscrolled{

@@ -2,20 +2,22 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const searchButton = document.getElementById('search-button');
-    const searchbutton2 = document.getElementById('search-button2');
     const middleDiv = document.getElementById('top-move-on-scroll');
+    const middleDivanchors = document.querySelectorAll('middleDiv a');
 
-
-    window.addEventListener('window size changed', () => {
-
-    });
+    if(window.innerWidth < 1090)
+    {
+        searchButton.style.display = 'none';
+        middleDiv.style.display = 'flex';
+        middleDivanchors.display = 'none';
+    } 
 
     //nav bar scroll
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
         const headerTop = document.getElementById('header-top');
-
         const headerMiddle = document.getElementById('header-middle');
+        
         const sideicon = document.getElementById('side-icon');
         const headerBottom = document.getElementById('header-bottom');
         const logo = document.getElementById('logo');
@@ -51,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 searchButton.style.display = 'flex';
                 middleDiv.style.display = 'none';
             } else {
-                const middleDivanchors = this.document.querySelectorAll('middleDiv a');
                 middleDivanchors.display = 'none';
             }
 
@@ -116,10 +117,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //responiveness
-    function toggleMenu(){
-        var nav= document.querySelector('.navigation');
-        nav.style.display=nav.style.display==='block'? 'none' :'block';
-    }
+    // function toggleMenu(){
+    //     var nav= document.querySelector('.navigation');
+    //     nav.style.display=nav.style.display==='block'? 'none' :'block';
+    // }
 
     //login - sign-up pop up
     const loginIconTrigger = document.getElementById('login-button');
