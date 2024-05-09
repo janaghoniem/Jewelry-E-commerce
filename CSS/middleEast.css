@@ -1,6 +1,21 @@
+@import url(https://db.onlinewebfonts.com/c/2e492ac67105d56ef337489b56a86486?family=Cooper+BT+W03+Md);
+@import url('https://fonts.cdnfonts.com/css/garet');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/futura-pt');
+
+/* OPTIONAL FONT FOR LOGIN POP UP */
+@import url(https://db.onlinewebfonts.com/c/be89a5bed739eee8649fa3322ff5c52b?family=Engravers%27+Gothic+BT);
+
+/* FROM HAYA */
+@import url('https://fonts.cdnfonts.com/css/garet');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 *{
-    font-family: 'Nunito Sans', 'PT Sans','Didact Gothic','Garet', sans-serif;
+    font-family: 'Futura Pt','Nunito Sans', 'PT Sans','Didact Gothic','Garet', sans-serif;
 
 }
 body {
@@ -39,9 +54,12 @@ overflow-x: hidden;
 /* overflow: hidden; btkhali el kalam msh sticky */
 
 }
-.coll-title h1{
-   margin-top: 0;
-    margin-bottom:5em;
+.coll-title{
+    margin-top: 15px;
+    font-family: 'Futura Pt', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 .coll-desc {
     display:flex;
@@ -229,14 +247,20 @@ font-size: large;
     width:calc(33%-2%);
 
 }
-.info{
-    font-weight: 100;
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    /* margin-top:15px; */
-    font-family: 'gill sans','gill sans mt', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
 }
-.info p{
-    margin:0;
+
+.info p {
+    margin: 10px 0 0 5px;
+    font-weight: 500;
+    color: black;
 }
 
 .filter-box{
@@ -396,7 +420,7 @@ input[type="checkbox"]{
     
     background-color: white;
    
-   
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -450,21 +474,35 @@ overflow: hidden;
     transition: transform 0.4s ease;
 }
 
-.c-info{
-    font-weight: 90;
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 1px;
-    /* background-color: 	#7b40009f;
-    border-radius:20px 0px; */
-    width:97%;
-    height:auto;
-    padding-bottom: 0;
-    font-family: 'gill sans','gill sans mt', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
 }
-.c-info p{
-    margin:0;
+.info p{
+    margin: 5px 0 0 5px;
+    font-weight: 500;
+    color: black;
 }
-.curtain-btn{
+
+.info button{
+    padding: 3%;
+    width: 70%;
+    color: white;
+    background-color: black;
+    border: black 1px solid;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.info button:hover{
+    color: black;
+    background-color: white;
+}
+
+/* .curtain-btn{
     position: absolute;
     top:0;
     left:0;
@@ -475,7 +513,7 @@ overflow: hidden;
     transition: opacity 0.3s ease;
     opacity:0;
     border-radius: 0px 0px 20px 0px;
-}
+} */
 
 .popupMessage{
     position: fixed;
@@ -504,7 +542,7 @@ overflow: hidden;
     opacity:1;
 }
 .coll-card{
-    width:calc(25%-2%);
+    /* width:calc(25%-2%);
     margin:10px;
     display:flex;
     flex-direction: column;
@@ -515,11 +553,56 @@ overflow: hidden;
     vertical-align: top;
     margin-bottom: 20px;
     align-items: center;
-    justify-content: center;
-    
-
-
+    justify-content: center; */
+    overflow: hidden;
+    position: relative;
+    width: 300;
+    width: fit-content;
+    margin-right: 20px;
+    margin-top: 3%;
+    height: 29em;
 }
+
+.cards{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.imge{
+    position: relative;
+    overflow: hidden;
+    width: 240px;
+    height: 300px;
+}
+.imge i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.imge i:hover{
+    transform: scale(1.1);
+    color: rgb(158, 2, 2);
+    font-weight: bolder;
+}
+.imge img:hover{
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+.card1{
+    overflow: hidden;
+    position: relative;
+    width: 300;
+    width: fit-content;
+    margin-right: 20px;
+    margin-top: 3%;
+    height: 29em;
+}
+
 @media only screen 
  and (max-device-width: 1240px)
  and (-webkit-min-device-pixel-ratio:1){

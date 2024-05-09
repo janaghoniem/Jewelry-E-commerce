@@ -76,3 +76,22 @@ function addToCart(){
 
    
 }
+
+function addToWishlist(){
+    var popup = document.createElement("div");
+    popup.classList.add("popupMessage");
+    popup.textContent= "Added to wishlist";
+    document.body.appendChild(popup);
+
+   
+    setTimeout(function(){
+        popup.style.display="block";
+    },100);
+
+    setTimeout(function(){
+        popup.style.display="none";
+        popup.parentNode.removeChild(popup);
+    },2000);
+
+   
+}
