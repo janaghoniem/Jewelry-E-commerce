@@ -4,17 +4,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchButton = document.getElementById('search-button');
     const searchButton2 = document.getElementById('search-button2');
     const middleDiv = document.getElementById('top-move-on-scroll');
-    const middleDivanchors = document.querySelectorAll('middleDiv a');
+    const middleDivanchors = middleDiv.querySelectorAll('a');
     const headerMiddle = document.getElementById('header-middle');
 
-    if(window.innerWidth < 1100)
-    {
-        searchButton.style.display = 'none';
-        searchButton2.style.marginLeft = '70px';
-        middleDiv.style.display = 'flex';
-        middleDivanchors.display = 'none';
-        headerMiddle.style.justifyContent = 'center';
-    } 
+    window.addEventListener('resize', () => {
+        if(window.innerWidth < 1100)
+        {
+            searchButton.style.display = 'none';
+            searchButton2.style.marginLeft = '50px';
+            middleDiv.style.display = 'flex';
+            middleDivanchors.forEach(anchor => {
+                anchor.style.display = 'none';
+            });
+            headerMiddle.style.justifyContent = 'center';
+        } 
+        else {
+            searchButton.style.display = 'flex'; 
+            middleDiv.style.display = 'none';
+            middleDivanchors.forEach(anchor => {
+                anchor.style.display = 'inline';
+            });
+        }
+    });
 
     //nav bar scroll
     window.addEventListener('scroll', function() {
@@ -59,10 +70,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 searchButton.style.display = 'flex';
                 middleDiv.style.display = 'none';
             } else {
-                middleDivanchors.display = 'none';
-                searchButton2.classList.remove('search-button-scrolled');
-                searchButton2.classList.add('search-button-unscrolled');
+                middleDivanchors.forEach(anchor => {
+                    anchor.style.display = 'none';
+                });
+                headerMiddle.style.justifyContent = 'center';
             }
+            
+            searchButton2.classList.remove('search-button-scrolled');
+            searchButton2.classList.add('search-button-unscrolled');
 
             sideicon.style.color = 'white';
 
@@ -124,12 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 30); 
     });
-
-    //responiveness
-    // function toggleMenu(){
-    //     var nav= document.querySelector('.navigation');
-    //     nav.style.display=nav.style.display==='block'? 'none' :'block';
-    // }
 
     //login - sign-up pop up
     const loginIconTrigger = document.getElementById('login-button');
@@ -417,14 +426,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function expandSearch2() {
         if (buttonCount2 === 0) {
-            if(window.innerWidth > 440)
+            if(window.innerWidth > 400)
             {
+                console.log('da5al hena2');
                 searchDiv2.style.width = '200px';
                 searchField2.style.width = '200px';
             } else {
                 console.log('da5al hena');
-                searchDiv2.style.width = '120px';
-                searchField2.style.width = '120px';
+                searchDiv2.style.width = '100px';
+                searchField2.style.width = '100px';
             }
             searchDiv2.style.border = '1px solid black';
             buttonCount2++;
@@ -523,5 +533,26 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+
+    // const closebtn = document.getElementById('closebtn');
+    const openIcon = document.getElementById('ham-whatever');
+
+    // function openNav() {
+    //     console.log('clicked');
+    //     document.getElementById("mySidepanel").style.display = 'block';
+    //     document.getElementById("mySidepanel").style.width = "250px";
+    // }
+      
+    // function closeNav() {
+    //     document.getElementById("mySidepanel").style.width = "0";
+    // }
+      
+    openIcon.addEventListener('click', () => {
+        console.log('clicked');
+        var nav= document.querySelector('.navigation');
+        nav.style.display=nav.style.display==='block'? 'none' :'block';
+    });
+    // closebtn.addEventListener('click', closeNav());
 
 });
