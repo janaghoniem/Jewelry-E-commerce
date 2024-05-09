@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/main.css">
-    <link rel="stylesheet" href="../CSS/product.css">
+    <title>Edit product</title>
+    <link rel="stylesheet" href="../CSS/edit.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/main.css">
     <script src="../Javascript/landing-script.js"></script>
     <script src="../Javascript/product.js"></script>
-    <link rel="stylesheet" href="../CSS/edit-product.css">
+    <script src="../Javascript/add-product.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-      <!-- Jana's amazing header  -->
-      <header>
+    <!-- Jana's amazing header  -->
+    <header>
         <div class="header-top-unscrolled" id="header-top">
-            <div class="store-services">
+            <!-- <div class="store-services">
                 <nav class="navigation">
                     <a href="#">
                         <i class="fa-solid fa-location-dot"></i>
-                        <p>Stores</p>
+                        <p>Find a Store</p>
                     </a>
                     <a href="#">
                         <i class="fa-solid fa-bell-concierge"></i>
@@ -27,7 +31,7 @@
                     </a>
                     <a href="#">
                         <i class="fa-solid fa-headset"></i>
-                        <p>Contacts</p>
+                        <p>Contact Us</p>
                     </a>
                 </nav>
                 <div class="search-button-unscrolled" id="search-button">
@@ -56,9 +60,15 @@
                         <p>Shopping Bag</p>
                     </a>
                 </nav>
-            </div>
+            </div> -->
         </div>
         <div class="header-middle-unscrolled" id="header-middle">
+            <div class="responsive">
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
             <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
             <div id="top-move-on-scroll"></div>
         </div>
@@ -76,107 +86,99 @@
                 <a href="#">Head Pieces</a> -->
             </nav>
         </div>
+
     </header>
 
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Are you sure ?</h1>
+                <span class="sure"></span>
 
-    <div class="container">
-        <div class="cards">
-
-            <div class="card">
-                <div class="card__image-holder">
-                    <img class="card__image" />
-                    <div id="preview"></div>
-                </div>
-                <div class="card-title">
-                    <a href="#" class="toggle-info btn">
-                        <span class="left"></span>
-                        <span class="right"></span>
-                    </a>
-                    <h2>
-                        Product Name
-                        <small>Collection:</small>
-                        <small>price:</small>
-                    </h2>
-                </div>
-                <div class="card-flap flap1">
-                    <div class="card-description">
-                        This is where product description will be displayed, added and edited by the admin
-                    </div>
-                    <div class="card-flap flap2">
-                        <div class="card-actions">
-                            <a href="#" class="btn">Save</a>
-                            <a href="#" class="btn">Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <button type="submit" id="submitButton">Sure</button>
+            </form>
         </div>
-        <!-- <div class="text">
-           Contact us Form
-        </div> -->
-        <form action="#">
-            <div class="form-row">
-                <div class="input-data">
-                    <input type="text" required>
-                    <div class="underline"></div>
-                    <label for="">Product Name</label>
-                </div>
-                <div class="input-data">
-                    <input type="number" min="1000" required>
-                    <div class="underline"></div>
-                    <label for="">Price</label>
-                </div>
-            </div>
-            <div class="form-row">
-               
-                <!-- <div class="input-data">
-                 <input type="text" required>
-                 <div class="underline"></div>
-                 <label for="">Email Address</label>
-              </div> -->
-                <!-- <div class="input-data">
-                 <input type="text" required>
-                 <div class="underline"></div>
-                 <label for="">Website Name</label>
-              </div> -->
-            </div>
-            <div class="form-row">
-                <div class="input-data textarea">
-                    <textarea rows="8" cols="80" required></textarea>
-                    <br />
-                    <div class="underline"></div>
-                    <label for="">Product Description</label>
-                    <br />
-
-                </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Edit your Creation</h1>
+                <span>fill in the field where you want to see a change</span>
+                <input type="text" placeholder="Rename Product" pattern="[A-Za-z\s]+" >
+                <input type="number" placeholder="Change the price" min="1000">
                 <select name="Collections" id="Collections">
                     <option value="" disabled selected>Belongs to</option>
-                    <option value="">Collection 1</option>
-                    <option value="">Collection 2</option>
-                    <option value="">Collection 3</option>
-                    <option value="">Collection 4</option>
+                    <option value="1">Collection 1</option>
+                    <option value="1">Collection 2</option>
+                    <option value="1">Collection 3</option>
+                    <option value="1">Collection 4</option>
                 </select>
-            </div>
-            <div class="form-row">
-                <!-- <label><br>Upload image</label> -->
+                <select name="Category" id="Categroy">
+                    <option value="" disabled selected>Categroy</option>
+                    <option value="1">Ring</option>
+                    <option value="1">Necklace</option>
+                    <option value="1">Earrings</option>
+                </select>
                 <div class="uploadOuter">
                     <label for="uploadFile" class="btn btn-primary">Upload Image</label>
                     <strong>OR</strong>
                     <span class="dragBox">
                         Drag and Drop image here
                         <input type="file" onChange="dragNdrop(event)" ondragover="drag()" ondrop="drop()"
-                            id="uploadFile" required />
+                            id="uploadFile" />
                     </span>
                 </div>
-            </div>
-            <div class="form-row submit-btn">
-                <div class="input-data">
-                    <div class="inner"></div>
-                    <input type="submit" value="Edit">
+                <h4 class="successful"></h4>
+                <h6 class="s"></h6>
+                <!-- <button>Edit</button> -->
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <!-- <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p> -->
+                    <h3 class="picture-validation"></h3>
+                    <div id="preview" class="image-container"></div>
+                    <button class="hidden" id="login">Continue Editing</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <!-- <div class="cards">
+
+                        <div class="card">
+                            <div class="card__image-holder">
+                                <img class="card__image" />
+                                <div id="preview"></div>
+                            </div>
+                            <div class="card-title">
+                                <a href="#" class="toggle-info btn">
+                                    <span class="left"></span>
+                                    <span class="right"></span>
+                                </a>
+                                <h2>
+                                    Product Name
+                                    <small>Collection:</small>
+                                    <small>price:</small>
+                                </h2>
+                            </div>
+                            <div class="card-flap flap1">
+                                <div class="card-description">
+                                    This is where product description will be displayed, added and edited by the admin
+                                </div>
+                                <div class="card-flap flap2">
+                                    <div class="card-actions">
+                                        <a href="#" class="btn">Save</a>
+                                        <a href="#" class="btn">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <button class="hidden" id="register" onclick=" checkConditions()">Edit</button>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
-   
+
+
 </body>
+
 </html>
