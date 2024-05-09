@@ -55,11 +55,11 @@ overflow-x: hidden;
 
 }
 .coll-title{
-    margin-top: 15px;
-    font-family: 'Futura Pt', sans-serif;
-    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
     font-weight: 500;
-    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 50px;
+    font-size: 3vw;
 }
 .coll-desc {
     display:flex;
@@ -83,6 +83,18 @@ overflow-x: hidden;
     position: sticky;
     top:90px;
     /* margin-top: 90px; */
+}
+
+#desc1 p, #desc1 h2 {
+    color: rgb(98, 98, 98);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#desc1 h2 {
+    font-size: 25px;
+    font-weight: 500;
 }
 .p1{
     font-size:20px;
