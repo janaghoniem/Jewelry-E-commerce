@@ -44,38 +44,27 @@ document.querySelector('.cvv-input').oninput = () => {
 // // Event listener for the button click
 // completePurchaseBtn.addEventListener('click', hideFormContainerOnClick);
 
-// -------------------form validation-----------------------------
-// Function to validate form fields
+// ------------------- Billing form validation-----------------------------
+
 function validateForm() {
     let isValid = true;
 
-    // Select all input elements in the form
+    
     const inputs = document.querySelectorAll('.checkout-form input[type="text"]');
     
-    // Loop through each input element
+    
     inputs.forEach(input => {
-        // Check if the input value is empty
-        const inputField = document.getElementById('name');
         if (input.value.trim() === '') {
-            
             isValid = false;
-            // Add red border to the input field
             input.classList.add('invalid');
-            // Create and append a span element to show error message
             const errorMessage = input.parentNode.querySelector('.error-message');
             if (!errorMessage) {
-                // Create and append a span element to show error message
                 const errorMessage = document.createElement('span');
                 errorMessage.classList.add('error-message');
                 errorMessage.textContent = 'This field is required';
                 input.parentNode.appendChild(errorMessage);
             }
-            // inputs.classList.add('error-message');
-            // inputField.style.backgroundColor = 'rgb(255, 172, 172)';
-            // inputField.classList.add('error-message');
-            input.parentNode.appendChild(errorMessage);
         } else {
-            // Remove red border and error message if input is not empty
             input.classList.remove('invalid');
             const errorMessage = input.parentNode.querySelector('.error-message');
             if (errorMessage) {
@@ -87,62 +76,22 @@ function validateForm() {
     return isValid;
 }
 
-// Function to handle form submission
 function handleFormSubmission(event) {
-    // Prevent the default form submission behavior
+
     event.preventDefault();
 
-    // Validate the form
     const isValid = validateForm();
-
-    // If the form is valid, proceed to the next page
     if (isValid) {
-        // Add your logic here to redirect or perform any action for completing the purchase
         console.log('Form is valid. Proceeding to the next step...');
+        const formContainer = document.querySelector('.form-container');
+        const containerDiv = document.querySelector('.container');
+     
+        formContainer.classList.add('hidden');
+        containerDiv.classList.remove('hidden');
     }
 }
 
-// Get the form element
 const form = document.querySelector('.checkout-form');
 
-// Add event listener to the form submission
+
 form.addEventListener('submit', handleFormSubmission);
-
-
-
-
-// function validateForm() {
-//     let isValid = true;
-
-//     // Select all input elements in the form
-//     const inputs = document.querySelectorAll('.checkout-form input[type="text"]');
-    
-//     // Loop through each input element
-//     inputs.forEach(input => {
-//         // Check if the input value is empty
-//         if (input.value.trim() === '') {
-//             isValid = false;
-//             // Add red border to the input field
-//             input.classList.add('invalid');
-//             // Check if an error message already exists
-//             const errorMessage = input.parentNode.querySelector('.error-message');
-//             if (!errorMessage) {
-//                 // Create and append a span element to show error message
-//                 const errorMessage = document.createElement('span');
-//                 errorMessage.classList.add('error-message');
-//                 errorMessage.textContent = 'This field is required';
-//                 input.parentNode.appendChild(errorMessage);
-//             }
-//         } else {
-//             // Remove red border and error message if input is not empty
-//             input.classList.remove('invalid');
-//             const errorMessage = input.parentNode.querySelector('.error-message');
-//             if (errorMessage) {
-//                 errorMessage.remove();
-//             }
-//         }
-//     });
-
-//     return isValid;
-// }
-
