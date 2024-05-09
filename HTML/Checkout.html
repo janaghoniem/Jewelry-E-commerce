@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <div class="container hidden  ">
+    <div class="container hidden ">
         <div class="card-container">
             <div class="front">
                 <div class="image">
@@ -56,7 +56,7 @@
                 <div class="box">
                     <span>cvv</span>
                     <div class="cvv-box"></div>
-                    <img src="C:\Users\a\AppData\Local\Temp\570e8289-5825-462e-bde3-c2a2252dbdf3_credit card form.zip.df3\project - Copy\image\visa.png"
+                    <img src="../images/Checkout/visa.png"
                         alt="">
                 </div>
             </div>
@@ -64,14 +64,14 @@
         </div>
 
 
-        <form action="">
+        <form action="" class="payment-form">
             <div class="inputBox">
                 <span>Card number</span>
                 <input type="text" maxlength="16" class="card-number-input">
             </div>
             <div class="inputBox">
                 <span>card holder</span>
-                <input type="tetx" class="card-holder-input">
+                <input type="text" class="card-holder-input">
             </div>
             <div class="flexbox">
                 <div class="inputBox">
@@ -102,6 +102,7 @@
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
+
                         <option value="2025">2025</option>
                         <option value="2026">2026</option>
                         <option value="2027">2027</option>
@@ -115,17 +116,16 @@
                     <input type="text" maxlength="4" class="cvv-input">
                 </div>
             </div>
-            
-            <input type="submit" value="Back" class="submit-btn " onclick=
-            "window.location.href = 'ShoppAll.html';">
 
+            
+            <input type="submit" value=" Pay EGP 277,100" class="submit-btn" onclick="handleFormSubmissions(event)">
+            <input type="submit" value="Back" class="submit-btn " onclick="window.location.href = 'ShoppAll.html';">
 
         </form>
-        <input type="submit" value=" Pay EGP 277,100" class="submit-btn"  
-        onclick="payAndRedirect()">
+
 
     </div>
-    <div class="form-container  ">
+    <div class="form-container   ">
         <h2 class="form-title">BILLING ADDRESS</h2>
         <form action="" class="checkout-form">
             <div class="input-line">
