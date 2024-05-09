@@ -28,14 +28,12 @@
         </div>
     </div>
 
-    <div class="container hidden ">
+    <div class="container hidden  ">
         <div class="card-container">
             <div class="front">
                 <div class="image">
-                    <img src="../images/Checkout/chip.png"
-                        alt="">
-                    <img src="../images/Checkout/visa.png"
-                        alt="">
+                    <img src="../images/Checkout/chip.png" alt="">
+                    <img src="../images/Checkout/visa.png" alt="">
                 </div>
                 <div class="card-number-box">################</div>
                 <div class="flexbox">
@@ -117,10 +115,14 @@
                     <input type="text" maxlength="4" class="cvv-input">
                 </div>
             </div>
-            <input type="submit" value="submit" class="submit-btn">
+            
+            <input type="submit" value="Back" class="submit-btn " onclick=
+            "window.location.href = 'ShoppAll.html';">
 
 
         </form>
+        <input type="submit" value=" Pay EGP 277,100" class="submit-btn"  
+        onclick="payAndRedirect()">
 
     </div>
     <div class="form-container  ">
@@ -158,7 +160,7 @@
         </form>
     </div>
     <script src="../Javascript/Checkout.js"></script>
-   
+
 
 
 

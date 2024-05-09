@@ -10,6 +10,18 @@
 body{
     background-color:rgb(220, 201, 177);
 }
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(36%);
+}
+
 .collection-button {
     border: .0625rem solid #FFFFFF;
     background-color: transparent;

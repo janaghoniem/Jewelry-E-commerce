@@ -113,4 +113,68 @@ form.addEventListener('submit', handleFormSubmission);
 
 
 
-// ----------Payment Form Validation-----------------------------
+// -------------------------------------------------------------Payment Form Validation-----------------------------------------------
+function validateForms() {
+    let isFormValid = true;
+
+    // Select all input elements in the forms
+    const forms = document.querySelectorAll('.checkout-form');
+
+    // Loop through each form
+    forms.forEach(form => {
+        // Select all input elements in the form
+        const inputs = form.querySelectorAll('input, select');
+        
+        // Loop through each input element
+        inputs.forEach(input => {
+            // Check if the input value is empty
+            if (!input.value.trim()) {
+                isFormValid = false;
+                // Add red border to the input field
+                input.classList.add('invalid');
+                // Check if an error message already exists
+                const errorMessage = input.parentNode.querySelector('.error-message');
+                if (!errorMessage) {
+                    // Create and append a span element to show error message
+                    const errorMessage = document.createElement('span');
+                    errorMessage.classList.add('error-message');
+                    errorMessage.textContent = 'This field is required';
+                    input.parentNode.appendChild(errorMessage);
+                }
+            } else {
+                // Remove red border and error message if input is not empty
+                input.classList.remove('invalid');
+                const errorMessage = input.parentNode.querySelector('.error-message');
+                if (errorMessage) {
+                    errorMessage.remove();
+                }
+            }
+        });
+    });
+
+    // Return true if all forms are valid, otherwise false
+    return isFormValid;
+}
+
+// Function to handle form submission
+function handleFormSubmissions(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Validate all forms
+    const areFormsValid = validateForms();
+
+    // If all forms are valid, proceed with submission
+    if (areFormsValid) {
+        // Add your logic here to proceed with form submission
+        console.log('All forms are valid. Proceeding with submission...');
+    }
+}
+
+function payAndRedirect() {
+    // Display success message
+    alert('Paid successfully!');
+
+    // Redirect to the specified page
+    window.location.href = 'ShoppAll.html';
+}

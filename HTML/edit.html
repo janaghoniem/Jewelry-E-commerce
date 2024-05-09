@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="../Javascript/landing-script.js"></script>
     <script src="../Javascript/product.js"></script>
-    <script src="../Javascript/edit.js"></script>
+    <script src="../Javascript/edit-product.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <!-- Jana's amazing header  -->
-      <header>
+    <header>
         <div class="header-top-unscrolled" id="header-top">
             <!-- <div class="store-services">
                 <nav class="navigation">
@@ -66,9 +66,9 @@
             <div class="responsive">
                 <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
                     <i class="fa fa-bars"></i>
-                  </a>
+                </a>
             </div>
-           
+
             <a href="#main" class="logo-unscrolled" id="logo">Logo-Here</a>
             <div id="top-move-on-scroll"></div>
         </div>
@@ -78,7 +78,7 @@
                 <a href="collections-setup.html">Collection</a>
                 <a href="product.html">Products</a>
                 <a href="Orders.html">Orders</a>
-                <a href="">Statistics</a>
+                <a href="statistics.html">Statistics</a>
                 <a href="reviewsAdmin.html">Reviews</a>
                 <a href="support.html">Customer Support</a>
                 <!-- <a href="#">Necklaces</a>
@@ -86,39 +86,36 @@
                 <a href="#">Head Pieces</a> -->
             </nav>
         </div>
-       
+
     </header>
 
     <div class="container" id="container">
         <div class="form-container sign-up">
             <form>
                 <h1>Are you sure ?</h1>
-                <span>You changed fields and left some empty, if you still
-                    want to edit go ahead and click on "continue editing" button
-                    but if you're sure with your changes, press on the "sure" button before loeding the page
-                </span>
+                <span class="sure"></span>
 
-                <button>Sure</button>
+                <button type="submit" id="submitButton">Sure</button>
             </form>
         </div>
         <div class="form-container sign-in">
             <form>
                 <h1>Edit your Creation</h1>
                 <span>fill in the field where you want to see a change</span>
-                <input type="text" placeholder="Rename Product" pattern="[A-Za-z\s]+" title="Only text is allowed">
+                <input type="text" placeholder="Rename Product" pattern="[A-Za-z\s]+" >
                 <input type="number" placeholder="Change the price" min="1000">
                 <select name="Collections" id="Collections">
                     <option value="" disabled selected>Belongs to</option>
-                    <option value="">Collection 1</option>
-                    <option value="">Collection 2</option>
-                    <option value="">Collection 3</option>
-                    <option value="">Collection 4</option>
+                    <option value="1">Collection 1</option>
+                    <option value="1">Collection 2</option>
+                    <option value="1">Collection 3</option>
+                    <option value="1">Collection 4</option>
                 </select>
                 <select name="Category" id="Categroy">
                     <option value="" disabled selected>Categroy</option>
-                    <option value="">Ring</option>
-                    <option value="">Necklace</option>
-                    <option value="">Earrings</option>
+                    <option value="1">Ring</option>
+                    <option value="1">Necklace</option>
+                    <option value="1">Earrings</option>
                 </select>
                 <div class="uploadOuter">
                     <label for="uploadFile" class="btn btn-primary">Upload Image</label>
@@ -129,6 +126,8 @@
                             id="uploadFile" />
                     </span>
                 </div>
+                <h4 class="successful"></h4>
+                <h6 class="s"></h6>
                 <!-- <button>Edit</button> -->
             </form>
         </div>
@@ -137,6 +136,8 @@
                 <div class="toggle-panel toggle-left">
                     <!-- <h1>Welcome Back!</h1>
                     <p>Enter your personal details to use all of site features</p> -->
+                    <h3 class="picture-validation"></h3>
+                    <div id="preview" class="image-container"></div>
                     <button class="hidden" id="login">Continue Editing</button>
                 </div>
                 <div class="toggle-panel toggle-right">
@@ -171,12 +172,12 @@
                             </div>
                         </div>
                     </div> -->
-                    <button class="hidden" id="register">Edit</button>
+                    <button class="hidden" id="register" onclick=" checkConditions()">Edit</button>
                 </div>
             </div>
         </div>
     </div>
-   
+
 
 </body>
 

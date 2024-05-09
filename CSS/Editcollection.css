@@ -357,7 +357,9 @@ label[for=img-landing] {
 .hidden1 {
     display: none;
 }
-
+/* .hidden2 {
+    display: none;
+} */
 #preview1 {
     display: none;
 }
@@ -384,15 +386,14 @@ label[for=img-landing] {
     .form-container.first {
         padding-left: 5vw;
         width: 100%;
-        z-index: 999;
+        /* z-index: 999; */
     }
     .form-container.second form{
        
         padding-right:90vw;
         width: 100%;
-        /* padding-right: 10vw;*/
-        /* width: 100%;  */
-        z-index: 999;
+        
+        /* z-index: 999; */
     }
     .form-container.second h1{
         font-size: 15px;
@@ -404,3 +405,4 @@ label[for=img-landing] {
         height:auto;
     }
 }
+
