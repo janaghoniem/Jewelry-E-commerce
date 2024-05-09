@@ -63,7 +63,7 @@ header:hover {
     background-color: white;
 }
 
-header:hover a, header:hover .navigation p, header:hover #side-icon{
+header:hover a, header:hover .navigation p{
     color: black;
 }
 
@@ -997,29 +997,31 @@ footer {
     padding-top: 60px; 
     transition: 0.5s;
 }
+
   
-  .sidepanel a {
+.sidepanel a {
+    font-family: 'Futura Pt', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
-  }
+}
   
-  .sidepanel a:hover {
-    color: #f1f1f1;
-  }
+.sidepanel a:hover {
+    color: rgb(254, 248, 241);
+}
   
-  .sidepanel .closebtn {
+.sidepanel .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-
-
+}
 
 @media screen and (max-width: 385px) {
 

@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             middleDivanchors.forEach(anchor => {
                 anchor.style.display = 'inline';
             });
+            closeNav();
         }
     });
 
@@ -95,6 +96,26 @@ document.addEventListener('DOMContentLoaded', function() {
             headerBottom.classList.add('header-bottom-unscrolled');
             headerBottom.classList.remove('header-bottom-scrolled');
         }
+    });
+
+    //responsive header
+    const closebtn = document.getElementById('closebtn');
+    const openIcon = document.getElementById('ham-whatever');
+      
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+    }
+      
+    openIcon.addEventListener('click', () => {
+        // console.log('clicked');
+        // var nav= document.querySelector('.navigation');
+        // nav.style.display=nav.style.display==='block'? 'none' :'block';
+        console.log('clicked');
+        document.getElementById("mySidepanel").style.display = 'block';
+        document.getElementById("mySidepanel").style.width = "250px";
+    });
+    closebtn.addEventListener('click', () => {
+        document.getElementById("mySidepanel").style.width = "0";
     });
 
     //nav bar extension on hover
@@ -533,26 +554,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
-
-
-    // const closebtn = document.getElementById('closebtn');
-    const openIcon = document.getElementById('ham-whatever');
-
-    // function openNav() {
-    //     console.log('clicked');
-    //     document.getElementById("mySidepanel").style.display = 'block';
-    //     document.getElementById("mySidepanel").style.width = "250px";
-    // }
-      
-    // function closeNav() {
-    //     document.getElementById("mySidepanel").style.width = "0";
-    // }
-      
-    openIcon.addEventListener('click', () => {
-        console.log('clicked');
-        var nav= document.querySelector('.navigation');
-        nav.style.display=nav.style.display==='block'? 'none' :'block';
-    });
-    // closebtn.addEventListener('click', closeNav());
 
 });
