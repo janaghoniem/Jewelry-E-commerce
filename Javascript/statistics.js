@@ -24,3 +24,5 @@ const closeMenu = () => {
 openMenuBtn.addEventListener("click", openMenu);
 
 closeMenuBtn.addEventListener("click", closeMenu);
+
+
