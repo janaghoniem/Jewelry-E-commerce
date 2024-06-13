@@ -1314,6 +1314,32 @@ sort {
     z-index:9999;
     animation: slideDown 0.5s ease forwards;
 }
+.title p {
+    margin: 0 0 10px 0;
+}
+
+.pics {
+    display: flex;
+    align-items: flex-start; 
+    margin-top: 20px;
+}
+
+.pics img {
+    width: 45vw;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 3vw;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.description p {
+    margin: 0 0 10px 0;
+    font-size: 2vw;
+}
 
 @keyframes slideDown{
     0%{
